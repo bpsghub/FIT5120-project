@@ -1,5 +1,7 @@
 import './assets/base.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'leaflet/dist/leaflet.css'
+import 'leaflet-routing-machine/dist/leaflet-routing-machine.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
