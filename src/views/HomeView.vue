@@ -69,9 +69,6 @@ h2.banner_title {
 }
 
 .banner_button .button :deep(.btn) {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  padding: clamp(15px, 3vw, 20px) clamp(30px, 5vw, 40px);
-  min-width: 200px;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
@@ -81,7 +78,6 @@ h2.banner_title {
 }
 
 .banner_button .button :deep(.btn):hover {
-  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 

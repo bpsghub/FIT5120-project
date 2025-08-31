@@ -1,10 +1,13 @@
 <template>
   <div class="facility_event-w">
-    <div class="header-section">
-      <h1>Find Facility / Event</h1>
-      <p class="subtitle">
-        Discover local facilities and community events that serve your cultural needs
-      </p>
+    <div class="header-section d-flex">
+      <Button class="button" :hover="true" bg-color="white" :href="'/'">Back</Button>
+      <div class="facility_header">
+        <h1>Find Facility / Event</h1>
+        <p class="subtitle">
+          Discover local facilities and community events that serve your cultural needs
+        </p>
+      </div>
     </div>
 
     <!-- Tab Navigation -->
@@ -319,6 +322,7 @@ import L from 'leaflet'
 import 'leaflet-routing-machine'
 // import facilityService from '../services/facilityService.js' // Real API
 import mockFacilityService from '../services/mockFacilityService.js' // Mock data for now
+import Button from '@/components/Button.vue'
 
 // Fix for default marker icons in Leaflet
 delete L.Icon.Default.prototype._getIconUrl
