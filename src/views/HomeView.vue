@@ -20,7 +20,7 @@ import Button from '@/components/Button.vue'
         <Button class="button pe-5" bg-color="black" :hover="true" :href="'/FindFacility_Event'"
           >Find Facility / Event</Button
         >
-        <Button class="button" :hover="true" bg-color="white" :href="'/LearnEnglish.vue'"
+        <Button class="button" :hover="true" bg-color="white" :href="'/learnenglish'"
           >Learn English</Button
         >
       </div>
