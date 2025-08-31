@@ -132,21 +132,121 @@
         <p>Try adjusting your search criteria or filters</p>
         <button @click="clearFilters" class="clear-btn">Clear Filters</button>
       </div>
-    </div>
-
-    <!-- Test Button (temporary for development) -->
+    </div>    <!-- Test Button (temporary for development) -->
     <div class="debug-section" v-if="isDevelopment">
       <button @click="testAPI" class="test-btn">Test API Connection</button>
+    </div>
+
+    <!-- Map Section with Side-by-Side Layout -->
+    <div v-if="!loading && !error && facilities.length > 0" class="map-section">
+      <div class="map-header">
+        <h3>Map View</h3>
+        <div class="map-controls">
+          <div class="direction-controls" v-if="userLocationFound">
+            <button @click="clearDirections" class="clear-directions-btn">
+              Clear Directions
+            </button>
+            <span class="location-status">📍 Location enabled</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="map-content">
+        <!-- Left Side - Facility List -->
+        <div class="map-facilities-list">
+          <div class="facilities-list-header">
+            <h4>We found {{ facilities.length }} facilities near you!</h4>
+          </div>
+          
+          <div class="facilities-scroll-container">
+            <div
+              v-for="facility in facilities"
+              :key="facility.id"
+              @click="selectFacilityFromMap(facility)"
+              :class="['map-facility-item', { selected: selectedFacility?.id === facility.id }]"
+            >
+              <div class="facility-info">
+                <h5 class="facility-name">{{ facility.name }}</h5>
+                <p class="facility-type">{{ facility.type }}</p>
+                <p class="facility-distance">{{ calculateDistance(facility.coordinates) }} km</p>
+              </div>
+              <button 
+                @click.stop="requestUserLocationForDirections(facility)"
+                class="get-directions-btn"
+                title="Get directions to this facility"
+              >
+                🧭
+              </button>
+            </div>
+          </div>
+          
+          <!-- Pagination for map facility list -->
+          <div class="map-pagination" v-if="facilities.length > 10">
+            <button class="page-btn">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <span class="pagination-more">>></span>
+          </div>
+        </div>
+
+        <!-- Right Side - Map -->
+        <div class="map-container">
+          <div id="facilityMap" class="map" ref="mapContainer"></div>
+          
+          <!-- Map Loading State -->
+          <div v-if="mapLoading" class="map-loading">
+            <div class="loading-spinner"></div>
+            <p>Loading map...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Location Permission Dialog -->
+    <div v-if="showLocationPermission" class="location-overlay">
+      <div class="location-dialog">
+        <div class="dialog-header">
+          <h3>Get Directions</h3>
+          <button @click="closeLocationDialog" class="close-btn">&times;</button>
+        </div>
+        <div class="dialog-content">
+          <div class="location-icon">🧭</div>
+          <p>To show turn-by-turn directions to <strong>{{ selectedFacility?.name }}</strong>, we need to know your current location.</p>
+          
+          <div v-if="locationError" class="error-message">
+            <p>{{ locationError }}</p>
+          </div>
+          
+          <div class="dialog-actions">
+            <button @click="getUserLocation" class="allow-btn">
+              📍 Share My Location
+            </button>
+            <button @click="closeLocationDialog" class="deny-btn">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
+import L from 'leaflet'
+import 'leaflet-routing-machine'
 // import facilityService from '../services/facilityService.js' // Real API
 import mockFacilityService from '../services/mockFacilityService.js' // Mock data for now
 
-// Reactive data
+// Fix for default marker icons in Leaflet
+delete L.Icon.Default.prototype._getIconUrl
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png',
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+})
+
+// Existing reactive data
 const facilities = ref([])
 const loading = ref(false)
 const error = ref('')
@@ -157,6 +257,21 @@ const locationInput = ref('')
 const viewMode = ref('grid')
 const isDevelopment = ref(true) // Set to false in production
 
+// New reactive data for map functionality
+const selectedFacility = ref(null)
+const userLocation = ref({ lat: -37.8136, lng: 144.9631 }) // Default to Melbourne CBD
+const userLocationFound = ref(false)
+const mapContainer = ref(null)
+const map = ref(null)
+const markers = ref([])
+const markersLayer = ref(null)
+const routingControl = ref(null)
+const userLocationMarker = ref(null)
+const showLocationPermission = ref(false)
+const locationError = ref('')
+const mapLoading = ref(true)
+const mapLoaded = ref(false)
+
 // Methods
 const loadAllFacilities = async () => {
   loading.value = true
@@ -166,6 +281,13 @@ const loadAllFacilities = async () => {
     const response = await mockFacilityService.getAllFacilities()
     facilities.value = response.data || []
     console.log('✅ Loaded facilities:', response)
+    
+    // Initialize map after facilities are loaded
+    if (facilities.value.length > 0 && !mapLoaded.value) {
+      setTimeout(() => {
+        initializeMap()
+      }, 500)
+    }
   } catch (err) {
     error.value = err.message || 'Failed to load facilities'
     console.error('❌ Error loading facilities:', err)
@@ -233,8 +355,428 @@ const clearFilters = () => {
 
 const selectFacility = (facility) => {
   console.log('📍 Selected facility:', facility)
-  // TODO: Navigate to facility detail page or show modal
-  alert(`Selected: ${facility.name}\nAddress: ${facility.address}`)
+  selectedFacility.value = facility
+  
+  // Center map on selected facility if map is loaded
+  if (mapLoaded.value && map.value) {
+    map.value.setView([facility.coordinates.lat, facility.coordinates.lng], 16)
+    
+    // Find and open the popup for this facility
+    const marker = markers.value.find(m => m.facilityId === facility.id)
+    if (marker) {
+      marker.openPopup()
+    }
+  }
+}
+
+const selectFacilityFromMap = (facility) => {
+  selectFacility(facility)
+  
+  // Center map on selected facility
+  if (mapLoaded.value && map.value) {
+    map.value.setView([facility.coordinates.lat, facility.coordinates.lng], 16)
+    
+    // Find and open the popup for this facility
+    const marker = markers.value.find(m => m.facilityId === facility.id)
+    if (marker) {
+      marker.openPopup()
+    }
+  }
+}
+
+const calculateDistance = (coordinates) => {
+  // Simple distance calculation using Haversine formula (more accurate)
+  const lat1 = userLocation.value.lat
+  const lng1 = userLocation.value.lng
+  const lat2 = coordinates.lat
+  const lng2 = coordinates.lng
+
+  const R = 6371 // Radius of the Earth in kilometers
+  const dLat = (lat2 - lat1) * Math.PI / 180
+  const dLng = (lng2 - lng1) * Math.PI / 180
+  const a = 
+    Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
+    Math.sin(dLng/2) * Math.sin(dLng/2)
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
+  const distance = R * c
+
+  return Math.round(distance * 10) / 10 // Round to 1 decimal
+}
+
+// Map-related methods
+const initializeMap = async () => {
+  await nextTick()
+  
+  if (!mapContainer.value) {
+    console.error('Map container not found')
+    return
+  }
+
+  try {
+    // Initialize the map
+    map.value = L.map(mapContainer.value).setView(
+      [userLocation.value.lat, userLocation.value.lng], 
+      13
+    )
+
+    // Add tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map.value)
+
+    // Create markers layer group
+    markersLayer.value = L.layerGroup().addTo(map.value)
+
+    mapLoading.value = false
+    mapLoaded.value = true
+
+    // Add markers for current facilities
+    updateMapMarkers()
+  } catch (error) {
+    console.error('Error initializing map:', error)
+    mapLoading.value = false
+  }
+}
+
+const updateMapMarkers = () => {
+  if (!map.value || !markersLayer.value) return
+
+  // Clear existing markers
+  markersLayer.value.clearLayers()
+  markers.value = []
+
+  // Add markers for current facilities
+  facilities.value.forEach(facility => {
+    const marker = createMarker(facility)
+    markersLayer.value.addLayer(marker)
+    markers.value.push(marker)
+  })
+
+  // Fit map to show all markers if there are any
+  if (markers.value.length > 0) {
+    const group = new L.featureGroup(markers.value)
+    map.value.fitBounds(group.getBounds().pad(0.1))
+  }
+}
+
+const createMarker = (facility) => {
+  // Create custom icon based on facility type
+  const iconColor = getMarkerColor(facility.type)
+  
+  const customIcon = L.divIcon({
+    className: 'custom-marker',
+    html: `
+      <div style="
+        background-color: ${iconColor};
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 3px solid white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        color: white;
+        font-weight: bold;
+      ">
+        ${getMarkerSymbol(facility.type)}
+      </div>
+    `,
+    iconSize: [25, 25],
+    iconAnchor: [12, 12]
+  })
+
+  const marker = L.marker(
+    [facility.coordinates.lat, facility.coordinates.lng],
+    { icon: customIcon }
+  )
+
+  // Store facility ID for reference
+  marker.facilityId = facility.id
+
+  // Create popup content
+  const popupContent = `
+    <div style="min-width: 200px;">
+      <h4 style="margin: 0 0 10px 0; color: #333; font-size: 16px;">
+        ${facility.name}
+      </h4>
+      <p style="margin: 0 0 8px 0; color: #666; font-size: 14px;">
+        <strong>Type:</strong> ${facility.type}
+      </p>
+      <p style="margin: 0 0 8px 0; color: #666; font-size: 14px;">
+        <strong>Address:</strong> ${facility.address}
+      </p>
+      ${facility.ethnicTags ? `
+        <p style="margin: 0 0 8px 0; color: #666; font-size: 14px;">
+          <strong>Ethnic Tags:</strong> ${facility.ethnicTags.join(', ')}
+        </p>
+      ` : ''}
+      ${facility.openingHours ? `
+        <p style="margin: 0 0 8px 0; color: #666; font-size: 14px;">
+          <strong>Hours:</strong> ${facility.openingHours}
+        </p>
+      ` : ''}
+      ${facility.phone ? `
+        <p style="margin: 0 0 8px 0; color: #666; font-size: 14px;">
+          <strong>Phone:</strong> ${facility.phone}
+        </p>
+      ` : ''}
+      <div style="text-align: center; margin-top: 12px;">
+        <button 
+          onclick="window.showDirectionsToFacility(${facility.id})"
+          style="
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+          "
+        >
+          Get Directions
+        </button>
+      </div>
+    </div>
+  `
+
+  marker.bindPopup(popupContent, {
+    maxWidth: 300,
+    className: 'custom-popup'
+  })
+
+  // Handle marker click
+  marker.on('click', () => {
+    selectFacility(facility)
+  })
+
+  return marker
+}
+
+const getMarkerColor = (type) => {
+  const colors = {
+    'restaurant': '#e74c3c',
+    'supermarket': '#27ae60',
+    'community center': '#3498db',
+    'cultural event': '#9b59b6',
+    'food event': '#f39c12',
+    'workshop': '#16a085'
+  }
+  return colors[type] || '#95a5a6'
+}
+
+const getMarkerSymbol = (type) => {
+  const symbols = {
+    'restaurant': '🍽️',
+    'supermarket': '🏪',
+    'community center': '🏢',
+    'cultural event': '🎭',
+    'food event': '🍜',
+    'workshop': '🎨'
+  }
+  return symbols[type] || '📍'
+}
+
+// Geolocation and routing methods
+const requestUserLocationForDirections = (facility) => {
+  if (!userLocationFound.value) {
+    showLocationPermission.value = true
+    selectedFacility.value = facility
+  } else {
+    showDirections(facility)
+  }
+}
+
+const getUserLocation = () => {
+  locationError.value = ''
+  
+  if (!navigator.geolocation) {
+    locationError.value = 'Geolocation is not supported by this browser.'
+    return
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      userLocation.value = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      }
+      userLocationFound.value = true
+      showLocationPermission.value = false
+      
+      // Add user location marker to map
+      addUserLocationMarker()
+      
+      // Show directions to selected facility
+      if (selectedFacility.value) {
+        showDirections(selectedFacility.value)
+      }
+    },
+    (error) => {
+      console.error('Error getting location:', error)
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          locationError.value = 'Location access denied by user.'
+          break
+        case error.POSITION_UNAVAILABLE:
+          locationError.value = 'Location information is unavailable.'
+          break
+        case error.TIMEOUT:
+          locationError.value = 'Location request timed out.'
+          break
+        default:
+          locationError.value = 'An unknown error occurred while getting location.'
+          break
+      }
+      showLocationPermission.value = false
+    },
+    {
+      enableHighAccuracy: true,
+      timeout: 10000,
+      maximumAge: 60000
+    }
+  )
+}
+
+const addUserLocationMarker = () => {
+  if (!map.value || !userLocationFound.value) return
+  
+  // Remove existing user location marker
+  if (userLocationMarker.value) {
+    map.value.removeLayer(userLocationMarker.value)
+  }
+  
+  // Create user location icon
+  const userIcon = L.divIcon({
+    className: 'user-location-marker',
+    html: `
+      <div style="
+        background-color: #007bff;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 3px solid white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        position: relative;
+      ">
+        <div style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 8px;
+          height: 8px;
+          background-color: white;
+          border-radius: 50%;
+        "></div>
+      </div>
+    `,
+    iconSize: [20, 20],
+    iconAnchor: [10, 10]
+  })
+  
+  userLocationMarker.value = L.marker(
+    [userLocation.value.lat, userLocation.value.lng],
+    { icon: userIcon }
+  ).addTo(map.value)
+  
+  userLocationMarker.value.bindPopup('Your Location', {
+    className: 'user-location-popup'
+  })
+}
+
+const showDirections = (facility) => {
+  if (!map.value || !userLocationFound.value) return
+  
+  // Remove existing routing control
+  if (routingControl.value) {
+    map.value.removeControl(routingControl.value)
+  }
+  
+  // Create new routing control
+  routingControl.value = L.Routing.control({
+    waypoints: [
+      L.latLng(userLocation.value.lat, userLocation.value.lng),
+      L.latLng(facility.coordinates.lat, facility.coordinates.lng)
+    ],
+    routeWhileDragging: false,
+    addWaypoints: false,
+    createMarker: function() { return null; }, // Don't create default markers
+    lineOptions: {
+      styles: [{ color: '#007bff', weight: 6, opacity: 0.8 }]
+    },
+    show: true,
+    showAlternatives: false,
+    router: L.Routing.osrmv1({
+      serviceUrl: 'https://router.project-osrm.org/route/v1'
+    })
+  }).addTo(map.value)
+  
+  // Handle routing events
+  routingControl.value.on('routesfound', function(e) {
+    const routes = e.routes
+    const summary = routes[0].summary
+    console.log('Route found:', summary)
+    
+    showRouteInfo(summary)
+  })
+}
+
+const showRouteInfo = (summary) => {
+  const distance = (summary.totalDistance / 1000).toFixed(1) // Convert to km
+  const time = Math.round(summary.totalTime / 60) // Convert to minutes
+  
+  // Create a simple notification
+  const notification = document.createElement('div')
+  notification.innerHTML = `
+    <div style="
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 1000;
+      max-width: 300px;
+    ">
+      <h4 style="margin: 0 0 10px 0; color: #333;">Route to ${selectedFacility.value?.name}</h4>
+      <p style="margin: 0 0 5px 0;"><strong>Distance:</strong> ${distance} km</p>
+      <p style="margin: 0 0 10px 0;"><strong>Estimated time:</strong> ${time} minutes</p>
+      <button onclick="this.parentElement.parentElement.remove()" style="
+        background: #dc3545;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+      ">Close</button>
+    </div>
+  `
+  document.body.appendChild(notification)
+  
+  // Auto remove after 10 seconds
+  setTimeout(() => {
+    if (notification.parentElement) {
+      notification.remove()
+    }
+  }, 10000)
+}
+
+const closeLocationDialog = () => {
+  showLocationPermission.value = false
+  locationError.value = ''
+}
+
+const clearDirections = () => {
+  if (routingControl.value && map.value) {
+    map.value.removeControl(routingControl.value)
+    routingControl.value = null
+  }
 }
 
 const testAPI = async () => {
@@ -242,9 +784,35 @@ const testAPI = async () => {
   await loadAllFacilities()
 }
 
+// Watch for changes in facilities to update map
+watch(facilities, () => {
+  if (mapLoaded.value && facilities.value.length > 0) {
+    updateMapMarkers()
+  }
+})
+
 // Load data on component mount
 onMounted(() => {
   loadAllFacilities()
+  
+  // Add global function for popup buttons
+  window.showDirectionsToFacility = (facilityId) => {
+    const facility = facilities.value.find(f => f.id === facilityId)
+    if (facility) {
+      selectFacility(facility)
+      requestUserLocationForDirections(facility)
+    }
+  }
+})
+
+// Cleanup on unmount
+onUnmounted(() => {
+  if (window.showDirectionsToFacility) {
+    delete window.showDirectionsToFacility
+  }
+  if (routingControl.value && map.value) {
+    map.value.removeControl(routingControl.value)
+  }
 })
 </script>
 
@@ -587,6 +1155,441 @@ onMounted(() => {
   background: #1e7e34;
 }
 
+/* Map Section */
+.map-section {
+  margin-top: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.map-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.map-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.direction-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.clear-directions-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.clear-directions-btn:hover {
+  background: #c82333;
+}
+
+.location-status {
+  color: #28a745;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.map-content {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  height: 600px;
+}
+
+/* Left Side - Facility List for Map */
+.map-facilities-list {
+  background: #f8f9fa;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.facilities-list-header {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  background: white;
+}
+
+.facilities-list-header h4 {
+  margin: 0;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.facilities-scroll-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.map-facility-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #e0e0e0;
+}
+
+.map-facility-item:hover {
+  background: #f0f8ff;
+  border-color: #007bff;
+  transform: translateX(2px);
+}
+
+.map-facility-item.selected {
+  background: #e3f2fd;
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+}
+
+.map-facility-item .facility-info {
+  flex: 1;
+}
+
+.map-facility-item .facility-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.map-facility-item .facility-type {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0 0 4px 0;
+  text-transform: capitalize;
+}
+
+.map-facility-item .facility-distance {
+  font-size: 0.75rem;
+  color: #999;
+  margin: 0;
+}
+
+.get-directions-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.get-directions-btn:hover {
+  background: #218838;
+  transform: scale(1.1);
+}
+
+.map-pagination {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  background: white;
+}
+
+.map-pagination .page-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #666;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.map-pagination .page-btn:hover {
+  background: #f8f9fa;
+}
+
+.map-pagination .page-btn.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.map-pagination .pagination-more {
+  color: #999;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+/* Right Side - Map Container */
+.map-container {
+  position: relative;
+  background: #e0e0e0;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.map-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: #666;
+  z-index: 10;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Location Permission Dialog */
+.location-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.location-dialog {
+  background: white;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 0 20px;
+}
+
+.dialog-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.dialog-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.location-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.dialog-content p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.error-message p {
+  margin: 0;
+  color: #856404;
+}
+
+.dialog-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.allow-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.allow-btn:hover {
+  background: #218838;
+}
+
+.deny-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.deny-btn:hover {
+  background: #545b62;
+}
+
+/* Custom Leaflet Popup Styles */
+:deep(.custom-popup .leaflet-popup-content-wrapper) {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+:deep(.custom-popup .leaflet-popup-content) {
+  margin: 12px;
+  line-height: 1.4;
+}
+
+:deep(.custom-popup .leaflet-popup-tip) {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom marker hover effects */
+:deep(.custom-marker) {
+  transition: transform 0.2s ease;
+}
+
+:deep(.custom-marker:hover) {
+  transform: scale(1.1);
+}
+
+/* User Location Marker Styles */
+:deep(.user-location-marker) {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Routing Control Customization */
+:deep(.leaflet-routing-container) {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+:deep(.leaflet-routing-instructions) {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+:deep(.leaflet-routing-instruction) {
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+:deep(.leaflet-routing-instruction:last-child) {
+  border-bottom: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .header-section h1 {
@@ -619,6 +1622,48 @@ onMounted(() => {
   .list .facility-image {
     width: 100%;
     height: 200px;
+  }
+
+  .map-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .map-controls {
+    justify-content: center;
+  }
+
+  .map-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 400px;
+    height: 700px;
+  }
+
+  .map-facilities-list {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .facilities-scroll-container {
+    max-height: 250px;
+  }
+
+  .direction-controls {
+    justify-content: center;
+  }
+
+  .map-facility-item {
+    padding: 10px;
+  }
+
+  .map-facility-item .facility-name {
+    font-size: 0.9rem;
+  }
+
+  .map-facility-item .facility-type,
+  .map-facility-item .facility-distance {
+    font-size: 0.75rem;
   }
 }
 </style>
