@@ -17,12 +17,14 @@ import Button from '@/components/Button.vue'
         </div>
       </div>
       <div class="banner_button d-flex justify-content-center pt-3 pb-5">
-        <Button class="button pe-5" bg-color="black" :hover="true" :href="'/FacilityEvent'"
-          >Find Facility / Event</Button
-        >
-        <Button class="button" :hover="true" bg-color="white" :href="'/learnenglish'"
-          >Learn English</Button
-        >
+        <div class="button-wrapper">
+          <Button class="button" bg-color="black" :hover="true" :href="'/FindFacility_Event'"
+            >Find Facility / Event</Button
+          >
+          <Button class="button" :hover="true" bg-color="white" :href="'/learnenglish'"
+            >Learn English</Button
+          >
+        </div>
       </div>
     </div>
   </section>
@@ -68,6 +70,14 @@ h2.banner_title {
   gap: 1rem;
 }
 
+.button-wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .banner_button .button :deep(.btn) {
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -75,6 +85,9 @@ h2.banner_title {
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  padding: 12px 24px;
+  min-width: 200px;
+  font-size: 1rem;
 }
 
 .banner_button .button :deep(.btn):hover {
@@ -107,67 +120,130 @@ h2.banner_title {
   .banner_button {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
   }
 
-  .banner_button .button {
-    width: 100%;
-    max-width: 280px;
-  }
-
-  .banner_button .button :deep(.btn) {
-    width: 100%;
-    margin: 0;
-  }
-}
-
-@media (max-width: 576px) {
-  .banner {
-    min-height: 40vh;
-    padding: 10px 0;
-  }
-
-  .banner .container {
-    padding: 0 15px;
-  }
-
-  .banner_button {
+  .button-wrapper {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
     width: 100%;
     max-width: 320px;
+    gap: 1.25rem;
     margin: 0 auto;
-    padding-top: 1.5rem;
   }
 
   .banner_button .button {
     width: 100%;
-    max-width: 280px;
   }
 
   .banner_button .button :deep(.btn) {
     width: 100%;
     margin: 0;
-    padding: 14px 16px;
-    font-size: 0.95rem;
-    white-space: normal;
-    text-align: center;
-    line-height: 1.3;
-    min-height: 48px;
+    padding: 14px 20px;
+    font-size: 1rem;
+    min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+}
+
+/* Extra small devices (less than 576px) - Perfect centering */
+@media (max-width: 575.98px) {
+  .banner {
+    min-height: 50vh;
+    padding: 20px 0;
+  }
+
+  .banner .container {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner .row {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left_content,
+  .right_content {
+    width: 100%;
+    text-align: center;
+  }
 
   h2.banner_title {
-    font-size: clamp(2rem, 6vw, 3rem);
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
   }
 
   .banner .right_content p {
-    font-size: clamp(0.85rem, 2vw, 1rem);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .banner_button {
+    margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    gap: 1rem;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .banner_button .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .banner_button .button :deep(.btn) {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    min-height: 60px;
+    line-height: 1.3;
+    white-space: normal;
+    word-wrap: break-word;
+    hyphens: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .banner_button .button :deep(.btn):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  .body_image {
+    max-height: 250px;
   }
 }
 
@@ -191,6 +267,20 @@ h2.banner_title {
 
   .banner_button {
     margin-top: 1.5rem;
+  }
+
+  .button-wrapper {
+    max-width: 280px;
+  }
+
+  .banner_button .button :deep(.btn) {
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    min-height: 64px;
+    line-height: 1.4;
+    white-space: normal;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 
   .body_image {
