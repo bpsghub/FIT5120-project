@@ -21,13 +21,19 @@ const router = createRouter({
     },
     {
       path: '/FacilityEvent',
-      name: '/facilityevent',
+      name: 'facilityevent',
       component: FacilityEvent,
     },
     {
       path: '/learnenglish',
-      name: '/learn_english',
+      name: 'learnenglish',
       component: LearnEnglish,
+    },
+    {
+      path: '/flashcards/:category/:language',
+      name: 'flashcards',
+      component: () => import('../views/FlashcardsView.vue'),
+      props: true,
     },
   ],
 })
