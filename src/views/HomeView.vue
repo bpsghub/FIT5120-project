@@ -18,7 +18,7 @@ import Button from '@/components/Button.vue'
       </div>
       <div class="banner_button d-flex justify-content-center pt-3 pb-5">
         <div class="button-wrapper">
-          <Button class="button" bg-color="black" :hover="true" :href="'/FindFacility_Event'"
+          <Button class="button" bg-color="black" :hover="true" :href="'/facilityevent'"
             >Find Facility / Event</Button
           >
           <Button class="button" :hover="true" bg-color="white" :href="'/learnenglish'"
