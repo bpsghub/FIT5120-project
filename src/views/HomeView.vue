@@ -17,7 +17,7 @@ import Button from '@/components/Button.vue'
         </div>
       </div>
       <div class="banner_button d-flex justify-content-center pt-3 pb-5">
-        <Button class="button pe-5" bg-color="black" :hover="true" :href="'/FindFacility_Event'"
+        <Button class="button pe-5" bg-color="black" :hover="true" :href="'/FacilityEvent'"
           >Find Facility / Event</Button
         >
         <Button class="button" :hover="true" bg-color="white" :href="'/learnenglish'"
@@ -118,6 +118,56 @@ h2.banner_title {
   .banner_button .button :deep(.btn) {
     width: 100%;
     margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner {
+    min-height: 40vh;
+    padding: 10px 0;
+  }
+
+  .banner .container {
+    padding: 0 15px;
+  }
+
+  .banner_button {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+  }
+
+  .banner_button .button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .banner_button .button :deep(.btn) {
+    width: 100%;
+    margin: 0;
+    padding: 14px 16px;
+    font-size: 0.95rem;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h2.banner_title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .banner .right_content p {
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    margin-bottom: 1rem;
   }
 }
 

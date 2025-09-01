@@ -1,8 +1,8 @@
 <template>
   <div class="button-w">
-    <a :href="href" :class="btnClasses()">
+    <router-link :to="href" :class="btnClasses()">
       <slot>Default button</slot>
-    </a>
+    </router-link>
   </div>
 </template>
 
@@ -73,6 +73,23 @@ const btnClasses = () => ({
     padding: 10px 20px;
     font-size: 0.95rem;
     min-width: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .button-w .btn {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    min-width: 120px;
+    width: 100%;
+    max-width: 280px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
