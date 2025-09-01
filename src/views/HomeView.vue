@@ -39,27 +39,119 @@ import Button from '@/components/Button.vue'
 .banner {
   background-image: url('https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3803.jpg');
   background-size: cover;
-  background-position: bottom left;
+  background-position: center;
   background-repeat: no-repeat;
-  min-height: 50vh; /* Add some height to see the background */
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
 }
 
 h2.banner_title {
   font-family: 'Inter', sans-serif;
   font-weight: 900;
-  font-size: 5rem;
+  font-size: clamp(2.5rem, 8vw, 5rem);
   color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+}
+
+.banner .right_content p {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.5rem;
+}
+
+.banner_button {
+  margin-top: 2rem;
+  gap: 1rem;
 }
 
 .banner_button .button :deep(.btn) {
-  font-size: 1.5rem;
-  padding: 20px 40px;
-  min-width: 100px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.banner_button .button :deep(.btn):hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .body_image {
-  width: 100vw; /* Full viewport width */
+  width: 100%;
   height: auto;
-  object-fit: cover; /* Maintain aspect ratio while covering the area */
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 768px) {
+  .banner {
+    min-height: 50vh;
+    padding: 20px 0;
+  }
+
+  .banner .container {
+    padding: 0 15px;
+  }
+
+  .banner .row {
+    text-align: center;
+  }
+
+  .banner_button {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .banner_button .button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .banner_button .button :deep(.btn) {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    min-height: 45vh;
+    padding: 15px 0;
+  }
+
+  .banner .container {
+    padding: 0 10px;
+  }
+
+  h2.banner_title {
+    margin-bottom: 0.8rem;
+  }
+
+  .banner .right_content p {
+    margin-bottom: 1rem;
+  }
+
+  .banner_button {
+    margin-top: 1.5rem;
+  }
+
+  .body_image {
+    max-height: 250px;
+  }
+}
+
+/* Better container responsiveness */
+@media (min-width: 1200px) {
+  .banner {
+    min-height: 70vh;
+  }
 }
 </style>
