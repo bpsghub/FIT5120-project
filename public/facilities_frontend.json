@@ -1,0 +1,326 @@
+[
+  {
+    "id": 1,
+    "name": "Wulong Tai Chi Kung Fu Melbourne CBD",
+    "type": "facility",
+    "address": "506 Elizabeth St, Melbourne VIC 3000",
+    "coordinates": {
+      "lat": -37.8068236,
+      "lng": 144.9600646
+    },
+    "ethnicTags": ["Chinese"],
+    "phone": "61 3 9939 5430",
+    "rating": 5,
+    "image": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=lpqukzy8l7DvGKjqNrjXfQ&cb_client=search.gws-prod.gps&w=408&h=240&yaw=58.688732&pitch=0&thumbfov=100",
+    "sourceLayer": "mandarin",
+    "raw": {
+      "description": "Wulong Tai Chi Kung Fu is Melbourne's premium school for expert tai chi, qigong and wushu (kung fu) training."
+    }
+  },
+  {
+    "id": 2,
+    "name": "RMIT Table Tennis Club",
+    "type": "facility",
+    "address": "Building 8, Swanston St, Melbourne VIC 3000",
+    "coordinates": {
+      "lat": -37.8086521,
+      "lng": 144.9636394
+    },
+    "ethnicTags": ["Chinese"],
+    "phone": null,
+    "rating": 3.7,
+    "image": "https://via.placeholder.com/408x272/4285f4/ffffff?text=RMIT%20Table%20Tennis%20Cl",
+    "sourceLayer": "mandarin",
+    "raw": {
+      "description": "The RMIT Table Tennis Club operates in the City campus and the Bundoora Campus of RMIT University. Open to veterans, new players and everyone inbetween!"
+    }
+  },
+  {
+    "id": 3,
+    "name": "PTTA Table Tennis",
+    "type": "facility",
+    "address": "30 Aughtie Dr, Albert Park VIC 3206",
+    "coordinates": {
+      "lat": -37.8433729,
+      "lng": 144.9613557
+    },
+    "ethnicTags": ["Chinese"],
+    "phone": "61 411 540 550",
+    "rating": 5,
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nr2rWfoM2YTjvzkxdb3JQVNO3HG7RkdP8x-h91oWjccX_c2ffvArYyvRzZ1ed1tPhuonp6VEjGvX54rvCayt6J89-66ulJfRWZgWkBnA5fy-MIkMsM8w0fi2Fq2olfZWMp0Zx_n=w408-h306-k-no",
+    "sourceLayer": "mandarin",
+    "raw": {
+      "description": "At PTTA, our mission is to help table tennis become freely available and accessible in Melbourne. No matter where you are in your table tennis journey."
+    }
+  },
+  {
+    "id": 4,
+    "name": "Little Mandarin Yoga & Pilates (CBD)",
+    "type": "facility",
+    "address": "Lv 1/385 Little Lonsdale St, Melbourne VIC 3000",
+    "coordinates": {
+      "lat": -37.8117471,
+      "lng": 144.960508
+    },
+    "ethnicTags": ["Chinese"],
+    "phone": "61 489 083 830",
+    "rating": 4.6,
+    "image": "https://lh3.googleusercontent.com/p/AF1QipMI1SIX5sF1fOHtijvQk6B1En2zyZXjWQfHZPR_=w408-h272-k-no",
+    "sourceLayer": "mandarin",
+    "raw": {
+      "description": "Little Mandarin is an inclusive yoga and Pilates studio with homes in Melbourne CBD, Camberwell Junction, and Blackburn Square."
+    }
+  },
+  {
+    "id": 5,
+    "name": "Melbourne Chess Club",
+    "type": "facility",
+    "address": "62-66 Leicester St, Fitzroy VIC 3065",
+    "coordinates": {
+      "lat": -37.7952875,
+      "lng": 144.9777499
+    },
+    "ethnicTags": ["Chinese"],
+    "phone": "61 431 141 175",
+    "rating": 4.8,
+    "image": "https://lh3.googleusercontent.com/p/AF1QipNWk3bOGdEvViZ_wVNKFM0ymbsB7gtQlaKc8hkA=w408-h272-k-no",
+    "sourceLayer": "mandarin",
+    "raw": {
+      "description": "Established in 1866, the MCC is Australia's biggest chess club. We strive to provide the best experience for chess players at all levels and all age groups."
+    }
+  },
+  {
+    "id": 6,
+    "name": "Melbourne Museum",
+    "type": "facility",
+    "address": "11 Nicholson St, Carlton VIC 3053",
+    "coordinates": {
+      "lat": -37.803273,
+      "lng": 144.9717408
+    },
+    "ethnicTags": ["Vietnamese"],
+    "phone": "61 131102",
+    "rating": 4.6,
+    "image": "https://via.placeholder.com/408x272/4285f4/ffffff?text=Melbourne%20Museum",
+    "sourceLayer": "Vietnamese",
+    "raw": {
+      "description": "Museums Victoria acknowledges the Wurundjeri Woi Wurrung and Boon Wurrung Bunurong peoples of the eastern Kulin Nations where we work, and First Peoples across Victoria and Australia. First Peoples are advised that this site may contain voices, images, and names of people now passed and content of cultural significance."
+    }
+  },
+  {
+    "id": 7,
+    "name": "SUM OF US STUDIO | Physiotherapy and pilates studio in Prahran, Melbourne",
+    "type": "facility",
+    "address": "602 High St, Prahran VIC 3181",
+    "coordinates": {
+      "lat": -37.8539949,
+      "lng": 145.0080278
+    },
+    "ethnicTags": ["Vietnamese"],
+    "phone": "61 3 9510 6311",
+    "rating": 4.8,
+    "image": "https://lh3.googleusercontent.com/p/AF1QipMkOyChrPBnHSsu2UIdOXxfIhCA-jN9R0mmOdrD=w408-h612-k-no",
+    "sourceLayer": "Vietnamese",
+    "raw": {
+      "description": "Transform your fitness with reformer pilates classes in Prahran, Melbourne. Strengthen your body, fix posture, and enhance flexibility. Book today."
+    }
+  },
+  {
+    "id": 8,
+    "name": "Royal Botanic Gardens, Melbourne",
+    "type": "facility",
+    "address": "3004, Victoria, Melbourne",
+    "coordinates": {
+      "lat": -37.8302443,
+      "lng": 144.9801496
+    },
+    "ethnicTags": ["Vietnamese"],
+    "phone": "0392522300",
+    "rating": 4.7,
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nojzr0WhZxhBZhryV64ON35YYCgrU0GngkWUXEen8MBsCXOADf3kO84fr_mDv6LsA4XhO5G4PYRpJh8vnHefVkCfRQ948y4XOP5N02JGXldaQthPrUIys7kLxsqGxcjGxsBiqom=w408-h306-k-no",
+    "sourceLayer": "Vietnamese",
+    "raw": {
+      "description": "Royal Botanic Gardens Victoria plays a leading role in the conservation of plants through biodiversity research, programs to protect rare and threatened plants."
+    }
+  },
+  {
+    "id": 9,
+    "name": "Alexandra Gardens",
+    "type": "park",
+    "address": "Alexandra Gardens Skate Park, 3 Boathouse Dr, Melbourne VIC 3004",
+    "coordinates": {
+      "lat": -37.8204318,
+      "lng": 144.9721339
+    },
+    "ethnicTags": ["Vietnamese"],
+    "phone": "61 3 9658 9658",
+    "rating": 4.7,
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nprhAd3fTS_1Nr_mKRZuy-_DS4z51I7zy8TAAls-VY2hTQUaWsmzHj2BfYLl1j4LY4sEHqX8K6vgvhyHrJlQVqCx9HCBArdPIhnX9hBVYTtYMp1EbOFlKA9iL_2v8tyyp2EiId6VQ=w408-h306-k-no",
+    "sourceLayer": "Vietnamese",
+    "raw": {
+      "description": "Situated beside the Yarra River, the gardens' notable features include historic boathouses and Riverslide Skate Park."
+    }
+  },
+  {
+    "id": 10,
+    "name": "Energy Badminton Centre (EBC)",
+    "type": "community_centre",
+    "address": "Unit 2/4 Brough St, Springvale VIC 3171",
+    "coordinates": {
+      "lat": -37.9417938,
+      "lng": 145.1698208
+    },
+    "ethnicTags": ["Vietnamese"],
+    "phone": "61 478 787 988",
+    "rating": 4.5,
+    "image": "https://lh3.googleusercontent.com/p/AF1QipMl-4QdyjDRxs4a73Qwa1B-GbVHet1-ZPrVzguz=w426-h240-k-no",
+    "sourceLayer": "Vietnamese",
+    "raw": {
+      "description": "A premier badminton centre located in Springvale, Victoria. The perfect destination for badminton enthusiasts of all skill levels. · "
+    }
+  },
+  {
+    "id": 11,
+    "name": "Altona Badminton Centre",
+    "type": "community_centre",
+    "address": "Paisley Park, 217 Mason St, Altona North VIC 3025",
+    "coordinates": {
+      "lat": -37.8406432,
+      "lng": 144.8581873
+    },
+    "ethnicTags": ["Vietnamese"],
+    "phone": "61 419 324 512",
+    "rating": 4.5,
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqcCRFXJ4fjcAWHhqh2nKyGfQ6_APGx9CcAx69fhqk9SuJTc2au_o4YSA-yvoGKoT1QFI40Ud9bezmQe4JB_d6whCZxq8lQMxWHiFvNuKAF7oaNzkebv8ZF_00JREFRRmXeu5DM=w408-h544-k-no",
+    "sourceLayer": "Vietnamese",
+    "raw": {
+      "description": "Badminton complex in Altona North, Victoria. 12 high quality wood flooring badminton courts, junior badminton academy training and kiosk."
+    }
+  },
+  {
+    "id": 12,
+    "name": "Melbourne Sports and Aquatic Centre",
+    "type": "facility",
+    "address": "30 Aughtie Dr, Albert Park VIC 3206",
+    "coordinates": {
+      "lat": -37.843442,
+      "lng": 144.9618623
+    },
+    "ethnicTags": ["Indonesian"],
+    "phone": "61 3 9926 1555",
+    "rating": 4.4,
+    "image": "https://lh3.googleusercontent.com/p/AF1QipMjy9DCY45nu95HEyYtUt7XGOrisXohqqIw5AZK=w408-h331-k-no",
+    "sourceLayer": "Indonesian",
+    "raw": {
+      "description": "We are the home of high-performance sport in Victoria and are ready to support your sporting journey. From grassroots and community sport, personal fitness and health to excelling in a career in high-performance competition, we’ve got everything you need to succeed."
+    }
+  },
+  {
+    "id": 13,
+    "name": "Albert Park Yachting & Angling Club",
+    "type": "park",
+    "address": "129B Beaconsfield Parade, Albert Park VIC 3206",
+    "coordinates": {
+      "lat": -37.8494403,
+      "lng": 144.9507803
+    },
+    "ethnicTags": ["Indonesian"],
+    "phone": "61 3 4828 9218",
+    "rating": 4.6,
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npfeIWwZrucqolYkZ90lDnkW4drAdvMPGPDiBTeoN3kPK_bz0EYYWPdCWsm1tBhKxQeryguBI8P8DU8-LsxADYCAPChjUpsf3_46MOhXGy0CrWnK7vLRaLo6aVhoOUTB3Fgywx6_g=w408-h306-k-no",
+    "sourceLayer": "Indonesian",
+    "raw": {
+      "description": "The Angler's has been a hive of activity in Albert Park since 1909. With engaging atmosphere & magnificent outlook, it's one of Melbourne's Premier Clubs."
+    }
+  },
+  {
+    "id": 14,
+    "name": "Victoria National Gallery",
+    "type": "facility",
+    "address": "180 St Kilda Rd, Melbourne VIC 3006",
+    "coordinates": {
+      "lat": -37.8225942,
+      "lng": 144.9689278
+    },
+    "ethnicTags": ["Indonesian"],
+    "phone": "61 3 8620 2222",
+    "rating": 4.7,
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npXMt38ZusfYFTgndJqKcqrb6CWyYv83kapL-qek6UiJcELQ1v1R4WOOgP801f-ikzh6CgDTgIk-T20jFRs9A09uQtVbY-KDjguKkR2XG0pjJ8O6m1qLWDE9JZHjM1PFcJZ0Xc=w408-h306-k-no",
+    "sourceLayer": "Indonesian",
+    "raw": {
+      "description": "The National Gallery of Victoria (NGV) is Australia's largest and most visited art gallery and museum, renowned for its famous exhibitions."
+    }
+  },
+  {
+    "id": 15,
+    "name": "Immigration Museum",
+    "type": "facility",
+    "address": "400 Flinders St, Melbourne VIC 3000",
+    "coordinates": {
+      "lat": -37.8192442,
+      "lng": 144.9604547
+    },
+    "ethnicTags": ["Indonesian"],
+    "phone": "61 131102",
+    "rating": 4.4,
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4np_shifzYEceRMrw4buoXhqy5CG6rHY0Uqf2GAHncdPeQihX4bWUcw8wTcPmuuEv0mMhcMev237zhS8a2ipLojebyEGY7IYtUmzn0kx4cShCIIXWoQru49ccysj8-9cIfo2ejVo=w408-h306-k-no",
+    "sourceLayer": "Indonesian",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 16,
+    "name": "Victoria Market Pharmacy",
+    "type": "market",
+    "address": "523 Elizabeth St, Melbourne VIC 3000",
+    "coordinates": {
+      "lat": -37.8066573,
+      "lng": 144.9593671
+    },
+    "ethnicTags": ["Indonesian"],
+    "phone": "61 3 9329 7703",
+    "rating": 4.6,
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nplWDTXc-rjUvH2iOvA-yEqxmesbyoZZMMrQrPgoiKHV7ft8BohUfgxETXTSWYulWl01Q6e0RkIg90_5kUTVto-13t9lWTrb7Mjab0wep2HHbPCkCe4p96aiFx6hRLefo77VDCFOnwUbV4=w426-h240-k-no",
+    "sourceLayer": "Indonesian",
+    "raw": {
+      "description": "Victoria Market Pharmacy is located at the iconic Queen Victoria Market. Our friendly pharmacists & staff are here to help you with your medical & health."
+    }
+  },
+  {
+    "id": 17,
+    "name": "Princes Wharf",
+    "type": "facility",
+    "address": "Pier St, Port Melbourne VIC 3207",
+    "coordinates": {
+      "lat": -37.8410117,
+      "lng": 144.9269522
+    },
+    "ethnicTags": ["Indonesian"],
+    "phone": null,
+    "rating": 4.6,
+    "image": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nqIW7hP3eRsB73CB-sQMWvp_05z4BnBBilxRyVjoFUuEr6ytbre59jINtfEsqI3goMNCascDNInA5kRQbAKcxM_kZS5J7DwbuzaDYuBO6XGnPLiEA0_ThhiZYjhsChL5fvOk1Bceg=w408-h271-k-no",
+    "sourceLayer": "Indonesian",
+    "raw": {
+      "description": "Princes Pier is a 580 metre long [1] historic pier on Port Phillip, in Port Melbourne, Victoria, Australia. It was known as the New Railway Pier."
+    }
+  },
+  {
+    "id": 18,
+    "name": "Hardrock Climbing | Melbourne CBD",
+    "type": "facility",
+    "address": "4/8 Franklin St, Melbourne VIC 3000",
+    "coordinates": {
+      "lat": -37.8071108,
+      "lng": 144.9624975
+    },
+    "ethnicTags": ["Indonesian"],
+    "phone": "61 3 9631 5300",
+    "rating": 4.5,
+    "image": "https://lh3.googleusercontent.com/p/AF1QipNWViBzLilQhfn-bJNwmDDt91WQt1RGoWBiN6UX=w408-h272-k-no",
+    "sourceLayer": "Indonesian",
+    "raw": {
+      "description": "Melbourne's Ultimate Climbing Experience. Established since 1993. Access over 100 indoor rock climbing routes graded from 6 to 30 including top roping."
+    }
+  }
+]

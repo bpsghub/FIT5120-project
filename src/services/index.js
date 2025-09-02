@@ -1,8 +1,7 @@
 // Service exports for easy importing
-import mockFacilityService from './mock/facilityService.js'
+import realFacilityService from './facilityService.js'
 
-// For now, always use mock service in development
-const facilityService = mockFacilityService
+// Use real facility service that loads from JSON files
+const facilityService = realFacilityService
 
 export { facilityService }
-export { default as mockFacilityService } from './mock/facilityService.js'
