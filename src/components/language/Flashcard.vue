@@ -1,56 +1,36 @@
 <template>
   <div class="flashcard-container">
     <div class="flashcard" :class="{ 'is-flipped': isFlipped }" @click="flip">
-      <!-- Front side (English) -->
+      <!-- Front side (Native language) -->
       <div class="flashcard-side flashcard-front">
         <div class="card-content">
-          <div class="language-label">English</div>
-          <div class="text-content">{{ phrase.english }}</div>
-          <div class="flip-hint">Click to see translation</div>
-          <button
-            class="audio-btn"
-            @click.stop="playAudio(phrase.english, 'en')"
-            :disabled="isPlayingAudio"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              style="height: 16px; width: 16px"
-            >
+          <div class="language-label">{{ getLanguageName(nativeLanguage) }}</div>
+          <div class="text-content">{{ phrase.native }}</div>
+          <div class="flip-hint">Click to see English translation</div>
+          <button class="audio-btn" @click.stop="playAudio(phrase.native, nativeLanguage)" :disabled="isPlayingAudio">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 16px; width: 16px">
               <path
-                d="M3 10v4a1 1 0 0 0 1 1h2.22l3.13 3.13a1 1 0 0 0 1.65-.76V6.63a1 1 0 0 0-1.65-.76L6.22 9H4a1 1 0 0 0-1 1zM14 8.24a1 1 0 0 1 1.41 0 5 5 0 0 1 0 7.07 1 1 0 1 1-1.41-1.41 3 3 0 0 0 0-4.24 1 1 0 0 1 0-1.42z"
-              />
+                d="M3 10v4a1 1 0 0 0 1 1h2.22l3.13 3.13a1 1 0 0 0 1.65-.76V6.63a1 1 0 0 0-1.65-.76L6.22 9H4a1 1 0 0 0-1 1zM14 8.24a1 1 0 0 1 1.41 0 5 5 0 0 1 0 7.07 1 1 0 1 1-1.41-1.41 3 3 0 0 0 0-4.24 1 1 0 0 1 0-1.42z" />
               <path
-                d="M17.7 5.14a1 1 0 1 1 1.41 1.41 9 9 0 0 1 0 12.73 1 1 0 0 1-1.41-1.41 7 7 0 0 0 0-9.9 1 1 0 0 1 0-1.42z"
-              />
+                d="M17.7 5.14a1 1 0 1 1 1.41 1.41 9 9 0 0 1 0 12.73 1 1 0 0 1-1.41-1.41 7 7 0 0 0 0-9.9 1 1 0 0 1 0-1.42z" />
             </svg>
             {{ isPlayingAudio ? 'Playing...' : 'Listen' }}
           </button>
         </div>
       </div>
 
-      <!-- Back side (Native language) -->
+      <!-- Back side (English) -->
       <div class="flashcard-side flashcard-back">
         <div class="card-content">
-          <div class="language-label">{{ getLanguageName(nativeLanguage) }}</div>
-          <div class="text-content">{{ phrase.native }}</div>
-          <div class="flip-hint">Click to see English</div>
-          <button
-            class="audio-btn"
-            @click.stop="playAudio(phrase.native, nativeLanguage)"
-            :disabled="isPlayingAudio"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              style="height: 16px; width: 16px"
-            >
+          <div class="language-label">English</div>
+          <div class="text-content">{{ phrase.english }}</div>
+          <div class="flip-hint">Click to see {{ getLanguageName(nativeLanguage) }}</div>
+          <button class="audio-btn" @click.stop="playAudio(phrase.english, 'en')" :disabled="isPlayingAudio">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 16px; width: 16px">
               <path
-                d="M3 10v4a1 1 0 0 0 1 1h2.22l3.13 3.13a1 1 0 0 0 1.65-.76V6.63a1 1 0 0 0-1.65-.76L6.22 9H4a1 1 0 0 0-1 1zM14 8.24a1 1 0 0 1 1.41 0 5 5 0 0 1 0 7.07 1 1 0 1 1-1.41-1.41 3 3 0 0 0 0-4.24 1 1 0 0 1 0-1.42z"
-              />
+                d="M3 10v4a1 1 0 0 0 1 1h2.22l3.13 3.13a1 1 0 0 0 1.65-.76V6.63a1 1 0 0 0-1.65-.76L6.22 9H4a1 1 0 0 0-1 1zM14 8.24a1 1 0 0 1 1.41 0 5 5 0 0 1 0 7.07 1 1 0 1 1-1.41-1.41 3 3 0 0 0 0-4.24 1 1 0 0 1 0-1.42z" />
               <path
-                d="M17.7 5.14a1 1 0 1 1 1.41 1.41 9 9 0 0 1 0 12.73 1 1 0 0 1-1.41-1.41 7 7 0 0 0 0-9.9 1 1 0 0 1 0-1.42z"
-              />
+                d="M17.7 5.14a1 1 0 1 1 1.41 1.41 9 9 0 0 1 0 12.73 1 1 0 0 1-1.41-1.41 7 7 0 0 0 0-9.9 1 1 0 0 1 0-1.42z" />
             </svg>
             {{ isPlayingAudio ? 'Playing...' : 'Listen' }}
           </button>
@@ -87,7 +67,6 @@ const isPlayingAudio = ref(false)
 // Computed properties
 const getLanguageName = computed(() => {
   const languageMap = {
-    en: 'English',
     zh: '中文',
     vi: 'Tiếng Việt',
     id: 'Bahasa Indonesia',
