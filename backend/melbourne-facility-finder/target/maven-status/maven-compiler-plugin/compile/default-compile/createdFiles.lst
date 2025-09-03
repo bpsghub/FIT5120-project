@@ -1,0 +1,5 @@
+com/example/facilityfinder/controller/ItemController.class
+com/example/facilityfinder/model/Item$Coordinates.class
+com/example/facilityfinder/service/ItemService.class
+com/example/facilityfinder/model/Item.class
+com/example/facilityfinder/controller/FacilityController.class
