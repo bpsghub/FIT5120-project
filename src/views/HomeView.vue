@@ -18,22 +18,16 @@ import Button from '@/components/Button.vue'
       </div>
       <div class="banner_button d-flex justify-content-center pt-3 pb-5">
         <div class="button-wrapper">
-          <Button class="button" bg-color="black" :hover="true" :href="'/facilityevent'"
-            >Find Facility / Event</Button
-          >
-          <Button class="button" :hover="true" bg-color="white" :href="'/learnenglish'"
-            >Learn English</Button
-          >
+          <Button class="button" bg-color="black" :hover="true" :href="'/facilityevent'">Find Facility / Event</Button>
+          <Button class="button" :hover="true" bg-color="white" :href="'/learnenglish'">Learn English</Button>
         </div>
       </div>
     </div>
   </section>
   <section class="body">
     <img
-      src="https://thumbs.dreamstime.com/b/smiling-senior-couple-jogging-park-smiling-senior-couple-jogging-park-smiling-senior-active-couple-walking-jogging-130227194.jpg"
-      alt=""
-      class="body_image"
-    />
+      src="https://media.istockphoto.com/id/614035024/photo/seniors-using-weights.jpg?s=612x612&w=0&k=20&c=7cV8IFsLZbm327ylbbw40JnmzJyItI1S7sA5O5vL3kE="
+      alt="" class="body_image" />
   </section>
 </template>
 
@@ -94,16 +88,36 @@ h2.banner_title {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
+.body {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .body_image {
   width: 100%;
   height: auto;
   max-height: 400px;
   object-fit: cover;
   display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
+
 
 /* Mobile responsive improvements */
 @media (max-width: 768px) {
+  .body {
+    padding: 20px 15px;
+  }
+
+  .body_image {
+    max-height: 250px;
+    border-radius: 8px;
+  }
+
   .banner {
     min-height: 50vh;
     padding: 20px 0;
@@ -289,9 +303,60 @@ h2.banner_title {
 }
 
 /* Better container responsiveness */
+@media (min-width: 769px) {
+  .body {
+    padding: 60px 40px;
+  }
+
+  .body_image {
+    max-width: 800px;
+    max-height: 450px;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .body_image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@media (min-width: 992px) {
+  .body {
+    padding: 80px 60px;
+  }
+
+  .body_image {
+    max-width: 900px;
+    max-height: 500px;
+  }
+}
+
 @media (min-width: 1200px) {
   .banner {
     min-height: 70vh;
+  }
+
+  .body {
+    padding: 100px 80px;
+  }
+
+  .body_image {
+    max-width: 1000px;
+    max-height: 550px;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .body {
+    padding: 120px 100px;
+  }
+
+  .body_image {
+    max-width: 1200px;
+    max-height: 600px;
   }
 }
 </style>
