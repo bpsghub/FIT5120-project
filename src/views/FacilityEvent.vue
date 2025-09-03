@@ -14,20 +14,9 @@
     <!-- Tab Navigation -->
     <TabNavigation :tabs="tabs" :activeTab="activeTab" @tab-change="handleTabChange" />
 
-    <!-- Search Section -->
-    <SearchBar
-      v-model="searchKeyword"
-      @search="handleSearch"
-      placeholder="Search by name, suburb, postcode..."
-    />
-
     <!-- Filter Section -->
-    <FilterSection
-      :activeTab="activeTab"
-      :initialFilters="filters"
-      @filter-change="handleFilterChange"
-      @clear-filters="handleClearFilters"
-    />
+    <FilterSection :activeTab="activeTab" :initialFilters="filters" @filter-change="handleFilterChange"
+      @clear-filters="handleClearFilters" />
 
     <!-- Loading State -->
     <LoadingSpinner v-if="loading" :type="activeTab" />
@@ -37,50 +26,24 @@
 
     <!-- Results Section -->
     <div v-if="!loading && !error" class="results-section">
-      <ResultsHeader
-        :itemCount="currentItems.length"
-        :activeTab="activeTab"
-        :viewMode="viewMode"
-        @view-change="handleViewChange"
-      />
+      <ResultsHeader :itemCount="currentItems.length" :activeTab="activeTab" :viewMode="viewMode"
+        @view-change="handleViewChange" />
 
       <!-- Content Container -->
-      <ContentGrid
-        v-if="currentItems.length > 0"
-        :activeTab="activeTab"
-        :facilities="facilities"
-        :events="events"
-        :viewMode="viewMode"
-        @item-select="selectItem"
-      />
+      <ContentGrid v-if="currentItems.length > 0" :activeTab="activeTab" :facilities="facilities" :events="events"
+        :viewMode="viewMode" @item-select="selectItem" />
 
       <!-- No Results -->
-      <NoResults
-        v-if="currentItems.length === 0"
-        :type="activeTab"
-        @clear-filters="handleClearFilters"
-      />
+      <NoResults v-if="currentItems.length === 0" :type="activeTab" @clear-filters="handleClearFilters" />
     </div>
 
     <!-- Map Section -->
-    <MapSection
-      :loading="loading"
-      :error="error"
-      :currentItems="currentItems"
-      :activeTab="activeTab"
-      :selectedItem="selectedItem"
-      :userLocation="userLocation"
-      :userLocationFound="userLocationFound"
-      :mapLoading="mapLoading"
-      :showLocationPermission="showLocationPermission"
-      :locationError="locationError"
-      @clear-directions="clearDirections"
-      @item-select="selectItemFromMap"
-      @request-directions="requestUserLocationForDirections"
-      @close-location-dialog="closeLocationDialog"
-      @get-user-location="getUserLocation"
-      ref="mapSectionRef"
-    />
+    <MapSection :loading="loading" :error="error" :currentItems="currentItems" :activeTab="activeTab"
+      :selectedItem="selectedItem" :userLocation="userLocation" :userLocationFound="userLocationFound"
+      :mapLoading="mapLoading" :showLocationPermission="showLocationPermission" :locationError="locationError"
+      @clear-directions="clearDirections" @item-select="selectItemFromMap"
+      @request-directions="requestUserLocationForDirections" @close-location-dialog="closeLocationDialog"
+      @get-user-location="getUserLocation" ref="mapSectionRef" />
   </div>
 </template>
 
@@ -93,7 +56,6 @@ import { useMap } from '@/composables/useMap'
 // Component imports
 import Button from '@/components/common/Button.vue'
 import TabNavigation from '@/components/navigation/TabNavigation.vue'
-import SearchBar from '@/components/forms/SearchBar.vue'
 import FilterSection from '@/components/forms/FilterSection.vue'
 import LoadingSpinner from '@/components/common/LoadingSpinner.vue'
 import ErrorMessage from '@/components/common/ErrorMessage.vue'
