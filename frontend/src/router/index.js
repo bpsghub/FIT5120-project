@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import FacilityEvent from '@/views/FacilityEvent.vue'
+import Facility_Event from '@/views/Facility_Event.vue'
 import LearnEnglish from '@/views/LearnEnglish.vue'
 
 const router = createRouter({
@@ -20,20 +20,14 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
     },
     {
-      path: '/FacilityEvent',
-      name: 'facilityevent',
-      component: FacilityEvent,
+      path: '/FindFacility_Event',
+      name: '/facility_event',
+      component: Facility_Event,
     },
     {
       path: '/learnenglish',
-      name: 'learnenglish',
+      name: '/learn_english',
       component: LearnEnglish,
-    },
-    {
-      path: '/flashcards/:category/:language',
-      name: 'flashcards',
-      component: () => import('../views/FlashcardsView.vue'),
-      props: true,
     },
   ],
 })
