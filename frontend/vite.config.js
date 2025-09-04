@@ -10,9 +10,13 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+    server: {
+    port: 5566,
+    open: true, // Auto
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
-  },
+  }
 })
