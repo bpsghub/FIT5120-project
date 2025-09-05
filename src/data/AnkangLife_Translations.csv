@@ -1,4 +1,4 @@
-﻿translation id,key,lang code,text
+﻿translationId,key,langCode,text
 1,hello,en,Hello
 2,hello,zh,你好
 3,hello,vi,Xin chào
@@ -14,7 +14,7 @@
 13,good evening,en,Good evening
 14,good evening,zh,晚上好
 15,good evening,vi,Chào buổi tối
-16,good evening,id,Selamat malam
+16,good evening,id,Selamat malamx
 17,how are you,en,How are you?
 18,how are you,zh,你好吗？
 19,how are you,vi,Bạn khỏe không?

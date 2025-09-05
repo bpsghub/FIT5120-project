@@ -25,15 +25,15 @@ export const learningCategories = [
       'good afternoon',
       'good evening',
       'how are you',
-      "i'm fine, thank you",
-      "what's your name",
+      'i’m fine, thank you',
+      'what’s your name',
       'my name is',
       'nice to meet you',
       'where are you from',
-      "i'm from china",
+      'i’m from china',
       'please',
       'thank you',
-      "you're welcome",
+      'you’re welcome',
       'excuse me',
       'sorry',
       'yes',
@@ -42,7 +42,7 @@ export const learningCategories = [
       'a little',
       'can you help me',
       'where is the toilet',
-      "i don't understand",
+      'i don’t understand',
       'please speak slowly',
       'goodbye',
     ],
@@ -80,7 +80,7 @@ export const learningCategories = [
       'i lost my phone',
       'my bag was stolen',
       'where is the police station',
-      'i dont feel safe',
+      'i don’t feel safe',
       'please write it down',
       'i need a translator',
       'can you call my family',
@@ -94,7 +94,7 @@ export const learningCategories = [
     color: '#059669',
     phrases: [
       'how much is this',
-      'its too expensive',
+      'it’s too expensive',
       'can you give me a discount',
       'i want this one',
       'do you have another size',
@@ -163,9 +163,8 @@ export class TranslationService {
 
   // Get translation by key and language
   static getTranslation(key, langCode) {
-    return (
-      translationData.find((item) => item.key === key && item.langCode === langCode)?.text || key
-    )
+    const result = translationData.find((item) => item.key === key && item.langCode === langCode)
+    return result?.text || key
   }
 
   // Get all translations for a specific key
