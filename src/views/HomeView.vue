@@ -1,8 +1,17 @@
 <script setup>
 import Button from '@/components/Button.vue'
+import { useAuth } from '@/composables'
+
+const { logout } = useAuth()
 </script>
 
 <template>
+  <div class="header-controls">
+    <button @click="logout" class="logout-btn">
+      <span class="logout-icon">&#128274;</span>
+      Logout
+    </button>
+  </div>
   <section class="banner d-flex align-items-center justify-content-center">
     <div class="container">
       <div class="row align-items-center">
@@ -18,22 +27,18 @@ import Button from '@/components/Button.vue'
       </div>
       <div class="banner_button d-flex justify-content-center pt-3 pb-5">
         <div class="button-wrapper">
-          <Button class="button" bg-color="black" :hover="true" :href="'/facilityevent'"
-            >Find Facility / Event</Button
-          >
-          <Button class="button" :hover="true" bg-color="white" :href="'/learnenglish'"
-            >Learn English</Button
-          >
+          <Button class="button" bg-color="black" :hover="true" :href="'/facilityevent'">Find Facility / Event</Button>
+          <Button class="button" :hover="true" bg-color="white" :href="'/learnenglish'">Learn English</Button>
         </div>
       </div>
     </div>
   </section>
-  <section class="body">
-    <img
-      src="https://thumbs.dreamstime.com/b/smiling-senior-couple-jogging-park-smiling-senior-couple-jogging-park-smiling-senior-active-couple-walking-jogging-130227194.jpg"
-      alt=""
-      class="body_image"
-    />
+  <section class="body-section">
+    <div class="image-container">
+      <img
+        src="https://thumbs.dreamstime.com/b/smiling-senior-couple-jogging-park-smiling-senior-couple-jogging-park-smiling-senior-active-couple-walking-jogging-130227194.jpg"
+        alt="Senior couple jogging in park" class="body_image" />
+    </div>
   </section>
 </template>
 
@@ -94,12 +99,42 @@ h2.banner_title {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Body section with clean image container */
+.body-section {
+  margin: 0;
+  padding: 40px 20px;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
 .body_image {
   width: 100%;
-  height: auto;
-  max-height: 400px;
+  height: 400px;
   object-fit: cover;
+  object-position: top right;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .body_image {
+  transform: scale(1.02);
 }
 
 /* Mobile responsive improvements */
@@ -147,6 +182,19 @@ h2.banner_title {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  /* Mobile body section adjustments */
+  .body-section {
+    padding: 20px 15px;
+  }
+
+  .image-container {
+    border-radius: 12px;
+  }
+
+  .body_image {
+    height: 250px;
   }
 }
 
@@ -283,8 +331,17 @@ h2.banner_title {
     hyphens: auto;
   }
 
+  /* Small mobile body section adjustments */
+  .body-section {
+    padding: 15px 10px;
+  }
+
+  .image-container {
+    border-radius: 8px;
+  }
+
   .body_image {
-    max-height: 250px;
+    height: 200px;
   }
 }
 
@@ -292,6 +349,54 @@ h2.banner_title {
 @media (min-width: 1200px) {
   .banner {
     min-height: 70vh;
+  }
+}
+
+/* Header controls and logout button */
+.header-controls {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #4a5568;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #cbd5e0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logout-icon {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .header-controls {
+    top: 15px;
+    right: 15px;
+  }
+
+  .logout-btn {
+    padding: 8px 12px;
+    font-size: 0.85rem;
   }
 }
 </style>
