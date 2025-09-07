@@ -1,18 +1,22 @@
 <template>
   <div class="facility-event-page">
+    <!-- Back Button - Top Left -->
+    <div class="back-button-container">
+      <Button class="back-button" :hover="true" bg-color="white" :href="'/'">Back</Button>
+    </div>
+
     <!-- Header Section -->
-    <div class="header-section d-flex">
-      <Button class="button" :hover="true" bg-color="white" :href="'/'">Back</Button>
-      <div class="facility_header">
-        <h1>Find Facility / Event</h1>
-        <p class="subtitle">
-          Discover local facilities and community events that serve your cultural needs
-        </p>
-      </div>
+    <div class="header-section">
+      <h1>Find Facility / Event</h1>
+      <p class="subtitle">
+        Discover local facilities and community events that serve your cultural needs
+      </p>
     </div>
 
     <!-- Tab Navigation -->
-    <TabNavigation :tabs="tabs" :activeTab="activeTab" @tab-change="handleTabChange" />
+    <div class="tab-navigation-container">
+      <TabNavigation :tabs="tabs" :activeTab="activeTab" @tab-change="handleTabChange" />
+    </div>
 
     <!-- Filter Section -->
     <FilterSection :activeTab="activeTab" :initialFilters="filters" @filter-change="handleFilterChange"
@@ -283,12 +287,26 @@ onMounted(async () => {
   margin: 0 auto;
   padding: 20px;
   font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+/* Back Button Positioning */
+.back-button-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.back-button {
+  margin: 0;
 }
 
 /* Header Section */
 .header-section {
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 60px; /* Add space for back button */
 }
 
 .header-section h1 {
@@ -304,13 +322,33 @@ onMounted(async () => {
   margin-bottom: 0;
 }
 
+/* Tab Navigation Container */
+.tab-navigation-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
 .results-section {
   margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
+  .header-section {
+    margin-top: 50px;
+  }
+  
   .header-section h1 {
     font-size: 2rem;
+  }
+  
+  .back-button-container {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .header-section {
+    margin-top: 20px;
   }
 }
 </style>

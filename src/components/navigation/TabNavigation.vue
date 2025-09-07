@@ -45,13 +45,11 @@ const selectTab = (tabValue) => {
   display: flex;
   justify-content: center;
   gap: 5px;
-  margin-bottom: 30px;
   background: #f8f9fa;
   padding: 5px;
   border-radius: 8px;
   max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto; /* Ensure perfect centering */
 }
 
 .tab-btn {
@@ -94,7 +92,7 @@ const selectTab = (tabValue) => {
 @media (max-width: 768px) {
   .tab-navigation {
     max-width: 100%;
-    margin: 0 0 30px 0;
+    margin: 0 auto;
   }
 
   .tab-btn {
