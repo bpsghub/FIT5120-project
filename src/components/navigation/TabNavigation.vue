@@ -1,12 +1,7 @@
 <template>
   <div class="tab-navigation">
-    <button
-      v-for="tab in tabs"
-      :key="tab.value"
-      @click="selectTab(tab.value)"
-      :class="['tab-btn', { active: activeTab === tab.value }]"
-      :disabled="disabled"
-    >
+    <button v-for="tab in tabs" :key="tab.value" @click="selectTab(tab.value)"
+      :class="['tab-btn', { active: activeTab === tab.value }]" :disabled="disabled">
       <span v-if="tab.icon" class="tab-icon">{{ tab.icon }}</span>
       {{ tab.label }}
     </button>
@@ -49,7 +44,8 @@ const selectTab = (tabValue) => {
   padding: 5px;
   border-radius: 8px;
   max-width: 400px;
-  margin: 0 auto; /* Ensure perfect centering */
+  margin: 0 auto;
+  /* Ensure perfect centering */
 }
 
 .tab-btn {

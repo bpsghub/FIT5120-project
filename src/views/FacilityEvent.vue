@@ -306,7 +306,8 @@ onMounted(async () => {
 .header-section {
   text-align: center;
   margin-bottom: 30px;
-  margin-top: 60px; /* Add space for back button */
+  margin-top: 60px;
+  /* Add space for back button */
 }
 
 .header-section h1 {
@@ -337,16 +338,16 @@ onMounted(async () => {
   .header-section {
     margin-top: 50px;
   }
-  
+
   .header-section h1 {
     font-size: 2rem;
   }
-  
+
   .back-button-container {
     position: relative;
     margin-bottom: 20px;
   }
-  
+
   .header-section {
     margin-top: 20px;
   }
