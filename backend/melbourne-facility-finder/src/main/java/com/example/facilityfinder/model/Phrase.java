@@ -7,7 +7,6 @@ import lombok.AllArgsConstructor;
 import java.util.Map;
 
 /**
- * 前端需要的短语实体（含分类和多语言翻译）
  */
 @Data
 @AllArgsConstructor
