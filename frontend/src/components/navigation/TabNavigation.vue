@@ -1,12 +1,7 @@
 <template>
   <div class="tab-navigation">
-    <button
-      v-for="tab in tabs"
-      :key="tab.value"
-      @click="selectTab(tab.value)"
-      :class="['tab-btn', { active: activeTab === tab.value }]"
-      :disabled="disabled"
-    >
+    <button v-for="tab in tabs" :key="tab.value" @click="selectTab(tab.value)"
+      :class="['tab-btn', { active: activeTab === tab.value }]" :disabled="disabled">
       <span v-if="tab.icon" class="tab-icon">{{ tab.icon }}</span>
       {{ tab.label }}
     </button>
@@ -45,13 +40,12 @@ const selectTab = (tabValue) => {
   display: flex;
   justify-content: center;
   gap: 5px;
-  margin-bottom: 30px;
   background: #f8f9fa;
   padding: 5px;
   border-radius: 8px;
   max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  /* Ensure perfect centering */
 }
 
 .tab-btn {
@@ -94,7 +88,7 @@ const selectTab = (tabValue) => {
 @media (max-width: 768px) {
   .tab-navigation {
     max-width: 100%;
-    margin: 0 0 30px 0;
+    margin: 0 auto;
   }
 
   .tab-btn {

@@ -2,7 +2,9 @@
 export class CSVLoader {
   static async loadTranslations() {
     try {
-      const response = await fetch('/translations.csv')
+      // Add cache-busting parameter to force fresh data
+      const timestamp = new Date().getTime()
+      const response = await fetch(`/translations.csv?v=${timestamp}`)
       const csvText = await response.text()
 
       // Parse CSV manually (simple parser for our specific format)
@@ -20,9 +22,9 @@ export class CSVLoader {
 
         if (values.length >= 4) {
           translations.push({
-            translation_id: parseInt(values[0]),
+            translationId: parseInt(values[0]),
             key: values[1],
-            lang_code: values[2],
+            langCode: values[2],
             text: values[3],
           })
         }
@@ -61,10 +63,10 @@ export class CSVLoader {
   static getFallbackTranslations() {
     // Fallback data in case CSV loading fails
     return [
-      { translation_id: 1, key: 'hello', lang_code: 'en', text: 'Hello' },
-      { translation_id: 2, key: 'hello', lang_code: 'zh', text: '你好' },
-      { translation_id: 3, key: 'hello', lang_code: 'vi', text: 'Xin chào' },
-      { translation_id: 4, key: 'hello', lang_code: 'id', text: 'Halo' },
+      { translationId: 1, key: 'hello', langCode: 'en', text: 'Hello' },
+      { translationId: 2, key: 'hello', langCode: 'zh', text: '你好' },
+      { translationId: 3, key: 'hello', langCode: 'vi', text: 'Xin chào' },
+      { translationId: 4, key: 'hello', langCode: 'id', text: 'Halo' },
       // ... more fallback data
     ]
   }
