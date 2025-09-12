@@ -62,4 +62,67 @@ h2.banner_title {
   height: auto;
   object-fit: cover; /* Maintain aspect ratio while covering the area */
 }
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin: 0 0 20px 0;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 0 0 30px 0;
+}
+
+.primary-btn {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.primary-btn:hover {
+  background-color: #0d66d0;
+}
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 60px 20px;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin: 0 0 20px 0;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.feature-card p {
+  color: #666;
+  margin: 0;
+  line-height: 1.6;
+}
 </style>
