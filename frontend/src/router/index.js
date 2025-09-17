@@ -35,27 +35,22 @@ const router = createRouter({
       meta: { requiresAuth: true },
     },
     {
-<<<<<<< HEAD:frontend/src/router/index.js
       path: '/FindFacility_Event',
       name: '/facility_event',
       component: Facility_Event,
-=======
-      path: '/FacilityEvent',
-      name: 'facilityevent',
-      component: FacilityEvent,
+      // path: '/FacilityEvent',
+      // name: 'facilityevent',
+      // component: FacilityEvent,
       meta: { requiresAuth: true },
->>>>>>> 2f0264ad6c7a38531a5e4c8d888f46df9399da5a:src/router/index.js
     },
-      { path: '/facility/:id', name: 'FacilityDetail', component: FacilityDetailPage, props: true },
-  { path: '/event/:id', name: 'EventDetail', component: EventDetailPage, props: true },
+    { path: '/facility/:id', name: 'FacilityDetail', component: FacilityDetailPage, props: true },
+    { path: '/event/:id', name: 'EventDetail', component: EventDetailPage, props: true },
     {
       path: '/learnenglish',
       name: '/learn_english',
       component: LearnEnglish,
       meta: { requiresAuth: true },
     },
-<<<<<<< HEAD:frontend/src/router/index.js
-=======
     {
       path: '/flashcards/:category/:language',
       name: 'flashcards',
@@ -63,7 +58,6 @@ const router = createRouter({
       props: true,
       meta: { requiresAuth: true },
     },
->>>>>>> 2f0264ad6c7a38531a5e4c8d888f46df9399da5a:src/router/index.js
   ],
 })
 
