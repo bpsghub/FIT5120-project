@@ -1,0 +1,401 @@
+﻿translationId,key,langCode,text
+1,hello,en,Hello
+2,hello,zh,你好
+3,hello,vi,Xin chào
+4,hello,id,Halo
+5,good morning,en,Good morning
+6,good morning,zh,早上好
+7,good morning,vi,Chào buổi sáng
+8,good morning,id,Selamat pagi
+9,good afternoon,en,Good afternoon
+10,good afternoon,zh,下午好
+11,good afternoon,vi,Chào buổi chiều
+12,good afternoon,id,Selamat siang
+13,good evening,en,Good evening
+14,good evening,zh,晚上好
+15,good evening,vi,Chào buổi tối
+16,good evening,id,Selamat malamx
+17,how are you,en,How are you?
+18,how are you,zh,你好吗？
+19,how are you,vi,Bạn khỏe không?
+20,how are you,id,Apa kabar?
+21,"i’m fine, thank you",en,"I’m fine, thank you."
+22,"i’m fine, thank you",zh,我很好，谢谢
+23,"i’m fine, thank you",vi,"Tôi khỏe, cảm ơn"
+24,"i’m fine, thank you",id,"Saya baik, terima kasih"
+25,what’s your name,en,What’s your name?
+26,what’s your name,zh,你叫什么名字？
+27,what’s your name,vi,Bạn tên gì?
+28,what’s your name,id,Siapa nama Anda?
+29,my name is ,en,My name is …
+30,my name is ,zh,我的名字是…
+31,my name is ,vi,Tôi tên là…
+32,my name is ,id,Nama saya …
+33,nice to meet you,en,Nice to meet you
+34,nice to meet you,zh,很高兴见到你
+35,nice to meet you,vi,Rất vui được gặp bạn
+36,nice to meet you,id,Senang bertemu dengan Anda
+37,where are you from,en,Where are you from?
+38,where are you from,zh,你来自哪里？
+39,where are you from,vi,Bạn đến từ đâu?
+40,where are you from,id,Anda dari mana?
+41,i’m from china,en,I’m from China.
+42,i’m from china,zh,我来自中国
+43,i’m from china,vi,Tôi đến từ Trung Quốc
+44,i’m from china,id,Saya dari Tiongkok
+45,please,en,Please
+46,please,zh,请
+47,please,vi,Làm ơn
+48,please,id,Tolong
+49,thank you,en,Thank you
+50,thank you,zh,谢谢
+51,thank you,vi,Cảm ơn
+52,thank you,id,Terima kasih
+53,you’re welcome,en,You’re welcome
+54,you’re welcome,zh,不客气
+55,you’re welcome,vi,Không có gì
+56,you’re welcome,id,Sama-sama
+57,excuse me,en,Excuse me
+58,excuse me,zh,打扰一下
+59,excuse me,vi,Xin lỗi
+60,excuse me,id,Permisi
+61,sorry,en,Sorry
+62,sorry,zh,对不起
+63,sorry,vi,Xin lỗi
+64,sorry,id,Maaf
+65,yes,en,Yes
+66,yes,zh,是的
+67,yes,vi,Vâng
+68,yes,id,Ya
+69,no,en,No
+70,no,zh,不是
+71,no,vi,Không
+72,no,id,Tidak
+73,do you speak english,en,Do you speak English?
+74,do you speak english,zh,你会说英语吗？
+75,do you speak english,vi,Bạn có nói tiếng Anh không?
+76,do you speak english,id,Apakah Anda bisa berbahasa Inggris?
+77,a little,en,A little
+78,a little,zh,会一点点
+79,a little,vi,Một chút
+80,a little,id,Sedikit
+81,can you help me,en,Can you help me?
+82,can you help me,zh,你能帮我吗？
+83,can you help me,vi,Bạn có thể giúp tôi không?
+84,can you help me,id,Bisa tolong saya?
+85,where is the toilet,en,Where is the toilet?
+86,where is the toilet,zh,厕所在哪里？
+87,where is the toilet,vi,Nhà vệ sinh ở đâu?
+88,where is the toilet,id,Toilet di mana?
+89,i don’t understand,en,I don’t understand
+90,i don’t understand,zh,我不明白
+91,i don’t understand,vi,Tôi không hiểu
+92,i don’t understand,id,Saya tidak mengerti
+93,please speak slowly,en,Please speak slowly
+94,please speak slowly,zh,请说慢一点
+95,please speak slowly,vi,Làm ơn nói chậm lại
+96,please speak slowly,id,Tolong bicara pelan-pelan
+97,goodbye,en,Goodbye
+98,goodbye,zh,再见
+99,goodbye,vi,Tạm biệt
+100,goodbye,id,Selamat tinggal
+101,yoga,en,Yoga
+102,yoga,zh,瑜伽
+103,yoga,vi,Yoga
+104,yoga,id,Yoga
+105,tai chi,en,Tai Chi
+106,tai chi,zh,太极
+107,tai chi,vi,Thái Cực Quyền
+108,tai chi,id,Tai Chi
+109,table tennis,en,Table tennis
+110,table tennis,zh,乒乓球
+111,table tennis,vi,Bóng bàn
+112,table tennis,id,Tenis meja
+113,badminton,en,Badminton
+114,badminton,zh,羽毛球
+115,badminton,vi,Cầu lông
+116,badminton,id,Bulu tangkis
+117,walking,en,Walking
+118,walking,zh,散步
+119,walking,vi,Đi bộ
+120,walking,id,Jalan kaki
+121,dancing,en,Dancing
+122,dancing,zh,跳舞
+123,dancing,vi,Khiêu vũ
+124,dancing,id,Menari
+125,singing,en,Singing
+126,singing,zh,唱歌
+127,singing,vi,Hát
+128,singing,id,Bernyanyi
+129,playing chess,en,Playing chess
+130,playing chess,zh,下棋
+131,playing chess,vi,Chơi cờ
+132,playing chess,id,Bermain catur
+133,reading,en,Reading
+134,reading,zh,阅读
+135,reading,vi,Đọc sách
+136,reading,id,Membaca
+137,watching tv,en,Watching TV
+138,watching tv,zh,看电视
+139,watching tv,vi,Xem TV
+140,watching tv,id,Menonton TV
+141,gardening,en,Gardening
+142,gardening,zh,园艺
+143,gardening,vi,Làm vườn
+144,gardening,id,Berkebun
+145,cooking,en,Cooking
+146,cooking,zh,做饭
+147,cooking,vi,Nấu ăn
+148,cooking,id,Memasak
+149,shopping,en,Shopping
+150,shopping,zh,购物
+151,shopping,vi,Mua sắm
+152,shopping,id,Belanja
+153,exercise,en,Exercise
+154,exercise,zh,锻炼
+155,exercise,vi,Tập thể dục
+156,exercise,id,Olahraga
+157,swimming,en,Swimming
+158,swimming,zh,游泳
+159,swimming,vi,Bơi lội
+160,swimming,id,Berenang
+161,playing cards,en,Playing cards
+162,playing cards,zh,打牌
+163,playing cards,vi,Chơi bài
+164,playing cards,id,Bermain kartu
+165,listening to music,en,Listening to music
+166,listening to music,zh,听音乐
+167,listening to music,vi,Nghe nhạc
+168,listening to music,id,Mendengarkan musik
+169,painting,en,Painting
+170,painting,zh,画画
+171,painting,vi,Vẽ tranh
+172,painting,id,Melukis
+173,drinking tea,en,Drinking tea
+174,drinking tea,zh,喝茶
+175,drinking tea,vi,Uống trà
+176,drinking tea,id,Minum teh
+177,visiting friends,en,Visiting friends
+178,visiting friends,zh,拜访朋友
+179,visiting friends,vi,Thăm bạn bè
+180,visiting friends,id,Mengunjungi teman
+181,i need a doctor,en,I need a doctor
+182,i need a doctor,zh,我需要医生
+183,i need a doctor,vi,Tôi cần bác sĩ
+184,i need a doctor,id,Saya perlu dokter
+185,i feel sick,en,I feel sick
+186,i feel sick,zh,我感觉不舒服
+187,i feel sick,vi,Tôi thấy không khỏe
+188,i feel sick,id,Saya merasa sakit
+189,i have a headache,en,I have a headache
+190,i have a headache,zh,我头疼
+191,i have a headache,vi,Tôi bị đau đầu
+192,i have a headache,id,Saya sakit kepala
+193,i have a fever,en,I have a fever
+194,i have a fever,zh,我发烧
+195,i have a fever,vi,Tôi bị sốt
+196,i have a fever,id,Saya demam
+197,i have chest pain,en,I have chest pain
+198,i have chest pain,zh,我胸口痛
+199,i have chest pain,vi,Tôi bị đau ngực
+200,i have chest pain,id,Saya sakit dada
+201,i feel dizzy,en,I feel dizzy
+202,i feel dizzy,zh,我头晕
+203,i feel dizzy,vi,Tôi bị chóng mặt
+204,i feel dizzy,id,Saya pusing
+205,i have diabetes,en,I have diabetes
+206,i have diabetes,zh,我有糖尿病
+207,i have diabetes,vi,Tôi bị tiểu đường
+208,i have diabetes,id,Saya punya diabetes
+209,i need medicine,en,I need medicine
+210,i need medicine,zh,我需要药
+211,i need medicine,vi,Tôi cần thuốc
+212,i need medicine,id,Saya butuh obat
+213,call an ambulance,en,Call an ambulance!
+214,call an ambulance,zh,叫救护车！
+215,call an ambulance,vi,Gọi xe cấp cứu!
+216,call an ambulance,id,Panggil ambulans!
+217,where is the hospital,en,Where is the hospital?
+218,where is the hospital,zh,医院在哪里？
+219,where is the hospital,vi,Bệnh viện ở đâu?
+220,where is the hospital,id,Rumah sakit di mana?
+221,head,en,Head
+222,head,zh,头
+223,head,vi,Đầu
+224,head,id,Kepala
+225,eye,en,Eye
+226,eye,zh,眼睛
+227,eye,vi,Mắt
+228,eye,id,Mata
+229,ear,en,Ear
+230,ear,zh,耳朵
+231,ear,vi,Tai
+232,ear,id,Telinga
+233,nose,en,Nose
+234,nose,zh,鼻子
+235,nose,vi,Mũi
+236,nose,id,Hidung
+237,mouth,en,Mouth
+238,mouth,zh,嘴
+239,mouth,vi,Miệng
+240,mouth,id,Mulut
+241,stomach,en,Stomach
+242,stomach,zh,胃/肚子
+243,stomach,vi,Dạ dày
+244,stomach,id,Perut
+245,back,en,Back
+246,back,zh,背
+247,back,vi,Lưng
+248,back,id,Punggung
+249,arm,en,Arm
+250,arm,zh,胳膊
+251,arm,vi,Cánh tay
+252,arm,id,Lengan
+253,leg,en,Leg
+254,leg,zh,腿
+255,leg,vi,Chân
+256,leg,id,Kaki
+257,foot,en,Foot
+258,foot,zh,脚
+259,foot,vi,Bàn chân
+260,foot,id,Kaki
+261,help,en,Help!
+262,help,zh,救命！
+263,help,vi,Cứu với!
+264,help,id,Tolong!
+265,call the police,en,Call the police!
+266,call the police,zh,报警！
+267,call the police,vi,Gọi cảnh sát!
+268,call the police,id,Panggil polisi!
+269,i lost my wallet,en,I lost my wallet
+270,i lost my wallet,zh,我钱包丢了
+271,i lost my wallet,vi,Tôi mất ví
+272,i lost my wallet,id,Dompet saya hilang
+273,i lost my phone,en,I lost my phone
+274,i lost my phone,zh,我手机丢了
+275,i lost my phone,vi,Tôi mất điện thoại
+276,i lost my phone,id,HP saya hilang
+277,my bag was stolen,en,My bag was stolen
+278,my bag was stolen,zh,我的包被偷了
+279,my bag was stolen,vi,Túi của tôi bị mất trộm
+280,my bag was stolen,id,Tas saya dicuri
+281,where is the police station,en,Where is the police station?
+282,where is the police station,zh,警察局在哪里？
+283,where is the police station,vi,Đồn cảnh sát ở đâu?
+284,where is the police station,id,Kantor polisi di mana?
+285,i don’t feel safe,en,I don’t feel safe
+286,i don’t feel safe,zh,我感觉不安全
+287,i don’t feel safe,vi,Tôi cảm thấy không an toàn
+288,i don’t feel safe,id,Saya merasa tidak aman
+289,please write it down,en,Please write it down
+290,please write it down,zh,请写下来
+291,please write it down,vi,Làm ơn viết ra
+292,please write it down,id,Tolong tulis
+293,i need a translator,en,I need a translator
+294,i need a translator,zh,我需要翻译
+295,i need a translator,vi,Tôi cần người phiên dịch
+296,i need a translator,id,Saya butuh penerjemah
+297,can you call my family,en,Can you call my family?
+298,can you call my family,zh,你能帮我联系家人吗？
+299,can you call my family,vi,Bạn có thể gọi cho gia đình tôi không?
+300,can you call my family,id,Bisa hubungi keluarga saya?
+301,how much is this,en,How much is this?
+302,how much is this,zh,这个多少钱？
+303,how much is this,vi,Cái này bao nhiêu tiền?
+304,how much is this,id,Berapa harganya?
+305,it’s too expensive,en,It’s too expensive
+306,it’s too expensive,zh,太贵了
+307,it’s too expensive,vi,Đắt quá
+308,it’s too expensive,id,Terlalu mahal
+309,can you give me a discount,en,Can you give me a discount?
+310,can you give me a discount,zh,可以便宜一点吗？
+311,can you give me a discount,vi,Có thể giảm giá không?
+312,can you give me a discount,id,Bisa diskon?
+313,i want this one,en,I want this one
+314,i want this one,zh,我要这个
+315,i want this one,vi,Tôi muốn cái này
+316,i want this one,id,Saya mau yang ini
+317,do you have another size,en,Do you have another size?
+318,do you have another size,zh,有别的尺寸吗？
+319,do you have another size,vi,Có kích cỡ khác không?
+320,do you have another size,id,Ada ukuran lain?
+321,small,en,Small
+322,small,zh,小号
+323,small,vi,Nhỏ
+324,small,id,Kecil
+325,medium,en,Medium
+326,medium,zh,中号
+327,medium,vi,Vừa
+328,medium,id,Sedang
+329,large,en,Large
+330,large,zh,大号
+331,large,vi,Lớn
+332,large,id,Besar
+333,cash,en,Cash
+334,cash,zh,现金
+335,cash,vi,Tiền mặt
+336,cash,id,Tunai
+337,credit card,en,Credit card
+338,credit card,zh,信用卡
+339,credit card,vi,Thẻ tín dụng
+340,credit card,id,Kartu kredit
+341,receipt,en,Receipt
+342,receipt,zh,收据
+343,receipt,vi,Hóa đơn
+344,receipt,id,Struk
+345,bag,en,Bag
+346,bag,zh,袋子
+347,bag,vi,Túi
+348,bag,id,Tas
+349,where is the supermarket,en,Where is the supermarket?
+350,where is the supermarket,zh,超市在哪里？
+351,where is the supermarket,vi,Siêu thị ở đâu?
+352,where is the supermarket,id,Supermarket di mana?
+353,bread,en,Bread
+354,bread,zh,面包
+355,bread,vi,Bánh mì
+356,bread,id,Roti
+357,rice,en,Rice
+358,rice,zh,米饭
+359,rice,vi,Cơm
+360,rice,id,Nasi
+361,milk,en,Milk
+362,milk,zh,牛奶
+363,milk,vi,Sữa
+364,milk,id,Susu
+365,water,en,Water
+366,water,zh,水
+367,water,vi,Nước
+368,water,id,Air
+369,vegetables,en,Vegetables
+370,vegetables,zh,蔬菜
+371,vegetables,vi,Rau
+372,vegetables,id,Sayur
+373,fruit,en,Fruit
+374,fruit,zh,水果
+375,fruit,vi,Trái cây
+376,fruit,id,Buah
+377,meat,en,Meat
+378,meat,zh,肉
+379,meat,vi,Thịt
+380,meat,id,Daging
+381,fish,en,Fish
+382,fish,zh,鱼
+383,fish,vi,Cá
+384,fish,id,Ikan
+385,egg,en,Egg
+386,egg,zh,鸡蛋
+387,egg,vi,Trứng
+388,egg,id,Telur
+389,salt,en,Salt
+390,salt,zh,盐
+391,salt,vi,Muối
+392,salt,id,Garam
+393,sugar,en,Sugar
+394,sugar,zh,糖
+395,sugar,vi,Đường
+396,sugar,id,Gula
+397,toilet paper,en,Toilet paper
+398,toilet paper,zh,卫生纸
+399,toilet paper,vi,Giấy vệ sinh
+400,toilet paper,id,Tisu toilet

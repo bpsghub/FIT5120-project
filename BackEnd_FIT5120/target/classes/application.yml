@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: cultural-facility-service
+
+# 服务器配置
+server:
+  port: 5566
+  servlet:
+    context-path: /api
+
+# Google Places API配置
+google:
+  places:
+    api:
+      key: ${GOOGLE_PLACES_API_KEY:AIzaSyC3uLHsQzJ5pdWqfWZXqqgB-27UjziU_3k}
+      base-url: https://places.googleapis.com/v1
+
+# 日志配置
+logging:
+  level:
+    org.springframework.web: INFO
+    com.example.cultural: INFO
+    org.springframework.web.client.RestTemplate: DEBUG  # 调试API请求
