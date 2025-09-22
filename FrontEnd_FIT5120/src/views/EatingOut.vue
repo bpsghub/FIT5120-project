@@ -1,52 +1,32 @@
 <template>
-  <div class="eating-out-container">
-    <header class="header">
-      <div class="logo">Ankang Life</div>
-      <nav class="nav">
-        <router-link to="/facilities">Find Facility / Event</router-link>
-        <router-link to="/learnenglish">Learn English</router-link>
-        <router-link to="/socialnorms">Social Norms</router-link>
-        <router-link to="/navigatelife">Navigate your Life</router-link>
-      </nav>
-    </header>
+  <div class="eating-out-container container">
+    <Header />
     <div class="banner">
-      <h1>Eating Out</h1>
-      <p>Understand the dining customs in Australia — including how to order, share meals, and show respect.</p>
+      <h1>Meeting New People</h1>
+      <p>
+        This guid helps you feel confident when meeting new people in Australia - step by step
+      </p>
     </div>
     <div class="content-box">
-      <EatingOutContent :lang="lang" />
-    </div>
-    <div class="lang-switcher">
-      <div :class="['lang-btn', lang === 'en' ? 'active' : '']" @click="lang = 'en'">EN</div>
-      <div :class="['lang-btn', lang === 'cn' ? 'active' : '']" @click="lang = 'cn'">CN</div>
-      <div :class="['lang-btn', lang === 'vn' ? 'active' : '']" @click="lang = 'vn'">VN</div>
-      <div :class="['lang-btn', lang === 'id' ? 'active' : '']" @click="lang = 'id'">ID</div>
-    </div>
-    <div class="quiz-btn-row">
-      <button class="quiz-btn">
-        Take the Quiz
-        <span class="play-icon">
-          <svg width="32" height="32" viewBox="0 0 32 32">
-            <circle cx="16" cy="16" r="16" fill="#B6E24B" />
-            <polygon points="13,10 23,16 13,22" fill="#fff" />
-          </svg>
-        </span>
-      </button>
+      <LearningSlider
+        v-model:lang="lang"
+        csv-url="/Learning about Australia/eatingout.csv"
+        image-seed-prefix="eatingout"
+        @take-quiz="takeQuiz"
+      />
     </div>
   </div>
 </template>
 
-<script>
-import EatingOutContent from '@/components/EatingOutContent.vue';
-export default {
-  name: 'EatingOut',
-  components: { EatingOutContent },
-  data() {
-    return {
-      lang: 'en',
-    };
-  },
-};
+<script setup>
+import { ref } from 'vue'
+import Header from '@/components/Header.vue'
+import LearningSlider from '@/components/LearningSlider.vue'
+
+const lang = ref('en')
+function takeQuiz() {
+  alert('Quiz coming soon!')
+}
 </script>
 
 <style scoped>
@@ -115,9 +95,8 @@ export default {
 }
 
 .content-box {
-  background: #e5e5e5;
   margin: 40px auto 0 auto;
-  width: 85vw;
+  width: 100%;
   max-width: 900px;
   min-height: 250px;
   border-radius: 4px;
@@ -137,7 +116,7 @@ export default {
 .lang-switcher {
   position: fixed;
   right: 48px;
-  top: calc(120px + 96px);
+  top: calc(300px + 200px);
   /* header + banner height estimate */
   display: flex;
   flex-direction: column;
@@ -160,7 +139,9 @@ export default {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   opacity: 0.7;
   cursor: pointer;
-  transition: opacity 0.2s, background 0.2s;
+  transition:
+    opacity 0.2s,
+    background 0.2s;
 }
 
 .lang-btn.active {
@@ -186,7 +167,7 @@ export default {
   align-items: center;
   gap: 16px;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(102, 26, 255, 0.10);
+  box-shadow: 0 2px 8px rgba(102, 26, 255, 0.1);
   transition: background 0.2s;
 }
 

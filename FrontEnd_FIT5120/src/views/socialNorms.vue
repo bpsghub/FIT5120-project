@@ -1,89 +1,109 @@
 <template>
-  <div class="social-norms-container bg-light min-vh-100 d-flex flex-column">
+  <div class="social-norms-container min-vh-100 d-flex flex-column">
     <AppHeader />
-    <main
-      class="container flex-grow-1 d-flex flex-column align-items-center justify-content-center"
-    >
-      <div class="row g-5 justify-content-center mb-4 w-100">
-        <div class="col-12 col-md-6 col-lg-5">
-          <router-link
-            class="card h-100 text-decoration-none text-dark shadow-sm hover-shadow-lg"
-            :to="'/socialnorms/meetingpeople'"
+    <div class="banner">
+      <h1>Social Norms</h1>
+    </div>
+    <div class="content-box">
+      <div class="container py-4">
+        <div class="row g-5 justify-content-center mb-4 w-100">
+          <div
+            v-for="card in cards"
+            :key="card.key"
+            class="col-12 col-md-6 col-lg-5"
           >
-            <img
-              src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80"
-              class="card-img-top rounded-top"
-              alt="Meeting New People"
-              style="height: 220px; object-fit: cover"
-            />
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Meeting New People</h5>
-              <p class="card-text">
-                <b>G'day!</b> Discover how to meet new people in Australia with a smile, a
-                handshake, and a friendly greeting.
-              </p>
+            <div
+              class="card h-100 text-decoration-none text-dark shadow-sm hover-shadow-lg"
+              @click="goTo(card.key)"
+              style="cursor:pointer"
+            >
+              <img
+                :src="card.img"
+                class="card-img-top rounded-top"
+                :alt="card.title"
+                style="height: 220px; object-fit: cover"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">{{ card.title }}</h5>
+                <p class="card-text">{{ card.text }}</p>
+              </div>
             </div>
-          </router-link>
-        </div>
-        <div class="col-12 col-md-6 col-lg-5">
-          <router-link
-            class="card h-100 text-decoration-none text-dark shadow-sm hover-shadow-lg"
-            :to="'/socialnorms/eatingout'"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
-              class="card-img-top rounded-top"
-              alt="Eating Out"
-              style="height: 220px; object-fit: cover"
-            />
-            <div class="card-body">
-              <h5 class="card-title fw-bold">Eating Out</h5>
-              <p class="card-text">
-                From menu to manners -- Learn what to expect when eating out in Australia.
-              </p>
-            </div>
-          </router-link>
+          </div>
         </div>
       </div>
-      <div
-        class="d-flex flex-column align-items-end position-absolute lang-switcher"
-        style="right: 48px; top: 220px; gap: 16px"
-      >
-        <button
-          class="btn btn-lg lang-btn mb-2 active"
-          disabled
-          style="background: #d1aaff; color: #222; border: none"
-        >
-          EN
-        </button>
-        <button
-          class="btn btn-lg lang-btn mb-2"
-          style="background: #be8aed; color: #fff; border: none"
-        >
-          CN
-        </button>
-        <button
-          class="btn btn-lg lang-btn mb-2"
-          style="background: #be8aed; color: #fff; border: none"
-        >
-          VN
-        </button>
-        <button class="btn btn-lg lang-btn mb-2" style="background: #be8aed; color: #fff; border: none">
-          ID
-        </button>
-      </div>
-    </main>
+    </div>
+    <div class="lang-switcher">
+      <LanguageSwitcher v-model="lang" />
+    </div>
     <router-view />
   </div>
 </template>
 
 <script setup>
 import AppHeader from '@/components/Header.vue'
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue';
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+const lang = ref('en');
+const router = useRouter();
+
+const cards = [
+  {
+    key: 'meetingpeople',
+    title: 'Meeting New People',
+    text: "G'day! Discover how to meet new people in Australia with a smile, a handshake, and a friendly greeting.",
+    img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80',
+  },
+  {
+    key: 'eatingout',
+    title: 'Eating Out',
+    text: 'From menu to manners -- Learn what to expect when eating out in Australia.',
+    img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80',
+  },
+]
+
+function goTo(key) {
+  if (key === 'meetingpeople') {
+    router.push('/socialnorms/meetingpeople');
+  } else if (key === 'eatingout') {
+    router.push('/socialnorms/eatingout');
+  }
+}
 </script>
 
 <style scoped>
 .social-norms-container {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
   position: relative;
+}
+.banner {
+  color: #222;
+  padding: 48px 0 32px 0;
+  text-align: center;
+  font-family: 'Quicksand', 'Arial', sans-serif;
+  border-bottom: 0;
+}
+.banner h1 {
+  font-size: 2.3rem;
+  font-family: 'Quicksand', 'Arial', sans-serif;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+.content-box {
+  background: #fff;
+  margin: 40px auto 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 250px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #222;
 }
 .hover-shadow-lg:hover {
   box-shadow:
@@ -94,6 +114,15 @@ import AppHeader from '@/components/Header.vue'
   transition:
     box-shadow 0.25s,
     transform 0.25s;
+}
+.lang-switcher {
+  position: fixed;
+  right: 48px;
+  top: calc(120px + 96px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 100;
 }
 .lang-btn {
   width: 60px;
@@ -122,6 +151,8 @@ import AppHeader from '@/components/Header.vue'
     flex-direction: row !important;
     justify-content: center !important;
     margin-top: 32px !important;
+    right: unset;
+    top: unset;
   }
 }
 </style>

@@ -78,7 +78,25 @@ const router = createRouter({
     {
       path: '/navigatelife',
       name: 'navigatelife',
-      component: () => import('../views/AboutView.vue'),
+      component: () => import('../views/NavigateYourLife.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/publicTransportation',
+      name: 'publictransportation',
+      component: () => import('../views/PublicTransportation.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/grocceriesShopping',
+      name: 'grocceriesshopping',
+      component: () => import('../views/Grocceries Shopping.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/medicalAttention',
+      name: 'medicalattention',
+      component: () => import('../views/MedicalAttention.vue'),
       meta: { requiresAuth: true },
     },
   ],
