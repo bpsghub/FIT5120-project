@@ -1,6 +1,6 @@
-key,en,cn,vn,id
-order,"Order at the counter or table.","在柜台或桌子点餐。","Gọi món tại quầy hoặc tại bàn.","Pesan di konter atau di meja."
-share,"Sharing food is common among friends.","与朋友分享食物很常见。","Chia sẻ món ăn với bạn bè là bình thường.","Berbagi makanan dengan teman adalah hal biasa."
-thank,"Say 'thank you' to staff.","对工作人员说“谢谢”。","Nói 'cảm ơn' với nhân viên phục vụ.","Ucapkan 'terima kasih' kepada staf."
-wait,"Wait to be seated if required.","如有需要，请等待安排座位。","Nếu cần, hãy chờ được sắp xếp chỗ ngồi.","Tunggu untuk diarahkan ke tempat duduk jika diminta."
-pay,"Pay at the counter or table as instructed.","按照指示在柜台或桌子付款。","Thanh toán tại quầy hoặc tại bàn theo hướng dẫn.","Bayar di konter atau di meja sesuai petunjuk."
+key,title_en,title_cn,title_vn,title_id,en,cn,vn,id
+order,Ordering,点餐,Gọi món,Pemesanan,"Order at the counter or table.","在柜台或桌子点餐。","Gọi món tại quầy hoặc tại bàn.","Pesan di konter atau di meja."
+share,Sharing,分享,Chia sẻ,Berbagi,"Sharing food is common among friends.","与朋友分享食物很常见。","Chia sẻ món ăn với bạn bè là bình thường.","Berbagi makanan dengan teman adalah hal biasa."
+thank,Thanking,致谢,Cảm ơn,Berterima kasih,"Say 'thank you' to staff.","对工作人员说“谢谢”。","Nói 'cảm ơn' với nhân viên phục vụ.","Ucapkan 'terima kasih' kepada staf."
+wait,Waiting,等位,Chờ bàn,Menunggu,"Wait to be seated if required.","如有需要，请等待安排座位。","Nếu cần, hãy chờ được sắp xếp chỗ ngồi.","Tunggu untuk diarahkan ke tempat duduk jika diminta."
+pay,Paying,付款,Thanh toán,Pembayaran,"Pay at the counter or table as instructed.","按照指示在柜台或桌子付款。","Thanh toán tại quầy hoặc tại bàn theo hướng dẫn.","Bayar di konter atau di meja sesuai petunjuk."

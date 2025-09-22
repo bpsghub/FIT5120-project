@@ -26,7 +26,7 @@
     </div>
     <div class="slider-instructions">{{ instructionText }}</div>
     <button v-if="currentSlide === slides.length - 1" class="quiz-btn blink" @click="$emit('take-quiz')">
-      <slot name="quiz-btn">Take Action, Take the Quiz</slot>
+      <slot name="quiz-btn">{{ quizBtnText }}</slot>
     </button>
   </div>
 </template>
@@ -84,13 +84,13 @@ onMounted(() => {
     })
 })
 const slideTitle = computed(() => {
-  // Translate the title based on lang
   const slide = slides.value[currentSlide.value]
   if (!slide) return ''
-  if (lang.value === 'en') return slide.title_en || slide.key || ''
-  if (lang.value === 'cn') return slide.title_cn || slide.key || ''
-  if (lang.value === 'vn') return slide.title_vn || slide.key || ''
-  if (lang.value === 'id') return slide.title_id || slide.key || ''
+  // Always use title_* if present, else use main text, else fallback to key
+  if (lang.value === 'en') return slide.title_en || slide.en || slide.key || ''
+  if (lang.value === 'cn') return slide.title_cn || slide.cn || slide.key || ''
+  if (lang.value === 'vn') return slide.title_vn || slide.vn || slide.key || ''
+  if (lang.value === 'id') return slide.title_id || slide.id || slide.key || ''
   return slide.key || ''
 })
 const slideDesc = computed(() => {
@@ -102,6 +102,13 @@ const instructionText = computed(() => {
   if (lang.value === 'vn') return 'SỬ DỤNG MŨI TÊN ĐỂ CHUYỂN GIỮA CÁC TRANG.'
   if (lang.value === 'id') return 'GUNAKAN PANAH UNTUK BERPINDAH ANTAR SLIDE.'
   return 'USE THE ARROWS TO NAVIGATE BETWEEN SLIDES.'
+})
+const quizBtnText = computed(() => {
+  if (lang.value === 'en') return 'Take the Quiz'
+  if (lang.value === 'cn') return '参加测验'
+  if (lang.value === 'vn') return 'Làm bài kiểm tra'
+  if (lang.value === 'id') return 'Ikuti Kuis'
+  return 'Take the Quiz'
 })
 </script>
 
