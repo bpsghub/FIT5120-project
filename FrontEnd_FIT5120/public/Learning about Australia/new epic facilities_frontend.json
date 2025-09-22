@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "name": "Wulong Tai Chi Kung Fu Melbourne CBD",
+    "type": "facility",
+    "address": null,
+    "coordinates": {
+      "lat": -37.8068236,
+      "lng": 144.9600646
+    },
+    "ethnicTags": [
+      "Chinese"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "mandarin",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 2,
+    "name": "RMIT Table Tennis Club",
+    "type": "facility",
+    "address": null,
+    "coordinates": {
+      "lat": -37.8086521,
+      "lng": 144.9636394
+    },
+    "ethnicTags": [
+      "Chinese"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "mandarin",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 3,
+    "name": "PTTA Table Tennis",
+    "type": "facility",
+    "address": null,
+    "coordinates": {
+      "lat": -37.8433729,
+      "lng": 144.9613557
+    },
+    "ethnicTags": [
+      "Chinese"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "mandarin",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 4,
+    "name": "Little Mandarin Yoga & Pilates (CBD)",
+    "type": "facility",
+    "address": null,
+    "coordinates": {
+      "lat": -37.8117471,
+      "lng": 144.960508
+    },
+    "ethnicTags": [
+      "Chinese"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "mandarin",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 5,
+    "name": "Melbourne Chess Club",
+    "type": "facility",
+    "address": null,
+    "coordinates": {
+      "lat": -37.7952875,
+      "lng": 144.9777499
+    },
+    "ethnicTags": [
+      "Chinese"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "mandarin",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 6,
+    "name": "Melbourne Museum",
+    "type": "facility",
+    "address": null,
+    "coordinates": {
+      "lat": -37.803273,
+      "lng": 144.9717408
+    },
+    "ethnicTags": [
+      "Vietnamese"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "Vietnamese",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 7,
+    "name": "SUM OF US STUDIO | Physiotherapy and pilates studio in Prahran, Melbourne",
+    "type": "facility",
+    "address": null,
+    "coordinates": {
+      "lat": -37.8539949,
+      "lng": 145.0080278
+    },
+    "ethnicTags": [
+      "Vietnamese"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "Vietnamese",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 8,
+    "name": "Royal Botanic Gardens, Melbourne",
+    "type": "facility",
+    "address": null,
+    "coordinates": {
+      "lat": -37.8302443,
+      "lng": 144.9801496
+    },
+    "ethnicTags": [
+      "Vietnamese"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "Vietnamese",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 9,
+    "name": "Alexandra Gardens",
+    "type": "park",
+    "address": null,
+    "coordinates": {
+      "lat": -37.8204318,
+      "lng": 144.9721339
+    },
+    "ethnicTags": [
+      "Vietnamese"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "Vietnamese",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 10,
+    "name": "Energy Badminton Centre (EBC)",
+    "type": "community_centre",
+    "address": null,
+    "coordinates": {
+      "lat": -37.9417938,
+      "lng": 145.1698208
+    },
+    "ethnicTags": [
+      "Vietnamese"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "Vietnamese",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 11,
+    "name": "Altona Badminton Centre",
+    "type": "community_centre",
+    "address": null,
+    "coordinates": {
+      "lat": -37.8406432,
+      "lng": 144.8581873
+    },
+    "ethnicTags": [
+      "Vietnamese"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "Vietnamese",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 12,
+    "name": "Melbourne Sports and Aquatic Centre",
+    "type": "facility",
+    "address": null,
+    "coordinates": {
+      "lat": -37.843442,
+      "lng": 144.9618623
+    },
+    "ethnicTags": [
+      "Indonesian"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "Indonesian",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 13,
+    "name": "Albert Park Yachting & Angling Club",
+    "type": "park",
+    "address": null,
+    "coordinates": {
+      "lat": -37.8494403,
+      "lng": 144.9507803
+    },
+    "ethnicTags": [
+      "Indonesian"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "Indonesian",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 14,
+    "name": "Victoria National Gallery",
+    "type": "facility",
+    "address": null,
+    "coordinates": {
+      "lat": -37.8225942,
+      "lng": 144.9689278
+    },
+    "ethnicTags": [
+      "Indonesian"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "Indonesian",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 15,
+    "name": "Immigration Museum",
+    "type": "facility",
+    "address": null,
+    "coordinates": {
+      "lat": -37.8192442,
+      "lng": 144.9604547
+    },
+    "ethnicTags": [
+      "Indonesian"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "Indonesian",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 16,
+    "name": "Victoria Market Pharmacy",
+    "type": "market",
+    "address": null,
+    "coordinates": {
+      "lat": -37.8066573,
+      "lng": 144.9593671
+    },
+    "ethnicTags": [
+      "Indonesian"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "Indonesian",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 17,
+    "name": "Princes Wharf",
+    "type": "facility",
+    "address": null,
+    "coordinates": {
+      "lat": -37.8410117,
+      "lng": 144.9269522
+    },
+    "ethnicTags": [
+      "Indonesian"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "Indonesian",
+    "raw": {
+      "description": ""
+    }
+  },
+  {
+    "id": 18,
+    "name": "Hardrock Climbing | Melbourne CBD",
+    "type": "facility",
+    "address": null,
+    "coordinates": {
+      "lat": -37.8071108,
+      "lng": 144.9624975
+    },
+    "ethnicTags": [
+      "Indonesian"
+    ],
+    "phone": null,
+    "rating": null,
+    "image": null,
+    "sourceLayer": "Indonesian",
+    "raw": {
+      "description": ""
+    }
+  }
+]
