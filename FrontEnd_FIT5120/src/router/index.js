@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import FacilityEvent from '@/views/FacilityEvent.vue'
 import LearnEnglish from '@/views/LearnEnglish.vue'
 import PassCode from '@/views/PassCode.vue'
-import SocialNorms from '@/views/SocialNorms.vue'
+import SocialNorms from '@/views/socialNorms.vue'
 import MeetingPeople from '@/views/MeetingPeople.vue'
 import EatingOut from '@/views/EatingOut.vue'
 
