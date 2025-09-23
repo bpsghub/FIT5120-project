@@ -1,56 +1,88 @@
 <template>
   <div class="meeting-people-guide">
-    <Header />
     <!-- Hero Banner -->
     <header class="hero-banner">
       <div class="hero-gradient"></div>
       <div class="hero-particles">
-        <span v-for="n in 18" :key="n" class="particle" :style="particleStyle(n)" />
+        <span v-for="n in 18" :key="n" class="particle" :style="particleStyle(n)"></span>
       </div>
       <div class="hero-content">
         <h1 class="main-title">Meeting New People</h1>
         <h2 class="subtitle">This guide helps you feel confident when meeting new people in Australia.</h2>
       </div>
-      <!-- <div class="progress-bar" :style="{ width: progressPercent + '%' }" aria-label="Progress"></div> -->
+      <div class="progress-bar" :style="{ width: progressPercent + '%' }" aria-label="Progress"></div>
     </header>
 
-    <!-- Learning section -->
-    <div class="content-box">
-      <LearningSlider v-model:lang="lang" csv-url="/Learning about Australia/meetingPeople.csv"
-        image-seed-prefix="meetingpeople" @take-quiz="takeQuiz" />
-    </div>
+    <!-- Carousel Slider -->
+    <main class="carousel-section">
+      <swiper ref="swiperRef" :slides-per-view="1" :space-between="32"
+        :pagination="{ clickable: true, el: '.swiper-pagination' }" :navigation="false" :on-slideChange="onSlideChange"
+        class="meeting-carousel" :aria-label="'Step-by-step guide carousel'">
+        <!-- Slide 1: Small Talk -->
+        <swiper-slide>
+          <div class="slide-card">
+            <div class="slide-grid">
+              <div class="slide-text">
+                <h3 class="slide-headline">Small Talk</h3>
+                <ul class="slide-bullets">
+                  <li>Start with small talk about the weather or hobbies.</li>
+                  <li>Ask open-ended questions to show interest.</li>
+                  <li>Smile and use friendly body language.</li>
+                </ul>
+                <div class="slide-tip" tabindex="0" aria-label="Pro Tip: Australians love talking about sports!">
+                  <span class="tip-icon">💡</span>
+                  <span class="tip-text">Pro Tip: Australians love talking about sports!</span>
+                </div>
+              </div>
+              <div class="slide-image-container">
+                <img src="/public/Learning about Australia/meetingPeople.jpg"
+                  alt="Illustration of relaxed conversation starters" class="slide-image" />
+                <div class="image-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+        <!-- Add more slides here for the rest of the guide -->
+      </swiper>
+      <!-- Navigation Arrows -->
+      <button class="carousel-arrow left" @click="prevSlide" aria-label="Previous slide" tabindex="0">
+        <span class="chevron">&#8249;</span>
+      </button>
+      <button class="carousel-arrow right" @click="nextSlide" aria-label="Next slide" tabindex="0">
+        <span class="chevron">&#8250;</span>
+      </button>
+      <!-- Pagination Dots -->
+      <div class="swiper-pagination" aria-label="Carousel pagination"></div>
+    </main>
+
+    <!-- Sticky Footer Instruction -->
+    <footer class="sticky-instruction" aria-live="polite">
+      Use the arrows or swipe to navigate between slides.
+    </footer>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, nextTick } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/swiper-bundle.css'
-import Header from '@/components/Header.vue'
-import LearningSlider from '@/components/LearningSlider.vue'
 
-const lang = ref('en')
+const swiperRef = ref(null)
+const totalSlides = 1 // Update as you add more slides
+const currentSlide = ref(0)
 
-const slides = ref([])
+const progressPercent = computed(() => ((currentSlide.value + 1) / totalSlides) * 100)
 
-
-async function fetchSlides() {
-  const res = await fetch('/Learning about Australia/meetingPeople.csv')
-  const csv = await res.text()
-  const lines = csv.split(/\r?\n/).filter(Boolean)
-  const headers = lines[0].split(',')
-  slides.value = lines.slice(1).map(line => {
-    const cols = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/)
-    const obj = {}
-    headers.forEach((h, i) => {
-      obj[h.trim()] = cols[i]?.replace(/^"|"$/g, '').trim() || ''
-    })
-    return obj
-  })
-  await nextTick()
+function prevSlide() {
+  swiperRef.value?.swiper.slidePrev()
 }
-
-onMounted(fetchSlides)
-
+function nextSlide() {
+  swiperRef.value?.swiper.slideNext()
+}
+function onSlideChange(swiper) {
+  currentSlide.value = swiper.activeIndex
+}
+// Particle animation style
 function particleStyle(n) {
   const angle = (n / 18) * 2 * Math.PI
   const radius = 120 + Math.random() * 40
@@ -66,7 +98,6 @@ function particleStyle(n) {
     animationDelay: `${delay}s`
   }
 }
-
 </script>
 
 <style scoped>
@@ -97,8 +128,7 @@ function particleStyle(n) {
   position: absolute;
   inset: 0;
   background: linear-gradient(120deg, #E6E6FA 0%, #9370DB 100%);
-  z-index: 0;
-  pointer-events: none;
+  z-index: 1;
 }
 
 .hero-particles {
@@ -152,14 +182,24 @@ function particleStyle(n) {
   margin-bottom: 0;
 }
 
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #FFD700 0%, #4B0082 100%);
+  border-radius: 0 8px 8px 0;
+  z-index: 4;
+  transition: width 0.4s cubic-bezier(.4, 1.3, .6, 1);
+}
+
 /* Carousel Section */
 .carousel-section {
   position: relative;
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 32px 0 64px 0;
   z-index: 10;
-  min-height: 420px;
 }
 
 .meeting-carousel {
@@ -171,15 +211,12 @@ function particleStyle(n) {
   background: #F6F4FF;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(75, 0, 130, 0.10);
-  padding: 32px 48px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  min-height: 340px;
+  min-height: 260px;
   position: relative;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
 }
 
 .slide-grid {
@@ -203,12 +240,6 @@ function particleStyle(n) {
   color: #4B0082;
   font-weight: 700;
   margin-bottom: 12px;
-}
-
-.slide-desc {
-  font-size: 16px;
-  color: #222;
-  margin: 0 0 16px 0;
 }
 
 .slide-bullets {
@@ -270,6 +301,13 @@ function particleStyle(n) {
   }
 }
 
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(120deg, rgba(75, 0, 130, 0.18) 0%, rgba(230, 230, 250, 0.12) 100%);
+  pointer-events: none;
+}
 
 /* Carousel Arrows */
 .carousel-arrow {

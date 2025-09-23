@@ -71,7 +71,7 @@ const { t } = useI18n()
 
 /* Banner content with semi-transparent background */
 .banner_content {
-  background-color: rgba(84, 74, 87, 0.3);
+  background-color: rgb(84 74 87 / 62%);
   padding: 5% 10%;
   border: 2px solid white;
 }

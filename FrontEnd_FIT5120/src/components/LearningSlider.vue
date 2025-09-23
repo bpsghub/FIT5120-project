@@ -1,35 +1,52 @@
 <template>
-  <div class="learning-slider-container">
+  <div class="learning-slider-container justify-content-center container">
     <div class="slider-content">
       <slot name="lang-switcher">
-        <LanguageSwitcher v-model="lang" class="lang-switcher" />
+        <LanguageSwitcher v-model="langProxy" class="lang-switcher" />
       </slot>
-      <div class="slider-row">
-        <button class="arrow-btn left" @click="prevSlide" :disabled="currentSlide === 0">
-          <span>&lt;</span>
-        </button>
-        <div class="slide-card">
-          <h2 class="slide-title">{{ slideTitle }}</h2>
-          <p class="slide-desc">{{ slideDesc }}</p>
-        </div>
-        <button class="arrow-btn right" @click="nextSlide" :disabled="currentSlide === slides.length - 1">
-          <span>&gt;</span>
-        </button>
+      <div class="display-toggle">
+        <button :class="{ active: displayMode === 'grid' }" @click="displayMode = 'grid'">Grid</button>
+        <button :class="{ active: displayMode === 'column' }" @click="displayMode = 'column'">Column</button>
       </div>
-      <div class="slide-image">
-        <img :src="getRandomImage(currentSlide)" alt="Slide Image" />
+      <div :class="['cards-wrapper', displayMode]">
+        <div class="row w-100 m-0">
+          <div v-for="(card, idx) in cards" :key="card.key"
+            :class="displayMode === 'grid' ? 'col-lg-4 col-md-6 col-12 d-flex justify-content-center mb-4' : 'col-12 d-flex justify-content-center mb-4'">
+            <div :class="['slide-card-with-image', 'w-100', displayMode]">
+              <template v-if="displayMode === 'grid'">
+                <div class="slide-image mb-3">
+                  <img :src="getRandomImage(idx)" alt="Slide Image" />
+                </div>
+                <div class="slide-card text-center">
+                  <h2 class="slide-title">{{ getTitle(card) }}</h2>
+                  <p class="slide-desc">{{ card[langProxy] }}</p>
+                </div>
+              </template>
+              <template v-else>
+                <div class="slide-card d-flex flex-column justify-content-center align-items-start flex-grow-1">
+                  <h2 class="slide-title">{{ getTitle(card) }}</h2>
+                  <p class="slide-desc">{{ card[langProxy] }}</p>
+                </div>
+                <div class="slide-image ms-4 d-flex align-items-center">
+                  <img :src="getRandomImage(idx)" alt="Slide Image" />
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="slider-instructions">{{ instructionText }}</div>
-    <button v-if="currentSlide === slides.length - 1" class="quiz-btn blink" @click="$emit('take-quiz')">
-      <slot name="quiz-btn">{{ quizBtnText }}</slot>
-    </button>
+    <div class="quiz-btn-bottom-wrapper">
+      <button class="quiz-btn" @click="$emit('take-quiz')">
+        {{ quizBtnText }}
+      </button>
+    </div>
   </div>
 </template>
 
 <script setup>
+
 import { ref, onMounted, computed } from 'vue'
-import Papa from 'papaparse'
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 
 const props = defineProps({
@@ -39,83 +56,100 @@ const props = defineProps({
 })
 const emit = defineEmits(['update:lang', 'take-quiz'])
 
-const lang = computed({
+// Proxy for v-model:lang
+const langProxy = computed({
   get: () => props.lang,
   set: (val) => emit('update:lang', val)
 })
 
-const slides = ref([])
-const currentSlide = ref(0)
+const quizBtnText = computed(() => {
+  switch (langProxy.value) {
+    case 'en': return 'Take Quiz'
+    case 'cn': return '参加测验'
+    case 'vn': return 'Làm bài kiểm tra'
+    case 'id': return 'Ikuti Kuis'
+    default: return 'Take Quiz'
+  }
+})
 
-function prevSlide() {
-  if (currentSlide.value > 0) currentSlide.value--
-}
-function nextSlide() {
-  if (currentSlide.value < slides.value.length - 1) currentSlide.value++
-}
+const cards = ref([])
+const displayMode = ref('grid')
+
 function getRandomImage(idx) {
   return `https://picsum.photos/seed/${props.imageSeedPrefix}${idx + 1}/180/180`
 }
-onMounted(() => {
-  fetch(props.csvUrl)
-    .then((res) => res.text())
-    .then((csv) => {
-      Papa.parse(csv, {
-        header: true,
-        skipEmptyLines: true,
-        complete: (results) => {
-          slides.value = results.data.map((row) => ({
-            en: row.en || '',
-            cn: row.cn || '',
-            vn: row.vn || '',
-            id: row.id || '',
-            key: row.key || '',
-            title_en: row.title_en || row.key || '',
-            title_cn: row.title_cn || row.key || '',
-            title_vn: row.title_vn || row.key || '',
-            title_id: row.title_id || row.key || '',
-          }))
-        },
-      })
-    })
+
+onMounted(async () => {
+  const res = await fetch(props.csvUrl)
+  const csv = await res.text()
+  const lines = csv.split(/\r?\n/).filter(Boolean)
+  const headers = lines[0].split(',')
+  cards.value = lines.slice(1).map(line => {
+    const values = []
+    let inQuotes = false, cur = ''
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i]
+      if (char === '"') inQuotes = !inQuotes
+      else if (char === ',' && !inQuotes) { values.push(cur); cur = '' }
+      else cur += char
+    }
+    values.push(cur)
+    const obj = {}
+    headers.forEach((h, i) => { obj[h.trim()] = (values[i] || '').replace(/^"|"$/g, '') })
+    return obj
+  })
 })
-const slideTitle = computed(() => {
-  const slide = slides.value[currentSlide.value]
-  if (!slide) return ''
-  // Always use title_* if present, else use main text, else fallback to key
-  if (lang.value === 'en') return slide.title_en || slide.en || slide.key || ''
-  if (lang.value === 'cn') return slide.title_cn || slide.cn || slide.key || ''
-  if (lang.value === 'vn') return slide.title_vn || slide.vn || slide.key || ''
-  if (lang.value === 'id') return slide.title_id || slide.id || slide.key || ''
-  return slide.key || ''
-})
-const slideDesc = computed(() => {
-  return slides.value[currentSlide.value]?.[lang.value] || ''
-})
-const instructionText = computed(() => {
-  if (lang.value === 'en') return 'USE THE ARROWS TO NAVIGATE BETWEEN SLIDES.'
-  if (lang.value === 'cn') return '使用箭头在幻灯片之间导航。'
-  if (lang.value === 'vn') return 'SỬ DỤNG MŨI TÊN ĐỂ CHUYỂN GIỮA CÁC TRANG.'
-  if (lang.value === 'id') return 'GUNAKAN PANAH UNTUK BERPINDAH ANTAR SLIDE.'
-  return 'USE THE ARROWS TO NAVIGATE BETWEEN SLIDES.'
-})
-const quizBtnText = computed(() => {
-  if (lang.value === 'en') return 'Take the Quiz'
-  if (lang.value === 'cn') return '参加测验'
-  if (lang.value === 'vn') return 'Làm bài kiểm tra'
-  if (lang.value === 'id') return 'Ikuti Kuis'
-  return 'Take the Quiz'
-})
+
+function getTitle(card) {
+  switch (langProxy.value) {
+    case 'en': return card.title_en || card.en || card.key || ''
+    case 'cn': return card.title_cn || card.cn || card.key || ''
+    case 'vn': return card.title_vn || card.vn || card.key || ''
+    case 'id': return card.title_id || card.id || card.key || ''
+    default: return card.key || ''
+  }
+}
+
 </script>
 
 <style scoped>
 .learning-slider-container {
-  min-height: 100vh;
-  background: #fff;
+  min-height: 80vh;
+  background: #74238b00;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Quicksand', 'Arial', sans-serif;
+}
+
+.display-toggle {
+  display: flex;
+  gap: 12px;
+  margin: 24px 0 24px 0;
+  justify-content: center;
+}
+
+.display-toggle button {
+  background: #e9e4ff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #661aff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.display-toggle button.active {
+  background: #661aff;
+  color: #fff;
+}
+
+
+
+.cards-wrapper {
+  width: 100%;
 }
 
 .lang-switcher {
@@ -124,26 +158,63 @@ const quizBtnText = computed(() => {
   right: 50px;
 }
 
+
 .slider-content {
-  margin: 40px auto 0 auto;
   width: 100%;
-  max-width: 900px;
   min-height: 250px;
-  border-radius: 4px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
   color: #222;
+  padding-bottom: 24px;
 }
 
-.slider-row {
+.slider-main-row {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
+  gap: 24px;
+}
+
+
+.slide-card-with-image {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(102, 26, 255, 0.10);
+  padding: 32px 36px;
+  gap: 32px;
+  width: 100%;
+  margin: 0;
+  transition: box-shadow 0.25s, transform 0.22s, border 0.18s;
+  border: 2.5px solid transparent;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.slide-card-with-image.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.slide-card-with-image.column {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-card-with-image:hover {
+  box-shadow: 0 12px 36px 0 rgba(102, 26, 255, 0.22), 0 2px 16px 0 rgba(102, 26, 255, 0.10);
+  transform: translateY(-8px) scale(1.025);
+  border: 2.5px solid #a259e6;
+  z-index: 2;
 }
 
 .arrow-btn {
@@ -168,21 +239,23 @@ const quizBtnText = computed(() => {
   cursor: not-allowed;
 }
 
+
 .slide-card {
-  background: #f8f6ff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(102, 26, 255, 0.08);
-  padding: 32px 36px;
-  min-width: 260px;
-  max-width: 420px;
-  margin: 0 16px;
+  /* display: flex !important;
+  align-items: center !important; */
+  background: transparent;
+  border-radius: 12px;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .slide-title {
+
   color: #661aff;
   font-size: 1.5rem;
   font-weight: 700;
@@ -194,22 +267,37 @@ const quizBtnText = computed(() => {
   color: #222;
   font-size: 1.08rem;
   margin-bottom: 8px;
+  text-align: start;
 }
 
+
+
 .slide-image {
-  margin: 24px auto 0 auto;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(102, 26, 255, 0.13);
 }
 
+
+
 .slide-image img {
-  width: 180px;
-  height: 180px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(102, 26, 255, 0.1);
+  border-radius: 0;
   background: #fff;
+  border: none;
+  transition: transform 0.2s;
+  display: block;
+}
+
+.slide-image img:hover {
+  transform: scale(1.04) rotate(-2deg);
 }
 
 .slider-instructions {
@@ -224,9 +312,17 @@ const quizBtnText = computed(() => {
   letter-spacing: 0.5px;
 }
 
+
+
+.quiz-btn-bottom-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
 .quiz-btn {
-  margin: 32px auto 0 auto;
-  display: block;
   background: #661aff;
   color: #fff;
   font-size: 1.3rem;
@@ -240,6 +336,8 @@ const quizBtnText = computed(() => {
     background 0.2s,
     transform 0.2s;
   outline: none;
+  margin: 0 auto;
+  display: block;
 }
 
 .quiz-btn:hover,
@@ -252,20 +350,30 @@ const quizBtnText = computed(() => {
   animation: blink-animation 1s steps(2, start) infinite;
 }
 
+
 @media (max-width: 900px) {
   .slider-content {
     font-size: 1.1rem;
-    max-width: 100vw;
-    min-width: 0;
     margin: 16px auto 0 auto;
+    padding-bottom: 8px;
+  }
+
+  .slide-card-with-image {
+    padding: 16px 10px;
+    gap: 12px;
+    margin: 0;
+  }
+
+  .slide-card-with-image.grid,
+  .slide-card-with-image.column {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
   }
 
   .slide-card {
-    min-width: 160px;
-    max-width: 90vw;
-    padding: 16px 10px;
-    margin: 0 6px;
     font-size: 1rem;
+    align-items: center;
   }
 
   .slide-image img {
@@ -279,29 +387,6 @@ const quizBtnText = computed(() => {
     height: 36px;
     font-size: 1.3rem;
   }
-
-  .lang-switcher {
-    position: static;
-    margin: 0 0 12px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    z-index: 2;
-  }
-
-  .slider-row {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .slide-card {
-    margin: 0;
-    width: 100%;
-    max-width: 90vw;
-  }
 }
 
 @media (max-width: 600px) {
@@ -310,8 +395,6 @@ const quizBtnText = computed(() => {
   }
 
   .slide-card {
-    min-width: 100px;
-    max-width: 98vw;
     padding: 8px 4px;
     font-size: 0.9rem;
   }
@@ -353,7 +436,6 @@ const quizBtnText = computed(() => {
   .slide-card {
     margin: 0;
     width: 100%;
-    max-width: 98vw;
   }
 }
 
