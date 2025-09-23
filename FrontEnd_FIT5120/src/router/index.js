@@ -123,6 +123,13 @@ const router = createRouter({
       component: () => import('../views/TramLearning.vue'),
       meta: { requiresAuth: true },
     },
+    {
+      path: '/facility/:id',
+      name: 'FacilityDetail',
+      component: () => import('../views/FacilityDetailPage.vue'),
+      props: true,
+      meta: { requiresAuth: true },
+    },
   ],
 })
 
