@@ -12,11 +12,7 @@
           <h2 class="slide-title">{{ slideTitle }}</h2>
           <p class="slide-desc">{{ slideDesc }}</p>
         </div>
-        <button
-          class="arrow-btn right"
-          @click="nextSlide"
-          :disabled="currentSlide === slides.length - 1"
-        >
+        <button class="arrow-btn right" @click="nextSlide" :disabled="currentSlide === slides.length - 1">
           <span>&gt;</span>
         </button>
       </div>
@@ -121,11 +117,13 @@ const quizBtnText = computed(() => {
   align-items: center;
   font-family: 'Quicksand', 'Arial', sans-serif;
 }
+
 .lang-switcher {
   position: absolute;
   top: 150px;
   right: 50px;
 }
+
 .slider-content {
   margin: 40px auto 0 auto;
   width: 100%;
@@ -139,6 +137,7 @@ const quizBtnText = computed(() => {
   font-size: 2rem;
   color: #222;
 }
+
 .slider-row {
   display: flex;
   flex-direction: row;
@@ -146,6 +145,7 @@ const quizBtnText = computed(() => {
   justify-content: center;
   width: 100%;
 }
+
 .arrow-btn {
   background: #a259e6;
   color: #fff;
@@ -161,11 +161,13 @@ const quizBtnText = computed(() => {
   transition: background 0.2s;
   box-shadow: 0 2px 8px rgba(102, 26, 255, 0.1);
 }
+
 .arrow-btn:disabled {
   background: #e0d6f7;
   color: #b8a1e6;
   cursor: not-allowed;
 }
+
 .slide-card {
   background: #f8f6ff;
   border-radius: 18px;
@@ -179,6 +181,7 @@ const quizBtnText = computed(() => {
   justify-content: center;
   align-items: center;
 }
+
 .slide-title {
   color: #661aff;
   font-size: 1.5rem;
@@ -186,17 +189,20 @@ const quizBtnText = computed(() => {
   margin-bottom: 16px;
   letter-spacing: 0.5px;
 }
+
 .slide-desc {
   color: #222;
   font-size: 1.08rem;
   margin-bottom: 8px;
 }
+
 .slide-image {
   margin: 24px auto 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .slide-image img {
   width: 180px;
   height: 180px;
@@ -205,6 +211,7 @@ const quizBtnText = computed(() => {
   box-shadow: 0 2px 12px rgba(102, 26, 255, 0.1);
   background: #fff;
 }
+
 .slider-instructions {
   margin-top: 32px;
   background: #fff;
@@ -216,6 +223,7 @@ const quizBtnText = computed(() => {
   box-shadow: 0 2px 8px rgba(102, 26, 255, 0.1);
   letter-spacing: 0.5px;
 }
+
 .quiz-btn {
   margin: 32px auto 0 auto;
   display: block;
@@ -233,11 +241,13 @@ const quizBtnText = computed(() => {
     transform 0.2s;
   outline: none;
 }
+
 .quiz-btn:hover,
 .quiz-btn:focus {
   background: #a259e6;
   transform: scale(1.04);
 }
+
 .blink {
   animation: blink-animation 1s steps(2, start) infinite;
 }
@@ -249,6 +259,7 @@ const quizBtnText = computed(() => {
     min-width: 0;
     margin: 16px auto 0 auto;
   }
+
   .slide-card {
     min-width: 160px;
     max-width: 90vw;
@@ -256,16 +267,19 @@ const quizBtnText = computed(() => {
     margin: 0 6px;
     font-size: 1rem;
   }
+
   .slide-image img {
     width: 120px;
     height: 120px;
     border-radius: 10px;
   }
+
   .arrow-btn {
     width: 36px;
     height: 36px;
     font-size: 1.3rem;
   }
+
   .lang-switcher {
     position: static;
     margin: 0 0 12px 0;
@@ -276,59 +290,114 @@ const quizBtnText = computed(() => {
     width: 100%;
     z-index: 2;
   }
+
   .slider-row {
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
+
   .slide-card {
     margin: 0;
     width: 100%;
     max-width: 90vw;
   }
 }
+
 @media (max-width: 600px) {
   .slider-content {
     font-size: 0.95rem;
   }
+
   .slide-card {
     min-width: 100px;
     max-width: 98vw;
     padding: 8px 4px;
     font-size: 0.9rem;
   }
+
   .slide-title {
     font-size: 1.1rem;
     margin-bottom: 8px;
   }
+
   .slide-desc {
     font-size: 0.85rem;
     margin-bottom: 4px;
   }
+
   .slide-image img {
     width: 80px;
     height: 80px;
     border-radius: 7px;
   }
+
   .arrow-btn {
     width: 28px;
     height: 28px;
     font-size: 1rem;
   }
+
   .lang-switcher {
     margin-bottom: 8px;
     width: 100%;
     justify-content: center;
   }
+
   .slider-row {
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
+
   .slide-card {
     margin: 0;
     width: 100%;
     max-width: 98vw;
+  }
+}
+
+.lang-switcher {
+  position: fixed;
+  right: 48px;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 100;
+}
+
+.lang-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  opacity: 0.9;
+  transition:
+    opacity 0.2s,
+    background 0.2s;
+}
+
+.lang-btn.active {
+  background: #d1aaff !important;
+  color: #222 !important;
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .lang-switcher {
+    position: static !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    margin-top: 32px !important;
+    right: unset;
+    top: unset;
   }
 }
 </style>

@@ -8,12 +8,9 @@
       </p>
     </div>
     <div class="content-box">
-      <LearningSlider
-        v-model:lang="lang"
-        csv-url="/Learning about Australia/eatingout.csv"
-        image-seed-prefix="eatingout"
-        @take-quiz="takeQuiz"
-      />
+      <LearningSlider v-model:lang="lang"
+        csv-url="/Learning about Australia/FrontEnd_FIT5120/public/Learning about Australia/dining_etiquette_multilang_horizontal.csv"
+        image-seed-prefix="eatingout" @take-quiz="takeQuiz" />
     </div>
   </div>
 </template>

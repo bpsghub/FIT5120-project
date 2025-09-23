@@ -1,14 +1,12 @@
 <template>
   <div class="find-page">
+    <Header />
     <div class="page-header">
       <h1>Find {{ activeTab === 'facilities' ? 'Facilities' : 'Events' }}</h1>
 
       <div class="controls">
-        <button
-          @click="toggleTab"
-          class="toggle-btn"
-          :class="activeTab === 'facilities' ? 'facility-active' : 'event-active'"
-        >
+        <button @click="toggleTab" class="toggle-btn"
+          :class="activeTab === 'facilities' ? 'facility-active' : 'event-active'">
           {{ activeTab === 'facilities' ? 'Switch to Events' : 'Switch to Facilities' }}
         </button>
 
@@ -86,19 +84,9 @@
         </div>
 
         <div v-if="!loading && !error && items.length > 0" class="cards-container">
-          <FacilityCard
-            v-for="item in items"
-            :key="item.id"
-            :facility="item"
-            v-if="activeTab === 'facilities'"
-          />
+          <FacilityCard v-for="item in items" :key="item.id" :facility="item" v-if="activeTab === 'facilities'" />
 
-          <EventCard
-            v-for="item in items"
-            :key="item.id"
-            :event="item"
-            v-if="activeTab === 'events'"
-          />
+          <EventCard v-for="item in items" :key="item.id" :event="item" v-if="activeTab === 'events'" />
         </div>
       </div>
 
@@ -116,6 +104,7 @@ import FacilityCard from '@/components/FacilityCard.vue'
 import EventCard from '@/components/EventCard.vue'
 import facilityService from '@/services/facilityService'
 import eventService from '@/services/eventService'
+import Header from '@/components/Header.vue'
 
 const activeTab = ref('facilities')
 const showFilters = ref(false)
@@ -192,12 +181,12 @@ const loadData = async () => {
       }
 
       const response = await facilityService.searchFacilitiesWithFilters(filterParams)
-      console.log("响应数据 is ",response.data)
+      console.log("响应数据 is ", response.data)
       items.value = (response.data || []).map(f => ({
         ...f,
         isOpen: getOpenStatus(f)
       }))
-      console.log("响应数据 is  items is ",items.value)
+      console.log("响应数据 is  items is ", items.value)
     } else {
       const response = await eventService.getNearbyEvents(
         userLocation.value.lat,
@@ -552,8 +541,13 @@ onUnmounted(() => {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .loading p {

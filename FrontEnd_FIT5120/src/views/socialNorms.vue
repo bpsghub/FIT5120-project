@@ -5,24 +5,14 @@
       <h1>Social Norms</h1>
     </div>
     <div class="content-box">
+
       <div class="container py-4">
         <div class="row g-5 justify-content-center mb-4 w-100">
-          <div
-            v-for="card in cards"
-            :key="card.key"
-            class="col-12 col-md-6 col-lg-5"
-          >
-            <div
-              class="card h-100 text-decoration-none text-dark shadow-sm hover-shadow-lg"
-              @click="goTo(card.key)"
-              style="cursor:pointer"
-            >
-              <img
-                :src="card.img"
-                class="card-img-top rounded-top"
-                :alt="card.title"
-                style="height: 220px; object-fit: cover"
-              />
+          <div v-for="card in cards" :key="card.key" class="col-12 col-md-6 col-lg-5">
+            <div class="card h-100 text-decoration-none text-dark shadow-sm hover-shadow-lg" @click="goTo(card.key)"
+              style="cursor:pointer">
+              <img :src="card.img" class="card-img-top rounded-top" :alt="card.title"
+                style="height: 220px; object-fit: cover" />
               <div class="card-body">
                 <h5 class="card-title fw-bold">{{ card.title }}</h5>
                 <p class="card-text">{{ card.text }}</p>
@@ -30,12 +20,11 @@
             </div>
           </div>
         </div>
+        <div class="lang-switcher">
+          <LanguageSwitcher v-model="lang" />
+        </div>
       </div>
     </div>
-    <div class="lang-switcher">
-      <LanguageSwitcher v-model="lang" />
-    </div>
-    <router-view />
   </div>
 </template>
 
@@ -79,6 +68,7 @@ function goTo(key) {
   flex-direction: column;
   position: relative;
 }
+
 .banner {
   color: #222;
   padding: 48px 0 32px 0;
@@ -86,12 +76,14 @@ function goTo(key) {
   font-family: 'Quicksand', 'Arial', sans-serif;
   border-bottom: 0;
 }
+
 .banner h1 {
   font-size: 2.3rem;
   font-family: 'Quicksand', 'Arial', sans-serif;
   margin-bottom: 12px;
   letter-spacing: 1px;
 }
+
 .content-box {
   background: #fff;
   margin: 40px auto 0 auto;
@@ -105,6 +97,7 @@ function goTo(key) {
   font-size: 1.1rem;
   color: #222;
 }
+
 .hover-shadow-lg:hover {
   box-shadow:
     0 12px 32px rgba(162, 89, 230, 0.18),
@@ -115,15 +108,26 @@ function goTo(key) {
     box-shadow 0.25s,
     transform 0.25s;
 }
+
 .lang-switcher {
   position: fixed;
   right: 48px;
-  top: calc(120px + 96px);
+  top: 50%;
   display: flex;
   flex-direction: column;
   gap: 16px;
   z-index: 100;
 }
+
+@media (max-width: 900px) {
+  .lang-switcher {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 32px;
+  }
+}
+
 .lang-btn {
   width: 60px;
   height: 60px;
@@ -140,11 +144,13 @@ function goTo(key) {
     opacity 0.2s,
     background 0.2s;
 }
+
 .lang-btn.active {
   background: #d1aaff !important;
   color: #222 !important;
   opacity: 1;
 }
+
 @media (max-width: 900px) {
   .lang-switcher {
     position: static !important;

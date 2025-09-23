@@ -1,15 +1,16 @@
 <template>
-  <div class="groceries-container container">
+  <div class="myki-learning-container container">
     <Header />
     <div class="banner">
-      <h1>Groceries Shopping</h1>
+      <h1>Learning About Myki Card</h1>
       <p>
-        Learn how to shop for groceries, pay, and save money in Australia.
+        This guide helps you understand how to use the Myki card for public transport in Australia, with step-by-step
+        instructions in multiple languages.
       </p>
     </div>
     <div class="content-box">
-      <LearningSlider v-model:lang="lang" csv-url="/Learning about Australia/groceries.csv"
-        image-seed-prefix="groceries" @take-quiz="takeQuiz" />
+      <LearningSlider v-model:lang="lang" csv-url="/Learning about Australia/epic4_myki_keys_final.csv"
+        image-seed-prefix="mykilearning" @take-quiz="takeQuiz" />
     </div>
   </div>
 </template>
@@ -26,41 +27,7 @@ function takeQuiz() {
 </script>
 
 <style scoped>
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #222;
-  padding: 24px 0 8px 0;
-  margin-bottom: 0px;
-}
-
-.logo {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 2.5rem;
-  margin-left: 48px;
-  font-weight: bold;
-}
-
-.nav {
-  display: flex;
-  gap: 32px;
-  margin-right: 48px;
-}
-
-.nav a {
-  color: #222;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.nav a.router-link-exact-active {
-  color: #a259e6;
-}
-
-.groceries-container {
+.myki-learning-container {
   min-height: 100vh;
   background: #fff;
   display: flex;
@@ -68,8 +35,8 @@ function takeQuiz() {
 }
 
 .banner {
-  background: #4a97b3;
-  color: #fff;
+  background: #e2c75c;
+  color: #222;
   padding: 48px 0 32px 0;
   text-align: center;
   font-family: 'Quicksand', 'Arial', sans-serif;
@@ -100,5 +67,24 @@ function takeQuiz() {
   justify-content: center;
   font-size: 2rem;
   color: #222;
+}
+
+.lang-switcher {
+  position: fixed;
+  right: 48px;
+  top: calc(300px + 200px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 100;
+}
+
+@media (max-width: 900px) {
+  .lang-switcher {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 32px;
+  }
 }
 </style>

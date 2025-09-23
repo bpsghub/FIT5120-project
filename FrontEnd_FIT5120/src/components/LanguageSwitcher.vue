@@ -1,11 +1,7 @@
 <template>
   <div class="lang-switcher">
-    <div
-      v-for="option in props.options"
-      :key="option.value"
-      :class="['lang-btn', props.modelValue === option.value ? 'active' : '']"
-      @click="updateLang(option.value)"
-    >
+    <div v-for="option in props.options" :key="option.value"
+      :class="['lang-btn', props.modelValue === option.value ? 'active' : '']" @click="updateLang(option.value)">
       {{ option.label }}
     </div>
   </div>
@@ -39,10 +35,16 @@ function updateLang(val) {
 
 <style scoped>
 .lang-switcher {
+  position: fixed;
+  top: 60%;
+  right: 32px;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: 16px;
+  z-index: 2000;
 }
+
 .lang-btn {
   width: 60px;
   height: 60px;
@@ -60,16 +62,20 @@ function updateLang(val) {
   cursor: pointer;
   transition: opacity 0.2s, background 0.2s;
 }
+
 .lang-btn.active {
   background: #d1aaff;
   color: #222;
   opacity: 1;
 }
+
 @media (max-width: 900px) {
   .lang-switcher {
+    position: static;
     flex-direction: row;
     justify-content: center;
     margin-top: 32px;
+    transform: none;
   }
 }
 </style>

@@ -99,6 +99,30 @@ const router = createRouter({
       component: () => import('../views/MedicalAttention.vue'),
       meta: { requiresAuth: true },
     },
+    {
+      path: '/mykicardlearning',
+      name: 'mykicardlearning',
+      component: () => import('../views/MykiCardLearning.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/buslearning',
+      name: 'buslearning',
+      component: () => import('../views/BusLearning.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/trainlearning',
+      name: 'trainlearning',
+      component: () => import('../views/TrainLearning.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/tramlearning',
+      name: 'tramlearning',
+      component: () => import('../views/TramLearning.vue'),
+      meta: { requiresAuth: true },
+    },
   ],
 })
 
