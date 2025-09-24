@@ -65,7 +65,8 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import 'swiper/swiper-bundle.css'
+import 'swiper/css'
+import 'swiper/css/bundle'
 
 const swiperRef = ref(null)
 const totalSlides = 1 // Update as you add more slides

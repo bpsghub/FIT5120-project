@@ -24,7 +24,8 @@
 
 <script setup>
 import { ref, computed, onMounted, nextTick } from 'vue'
-import 'swiper/swiper-bundle.css'
+import 'swiper/css'
+import 'swiper/css/bundle'
 import Header from '@/components/Header.vue'
 import LearningSlider from '@/components/LearningSlider.vue'
 
