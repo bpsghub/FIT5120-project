@@ -5,7 +5,7 @@
     <LearningBanner :title="$t('meetingpeople_title')" :subtitle="$t('meetingpeople_subtitle')" :particle-count="18" />
     <!-- Learning section -->
     <div class="content-box">
-      <LearningSlider :lang="locale" csv-url="/Learning about Australia/meetingPeople.csv"
+      <LearningSlider :lang="locale" csv-url="/Learning about Australia/meeting_etiquette.csv"
         image-seed-prefix="meetingpeople" @take-quiz="takeQuiz" />
     </div>
   </div>

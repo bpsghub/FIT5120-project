@@ -2,29 +2,26 @@
   <div class="public-transport-container container-fluid py-4">
     <Header />
     <div class="banner mb-4">
-      <h1>Public Transportation</h1>
-      <p>Understand how to catch public transport, read timetables, and use your travel card.</p>
+      <h1>{{ $t('publictransportation.title') }}</h1>
+      <p>{{ $t('publictransportation.subtitle') }}</p>
     </div>
     <div class="row justify-content-center">
       <div class="col-12 col-md-10">
         <div class="row g-4 justify-content-center">
-          <div v-for="card in cards" :key="card.title" class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+          <div v-for="card in cards" :key="card.route" class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
             <div class="portfolio__item card shadow-sm border-0 w-100 h-100" style="min-height:260px; cursor:pointer;"
               @click="goTo(card.route)">
               <div class="card-img-wrapper position-relative w-100 h-100">
                 <img :src="card.img" class="card-img-top object-fit-cover w-100 h-100"
                   style="min-height:220px; max-height:260px; transition:transform 0.5s;" alt="" />
                 <div class="portfolio__overlay d-flex flex-column justify-content-end align-items-start p-3">
-                  <div class="text-white fw-bold fs-5 mb-1">{{ card.title }}</div>
-                  <div class="text-white-50 small">{{ card.desc }}</div>
+                  <div class="text-white fw-bold fs-5 mb-1">{{ card.title() }}</div>
+                  <div class="text-white-50 small">{{ card.desc() }}</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="lang-switcher">
-        <LanguageSwitcher v-model="lang" />
       </div>
     </div>
   </div>
@@ -33,33 +30,34 @@
 <script setup>
 import { ref } from 'vue'
 import Header from '@/components/Header.vue'
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
-
+import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
+
 const lang = ref('en')
+const { t } = useI18n({ useScope: 'global' })
 const router = useRouter()
 const cards = [
   {
-    title: 'MyKi Card',
-    desc: 'Travel Card',
+    title: () => t('publictransportation.cards.myki', lang.value),
+    desc: () => t('publictransportation.cards.myki_desc', lang.value),
     img: 'https://www.travelvictoria.com.au/images/victoria/transport/ticketing/myki.jpg',
     route: '/mykicardlearning',
   },
   {
-    title: 'Bus',
-    desc: 'Public Bus',
+    title: () => t('publictransportation.cards.bus', lang.value),
+    desc: () => t('publictransportation.cards.bus_desc', lang.value),
     img: 'https://comfortdelgro.com.au/wp-content/uploads/22-Comfort-Delgro-CDC-Bus-Photo-Shoot-19Nov-DSC_9991.webp',
     route: '/buslearning',
   },
   {
-    title: 'Train',
-    desc: 'Train Service',
+    title: () => t('publictransportation.cards.train', lang.value),
+    desc: () => t('publictransportation.cards.train_desc', lang.value),
     img: 'https://upload.wikimedia.org/wikipedia/commons/2/27/City_of_Maryborough_Platform_10_Roma_Street_Station_Brisbane_P1280919_%28cropped%29.jpg',
     route: '/trainlearning',
   },
   {
-    title: 'Tram',
-    desc: 'Melbourne Tram',
+    title: () => t('publictransportation.cards.tram', lang.value),
+    desc: () => t('publictransportation.cards.tram_desc', lang.value),
     img: 'https://upload.wikimedia.org/wikipedia/commons/f/f5/Melbourne_Tram_E-Class_6007.jpg',
     route: '/tramlearning',
   },

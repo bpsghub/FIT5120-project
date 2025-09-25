@@ -1,205 +1,297 @@
 <template>
-  <div class="navigate-life-container">
+  <div class="modern-sections">
     <Header />
-    <div class="banner">
-      <h1>Navigate Your Life Independently</h1>
+    <div class="main-title">
+      <span class="main-title-text">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="main-title-icon">
+          <circle cx="16" cy="16" r="16" fill="#D6BCFA" />
+          <path d="M10 16h12M16 10v12" stroke="#6B46C1" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        {{ $t('nav.navigate') || 'Navigate Your Life' }}
+      </span>
     </div>
-    <div class="content-box">
-      <div class="container py-4">
-        <div class="row g-4 justify-content-center">
-          <div
-            v-for="(card, idx) in cards"
-            :key="card.key"
-            class="col-12 col-md-4 d-flex align-items-stretch"
-          >
-            <div
-              class="navlife-card card shadow-sm h-100 border-0 text-center"
-              @click="goTo(card.key)"
-              style="cursor:pointer"
-            >
-              <div class="circle-img mx-auto my-3">
-                <img :src="card.img" :alt="card.title" />
-              </div>
-              <div class="card-body">
-                <h5 class="card-title mb-2">{{ card.title }}</h5>
-                <p class="card-text">{{ card.text }}</p>
-              </div>
-            </div>
-          </div>
+    <div>
+      <section v-for="(card, idx) in cards" :key="card.key" :class="[
+        'service-section',
+        idx % 2 === 1 ? 'reverse' : '',
+        idx === 0 ? 'slide-in-right' : idx === 1 ? 'slide-in-left' : 'slide-in-right'
+      ]" :style="{ animationDelay: `${0.2 * idx}s` }" aria-label="Navigate Your Life Section">
+        <div class="section-img">
+          <img :src="card.img" :alt="card.title" />
+          <div class="img-overlay"></div>
         </div>
-      </div>
-    </div>
-    <div class="lang-switcher">
-      <LanguageSwitcher v-model="lang" />
+        <div class="section-content">
+          <h2 class="section-title">{{ card.title }}</h2>
+          <p class="section-subtitle">{{ card.text }}</p>
+          <button class="learn-more-btn" @click="goTo(card.key)">
+            {{ $t('Learn More') }}
+          </button>
+        </div>
+      </section>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-import Header from '@/components/Header.vue'
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import { computed, onMounted, ref } from 'vue';
+import { useRouter } from 'vue-router';
+import { useI18n } from 'vue-i18n';
+import Header from '@/components/Header.vue';
+const router = useRouter();
+const { t } = useI18n();
 
-const lang = ref('en')
-const router = useRouter()
+const cardKeys = [
+  'publictransportation',
+  'grocceriesshopping',
+  'medicalattention',
+];
 
-const cards = [
-  {
-    key: 'publictransportation',
-    title: 'Ride Public Transportation',
-    text: 'Get around Melbourne with ease — learn how to use buses, trains, and trams like a local.',
-    img: 'https://cdn-icons-png.flaticon.com/512/3068/3068774.png',
-  },
-  {
-    key: 'grocceries shopping',
-    title: 'Groceries Shopping',
-    text: 'From fresh veggies to rice and noodles — learn how to shop for your daily needs with confidence.',
-    img: 'https://cdn-icons-png.flaticon.com/512/3075/3075977.png',
-  },
-  {
-    key: 'medicalattention',
-    title: 'Seek Medical Attention',
-    text: 'Feeling unwell? Learn how to find a doctor, book an appointment, and get the care you need.',
-    img: 'https://cdn-icons-png.flaticon.com/512/3068/3068787.png',
-  },
-]
+const cardImages = {
+  publictransportation: 'https://zivazmanov.com/wp-content/uploads/2013/05/Four-Great-Reasons-to-Use-Public-Transportation.jpg',
+  grocceriesshopping: 'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  medicalattention: 'https://www.jonesfirmohio.com/wp-content/uploads/2020/09/shutterstock_457866949-1.jpg',
+};
+
+const cards = computed(() =>
+  cardKeys.map((key) => ({
+    key,
+    title: t(`navigate_your_life.cards.${key}.title`),
+    text: t(`navigate_your_life.cards.${key}.subtitle`),
+    img: cardImages[key],
+  }))
+);
 
 function goTo(key) {
   if (key === 'publictransportation') {
-    router.push('/publicTransportation')
-  } else if (key === 'grocceries shopping') {
-    router.push('/grocceriesShopping')
+    router.push('/publicTransportation');
+  } else if (key === 'grocceriesshopping') {
+    router.push('/grocceriesShopping');
   } else if (key === 'medicalattention') {
-    router.push('/medicalAttention')
+    router.push('/medicalAttention');
   }
 }
+
+const loaded = ref(false);
+onMounted(() => {
+  setTimeout(() => (loaded.value = true), 100);
+});
 </script>
 
 <style scoped>
-.navigate-life-container {
+.modern-sections {
+  width: 100vw;
   min-height: 100vh;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
+  background: linear-gradient(135deg, #F9F9F9 0%, #D6BCFA 100%);
+  padding: 0 0 40px 0;
+  font-family: 'Roboto', 'Arial', sans-serif;
 }
-.banner {
-  background: #fff;
-  color: #222;
-  padding: 48px 0 32px 0;
-  text-align: center;
-  font-family: 'Quicksand', 'Arial', sans-serif;
-  border-bottom: 0;
-}
-.banner h1 {
-  font-size: 2.3rem;
-  font-family: 'Quicksand', 'Arial', sans-serif;
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
-.content-box {
-  background: #fff;
-  margin: 40px auto 0 auto;
+
+.main-title {
   width: 100%;
-  max-width: 1200px;
-  min-height: 250px;
-  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 32px auto;
+  padding-top: 36px;
+  animation: fadeInTitle 1s cubic-bezier(.4, 2, .6, 1);
+}
+
+.main-title-text {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color: #222;
-}
-.navlife-card {
-  transition:
-    transform 0.18s cubic-bezier(0.4, 2, 0.6, 1),
-    box-shadow 0.18s cubic-bezier(0.4, 2, 0.6, 1);
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #6B46C1;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #6B46C1 60%, #8A4AF3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  gap: 16px;
+  transition: transform 0.2s cubic-bezier(.4, 2, .6, 1);
   cursor: pointer;
-  border-radius: 1.5rem;
-  padding-bottom: 1rem;
 }
-.navlife-card:hover {
-  transform: translateY(-8px) scale(1.04);
-  box-shadow:
-    0 8px 32px rgba(102, 26, 255, 0.18),
-    0 2px 8px rgba(0, 0, 0, 0.08);
-  border: 2px solid #4b8cff;
-  background: #f8faff;
+
+.main-title-text:hover {
+  transform: scale(1.04) translateY(-2px);
+  text-shadow: 0 4px 24px #D6BCFA;
 }
-.circle-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+
+.main-title-icon {
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: transform 0.3s cubic-bezier(.4, 2, .6, 1);
+}
+
+.main-title-text:hover .main-title-icon {
+  transform: rotate(20deg) scale(1.1);
+}
+
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-section {
+  display: flex;
+  align-items: center;
+  min-height: 320px;
+  margin: 40px auto;
+  max-width: 1100px;
   background: #fff;
-  border: 4px solid #4b8cff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(107, 70, 193, 0.08);
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  animation: fadeInSection 0.8s forwards;
+}
+
+/* Directional animation classes */
+.slide-in-right {
+  animation-name: slideInRight;
+}
+
+.slide-in-left {
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.service-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.section-img {
+  flex: 0 0 60%;
+  position: relative;
+  min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
-  transition: border-color 0.2s;
+  background: #D6BCFA;
 }
-.navlife-card:hover .circle-img {
-  border-color: #661aff;
+
+.section-img img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0.7;
+  z-index: 1;
 }
-.circle-img img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-}
-.card-title {
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  color: #222;
-}
-.card-text {
-  font-size: 1.1rem;
-  color: #444;
-}
-.lang-switcher {
-  position: fixed;
-  right: 48px;
-  top: calc(300px + 200px);
-  /* header + banner height estimate */
+
+/* .img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(107, 70, 193, 0.08), rgba(214, 188, 250, 0.18));
+  z-index: 2;
+} */
+
+.section-content {
+  flex: 0 0 40%;
+  padding: 40px 32px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  z-index: 100;
-}
-
-.lang-btn {
-  width: 60px;
-  height: 60px;
-  border-radius: 16px;
-  background: #a259e6;
-  color: #fff;
-  display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-  opacity: 0.7;
-  cursor: pointer;
-  transition:
-    opacity 0.2s,
-    background 0.2s;
 }
 
-.lang-btn.active {
-  background: #d1aaff;
-  color: #222;
-  opacity: 1;
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6B46C1;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 28px;
+}
+
+.learn-more-btn {
+  background: #6B46C1;
+  color: #fff;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
+  transition: all 0.3s cubic-bezier(.4, 2, .6, 1), transform 0.3s cubic-bezier(.4, 2, .6, 1);
+}
+
+.learn-more-btn:hover {
+  background: #8A4AF3;
+  transform: scale(1.05);
 }
 
 @media (max-width: 900px) {
-  .lang-switcher {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 32px;
-    right: unset;
-    top: unset;
+
+  .service-section,
+  .service-section.reverse {
+    flex-direction: column !important;
+    min-height: 0;
+    margin: 32px 0;
+    max-width: 98vw;
+  }
+
+  .section-img,
+  .section-content {
+    flex: 1 1 100%;
+    width: 100%;
+    min-height: 180px;
+    padding: 0;
+  }
+
+  .section-content {
+    align-items: center;
+    text-align: center;
+    padding: 24px 12px 32px 12px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
   }
 }
 </style>

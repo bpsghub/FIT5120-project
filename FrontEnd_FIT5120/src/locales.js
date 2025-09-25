@@ -31,6 +31,26 @@ export default {
         subtitle: 'From menu to manners -- Learn what to expect when eating out in Australia.',
       },
     },
+    navigate_your_life: {
+      title: 'Navigate Your Life Independently',
+      cards: {
+        publictransportation: {
+          title: 'Ride Public Transportation',
+          subtitle:
+            'Get around Melbourne with ease — learn how to use buses, trains, and trams like a local.',
+        },
+        grocceriesshopping: {
+          title: 'Groceries Shopping',
+          subtitle:
+            'From fresh veggies to rice and noodles — learn how to shop for your daily needs with confidence.',
+        },
+        medicalattention: {
+          title: 'Seek Medical Attention',
+          subtitle:
+            'Feeling unwell? Learn how to find a doctor, book an appointment, and get the care you need.',
+        },
+      },
+    },
   },
   zh: {
     meetingpeople_title: '结识新朋友',
@@ -60,6 +80,23 @@ export default {
       eatingout: {
         title: '外出就餐',
         subtitle: '从菜单到礼仪——了解在澳大利亚外出就餐时可以期待什么。',
+      },
+    },
+    navigate_your_life: {
+      title: '独立导航你的生活',
+      cards: {
+        publictransportation: {
+          title: '乘坐公共交通',
+          subtitle: '轻松畅游墨尔本——学习如何像本地人一样使用公交、火车和电车。',
+        },
+        grocceriesshopping: {
+          title: '购买杂货',
+          subtitle: '从新鲜蔬菜到米饭和面条——自信地学习如何购买日常所需。',
+        },
+        medicalattention: {
+          title: '寻求医疗帮助',
+          subtitle: '感觉不舒服？了解如何找医生、预约和获得所需的护理。',
+        },
       },
     },
   },
@@ -94,6 +131,26 @@ export default {
         subtitle: 'Từ thực đơn đến phép lịch sự -- Tìm hiểu những điều cần biết khi ăn ngoài ở Úc.',
       },
     },
+    navigate_your_life: {
+      title: 'Tự chủ cuộc sống của bạn',
+      cards: {
+        publictransportation: {
+          title: 'Đi phương tiện công cộng',
+          subtitle:
+            'Di chuyển quanh Melbourne dễ dàng — học cách sử dụng xe buýt, tàu và xe điện như người bản xứ.',
+        },
+        grocceriesshopping: {
+          title: 'Mua sắm thực phẩm',
+          subtitle:
+            'Từ rau củ tươi đến gạo và mì — học cách mua sắm nhu yếu phẩm hàng ngày một cách tự tin.',
+        },
+        medicalattention: {
+          title: 'Tìm kiếm chăm sóc y tế',
+          subtitle:
+            'Cảm thấy không khỏe? Học cách tìm bác sĩ, đặt lịch hẹn và nhận được sự chăm sóc cần thiết.',
+        },
+      },
+    },
   },
   id: {
     meetingpeople_title: 'Bertemu Orang Baru',
@@ -126,6 +183,26 @@ export default {
         title: 'Makan di Luar',
         subtitle:
           'Dari menu hingga etika -- Pelajari apa yang diharapkan saat makan di luar di Australia.',
+      },
+    },
+    navigate_your_life: {
+      title: 'Navigasi Hidup Anda Secara Mandiri',
+      cards: {
+        publictransportation: {
+          title: 'Naik Transportasi Umum',
+          subtitle:
+            'Kelilingi Melbourne dengan mudah — pelajari cara menggunakan bus, kereta, dan trem seperti penduduk lokal.',
+        },
+        grocceriesshopping: {
+          title: 'Belanja Kebutuhan Pokok',
+          subtitle:
+            'Dari sayuran segar hingga nasi dan mie — pelajari cara berbelanja kebutuhan sehari-hari dengan percaya diri.',
+        },
+        medicalattention: {
+          title: 'Mencari Perawatan Medis',
+          subtitle:
+            'Merasa tidak enak badan? Pelajari cara menemukan dokter, membuat janji, dan mendapatkan perawatan yang Anda butuhkan.',
+        },
       },
     },
   },
