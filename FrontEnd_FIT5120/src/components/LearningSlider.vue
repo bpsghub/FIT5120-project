@@ -70,11 +70,12 @@ function buildTranslationTexts(cards) {
   // Add button labels first so order is fixed
   texts.push('Grid')
   texts.push('Column')
-  for (const card of cards) {
-    texts.push(card.title || card.title_en || card.en || card.key || '')
-    texts.push(card.desc || card.en || card.description || '')
-  }
   texts.push('Take Quiz')
+
+  for (const card of cards) {
+    texts.push(card.title)
+    texts.push(card.en)
+  }
   return texts
 }
 
@@ -106,7 +107,7 @@ async function translateAll() {
     // Assign translated values to buttons and cards
     gridBtnText.value = translations[0]
     columnBtnText.value = translations[1]
-    quizBtnText.value = translations[texts.length - 1]
+    quizBtnText.value = translations[2]
     translatedCards.value = mapTranslationsToCards(originalCards.value, translations)
   } catch {
     // If error, fallback to English
@@ -118,8 +119,8 @@ async function translateAll() {
 function setEnglishTexts() {
   translatedCards.value = originalCards.value.map(card => ({
     ...card,
-    translatedTitle: card.title || card.title_en || card.en || card.key || '',
-    translatedDesc: card.desc || card.en || card.description || '',
+    translatedTitle: card.title,
+    translatedDesc: card.en,
   }))
   quizBtnText.value = 'Take Quiz'
   gridBtnText.value = 'Grid'
@@ -243,13 +244,14 @@ watch(() => props.lang, () => { translateAll() })
   font-weight: 700;
   margin-bottom: 16px;
   letter-spacing: 0.5px;
+  text-align: start;
 }
 
 .slide-desc {
   color: #222;
   font-size: 1.08rem;
   margin-bottom: 8px;
-  text-align: center;
+  text-align: start;
 }
 
 .slide-image {

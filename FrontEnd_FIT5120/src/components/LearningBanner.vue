@@ -1,37 +1,48 @@
 <template>
-  <div class="meeting-people-guide">
-    <Header />
-    <!-- Hero Banner -->
-    <LearningBanner :title="$t('meetingpeople_title')" :subtitle="$t('meetingpeople_subtitle')" :particle-count="18" />
-    <!-- Learning section -->
-    <div class="content-box">
-      <LearningSlider :lang="locale" csv-url="/Learning about Australia/meetingPeople.csv"
-        image-seed-prefix="meetingpeople" @take-quiz="takeQuiz" />
+  <header class="learning-banner">
+    <div class="hero-gradient"></div>
+    <div class="hero-particles">
+      <span v-for="n in particleCount" :key="n" class="particle" :style="particleStyle(n)" />
     </div>
-  </div>
+    <div class="hero-content">
+      <h1 class="main-title">{{ title }}</h1>
+      <h2 class="subtitle">{{ subtitle }}</h2>
+    </div>
+  </header>
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n'
-import Header from '@/components/Header.vue'
-import LearningSlider from '@/components/LearningSlider.vue'
-import LearningBanner from '@/components/LearningBanner.vue'
+import { computed } from 'vue'
+const props = defineProps({
+  title: { type: String, required: true },
+  subtitle: { type: String, default: '' },
+  particleCount: { type: Number, default: 18 },
+  particleRadius: { type: Number, default: 120 },
+  particleSpread: { type: Number, default: 40 },
+  particleSize: { type: Number, default: 12 },
+  particleSizeVar: { type: Number, default: 10 },
+  particleDelay: { type: Number, default: 2 }
+})
 
-const { locale } = useI18n()
+function particleStyle(n) {
+  const angle = (n / props.particleCount) * 2 * Math.PI
+  const radius = props.particleRadius + Math.random() * props.particleSpread
+  const x = Math.cos(angle) * radius
+  const y = Math.sin(angle) * radius
+  const size = props.particleSize + Math.random() * props.particleSizeVar
+  const delay = Math.random() * props.particleDelay
+  return {
+    left: `calc(50% + ${x}px)`,
+    top: `calc(60% + ${y}px)`,
+    width: `${size}px`,
+    height: `${size}px`,
+    animationDelay: `${delay}s`
+  }
+}
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap');
-
-.meeting-people-guide {
-  font-family: 'Open Sans', Arial, sans-serif;
-  background: #E6E6FA;
-  min-height: 100vh;
-  color: #222;
-}
-
-/* Hero Banner */
-.hero-banner {
+.learning-banner {
   position: relative;
   width: 100vw;
   min-height: 260px;

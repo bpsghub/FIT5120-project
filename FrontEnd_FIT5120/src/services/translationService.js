@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_KEY = 'AIzaSyCi8f57LNBdx-xxIyOf67_5j-yFzHlRNcs' // Replace with your actual key
+const API_KEY = import.meta.env.VITE_GOOGLE_TRANSLATION_API_KEY // Replace with your actual key
 const ENDPOINT = 'https://translation.googleapis.com/language/translate/v2'
 
 export async function translateText(text, targetLang, sourceLang = 'en') {

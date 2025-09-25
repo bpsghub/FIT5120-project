@@ -1,15 +1,10 @@
 <template>
-  <div class="eating-out-container container">
+  <div class="eating-out-container">
     <Header />
-    <div class="banner">
-      <h1>Meeting New People</h1>
-      <p>
-        This guid helps you feel confident when meeting new people in Australia - step by step
-      </p>
-    </div>
+    <LearningBanner :title="$t('socialnorms.eatingout.title')" :subtitle="$t('socialnorms.eatingout.subtitle')"
+      :particle-count="18" />
     <div class="content-box">
-      <LearningSlider v-model:lang="lang"
-        csv-url="/Learning about Australia/FrontEnd_FIT5120/public/Learning about Australia/dining_etiquette_multilang_horizontal.csv"
+      <LearningSlider :lang="locale" csv-url="/Learning about Australia/dining_etiquette.csv"
         image-seed-prefix="eatingout" @take-quiz="takeQuiz" />
     </div>
   </div>
@@ -17,10 +12,12 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import Header from '@/components/Header.vue'
+import LearningBanner from '@/components/LearningBanner.vue'
 import LearningSlider from '@/components/LearningSlider.vue'
 
-const lang = ref('en')
+const { locale } = useI18n()
 function takeQuiz() {
   alert('Quiz coming soon!')
 }
@@ -62,7 +59,7 @@ function takeQuiz() {
 }
 
 .eating-out-container {
-  min-height: 100vh;
+  height: 100%;
   background: #fff;
   display: flex;
   flex-direction: column;
