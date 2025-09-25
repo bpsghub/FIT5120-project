@@ -20,9 +20,7 @@
             </div>
           </div>
         </div>
-        <div class="lang-switcher">
-          <LanguageSwitcher v-model="lang" />
-        </div>
+        <!-- LanguageSwitcher removed: language is now set globally via Header -->
       </div>
     </div>
   </div>
@@ -30,26 +28,26 @@
 
 <script setup>
 import AppHeader from '@/components/Header.vue'
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue';
-import { ref } from 'vue';
+import { computed } from 'vue';
 import { useRouter } from 'vue-router';
-const lang = ref('en');
+import { useI18n } from 'vue-i18n';
 const router = useRouter();
+const { t } = useI18n();
 
-const cards = [
+const cards = computed(() => [
   {
     key: 'meetingpeople',
-    title: 'Meeting New People',
-    text: "G'day! Discover how to meet new people in Australia with a smile, a handshake, and a friendly greeting.",
+    title: t('socialnorms.meetingpeople.title'),
+    text: t('socialnorms.meetingpeople.subtitle'),
     img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80',
   },
   {
     key: 'eatingout',
-    title: 'Eating Out',
-    text: 'From menu to manners -- Learn what to expect when eating out in Australia.',
+    title: t('socialnorms.eatingout.title'),
+    text: t('socialnorms.eatingout.subtitle'),
     img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80',
   },
-]
+]);
 
 function goTo(key) {
   if (key === 'meetingpeople') {
@@ -109,56 +107,5 @@ function goTo(key) {
     transform 0.25s;
 }
 
-.lang-switcher {
-  position: fixed;
-  right: 48px;
-  top: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  z-index: 100;
-}
-
-@media (max-width: 900px) {
-  .lang-switcher {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 32px;
-  }
-}
-
-.lang-btn {
-  width: 60px;
-  height: 60px;
-  border-radius: 16px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-  opacity: 0.9;
-  transition:
-    opacity 0.2s,
-    background 0.2s;
-}
-
-.lang-btn.active {
-  background: #d1aaff !important;
-  color: #222 !important;
-  opacity: 1;
-}
-
-@media (max-width: 900px) {
-  .lang-switcher {
-    position: static !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    margin-top: 32px !important;
-    right: unset;
-    top: unset;
-  }
-}
+/* LanguageSwitcher styles removed */
 </style>

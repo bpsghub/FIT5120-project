@@ -1,16 +1,14 @@
 <template>
   <div class="learning-slider-container justify-content-center container">
     <div class="slider-content">
-      <slot name="lang-switcher">
-        <LanguageSwitcher v-model="langProxy" class="lang-switcher" />
-      </slot>
       <div class="display-toggle">
-        <button :class="{ active: displayMode === 'grid' }" @click="displayMode = 'grid'">Grid</button>
-        <button :class="{ active: displayMode === 'column' }" @click="displayMode = 'column'">Column</button>
+        <button :class="{ active: displayMode === 'grid' }" @click="displayMode = 'grid'">{{ gridBtnText }}</button>
+        <button :class="{ active: displayMode === 'column' }" @click="displayMode = 'column'">{{ columnBtnText
+        }}</button>
       </div>
       <div :class="['cards-wrapper', displayMode]">
         <div class="row w-100 m-0">
-          <div v-for="(card, idx) in cards" :key="card.key"
+          <div v-for="(card, idx) in translatedCards" :key="card.key"
             :class="displayMode === 'grid' ? 'col-lg-4 col-md-6 col-12 d-flex justify-content-center mb-4' : 'col-12 d-flex justify-content-center mb-4'">
             <div :class="['slide-card-with-image', 'w-100', displayMode]">
               <template v-if="displayMode === 'grid'">
@@ -18,14 +16,14 @@
                   <img :src="getRandomImage(idx)" alt="Slide Image" />
                 </div>
                 <div class="slide-card text-center">
-                  <h2 class="slide-title">{{ getTitle(card) }}</h2>
-                  <p class="slide-desc">{{ card[langProxy] }}</p>
+                  <h2 class="slide-title">{{ card.translatedTitle }}</h2>
+                  <p class="slide-desc">{{ card.translatedDesc }}</p>
                 </div>
               </template>
               <template v-else>
                 <div class="slide-card d-flex flex-column justify-content-center align-items-start flex-grow-1">
-                  <h2 class="slide-title">{{ getTitle(card) }}</h2>
-                  <p class="slide-desc">{{ card[langProxy] }}</p>
+                  <h2 class="slide-title">{{ card.translatedTitle }}</h2>
+                  <p class="slide-desc">{{ card.translatedDesc }}</p>
                 </div>
                 <div class="slide-image ms-4 d-flex align-items-center">
                   <img :src="getRandomImage(idx)" alt="Slide Image" />
@@ -44,71 +42,100 @@
   </div>
 </template>
 
+
 <script setup>
 
-import { ref, onMounted, computed } from 'vue'
-import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
-
+import { ref, onMounted, watch } from 'vue'
+import Papa from 'papaparse'
+import { translateBatch } from '@/services/translationService.js'
 const props = defineProps({
   csvUrl: { type: String, required: true },
   imageSeedPrefix: { type: String, default: 'slide' },
   lang: { type: String, default: 'en' },
 })
-const emit = defineEmits(['update:lang', 'take-quiz'])
 
-// Proxy for v-model:lang
-const langProxy = computed({
-  get: () => props.lang,
-  set: (val) => emit('update:lang', val)
-})
-
-const quizBtnText = computed(() => {
-  switch (langProxy.value) {
-    case 'en': return 'Take Quiz'
-    case 'cn': return '参加测验'
-    case 'vn': return 'Làm bài kiểm tra'
-    case 'id': return 'Ikuti Kuis'
-    default: return 'Take Quiz'
-  }
-})
-
-const cards = ref([])
+const originalCards = ref([])
+const translatedCards = ref([])
 const displayMode = ref('grid')
+const quizBtnText = ref('Take Quiz')
+const gridBtnText = ref('Grid')
+const columnBtnText = ref('Column')
 
 function getRandomImage(idx) {
   return `https://picsum.photos/seed/${props.imageSeedPrefix}${idx + 1}/180/180`
 }
 
-onMounted(async () => {
-  const res = await fetch(props.csvUrl)
-  const csv = await res.text()
-  const lines = csv.split(/\r?\n/).filter(Boolean)
-  const headers = lines[0].split(',')
-  cards.value = lines.slice(1).map(line => {
-    const values = []
-    let inQuotes = false, cur = ''
-    for (let i = 0; i < line.length; i++) {
-      const char = line[i]
-      if (char === '"') inQuotes = !inQuotes
-      else if (char === ',' && !inQuotes) { values.push(cur); cur = '' }
-      else cur += char
-    }
-    values.push(cur)
-    const obj = {}
-    headers.forEach((h, i) => { obj[h.trim()] = (values[i] || '').replace(/^"|"$/g, '') })
-    return obj
-  })
-})
+function buildTranslationTexts(cards) {
+  const texts = []
+  // Add button labels first so order is fixed
+  texts.push('Grid')
+  texts.push('Column')
+  for (const card of cards) {
+    texts.push(card.title || card.title_en || card.en || card.key || '')
+    texts.push(card.desc || card.en || card.description || '')
+  }
+  texts.push('Take Quiz')
+  return texts
+}
 
-function getTitle(card) {
-  switch (langProxy.value) {
-    case 'en': return card.title_en || card.en || card.key || ''
-    case 'cn': return card.title_cn || card.cn || card.key || ''
-    case 'vn': return card.title_vn || card.vn || card.key || ''
-    case 'id': return card.title_id || card.id || card.key || ''
-    default: return card.key || ''
+function mapTranslationsToCards(cards, translations) {
+  // translations: [grid, column, ...card titles/descs..., take quiz]
+  const newCards = []
+  for (let i = 0; i < cards.length; i++) {
+    // offset by 2 for grid/column
+    newCards.push({
+      ...cards[i],
+      translatedTitle: translations[2 + i * 2],
+      translatedDesc: translations[2 + i * 2 + 1],
+    })
+  }
+  return newCards
+}
+
+async function translateAll() {
+  // If English, no need to translate, just set original texts
+  if (props.lang === 'en') {
+    setEnglishTexts()
+    return
+  }
+
+  // Build array of texts to translate
+  const texts = buildTranslationTexts(originalCards.value)
+  try {
+    const translations = await translateBatch(texts, props.lang, 'en')
+    // Assign translated values to buttons and cards
+    gridBtnText.value = translations[0]
+    columnBtnText.value = translations[1]
+    quizBtnText.value = translations[texts.length - 1]
+    translatedCards.value = mapTranslationsToCards(originalCards.value, translations)
+  } catch {
+    // If error, fallback to English
+    setEnglishTexts()
   }
 }
+
+// If language is English, just set original texts
+function setEnglishTexts() {
+  translatedCards.value = originalCards.value.map(card => ({
+    ...card,
+    translatedTitle: card.title || card.title_en || card.en || card.key || '',
+    translatedDesc: card.desc || card.en || card.description || '',
+  }))
+  quizBtnText.value = 'Take Quiz'
+  gridBtnText.value = 'Grid'
+  columnBtnText.value = 'Column'
+}
+
+async function loadOriginalCards() {
+  const res = await fetch(props.csvUrl)
+  const csv = await res.text()
+  const parsed = Papa.parse(csv, { header: true, skipEmptyLines: true })
+  originalCards.value = parsed.data
+  await translateAll()
+}
+
+onMounted(loadOriginalCards)
+watch(() => props.lang, () => { translateAll() })
 
 </script>
 
@@ -146,18 +173,9 @@ function getTitle(card) {
   color: #fff;
 }
 
-
-
 .cards-wrapper {
   width: 100%;
 }
-
-.lang-switcher {
-  position: absolute;
-  top: 150px;
-  right: 50px;
-}
-
 
 .slider-content {
   width: 100%;
@@ -171,16 +189,6 @@ function getTitle(card) {
   color: #222;
   padding-bottom: 24px;
 }
-
-.slider-main-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 24px;
-}
-
 
 .slide-card-with-image {
   background: #fff;
@@ -217,32 +225,7 @@ function getTitle(card) {
   z-index: 2;
 }
 
-.arrow-btn {
-  background: #a259e6;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.2s;
-  box-shadow: 0 2px 8px rgba(102, 26, 255, 0.1);
-}
-
-.arrow-btn:disabled {
-  background: #e0d6f7;
-  color: #b8a1e6;
-  cursor: not-allowed;
-}
-
-
 .slide-card {
-  /* display: flex !important;
-  align-items: center !important; */
   background: transparent;
   border-radius: 12px;
   box-shadow: none;
@@ -255,7 +238,6 @@ function getTitle(card) {
 }
 
 .slide-title {
-
   color: #661aff;
   font-size: 1.5rem;
   font-weight: 700;
@@ -267,10 +249,8 @@ function getTitle(card) {
   color: #222;
   font-size: 1.08rem;
   margin-bottom: 8px;
-  text-align: start;
+  text-align: center;
 }
-
-
 
 .slide-image {
   margin: 0;
@@ -283,8 +263,6 @@ function getTitle(card) {
   box-shadow: 0 4px 16px rgba(102, 26, 255, 0.13);
 }
 
-
-
 .slide-image img {
   width: 100%;
   height: 100%;
@@ -295,24 +273,6 @@ function getTitle(card) {
   transition: transform 0.2s;
   display: block;
 }
-
-.slide-image img:hover {
-  transform: scale(1.04) rotate(-2deg);
-}
-
-.slider-instructions {
-  margin-top: 32px;
-  background: #fff;
-  color: #661aff;
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 12px 32px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(102, 26, 255, 0.1);
-  letter-spacing: 0.5px;
-}
-
-
 
 .quiz-btn-bottom-wrapper {
   display: flex;
@@ -332,9 +292,7 @@ function getTitle(card) {
   padding: 16px 40px;
   box-shadow: 0 2px 8px rgba(102, 26, 255, 0.1);
   cursor: pointer;
-  transition:
-    background 0.2s,
-    transform 0.2s;
+  transition: background 0.2s, transform 0.2s;
   outline: none;
   margin: 0 auto;
   display: block;
@@ -345,11 +303,6 @@ function getTitle(card) {
   background: #a259e6;
   transform: scale(1.04);
 }
-
-.blink {
-  animation: blink-animation 1s steps(2, start) infinite;
-}
-
 
 @media (max-width: 900px) {
   .slider-content {
@@ -381,12 +334,6 @@ function getTitle(card) {
     height: 120px;
     border-radius: 10px;
   }
-
-  .arrow-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 1.3rem;
-  }
 }
 
 @media (max-width: 600px) {
@@ -413,73 +360,6 @@ function getTitle(card) {
     width: 80px;
     height: 80px;
     border-radius: 7px;
-  }
-
-  .arrow-btn {
-    width: 28px;
-    height: 28px;
-    font-size: 1rem;
-  }
-
-  .lang-switcher {
-    margin-bottom: 8px;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .slider-row {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .slide-card {
-    margin: 0;
-    width: 100%;
-  }
-}
-
-.lang-switcher {
-  position: fixed;
-  right: 48px;
-  top: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  z-index: 100;
-}
-
-.lang-btn {
-  width: 60px;
-  height: 60px;
-  border-radius: 16px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-  opacity: 0.9;
-  transition:
-    opacity 0.2s,
-    background 0.2s;
-}
-
-.lang-btn.active {
-  background: #d1aaff !important;
-  color: #222 !important;
-  opacity: 1;
-}
-
-@media (max-width: 900px) {
-  .lang-switcher {
-    position: static !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    margin-top: 32px !important;
-    right: unset;
-    top: unset;
   }
 }
 </style>
