@@ -1,48 +1,54 @@
 <template>
   <div class="header-w">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm header-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light header-navbar">
       <div class="container-fluid">
         <router-link class="navbar-brand fw-bold fs-2 logo-link" to="/">{{ $t('nav.brand') }}</router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <router-link class="nav-link" to="/facilities">{{ $t('nav.facility') }}</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/learnenglish">{{ $t('nav.english') }}</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/socialnorms">{{ $t('nav.social') }}</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/navigatelife">{{ $t('nav.navigate') }}</router-link>
+        <TransitionGroup tag="div" class="collapse navbar-collapse" id="navbarNav" name="nav-slide">
+          <ul class="navbar-nav ms-auto" key="nav-list">
+            <li class="nav-item" v-for="(link, index) in navLinks" :key="index">
+              <router-link class="nav-link" :to="link.to">{{ $t(link.text) }}</router-link>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 {{ $t('nav.language') }}
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#" @click.prevent="setLang('en')">{{ $t('nav.lang.en') }}</a></li>
-                <li><a class="dropdown-item" href="#" @click.prevent="setLang('zh')">{{ $t('nav.lang.zh') }}</a></li>
-                <li><a class="dropdown-item" href="#" @click.prevent="setLang('vi')">{{ $t('nav.lang.vi') }}</a></li>
-                <li><a class="dropdown-item" href="#" @click.prevent="setLang('id')">{{ $t('nav.lang.id') }}</a></li>
-              </ul>
+              <TransitionGroup tag="ul" class="dropdown-menu" name="dropdown-slide">
+            <li v-for="lang in languages" :key="lang.code">
+              <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{ $t(lang.text) }}</a>
             </li>
-          </ul>
-        </div>
+        </TransitionGroup>
+        </li>
+        </ul>
+        </TransitionGroup>
       </div>
     </nav>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import { useI18n } from 'vue-i18n'
+
 const { locale } = useI18n()
+
+const navLinks = [
+  { to: '/facilities', text: 'nav.facility' },
+  { to: '/learnenglish', text: 'nav.english' },
+  { to: '/socialnorms', text: 'nav.social' },
+  { to: '/navigatelife', text: 'nav.navigate' }
+]
+
+const languages = [
+  { code: 'en', text: 'nav.lang.en' },
+  { code: 'zh', text: 'nav.lang.zh' },
+  { code: 'vi', text: 'nav.lang.vi' },
+  { code: 'id', text: 'nav.lang.id' }
+]
+
 function setLang(lang) {
   locale.value = lang
   localStorage.setItem('lang', lang)
@@ -54,24 +60,33 @@ function setLang(lang) {
   position: sticky;
   top: 0;
   z-index: 100;
+  background: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(6px);
+  transition: background 0.5s ease;
+}
+
+.header-w.scrolled {
+  background: rgba(255, 255, 255, 0.25) !important;
 }
 
 .header-navbar {
-  background: #fff;
+  background: transparent;
   box-shadow:
     0 4px 24px rgba(162, 89, 230, 0.08),
     0 1.5px 6px rgba(0, 0, 0, 0.04);
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .logo-link {
   color: #a259e6 !important;
   letter-spacing: 1px;
-  transition: color 0.2s;
+  transition: transform 0.2s, color 0.2s;
 }
 
 .logo-link:hover {
   color: #7c3aed !important;
+  transform: scale(1.05);
   text-shadow: 0 2px 12px #d1aaff44;
 }
 
@@ -81,16 +96,14 @@ function setLang(lang) {
   border-radius: 12px;
   padding: 8px 18px;
   margin: 0 4px;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    box-shadow 0.2s;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
 }
 
 .navbar-nav .nav-link:hover {
-  background: #d1aaff;
-  color: #222;
-  box-shadow: 0 2px 12px #d1aaff44;
+  background: linear-gradient(45deg, #d1aaff, #a259e6);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px #d1aaff66;
 }
 
 .router-link-exact-active.nav-link {
@@ -103,6 +116,7 @@ function setLang(lang) {
 .navbar-nav .nav-link:active {
   background: #be8aed;
   color: #fff;
+  transform: scale(0.98);
 }
 
 .dropdown-menu {
@@ -120,13 +134,14 @@ function setLang(lang) {
   border-radius: 8px;
   margin: 2px 8px;
   padding: 10px 18px;
-  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  transition: background 0.18s, color 0.18s, transform 0.18s;
 }
 
 .dropdown-item:hover,
 .dropdown-item:focus {
-  background: #d1aaff;
-  color: #222;
+  background: linear-gradient(45deg, #d1aaff, #a259e6);
+  color: #fff;
+  transform: translateX(4px);
   box-shadow: 0 2px 12px #d1aaff44;
 }
 
@@ -137,9 +152,36 @@ function setLang(lang) {
   font-weight: 600;
 }
 
+/* Animations */
+.nav-slide-enter-active,
+.nav-slide-leave-active {
+  transition: all 0.3s ease;
+}
+
+.nav-slide-enter-from,
+.nav-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.dropdown-slide-enter-active,
+.dropdown-slide-leave-active {
+  transition: all 0.3s ease;
+}
+
+.dropdown-slide-enter-from,
+.dropdown-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
 @media (max-width: 991px) {
   .navbar-nav .nav-link {
-    margin: 6px 0;
+    margin: 8px 0;
+    text-align: center;
+  }
+
+  .dropdown-menu {
     text-align: center;
   }
 }

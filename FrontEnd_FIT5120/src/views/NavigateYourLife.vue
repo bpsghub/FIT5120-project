@@ -79,9 +79,13 @@ onMounted(() => {
 
 <style scoped>
 .modern-sections {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #F9F9F9 0%, #D6BCFA 100%);
+  background-image: url("https://bookmestatic.net.nz/bookme-product-images/products/72238/72238_image2_UASR_M2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
   padding: 0 0 40px 0;
   font-family: 'Roboto', 'Arial', sans-serif;
 }

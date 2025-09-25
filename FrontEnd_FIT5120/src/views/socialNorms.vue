@@ -1,6 +1,6 @@
 <template>
   <div class="modern-sections">
-    <Header />
+    <Header class="transparent-header" />
     <div class="main-title">
       <span class="main-title-text">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="main-title-icon">
@@ -72,9 +72,18 @@ function goTo(key) {
 .modern-sections {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #F9F9F9 0%, #D6BCFA 100%);
+  /* Fixed background image */
+  background: url('https://c4.wallpaperflare.com/wallpaper/180/498/372/sydney-australia-sydney-opera-house-city-wallpaper-preview.jpg') no-repeat center center fixed;
+  background-size: cover;
   padding: 0 0 40px 0;
   font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+/* Transparent header style */
+.transparent-header {
+  background: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(6px);
 }
 
 .main-title {
@@ -137,7 +146,7 @@ function goTo(key) {
   min-height: 320px;
   margin: 40px auto;
   max-width: 1100px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 16px;
   box-shadow: 0 2px 12px rgba(107, 70, 193, 0.08);
   overflow: hidden;
