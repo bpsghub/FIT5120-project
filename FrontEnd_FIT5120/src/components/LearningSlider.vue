@@ -4,7 +4,7 @@
       <div class="display-toggle">
         <button :class="{ active: displayMode === 'grid' }" @click="displayMode = 'grid'">{{ gridBtnText }}</button>
         <button :class="{ active: displayMode === 'column' }" @click="displayMode = 'column'">{{ columnBtnText
-        }}</button>
+          }}</button>
       </div>
       <div :class="['cards-wrapper', displayMode]">
         <div class="row w-100 m-0">
@@ -86,8 +86,8 @@ function mapTranslationsToCards(cards, translations) {
     // offset by 2 for grid/column
     newCards.push({
       ...cards[i],
-      translatedTitle: translations[2 + i * 2],
-      translatedDesc: translations[2 + i * 2 + 1],
+      translatedTitle: translations[3 + i * 2],
+      translatedDesc: translations[3 + i * 2 + 1],
     })
   }
   return newCards

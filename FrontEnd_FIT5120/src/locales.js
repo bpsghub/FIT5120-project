@@ -1,6 +1,26 @@
 export default {
   en: {
     meetingpeople_title: 'Meeting New People',
+    myki_learning: {
+      title: 'Learning About Myki Card',
+      subtitle:
+        'This guide helps you understand how to use the Myki card for public transport in Australia, with step-by-step instructions in multiple languages.',
+    },
+    bus_learning: {
+      title: 'Learning About Buses',
+      subtitle:
+        'This guide helps you understand how to use buses in Australia, with step-by-step instructions in multiple languages.',
+    },
+    train_learning: {
+      title: 'Learning About Trains',
+      subtitle:
+        'This guide helps you understand how to use trains in Australia, with step-by-step instructions in multiple languages.',
+    },
+    tram_learning: {
+      title: 'Learning About Trams',
+      subtitle:
+        'This guide helps you understand how to use trams in Australia, with step-by-step instructions in multiple languages.',
+    },
     meetingpeople_subtitle:
       'This guide helps you feel confident when meeting new people in Australia.',
     nav: {
@@ -20,6 +40,9 @@ export default {
     home: {
       desc: 'The meaning of 安康 (ān kāng) in English is well-being, health, or welfare. It describes a state of being healthy and happy, encompassing both physical and mental health.',
     },
+    button_learnmore: {
+      label: 'Learn More',
+    },
     socialnorms: {
       meetingpeople: {
         title: 'Meeting New People',
@@ -38,6 +61,53 @@ export default {
           title: 'Ride Public Transportation',
           subtitle:
             'Get around Melbourne with ease — learn how to use buses, trains, and trams like a local.',
+          publictransportation_card: {
+            subtitle:
+              'Learn how to use Melbourne’s public transport system: myki, bus, train, and tram.',
+            cards: {
+              myki: {
+                myki_title: 'Myki Card',
+                myki_desc:
+                  'How to buy, top up, and use your myki card for all public transport in Melbourne.',
+                myki_page: {
+                  title: 'Myki Card Learning',
+                  subtitle:
+                    'This guide helps you understand how to use the Myki card for public transport in Australia, with step-by-step instructions in multiple languages.',
+                },
+              },
+
+              bus: {
+                bus_title: 'Bus',
+                bus_desc:
+                  'How to catch a bus, read timetables, and understand bus routes in Melbourne.',
+                bus_page: {
+                  title: 'Bus Learning',
+                  subtitle:
+                    'This guide helps you understand how to use buses in Australia, with step-by-step instructions in multiple languages.',
+                },
+              },
+              train: {
+                train_title: 'Train',
+                train_desc:
+                  'How to use Melbourne’s train network, find stations, and travel safely.',
+                train_page: {
+                  title: 'Train Learning',
+                  subtitle:
+                    'This guide helps you understand how to use trains in Australia, with step-by-step instructions in multiple languages.',
+                },
+              },
+              tram: {
+                tram_title: 'Tram',
+                tram_desc:
+                  'How to ride trams, use the free tram zone, and validate your myki card.',
+                tram_page: {
+                  title: 'Tram Learning',
+                  subtitle:
+                    'This guide helps you understand how to use trams in Australia, with step-by-step instructions in multiple languages.',
+                },
+              },
+            },
+          },
         },
         grocceriesshopping: {
           title: 'Groceries Shopping',
@@ -54,6 +124,22 @@ export default {
   },
   zh: {
     meetingpeople_title: '结识新朋友',
+    myki_learning: {
+      title: '了解 Myki 卡',
+      subtitle: '本指南帮助你了解如何在澳大利亚的公共交通中使用 Myki 卡，提供多语言的分步说明。',
+    },
+    bus_learning: {
+      title: '了解公交车',
+      subtitle: '本指南帮助你了解如何在澳大利亚乘坐公交车，提供多语言的分步说明。',
+    },
+    train_learning: {
+      title: '了解火车',
+      subtitle: '本指南帮助你了解如何在澳大利亚乘坐火车，提供多语言的分步说明。',
+    },
+    tram_learning: {
+      title: '了解电车',
+      subtitle: '本指南帮助你了解如何在澳大利亚乘坐电车，提供多语言的分步说明。',
+    },
     meetingpeople_subtitle: '本指南帮助你在澳大利亚结识新朋友时充满自信。',
     nav: {
       facility: '查找设施/活动',
@@ -72,6 +158,9 @@ export default {
     home: {
       desc: '安康（ān kāng）的意思是健康、幸福、福祉。它描述了身心健康、快乐的状态。',
     },
+    button_learnmore: {
+      label: '了解更多',
+    },
     socialnorms: {
       meetingpeople: {
         title: '结识新朋友',
@@ -88,6 +177,44 @@ export default {
         publictransportation: {
           title: '乘坐公共交通',
           subtitle: '轻松畅游墨尔本——学习如何像本地人一样使用公交、火车和电车。',
+          publictransportation_card: {
+            subtitle: '学习如何使用墨尔本的公共交通系统：myki、公交、火车和电车。',
+            cards: {
+              myki: {
+                myki_title: 'Myki 卡',
+                myki_desc: '如何购买、充值和使用 Myki 卡乘坐墨尔本所有公共交通工具。',
+                myki_page: {
+                  title: 'Myki 卡学习',
+                  subtitle:
+                    '本指南帮助你了解如何在澳大利亚的公共交通中使用 Myki 卡，提供多语言的分步说明。',
+                },
+              },
+              bus: {
+                bus_title: '公交车',
+                bus_desc: '如何乘坐公交车、查看时刻表和了解墨尔本公交线路。',
+                bus_page: {
+                  title: '公交车学习',
+                  subtitle: '本指南帮助你了解如何在澳大利亚乘坐公交车，提供多语言的分步说明。',
+                },
+              },
+              train: {
+                train_title: '火车',
+                train_desc: '如何使用墨尔本火车网络、查找车站并安全出行。',
+                train_page: {
+                  title: '火车学习',
+                  subtitle: '本指南帮助你了解如何在澳大利亚乘坐火车，提供多语言的分步说明。',
+                },
+              },
+              tram: {
+                tram_title: '电车',
+                tram_desc: '如何乘坐电车、使用免费电车区和刷卡。',
+                tram_page: {
+                  title: '电车学习',
+                  subtitle: '本指南帮助你了解如何在澳大利亚乘坐电车，提供多语言的分步说明。',
+                },
+              },
+            },
+          },
         },
         grocceriesshopping: {
           title: '购买杂货',
@@ -102,6 +229,26 @@ export default {
   },
   vi: {
     meetingpeople_title: 'Gặp gỡ người mới',
+    myki_learning: {
+      title: 'Học về thẻ Myki',
+      subtitle:
+        'Hướng dẫn này giúp bạn hiểu cách sử dụng thẻ Myki cho giao thông công cộng ở Úc, với hướng dẫn từng bước bằng nhiều ngôn ngữ.',
+    },
+    bus_learning: {
+      title: 'Học về xe buýt',
+      subtitle:
+        'Hướng dẫn này giúp bạn hiểu cách sử dụng xe buýt ở Úc, với hướng dẫn từng bước bằng nhiều ngôn ngữ.',
+    },
+    train_learning: {
+      title: 'Học về tàu',
+      subtitle:
+        'Hướng dẫn này giúp bạn hiểu cách sử dụng tàu ở Úc, với hướng dẫn từng bước bằng nhiều ngôn ngữ.',
+    },
+    tram_learning: {
+      title: 'Học về xe điện',
+      subtitle:
+        'Hướng dẫn này giúp bạn hiểu cách sử dụng xe điện ở Úc, với hướng dẫn từng bước bằng nhiều ngôn ngữ.',
+    },
     meetingpeople_subtitle: 'Hướng dẫn này giúp bạn tự tin khi gặp gỡ người mới ở Úc.',
     nav: {
       facility: 'Tìm Cơ sở / Sự kiện',
@@ -119,6 +266,9 @@ export default {
     },
     home: {
       desc: 'Ý nghĩa của 安康 (ān kāng) trong tiếng Việt là sự khỏe mạnh, hạnh phúc, an lành cả về thể chất lẫn tinh thần.',
+    },
+    button_learnmore: {
+      label: 'Tìm hiểu thêm',
     },
     socialnorms: {
       meetingpeople: {
@@ -138,6 +288,49 @@ export default {
           title: 'Đi phương tiện công cộng',
           subtitle:
             'Di chuyển quanh Melbourne dễ dàng — học cách sử dụng xe buýt, tàu và xe điện như người bản xứ.',
+          publictransportation_card: {
+            subtitle:
+              'Tìm hiểu cách sử dụng hệ thống giao thông công cộng ở Melbourne: myki, xe buýt, tàu và xe điện.',
+            cards: {
+              myki: {
+                myki_title: 'Thẻ Myki',
+                myki_desc:
+                  'Cách mua, nạp tiền và sử dụng thẻ myki cho tất cả phương tiện công cộng ở Melbourne.',
+                myki_page: {
+                  title: 'Học về thẻ Myki',
+                  subtitle:
+                    'Hướng dẫn này giúp bạn hiểu cách sử dụng thẻ Myki cho giao thông công cộng ở Úc, với hướng dẫn từng bước bằng nhiều ngôn ngữ.',
+                },
+              },
+              bus: {
+                bus_title: 'Xe buýt',
+                bus_desc: 'Cách đi xe buýt, xem giờ chạy và hiểu các tuyến xe buýt ở Melbourne.',
+                bus_page: {
+                  title: 'Học về xe buýt',
+                  subtitle:
+                    'Hướng dẫn này giúp bạn hiểu cách sử dụng xe buýt ở Úc, với hướng dẫn từng bước bằng nhiều ngôn ngữ.',
+                },
+              },
+              train: {
+                train_title: 'Tàu',
+                train_desc: 'Cách sử dụng hệ thống tàu ở Melbourne, tìm ga và đi lại an toàn.',
+                train_page: {
+                  title: 'Học về tàu',
+                  subtitle:
+                    'Hướng dẫn này giúp bạn hiểu cách sử dụng tàu ở Úc, với hướng dẫn từng bước bằng nhiều ngôn ngữ.',
+                },
+              },
+              tram: {
+                tram_title: 'Xe điện',
+                tram_desc: 'Cách đi xe điện, sử dụng khu vực xe điện miễn phí và quẹt thẻ myki.',
+                tram_page: {
+                  title: 'Học về xe điện',
+                  subtitle:
+                    'Hướng dẫn này giúp bạn hiểu cách sử dụng xe điện ở Úc, với hướng dẫn từng bước bằng nhiều ngôn ngữ.',
+                },
+              },
+            },
+          },
         },
         grocceriesshopping: {
           title: 'Mua sắm thực phẩm',
@@ -154,6 +347,26 @@ export default {
   },
   id: {
     meetingpeople_title: 'Bertemu Orang Baru',
+    myki_learning: {
+      title: 'Belajar Kartu Myki',
+      subtitle:
+        'Panduan ini membantu Anda memahami cara menggunakan kartu Myki untuk transportasi umum di Australia, dengan petunjuk langkah demi langkah dalam berbagai bahasa.',
+    },
+    bus_learning: {
+      title: 'Belajar Bus',
+      subtitle:
+        'Panduan ini membantu Anda memahami cara menggunakan bus di Australia, dengan petunjuk langkah demi langkah dalam berbagai bahasa.',
+    },
+    train_learning: {
+      title: 'Belajar Kereta',
+      subtitle:
+        'Panduan ini membantu Anda memahami cara menggunakan kereta di Australia, dengan petunjuk langkah demi langkah dalam berbagai bahasa.',
+    },
+    tram_learning: {
+      title: 'Belajar Trem',
+      subtitle:
+        'Panduan ini membantu Anda memahami cara menggunakan trem di Australia, dengan petunjuk langkah demi langkah dalam berbagai bahasa.',
+    },
     meetingpeople_subtitle:
       'Panduan ini membantu Anda merasa percaya diri saat bertemu orang baru di Australia.',
     nav: {
@@ -172,6 +385,9 @@ export default {
     },
     home: {
       desc: 'Arti 安康 (ān kāng) dalam bahasa Indonesia adalah kesejahteraan, kesehatan, atau kebahagiaan, mencakup kesehatan fisik dan mental.',
+    },
+    button_learnmore: {
+      label: 'Pelajari Lebih Lanjut',
     },
     socialnorms: {
       meetingpeople: {
@@ -192,6 +408,51 @@ export default {
           title: 'Naik Transportasi Umum',
           subtitle:
             'Kelilingi Melbourne dengan mudah — pelajari cara menggunakan bus, kereta, dan trem seperti penduduk lokal.',
+          publictransportation_card: {
+            subtitle:
+              'Pelajari cara menggunakan sistem transportasi umum Melbourne: myki, bus, kereta, dan trem.',
+            cards: {
+              myki: {
+                myki_title: 'Kartu Myki',
+                myki_desc:
+                  'Cara membeli, mengisi ulang, dan menggunakan kartu myki untuk semua transportasi umum di Melbourne.',
+                myki_page: {
+                  title: 'Belajar Kartu Myki',
+                  subtitle:
+                    'Panduan ini membantu Anda memahami cara menggunakan kartu Myki untuk transportasi umum di Australia, dengan petunjuk langkah demi langkah dalam berbagai bahasa.',
+                },
+              },
+              bus: {
+                bus_title: 'Bus',
+                bus_desc: 'Cara naik bus, membaca jadwal, dan memahami rute bus di Melbourne.',
+                bus_page: {
+                  title: 'Belajar Bus',
+                  subtitle:
+                    'Panduan ini membantu Anda memahami cara menggunakan bus di Australia, dengan petunjuk langkah demi langkah dalam berbagai bahasa.',
+                },
+              },
+              train: {
+                train_title: 'Kereta',
+                train_desc:
+                  'Cara menggunakan jaringan kereta Melbourne, menemukan stasiun, dan bepergian dengan aman.',
+                train_page: {
+                  title: 'Belajar Kereta',
+                  subtitle:
+                    'Panduan ini membantu Anda memahami cara menggunakan kereta di Australia, dengan petunjuk langkah demi langkah dalam berbagai bahasa.',
+                },
+              },
+              tram: {
+                tram_title: 'Trem',
+                tram_desc:
+                  'Cara naik trem, menggunakan zona trem gratis, dan memvalidasi kartu myki Anda.',
+                tram_page: {
+                  title: 'Belajar Trem',
+                  subtitle:
+                    'Panduan ini membantu Anda memahami cara menggunakan trem di Australia, dengan petunjuk langkah demi langkah dalam berbagai bahasa.',
+                },
+              },
+            },
+          },
         },
         grocceriesshopping: {
           title: 'Belanja Kebutuhan Pokok',

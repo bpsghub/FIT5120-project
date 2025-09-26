@@ -7,7 +7,7 @@
           <circle cx="16" cy="16" r="16" fill="#D6BCFA" />
           <path d="M10 16h12M16 10v12" stroke="#6B46C1" stroke-width="2" stroke-linecap="round" />
         </svg>
-        {{ $t('nav.navigate') || 'Navigate Your Life' }}
+        {{ $t('nav.navigate') }}
       </span>
     </div>
     <div>
@@ -24,7 +24,7 @@
           <h2 class="section-title">{{ card.title }}</h2>
           <p class="section-subtitle">{{ card.text }}</p>
           <button class="learn-more-btn" @click="goTo(card.key)">
-            {{ $t('Learn More') }}
+            {{ $t('button_learnmore.label') }}
           </button>
         </div>
       </section>

@@ -24,7 +24,7 @@
           <h2 class="section-title">{{ card.title }}</h2>
           <p class="section-subtitle">{{ card.text }}</p>
           <button class="learn-more-btn" @click="goTo(card.key)">
-            {{ $t('Learn More') }}
+            {{ $t('button_learnmore.label') }}
           </button>
         </div>
       </section>
