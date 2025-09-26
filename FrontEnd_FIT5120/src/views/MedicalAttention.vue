@@ -1,19 +1,12 @@
 <template>
-  <div class="medical-attention-container container">
+  <div class="medical-attention-container ">
     <Header />
-    <div class="banner">
-      <h1>Medical Attention</h1>
-      <p>
-        Learn how to access healthcare, visit clinics, and use health insurance in Australia.
-      </p>
-    </div>
+    <LearningBanner :title="$t('navigate_your_life.cards.grocceriesshopping.title')"
+      :subtitle="$t('navigate_your_life.cards.grocceriesshopping.subtitle')" :particle-count="18" />
+
     <div class="content-box">
-      <LearningSlider
-        v-model:lang="lang"
-        csv-url="/Learning about Australia/medical.csv"
-        image-seed-prefix="medical"
-        @take-quiz="takeQuiz"
-      />
+      <LearningSlider :lang="locale" v-model="locale" csv-url="/Learning about Australia/epic4_doctor_etiquettes.csv"
+        image-seed-prefix="medical" @take-quiz="takeQuiz" />
     </div>
   </div>
 </template>
@@ -22,84 +15,20 @@
 import { ref } from 'vue'
 import Header from '@/components/Header.vue'
 import LearningSlider from '@/components/LearningSlider.vue'
+import { useI18n } from 'vue-i18n'
+import LearningBanner from '@/components/LearningBanner.vue'
 
-const lang = ref('en')
+const { locale } = useI18n()
 function takeQuiz() {
   alert('Quiz coming soon!')
 }
 </script>
 
 <style scoped>
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #222;
-  padding: 24px 0 8px 0;
-  margin-bottom: 0px;
-}
-
-.logo {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 2.5rem;
-  margin-left: 48px;
-  font-weight: bold;
-}
-
-.nav {
-  display: flex;
-  gap: 32px;
-  margin-right: 48px;
-}
-
-.nav a {
-  color: #222;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.nav a.router-link-exact-active {
-  color: #a259e6;
-}
-
 .medical-attention-container {
   min-height: 100vh;
-  background: #fff;
+  background: #E6E6FA;
   display: flex;
   flex-direction: column;
-}
-
-.banner {
-  background: #b34a97;
-  color: #fff;
-  padding: 48px 0 32px 0;
-  text-align: center;
-  font-family: 'Quicksand', 'Arial', sans-serif;
-  border-bottom: 8px dashed #fff;
-}
-.banner h1 {
-  font-size: 2.3rem;
-  font-family: 'Quicksand', 'Arial', sans-serif;
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
-.banner p {
-  font-size: 1.2rem;
-  margin: 0 auto;
-  max-width: 900px;
-}
-.content-box {
-  margin: 40px auto 0 auto;
-  width: 100%;
-  max-width: 900px;
-  min-height: 250px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  color: #222;
 }
 </style>

@@ -113,6 +113,15 @@ export default {
           title: 'Groceries Shopping',
           subtitle:
             'From fresh veggies to rice and noodles — learn how to shop for your daily needs with confidence.',
+          grocceries_page: {
+            title: 'Groceries Shopping',
+            subtitle: 'Learn how to shop for groceries, pay, and save money in Australia.',
+          },
+          medical_page: {
+            title: 'Medical Attention',
+            subtitle:
+              'Learn how to access healthcare, visit clinics, and use health insurance in Australia.',
+          },
         },
         medicalattention: {
           title: 'Seek Medical Attention',
@@ -219,6 +228,14 @@ export default {
         grocceriesshopping: {
           title: '购买杂货',
           subtitle: '从新鲜蔬菜到米饭和面条——自信地学习如何购买日常所需。',
+          grocceries_page: {
+            title: '购买杂货',
+            subtitle: '学习如何在澳大利亚购买杂货、付款和省钱。',
+          },
+          medical_page: {
+            title: '寻求医疗帮助',
+            subtitle: '学习如何在澳大利亚获得医疗服务、就诊和使用健康保险。',
+          },
         },
         medicalattention: {
           title: '寻求医疗帮助',
@@ -336,6 +353,15 @@ export default {
           title: 'Mua sắm thực phẩm',
           subtitle:
             'Từ rau củ tươi đến gạo và mì — học cách mua sắm nhu yếu phẩm hàng ngày một cách tự tin.',
+          grocceries_page: {
+            title: 'Mua sắm thực phẩm',
+            subtitle: 'Tìm hiểu cách mua sắm thực phẩm, thanh toán và tiết kiệm tiền tại Úc.',
+          },
+          medical_page: {
+            title: 'Tìm kiếm chăm sóc y tế',
+            subtitle:
+              'Tìm hiểu cách tiếp cận dịch vụ y tế, đến phòng khám và sử dụng bảo hiểm sức khỏe tại Úc.',
+          },
         },
         medicalattention: {
           title: 'Tìm kiếm chăm sóc y tế',
@@ -458,6 +484,16 @@ export default {
           title: 'Belanja Kebutuhan Pokok',
           subtitle:
             'Dari sayuran segar hingga nasi dan mie — pelajari cara berbelanja kebutuhan sehari-hari dengan percaya diri.',
+          grocceries_page: {
+            title: 'Belanja Kebutuhan Pokok',
+            subtitle:
+              'Pelajari cara berbelanja kebutuhan pokok, membayar, dan menghemat uang di Australia.',
+          },
+          medical_page: {
+            title: 'Mencari Perawatan Medis',
+            subtitle:
+              'Pelajari cara mengakses layanan kesehatan, mengunjungi klinik, dan menggunakan asuransi kesehatan di Australia.',
+          },
         },
         medicalattention: {
           title: 'Mencari Perawatan Medis',
