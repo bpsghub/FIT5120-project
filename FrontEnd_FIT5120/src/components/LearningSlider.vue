@@ -9,7 +9,7 @@
       <div :class="['cards-wrapper', displayMode]">
         <div class="row w-100 m-0">
           <div v-for="(card, idx) in translatedCards" :key="card.key"
-            :class="displayMode === 'grid' ? 'col-lg-4 col-md-6 col-12 d-flex justify-content-center mb-4' : 'col-12 d-flex justify-content-center mb-4'">
+            :class="displayMode === 'grid' ? 'col-lg-4 col-md-6 col-12 d-flex justify-content-center mb-4 ' : 'col-12 d-flex justify-content-center mb-4 '">
             <div :class="['slide-card-with-image', 'w-100', displayMode]">
               <template v-if="displayMode === 'grid'">
                 <div class="slide-image mb-3">
@@ -224,6 +224,7 @@ watch(() => props.lang, () => { translateAll() })
   transform: translateY(-8px) scale(1.025);
   border: 2.5px solid #a259e6;
   z-index: 2;
+  cursor: pointer;
 }
 
 .slide-card {
