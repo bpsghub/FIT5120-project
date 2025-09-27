@@ -3,7 +3,7 @@
   <div class="quiztaking">
     <Header />
     <div class="quiztaking-w container mt-5 mb-5" v-if="!allCorrect">
-      <h2 class="quiz-header">Dining Etiquette Quiz</h2>
+      <h2 class="quiz-header">{{ staticTexts.quizTime }}</h2>
       <div v-for="(q, idx) in questions" :key="q.key" class="quiz-question-block">
         <div :class="['question-title',
           userAnswers[q.key] === undefined ? '' : (isCorrect(q) ? 'correct' : 'incorrect')
@@ -19,35 +19,80 @@
           </button>
         </div>
         <div v-if="userAnswers[q.key] && !isCorrect(q)" class="explanation">
-          <span class="wrong-msg">Wrong, try again!</span>
+          <span class="wrong-msg">{{ staticTexts.wrongTryAgain }}</span>
         </div>
         <div v-if="isCorrect(q)" class="explanation">
-          <span class="correct-msg">Correct! {{ q.explanation[lang] || q.explanation.en }}</span>
+          <span class="correct-msg">{{ staticTexts.correct }} {{ q.explanation[lang] || q.explanation.en }}</span>
         </div>
       </div>
     </div>
     <div v-else class="congrats-block">
-      <h2>Congratulations!</h2>
-      <p>You have completed all questions correctly!</p>
-      <button class="home-btn" @click="goHome">Go to Home</button>
+      <h2>{{ staticTexts.congratulations }}</h2>
+      <p>{{ staticTexts.completedAll }}</p>
+      <button class="home-btn" @click="goHome">{{ staticTexts.goHome }}</button>
     </div>
   </div>
 </template>
 
 <script setup>
 import Header from '@/components/Header.vue'
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
+import { translateText } from '@/services/translationService.js'
 
-const lang = 'en' // Set language code here, or get from i18n if needed
+// Lấy lang từ i18n để đồng bộ khi đổi ngôn ngữ
+const { locale } = useI18n()
+const lang = computed(() => locale.value)
 const questions = ref([])
 const userAnswers = ref({})
 
-// Load quiz data
+// Static texts to translate
+const staticTexts = ref({
+  quizTime: 'Quiz Time!',
+  congratulations: 'Congratulations!',
+  completedAll: 'You have completed all questions correctly!',
+  goHome: 'Go to Home',
+  wrongTryAgain: 'Wrong, try again!',
+  correct: 'Correct!'
+})
+
+async function translateStatics() {
+  if (lang.value === 'en') {
+    // Reset về tiếng Anh nếu chuyển lại
+    staticTexts.value = {
+      quizTime: 'Quiz Time!',
+      congratulations: 'Congratulations!',
+      completedAll: 'You have completed all questions correctly!',
+      goHome: 'Go to Home',
+      wrongTryAgain: 'Wrong, try again!',
+      correct: 'Correct!'
+    }
+    return
+  }
+  const keys = Object.keys(staticTexts.value)
+  const values = keys.map(k => staticTexts.value[k])
+  try {
+    const translated = await Promise.all(values.map(text => translateText(text, lang.value, 'en')))
+    keys.forEach((k, i) => {
+      staticTexts.value[k] = translated[i]
+    })
+  } catch {
+    // fallback: keep English if error
+  }
+}
+
+
 onMounted(async () => {
   const res = await fetch('/Learning about Australia/quiz_dining_multilang.json')
   const data = await res.json()
   questions.value = data.items
+  await translateStatics()
+})
+
+// Theo dõi sự thay đổi ngôn ngữ và dịch lại text tĩnh
+watch(lang, async () => {
+  await translateStatics()
 })
 
 function selectAnswer(q, optId) {

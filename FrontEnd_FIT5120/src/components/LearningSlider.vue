@@ -4,7 +4,7 @@
       <div class="display-toggle">
         <button :class="{ active: displayMode === 'grid' }" @click="displayMode = 'grid'">{{ gridBtnText }}</button>
         <button :class="{ active: displayMode === 'column' }" @click="displayMode = 'column'">{{ columnBtnText
-        }}</button>
+          }}</button>
       </div>
       <div :class="['cards-wrapper', displayMode]">
         <div class="row w-100 m-0">
@@ -55,7 +55,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 function takeQuiz() {
-  alert('Quiz coming soon!');
+  alert('Remember to learn all the lessons before taking the quiz, you can always go back to learn all the lessons before taking the quiz again');
   router.push("/quiztaking")
 }
 
