@@ -1,7 +1,24 @@
 <script setup>
 import Header from '@/components/Header.vue'
 import { useI18n } from 'vue-i18n'
+
+import { useRouter } from 'vue-router'
 const { t } = useI18n()
+const router = useRouter()
+
+function goToFacility() {
+  router.push('/FacilityEvent')
+}
+function goToEnglish() {
+  router.push('/learnenglish')
+}
+function goToSocialNorms() {
+  router.push('/socialnorms')
+}
+function goToNavigate() {
+  router.push('/navigatelife')
+}
+
 </script>
 
 <template>
@@ -14,10 +31,10 @@ const { t } = useI18n()
         <section class="banner-section container ">
           <div class="row align-items-center">
             <div class="col-12 col-lg-6 text-center">
-              <h2 class="banner_title">{{ t('nav.brand') }}</h2>
+              <h2 class="banner_title" data-aos="fade-up">{{ t('nav.brand') }}</h2>
             </div>
             <div class="col-12 col-lg-6">
-              <div class="banner_content">
+              <div class="banner_content" data-aos="fade-left">
                 <p class="banner_desc">
                   {{ t('home.desc') }}
                 </p>
@@ -25,8 +42,9 @@ const { t } = useI18n()
             </div>
           </div>
           <div class="d-flex flex-column align-items-center mt-5">
-            <span class="get-started-text mb-2">Let's get started</span>
-            <div class="chevron-animate mt-2">
+            <span class="get-started-text mb-2" data-aos="fade-up" data-aos-delay="200">{{ t('home.lets_get_started')
+            }}</span>
+            <div class="chevron-animate mt-2" data-aos="fade-down" data-aos-delay="400">
               <i class="fa-solid fa-chevron-down fa-2x"></i>
             </div>
           </div>
@@ -35,38 +53,99 @@ const { t } = useI18n()
     </div>
     <section class="our_mission w-100">
       <div class=" mission_banner text-white w-100 d-flex justify-content-center align-items-center py-5 fw-bold fs-4">
-        <p class="p_ourmission border-white">Helping older adults build connections, learn new skills, and feel truly at
-          home in
-          Australia</p>
+        <p class="p_ourmission border-white">{{ t('home.helping_older') }}</p>
       </div>
-      <div class="our_mission_main row gx-0 align-items-stretch">
-        <div class="our_mission_left col-12 col-md-6"></div>
-        <div class="col-12 col-md-6 d-flex align-items-center position-relative p-0 wow">
+      <div class="our_mission_main d-flex align-items-stretch" style="min-height: 600px;">
+        <div class="our_mission_left" style="flex: 6 1 0;" data-aos="fade-right" data-aos-delay="200"></div>
+        <div class="our_mission_right d-flex align-items-center position-relative p-0" style="flex: 5 1 0;"
+          data-aos="fade-left" data-aos-delay="400">
           <div class="ourmission_content w-100 text-start">
-            <h2 class="fw-semibold mb-3">Our mission</h2>
-            <p class="p_subtitle">
-              Our mission is to empower older adults to confidently embrace life in Australia.
-              We provide resources, guidance, and a supportive community to help seniors connect, learn, and thrive.
-              By bridging cultures and generations, we aim to ensure every senior feels welcome, valued, and at home in
-              their new environment
+            <h2 class="fw-semibold mb-3" data-aos="fade-up">{{ t('home.our_mission.our_mission_title') }}</h2>
+            <p class="p_subtitle" data-aos="fade-up" data-aos-delay="200">
+              {{ t('home.our_mission.our_mission_desc') }}
             </p>
           </div>
         </div>
+        <div class="our_mission_remain our-features-header-yellow-col col-md-1 d-none d-md-flex"
+          style="background-color: rgb(181,88,74) !important;" data-aos="fade-down" data-aos-delay="600">
+          <span class="vertical-text-mission">{{ t('home.our_mission.our_mission_title') }}</span>
+        </div>
       </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <p class="animate__animated animate__fadeInUp wow">Hello</p>
+    </section>
+
+    <!-- Our Features Cards Section -->
+    <section class="our_features_section w-100">
+      <div class="our-features-section-flex">
+        <div class="our-features-header-yellow-col col-md-1 d-none d-md-flex" data-aos="fade-down" data-aos-delay="200">
+          <span class="vertical-text">{{ t('home.our_features.our_features_title') }}</span>
+        </div>
+        <div class="our-features-main-content col-md-11">
+          <div class="our-features-header-bg d-flex justify-content-center align-items-center w-100" data-aos="fade-up"
+            data-aos-delay="400">
+            <span class="our-features-header-title">{{ t('home.our_features.our_features_title') }}</span>
+          </div>
+          <div class="features-container">
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+              <div class="feature-icon"><i class="fa-solid fa-map"></i></div>
+              <h3 class="feature-title">{{ t('home.our_features.our_features_cards.facility.facility_title') }}</h3>
+              <p class="feature-desc">{{ t('home.our_features.our_features_cards.facility.description') }}</p>
+              <button class="learn-more-btn" @click="goToFacility">{{ t('button_learnmore.label') }}</button>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="700">
+              <div class="feature-icon"><i class="fa-brands fa-leanpub"></i></div>
+              <h3 class="feature-title">{{ t('home.our_features.our_features_cards.learning.learning_title') }}</h3>
+              <p class="feature-desc">{{ t('home.our_features.our_features_cards.learning.description') }}</p>
+              <button class="learn-more-btn" @click="goToEnglish">{{ t('button_learnmore.label') }}</button>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="800">
+              <div class="feature-icon"><i class="fa-solid fa-user-group"></i></div>
+              <h3 class="feature-title">{{ t('home.our_features.our_features_cards.social.social_title') }}</h3>
+              <p class="feature-desc">{{ t('home.our_features.our_features_cards.social.description') }}</p>
+              <button class="learn-more-btn" @click="goToSocialNorms">{{ t('button_learnmore.label') }}</button>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="900">
+              <div class="feature-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+              <h3 class="feature-title">{{ t('home.our_features.our_features_cards.navigate.navigate_title') }}</h3>
+              <p class="feature-desc">{{ t('home.our_features.our_features_cards.navigate.description') }}</p>
+              <button class="learn-more-btn" @click="goToNavigate">{{ t('button_learnmore.label') }}</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
 
 <style scoped>
+@media (max-width: 768px) {
+  .ourmission_content {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .our_mission_main {
+    flex-direction: column !important;
+    min-height: unset;
+  }
+
+  .our_mission_left,
+  .our_mission_right,
+  .our_mission_remain {
+    width: 100% !important;
+    min-width: unset !important;
+    max-width: unset !important;
+    flex: unset !important;
+  }
+
+  .our_mission_remain {
+    justify-content: flex-start;
+    min-height: 60px;
+    height: 60px;
+  }
+}
+
 h2 {
   font-size: 2.5rem
 }
@@ -184,78 +263,21 @@ h2 {
   margin: 0 auto;
 }
 
-
-
-.our_mission_left {
-  flex: 1 1 50%;
-  min-width: 0;
-  min-height: 600px;
-  background-image: url('https://static.wixstatic.com/media/9d0f12_2673b1f519594338983efe92d82543cc~mv2.jpg/v1/fill/w_832,h_836,al_c,q_85,enc_avif,quality_auto/9d0f12_2673b1f519594338983efe92d82543cc~mv2.jpg');
-  background-size: contain;
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.get-started-text {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 0.2s, text-shadow 0.2s, transform 0.2s;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
 
-
-.our_mission_main .left_content {
-  top: 0;
-  height: 600px;
-  max-height: 700px;
-  min-height: 400px;
-  z-index: 2;
-}
-
-.our_mission_main .left_content img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.ourmission_content {
-  max-width: 600px;
-  width: 100%;
-  text-align: start;
-  padding: 0% 10%;
-}
-
-.our_mission_main .right_content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 600px;
-}
-
-
-/* Responsive adjustments for medium screens */
-@media (max-width: 900px) {
-  .banner_title {
-    font-size: 2.2rem;
-  }
-
-  .banner_desc {
-    font-size: 1rem;
-  }
-
-  .banner_content {
-    padding: 24px 8px;
-  }
-
-  .banner_button_group :deep(.btn) {
-    font-size: 1rem;
-    padding: 14px 5px !important;
-  }
-}
-
-.mission_banner {
-  background-color: #BE36EC
-}
-
-.p_ourmission {
-  border: black 2px solid;
-  padding: 20px;
+.get-started-text:hover {
+  color: #BE36EC;
+  text-shadow: 0 4px 16px #be36ec99, 0 2px 8px rgba(0, 0, 0, 0.18);
+  transform: scale(1.08) translateY(-2px);
 }
 
 /* Responsive adjustments for small screens */
@@ -300,21 +322,24 @@ h2 {
   }
 }
 
-.get-started-text {
-  display: inline-block;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: color 0.2s, text-shadow 0.2s, transform 0.2s;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-}
+/* Responsive adjustments for medium screens */
+@media (max-width: 900px) {
+  .banner_title {
+    font-size: 2.2rem;
+  }
 
-.get-started-text:hover {
-  color: #BE36EC;
-  text-shadow: 0 4px 16px #be36ec99, 0 2px 8px rgba(0, 0, 0, 0.18);
-  transform: scale(1.08) translateY(-2px);
+  .banner_desc {
+    font-size: 1rem;
+  }
+
+  .banner_content {
+    padding: 24px 8px;
+  }
+
+  .banner_button_group :deep(.btn) {
+    font-size: 1rem;
+    padding: 14px 5px !important;
+  }
 }
 
 @keyframes arrowDown {
@@ -332,6 +357,410 @@ h2 {
 .chevron-animate i {
   margin-top: 50px;
   font-size: 30px;
-  animation: arrowDown 1s linear 0s infinite;
+}
+
+/* Our mission  */
+.our_mission_left {
+  /* flex: 1 1 50%; */
+  height: 600px;
+  min-height: 300px;
+  background-image: url('https://www.10000steps.org.au/media/images/Physical-Activity-Recommendations-for-Older-Aus.original.png');
+  background-size: cover;
+  background-position: left top 10%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.our_mission_main .left_content {
+  top: 0;
+  height: 600px;
+  max-height: 700px;
+  min-height: 400px;
+  z-index: 2;
+}
+
+.our_mission_main .left_content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ourmission_content {
+  /* max-width: 600px; */
+  width: 100%;
+  text-align: start;
+  padding: 0% 10%;
+}
+
+.our_mission_main .right_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+}
+
+.our_mission_main .column_remain {
+  height: 100%;
+  width: 100%;
+  background-color: #BE36EC;
+}
+
+.mission_banner {
+  background-color: #BE36EC
+}
+
+.p_ourmission {
+  border: black 2px solid;
+  padding: 20px;
+}
+
+/* Thanh vàng bên trái cho Our Mission */
+.our_mission_remain {
+  background: #FACF46 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.vertical-text-mission {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  font-family: 'Inter', sans-serif;
+}
+
+/* our features  */
+
+.our_features .our_features_up {
+  background-attachment: fixed;
+  background: url("https://c4.wallpaperflare.com/wallpaper/621/962/493/australia-nsw-sydney-4k-wallpaper-preview.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+/* Our Feature  */
+.our_features .our_feature_remain {
+  background-color: rgb(250, 191, 70);
+}
+
+.learn-more-btn {
+  background: #6B46C1;
+  color: #fff;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
+  transition: all 0.3s cubic-bezier(.4, 2, .6, 1), transform 0.3s cubic-bezier(.4, 2, .6, 1);
+}
+
+.learn-more-btn:hover {
+  background: #8A4AF3;
+  transform: scale(1.05);
+}
+
+/* Our Features Section Redesign */
+
+
+.our-features-header-section {
+  width: 100vw;
+  min-height: 220px;
+  margin: 0;
+  padding: 0;
+}
+
+.our-features-header-bg {
+  width: 100vw;
+  min-height: 220px;
+  background-image: url('https://static.wixstatic.com/media/9d0f12_4d25e2222d434edea6371260caad1c2a~mv2.jpg/v1/fill/w_1257,h_383,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9d0f12_4d25e2222d434edea6371260caad1c2a~mv2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.our-features-header-content {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.our-features-header-title {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  font-family: 'Inter', sans-serif;
+}
+
+
+.our_features_section {
+  width: 100vw;
+  background: #faf7f2;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.our-features-section-flex {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  min-height: 100%;
+}
+
+.our-features-header-yellow-col {
+  background: #FACF46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.07);
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  font-family: 'Inter', sans-serif;
+}
+
+.our-features-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.our-features-header-bg {
+  width: 100%;
+  min-height: 220px;
+  background-image: url('https://static.wixstatic.com/media/9d0f12_4d25e2222d434edea6371260caad1c2a~mv2.jpg/v1/fill/w_1257,h_383,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9d0f12_4d25e2222d434edea6371260caad1c2a~mv2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.our-features-header-title {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  font-family: 'Inter', sans-serif;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1400px;
+  width: 90vw;
+  margin: 0 auto;
+  padding: 60px 0 60px 0;
+}
+
+.our-features-bg {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  min-height: 500px;
+  background-image: url('https://images.unsplash.com/photo-1549576490-b0b4831ef60a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.our-features-yellow-col {
+  width: 80px;
+  min-width: 60px;
+  background: #FACF46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.our-features-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  background: rgba(255, 255, 255, 0.85);
+  min-height: 500px;
+  z-index: 1;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1400px;
+  width: 90vw;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 40px 24px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-height: 370px;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  box-shadow: 0 8px 32px rgba(106, 68, 255, 0.13);
+  transform: translateY(-6px) scale(1.03);
+}
+
+.feature-icon {
+  font-size: 3.2rem;
+  color: #6B46C1;
+  margin-bottom: 18px;
+}
+
+.feature-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.feature-desc {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 28px;
+}
+
+/* Header features section layout */
+.our-features-header-section {
+  width: 100vw;
+  min-height: 220px;
+  margin: 0;
+  padding: 0;
+}
+
+.our-features-header-bg {
+  width: 100vw;
+  min-height: 220px;
+  background-image:
+    url('https://static.wixstatic.com/media/9d0f12_4d25e2222d434edea6371260caad1c2a~mv2.jpg/v1/fill/w_1257,h_383,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9d0f12_4d25e2222d434edea6371260caad1c2a~mv2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+}
+
+.our-features-header-yellow-col {
+  width: 90px;
+  min-width: 70px;
+  background: #FACF46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.07);
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  font-family: 'Inter', sans-serif;
+}
+
+.our-features-header-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.our-features-header-title {
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 1200px) {
+  .features-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  .features-container {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .feature-card {
+    padding: 28px 10px 24px 10px;
+    min-height: 0;
+  }
 }
 </style>

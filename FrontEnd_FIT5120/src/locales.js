@@ -39,6 +39,39 @@ export default {
     },
     home: {
       desc: 'The meaning of 安康 (ān kāng) in English is well-being, health, or welfare. It describes a state of being healthy and happy, encompassing both physical and mental health.',
+      lets_get_started: 'Let’s Get Started!',
+      helping_older:
+        'Helping older adults build connections, learn new skills, and feel truly at home in Australia',
+      our_mission: {
+        our_mission_title: 'Our Mission',
+        our_mission_desc:
+          'Our mission is to help older adults feel at home in Australia. We offer resources, language support, and community events so everyone can connect, learn, and grow. With our team and volunteers, seniors receive friendly guidance and opportunities to build friendships. We work with local groups to make sure every voice is heard. Together, we create a welcoming community where older adults can thrive and enjoy life.',
+      },
+      our_features: {
+        our_features_title: 'Our Features',
+        our_features_cards: {
+          facility: {
+            facility_title: 'Facility Finder',
+            description:
+              'Discover essential community facilities and services near you, from healthcare to recreation, all in one place.',
+          },
+          learning: {
+            learning_title: 'English Learning Hub',
+            description:
+              'Improve your English skills with practical lessons and resources designed for everyday life in Australia',
+          },
+          social: {
+            social_title: 'Australian Social Norms',
+            description:
+              'Understand local customs, etiquette, and social expectations to feel more confident in any situation.',
+          },
+          navigate: {
+            navigate_title: 'Navigate Your Life',
+            description:
+              'Get tips and guidance for daily living, from using public transport to managing your wellbeing in Australia.',
+          },
+        },
+      },
     },
     button_learnmore: {
       label: 'Learn More',
@@ -75,7 +108,6 @@ export default {
                     'This guide helps you understand how to use the Myki card for public transport in Australia, with step-by-step instructions in multiple languages.',
                 },
               },
-
               bus: {
                 bus_title: 'Bus',
                 bus_desc:
@@ -166,6 +198,34 @@ export default {
     },
     home: {
       desc: '安康（ān kāng）的意思是健康、幸福、福祉。它描述了身心健康、快乐的状态。',
+      lets_get_started: '开始吧！',
+      helping_older: '帮助年长者建立联系，学习新技能，并真正感受到澳大利亚的归属感',
+      our_mission: {
+        our_mission_title: '我们的使命',
+        our_mission_desc:
+          '我们的使命是帮助年长者在澳大利亚有归属感。我们提供资源、语言支持和社区活动，让每个人都能连接、学习和成长。通过我们的团队和志愿者，长者们获得友善的指导和结交朋友的机会。我们与本地团体合作，确保每个声音都被听见。我们共同营造一个让年长者能够茁壮成长、享受生活的温馨社区。',
+      },
+      our_features: {
+        our_features_title: '我们的特色',
+        our_features_cards: {
+          facility_title: {
+            title: '设施查找器',
+            description: '在您附近发现重要的社区设施和服务，从医疗到休闲，一应俱全。',
+          },
+          learning_title: {
+            title: '英语学习中心',
+            description: '通过实用课程和资源提升您的英语技能，适应澳大利亚的日常生活。',
+          },
+          social_title: {
+            title: '澳洲社交规范',
+            description: '了解当地习俗、礼仪和社交期望，让您在各种场合更自信。',
+          },
+          navigate_title: {
+            title: '生活导航',
+            description: '获取日常生活的建议和指导，从乘坐公共交通到管理您的健康。',
+          },
+        },
+      },
     },
     button_learnmore: {
       label: '了解更多',
@@ -283,6 +343,39 @@ export default {
     },
     home: {
       desc: 'Ý nghĩa của 安康 (ān kāng) trong tiếng Việt là sự khỏe mạnh, hạnh phúc, an lành cả về thể chất lẫn tinh thần.',
+      lets_get_started: 'Bắt đầu thôi!',
+      helping_older:
+        'Giúp người lớn tuổi xây dựng kết nối, học kỹ năng mới và thực sự cảm thấy như ở nhà tại Úc',
+      our_mission: {
+        our_mission_title: 'Sứ mệnh của chúng tôi',
+        our_mission_desc:
+          'Sứ mệnh của chúng tôi là giúp người lớn tuổi cảm thấy như ở nhà tại Úc. Chúng tôi cung cấp tài nguyên, hỗ trợ ngôn ngữ và các sự kiện cộng đồng để mọi người có thể kết nối, học hỏi và phát triển. Với đội ngũ và tình nguyện viên, người cao tuổi nhận được sự hướng dẫn thân thiện và cơ hội kết bạn. Chúng tôi hợp tác với các nhóm địa phương để đảm bảo mọi tiếng nói đều được lắng nghe. Cùng nhau, chúng tôi tạo ra một cộng đồng thân thiện nơi người lớn tuổi có thể phát triển và tận hưởng cuộc sống.',
+      },
+      our_features: {
+        our_features_title: 'Tính năng nổi bật',
+        our_features_cards: {
+          facility_title: {
+            title: 'Tìm kiếm cơ sở',
+            description:
+              'Khám phá các cơ sở và dịch vụ cộng đồng thiết yếu gần bạn, từ y tế đến giải trí, tất cả trong một nơi.',
+          },
+          learning_title: {
+            title: 'Trung tâm học tiếng Anh',
+            description:
+              'Cải thiện kỹ năng tiếng Anh với các bài học thực tế và tài nguyên dành cho cuộc sống hàng ngày ở Úc.',
+          },
+          social_title: {
+            title: 'Chuẩn mực xã hội Úc',
+            description:
+              'Hiểu các phong tục, phép lịch sự và kỳ vọng xã hội địa phương để tự tin hơn trong mọi tình huống.',
+          },
+          navigate_title: {
+            title: 'Điều hướng cuộc sống',
+            description:
+              'Nhận các mẹo và hướng dẫn cho cuộc sống hàng ngày, từ sử dụng phương tiện công cộng đến chăm sóc sức khỏe tại Úc.',
+          },
+        },
+      },
     },
     button_learnmore: {
       label: 'Tìm hiểu thêm',
@@ -411,6 +504,39 @@ export default {
     },
     home: {
       desc: 'Arti 安康 (ān kāng) dalam bahasa Indonesia adalah kesejahteraan, kesehatan, atau kebahagiaan, mencakup kesehatan fisik dan mental.',
+      lets_get_started: 'Ayo mulai!',
+      helping_older:
+        'Membantu lansia membangun koneksi, belajar keterampilan baru, dan benar-benar merasa betah di Australia',
+      our_mission: {
+        our_mission_title: 'Misi Kami',
+        our_mission_desc:
+          'Misi kami adalah membantu lansia merasa betah di Australia. Kami menawarkan sumber daya, dukungan bahasa, dan acara komunitas agar semua orang dapat terhubung, belajar, dan berkembang. Dengan tim dan relawan kami, lansia menerima bimbingan ramah dan kesempatan membangun persahabatan. Kami bekerja sama dengan kelompok lokal untuk memastikan setiap suara didengar. Bersama-sama, kami menciptakan komunitas yang ramah di mana lansia dapat berkembang dan menikmati hidup.',
+      },
+      our_features: {
+        our_features_title: 'Fitur Unggulan',
+        our_features_cards: {
+          facility: {
+            facility_title: 'Pencari Fasilitas',
+            description:
+              'Temukan fasilitas dan layanan komunitas penting di dekat Anda, dari kesehatan hingga rekreasi, semuanya di satu tempat.',
+          },
+          learning: {
+            learning_title: 'Pusat Belajar Bahasa Inggris',
+            description:
+              'Tingkatkan kemampuan bahasa Inggris Anda dengan pelajaran dan sumber daya praktis untuk kehidupan sehari-hari di Australia.',
+          },
+          social: {
+            social_title: 'Norma Sosial Australia',
+            description:
+              'Pahami adat istiadat, etiket, dan harapan sosial setempat agar lebih percaya diri dalam segala situasi.',
+          },
+          navigate: {
+            navigate_title: 'Navigasi Hidup Anda',
+            description:
+              'Dapatkan tips dan panduan untuk kehidupan sehari-hari, mulai dari menggunakan transportasi umum hingga mengelola kesejahteraan Anda di Australia.',
+          },
+        },
+      },
     },
     button_learnmore: {
       label: 'Pelajari Lebih Lanjut',
