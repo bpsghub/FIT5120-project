@@ -43,7 +43,7 @@ function goToNavigate() {
           </div>
           <div class="d-flex flex-column align-items-center mt-5">
             <span class="get-started-text mb-2" data-aos="fade-up" data-aos-delay="200">{{ t('home.lets_get_started')
-            }}</span>
+              }}</span>
             <div class="chevron-animate mt-2" data-aos="fade-down" data-aos-delay="400">
               <i class="fa-solid fa-chevron-down fa-2x"></i>
             </div>
@@ -85,29 +85,33 @@ function goToNavigate() {
             <span class="our-features-header-title">{{ t('home.our_features.our_features_title') }}</span>
           </div>
           <div class="features-container">
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="50" @click="goToFacility"
+              style="cursor: pointer;">
               <div class="feature-icon"><i class="fa-solid fa-map"></i></div>
               <h3 class="feature-title">{{ t('home.our_features.our_features_cards.facility.facility_title') }}</h3>
               <p class="feature-desc">{{ t('home.our_features.our_features_cards.facility.description') }}</p>
-              <button class="learn-more-btn" @click="goToFacility">{{ t('button_learnmore.label') }}</button>
+              <button class="learn-more-btn" @click.stop="goToFacility">{{ t('button_learnmore.label') }}</button>
             </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="700">
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100" @click="goToEnglish"
+              style="cursor: pointer;">
               <div class="feature-icon"><i class="fa-brands fa-leanpub"></i></div>
               <h3 class="feature-title">{{ t('home.our_features.our_features_cards.learning.learning_title') }}</h3>
               <p class="feature-desc">{{ t('home.our_features.our_features_cards.learning.description') }}</p>
-              <button class="learn-more-btn" @click="goToEnglish">{{ t('button_learnmore.label') }}</button>
+              <button class="learn-more-btn" @click.stop="goToEnglish">{{ t('button_learnmore.label') }}</button>
             </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="800">
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="150" @click="goToSocialNorms"
+              style="cursor: pointer;">
               <div class="feature-icon"><i class="fa-solid fa-user-group"></i></div>
               <h3 class="feature-title">{{ t('home.our_features.our_features_cards.social.social_title') }}</h3>
               <p class="feature-desc">{{ t('home.our_features.our_features_cards.social.description') }}</p>
-              <button class="learn-more-btn" @click="goToSocialNorms">{{ t('button_learnmore.label') }}</button>
+              <button class="learn-more-btn" @click.stop="goToSocialNorms">{{ t('button_learnmore.label') }}</button>
             </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="900">
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200" @click="goToNavigate"
+              style="cursor: pointer;">
               <div class="feature-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
               <h3 class="feature-title">{{ t('home.our_features.our_features_cards.navigate.navigate_title') }}</h3>
               <p class="feature-desc">{{ t('home.our_features.our_features_cards.navigate.description') }}</p>
-              <button class="learn-more-btn" @click="goToNavigate">{{ t('button_learnmore.label') }}</button>
+              <button class="learn-more-btn" @click.stop="goToNavigate">{{ t('button_learnmore.label') }}</button>
             </div>
           </div>
         </div>
@@ -361,7 +365,6 @@ h2 {
 
 /* Our mission  */
 .our_mission_left {
-  /* flex: 1 1 50%; */
   height: 600px;
   min-height: 300px;
   background-image: url('https://www.10000steps.org.au/media/images/Physical-Activity-Recommendations-for-Older-Aus.original.png');
@@ -438,14 +441,6 @@ h2 {
   font-family: 'Inter', sans-serif;
 }
 
-/* our features  */
-
-.our_features .our_features_up {
-  background-attachment: fixed;
-  background: url("https://c4.wallpaperflare.com/wallpaper/621/962/493/australia-nsw-sydney-4k-wallpaper-preview.jpg") no-repeat center center;
-  background-size: cover;
-}
-
 /* Our Feature  */
 .our_features .our_feature_remain {
   background-color: rgb(250, 191, 70);
@@ -477,19 +472,6 @@ h2 {
   min-height: 220px;
   margin: 0;
   padding: 0;
-}
-
-.our-features-header-bg {
-  width: 100vw;
-  min-height: 220px;
-  background-image: url('https://static.wixstatic.com/media/9d0f12_4d25e2222d434edea6371260caad1c2a~mv2.jpg/v1/fill/w_1257,h_383,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9d0f12_4d25e2222d434edea6371260caad1c2a~mv2.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
 }
 
 .our-features-header-content {
@@ -556,19 +538,6 @@ h2 {
   align-items: stretch;
 }
 
-.our-features-header-bg {
-  width: 100%;
-  min-height: 220px;
-  background-image: url('https://static.wixstatic.com/media/9d0f12_4d25e2222d434edea6371260caad1c2a~mv2.jpg/v1/fill/w_1257,h_383,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9d0f12_4d25e2222d434edea6371260caad1c2a~mv2.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-repeat: no-repeat;
-}
 
 .our-features-header-title {
   color: #fff;
@@ -646,19 +615,21 @@ h2 {
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
   padding: 40px 24px 32px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.12s, border-color 0.12s, transform 0.12s;
   min-height: 370px;
   cursor: pointer;
 }
 
 .feature-card:hover {
-  box-shadow: 0 8px 32px rgba(106, 68, 255, 0.13);
-  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 36px 0 rgba(106, 68, 255, 0.18), 0 2px 8px rgba(190, 54, 236, 0.12);
+  border-color: #be36ec;
+  transform: translateY(-8px) scale(1.04) !important;
 }
 
 .feature-icon {
@@ -692,7 +663,7 @@ h2 {
   width: 100vw;
   min-height: 220px;
   background-image:
-    url('https://static.wixstatic.com/media/9d0f12_4d25e2222d434edea6371260caad1c2a~mv2.jpg/v1/fill/w_1257,h_383,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9d0f12_4d25e2222d434edea6371260caad1c2a~mv2.jpg');
+    url('https://www.eatthis.com/wp-content/uploads/sites/4/2021/08/shutterstock_older-man-lifting-weights.jpeg?quality=82&strip=all');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

@@ -5,8 +5,8 @@
       <span v-for="n in particleCount" :key="n" class="particle" :style="particleStyle(n)" />
     </div>
     <div class="hero-content">
-      <h1 class="main-title">{{ title }}</h1>
-      <h2 class="subtitle">{{ subtitle }}</h2>
+      <h1 class="main-title" data-aos="fade-down" data-aos-delay="200">{{ title }}</h1>
+      <h2 class="subtitle" data-aos="zoom-in" data-aos-delay="400">{{ subtitle }}</h2>
     </div>
   </header>
 </template>

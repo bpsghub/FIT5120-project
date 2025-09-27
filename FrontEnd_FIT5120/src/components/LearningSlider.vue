@@ -4,13 +4,14 @@
       <div class="display-toggle">
         <button :class="{ active: displayMode === 'grid' }" @click="displayMode = 'grid'">{{ gridBtnText }}</button>
         <button :class="{ active: displayMode === 'column' }" @click="displayMode = 'column'">{{ columnBtnText
-          }}</button>
+        }}</button>
       </div>
       <div :class="['cards-wrapper', displayMode]">
         <div class="row w-100 m-0">
           <div v-for="(card, idx) in translatedCards" :key="card.key"
             :class="displayMode === 'grid' ? 'col-lg-4 col-md-6 col-12 d-flex justify-content-center mb-4 ' : 'col-12 d-flex justify-content-center mb-4 '">
-            <div :class="['slide-card-with-image', 'w-100', displayMode]">
+            <div :class="['slide-card-with-image', 'w-100', displayMode]" data-aos="fade-up"
+              :data-aos-delay="Math.min(idx * 50, 150)">
               <template v-if="displayMode === 'grid'">
                 <div class="slide-image mb-3">
                   <img :src="getRandomImage(idx)" alt="Slide Image" />
@@ -221,10 +222,9 @@ watch(() => props.lang, () => { translateAll() })
 
 .slide-card-with-image:hover {
   box-shadow: 0 12px 36px 0 rgba(102, 26, 255, 0.22), 0 2px 16px 0 rgba(102, 26, 255, 0.10);
-  transform: translateY(-8px) scale(1.025);
+  transform: translateY(-15px) !important;
   border: 2.5px solid #a259e6;
   z-index: 2;
-  cursor: pointer;
 }
 
 .slide-card {
@@ -273,7 +273,7 @@ watch(() => props.lang, () => { translateAll() })
   border-radius: 0;
   background: #fff;
   border: none;
-  transition: transform 0.2s;
+  transition: transform 0.5s;
   display: block;
 }
 
