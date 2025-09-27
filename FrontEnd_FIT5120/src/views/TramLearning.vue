@@ -4,7 +4,7 @@
     <LearningBanner :title="$t('tram_learning.title')" :subtitle="$t('tram_learning.subtitle')" :particle-count="18" />
     <div class="content-box">
       <LearningSlider v-model="locale" :lang="locale" csv-url="/Learning about Australia/epic4_tram_keys_final.csv"
-        image-seed-prefix="tramlearning" @take-quiz="takeQuiz" />
+        image-seed-prefix="tramlearning" />
     </div>
   </div>
 </template>
@@ -17,9 +17,7 @@ import LearningBanner from '@/components/LearningBanner.vue';
 import { useI18n } from 'vue-i18n';
 
 const { locale } = useI18n()
-function takeQuiz() {
-  alert('Quiz coming soon!');
-}
+
 </script>
 
 <style scoped>

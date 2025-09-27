@@ -6,7 +6,7 @@
 
     <div class="content-box">
       <LearningSlider :lang="locale" v-model="locale" csv-url="/Learning about Australia/epic4_doctor_etiquettes.csv"
-        image-seed-prefix="medical" @take-quiz="takeQuiz" />
+        image-seed-prefix="medical"  />
     </div>
   </div>
 </template>
@@ -19,9 +19,7 @@ import { useI18n } from 'vue-i18n'
 import LearningBanner from '@/components/LearningBanner.vue'
 
 const { locale } = useI18n()
-function takeQuiz() {
-  alert('Quiz coming soon!')
-}
+
 </script>
 
 <style scoped>

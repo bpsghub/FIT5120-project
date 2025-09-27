@@ -4,7 +4,7 @@
       <div class="display-toggle">
         <button :class="{ active: displayMode === 'grid' }" @click="displayMode = 'grid'">{{ gridBtnText }}</button>
         <button :class="{ active: displayMode === 'column' }" @click="displayMode = 'column'">{{ columnBtnText
-          }}</button>
+        }}</button>
       </div>
       <div :class="['cards-wrapper', displayMode]">
         <div class="row w-100 m-0">
@@ -13,7 +13,7 @@
             <div :class="['slide-card-with-image', 'w-100', displayMode]" data-aos="fade-up"
               :data-aos-delay="Math.min(idx * 50, 150)">
               <template v-if="displayMode === 'grid'">
-                <div class="slide-image mb-3">
+                <div class="slide-image w-100 mb-3">
                   <img :src="getRandomImage(idx)" alt="Slide Image" />
                 </div>
                 <div class="slide-card text-center">
@@ -36,7 +36,7 @@
       </div>
     </div>
     <div class="quiz-btn-bottom-wrapper">
-      <button class="quiz-btn" @click="$emit('take-quiz')">
+      <button class="quiz-btn" @click="takeQuiz">
         {{ quizBtnText }}
       </button>
     </div>
@@ -50,6 +50,15 @@ import { ref, onMounted, watch, nextTick } from 'vue'
 import AOS from 'aos'
 import Papa from 'papaparse'
 import { translateBatch } from '@/services/translationService.js'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+function takeQuiz() {
+  alert('Quiz coming soon!');
+  router.push("/quiztaking")
+}
+
 const props = defineProps({
   csvUrl: { type: String, required: true },
   imageSeedPrefix: { type: String, default: 'slide' },
@@ -266,22 +275,11 @@ onMounted(() => {
   text-align: start;
 }
 
-.slide-image {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 4px 16px rgba(102, 26, 255, 0.13);
-}
-
 .slide-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0;
+  border-radius: 15px;
   background: #fff;
   border: none;
   transition: transform 0.5s;

@@ -130,6 +130,12 @@ const router = createRouter({
       props: true,
       meta: { requiresAuth: true },
     },
+    {
+      path: '/quiztaking',
+      name: 'QuizTaking',
+      component: () => import('../views/QuizTaking.vue'),
+      meta: { requiresAuth: true },
+    },
   ],
 })
 

@@ -5,7 +5,7 @@
       :particle-count="18" />
     <div class="content-box">
       <LearningSlider :lang="locale" csv-url="/Learning about Australia/dining_etiquette.csv"
-        image-seed-prefix="eatingout" @take-quiz="takeQuiz" />
+        image-seed-prefix="eatingout"  />
     </div>
   </div>
 </template>
@@ -17,9 +17,7 @@ import LearningBanner from '@/components/LearningBanner.vue'
 import LearningSlider from '@/components/LearningSlider.vue'
 
 const { locale } = useI18n()
-function takeQuiz() {
-  alert('Quiz coming soon!')
-}
+
 </script>
 
 <style scoped>

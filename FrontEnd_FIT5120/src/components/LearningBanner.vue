@@ -1,5 +1,5 @@
 <template>
-  <header class="learning-banner">
+  <header class="learning-banner w-100">
     <div class="hero-gradient"></div>
     <div class="hero-particles">
       <span v-for="n in particleCount" :key="n" class="particle" :style="particleStyle(n)" />
