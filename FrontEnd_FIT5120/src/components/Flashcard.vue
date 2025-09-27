@@ -42,6 +42,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import Header from './Header.vue'
 
 const props = defineProps({
   phrase: {

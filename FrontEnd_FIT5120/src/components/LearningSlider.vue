@@ -4,7 +4,7 @@
       <div class="display-toggle">
         <button :class="{ active: displayMode === 'grid' }" @click="displayMode = 'grid'">{{ gridBtnText }}</button>
         <button :class="{ active: displayMode === 'column' }" @click="displayMode = 'column'">{{ columnBtnText
-        }}</button>
+          }}</button>
       </div>
       <div :class="['cards-wrapper', displayMode]">
         <div class="row w-100 m-0">
@@ -46,7 +46,8 @@
 
 <script setup>
 
-import { ref, onMounted, watch } from 'vue'
+import { ref, onMounted, watch, nextTick } from 'vue'
+import AOS from 'aos'
 import Papa from 'papaparse'
 import { translateBatch } from '@/services/translationService.js'
 const props = defineProps({
@@ -137,7 +138,17 @@ async function loadOriginalCards() {
 }
 
 onMounted(loadOriginalCards)
-watch(() => props.lang, () => { translateAll() })
+watch(() => props.lang, () => { translateAll() }, AOS.refresh())
+
+// Watch displayMode to refresh AOS after DOM updates
+watch(displayMode, async () => {
+  await nextTick()
+  AOS.refresh()
+})
+// Ensure AOS is initialized on mount
+onMounted(() => {
+  AOS.init()
+})
 
 </script>
 

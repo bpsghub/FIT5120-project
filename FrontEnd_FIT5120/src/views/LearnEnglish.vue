@@ -1,18 +1,14 @@
 <template>
-  <div class="learn-english-page">    <!-- Header Section -->
+  <div class="learn-english-page">
+    <Header />
     <div class="header-section">
       <div class="header-container">
-        <!-- Back Button -->
-        <div class="header-controls">
-          <Button class="back-button" :hover="true" bg-color="white" :href="'/'">Back</Button>
-        </div>
-
         <div class="hero-content">
           <h1>Learn English</h1>
           <p class="subtitle">Practice English phrases for everyday situations</p>
         </div>
       </div>
-      
+
       <!-- Language Selection -->
       <div class="language-selection-wrapper">
         <div class="language-selection">
@@ -34,15 +30,8 @@
           <p>Select a topic to start learning English phrases</p>
         </div>
         <div class="categories-grid">
-          <div
-            v-for="category in categories"
-            :key="category.id"
-            class="category-card"
-            @click="selectCategory(category)"
-            tabindex="0"
-            @keydown.enter="selectCategory(category)"
-            @keydown.space="selectCategory(category)"
-          >
+          <div v-for="category in categories" :key="category.id" class="category-card" @click="selectCategory(category)"
+            tabindex="0" @keydown.enter="selectCategory(category)" @keydown.space="selectCategory(category)">
             <div class="category-icon" :style="{ backgroundColor: category.color }">
               {{ category.icon }}
             </div>
@@ -63,42 +52,29 @@
           <div class="features-list">
             <div class="feature">
               <div class="feature-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  style="height: 24px; width: 24px; fill: #3b82f6"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                  style="height: 24px; width: 24px; fill: #3b82f6">
                   <path
-                    d="M3 10v4a1 1 0 0 0 1 1h2.22l3.13 3.13a1 1 0 0 0 1.65-.76V6.63a1 1 0 0 0-1.65-.76L6.22 9H4a1 1 0 0 0-1 1zM14 8.24a1 1 0 0 1 1.41 0 5 5 0 0 1 0 7.07 1 1 0 1 1-1.41-1.41 3 3 0 0 0 0-4.24 1 1 0 0 1 0-1.42z"
-                  />
+                    d="M3 10v4a1 1 0 0 0 1 1h2.22l3.13 3.13a1 1 0 0 0 1.65-.76V6.63a1 1 0 0 0-1.65-.76L6.22 9H4a1 1 0 0 0-1 1zM14 8.24a1 1 0 0 1 1.41 0 5 5 0 0 1 0 7.07 1 1 0 1 1-1.41-1.41 3 3 0 0 0 0-4.24 1 1 0 0 1 0-1.42z" />
                 </svg>
               </div>
               <span>Audio pronunciation</span>
             </div>
             <div class="feature">
               <div class="feature-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  style="height: 24px; width: 24px; fill: #3b82f6"
-                >
-                  <path
-                    d="M21 16V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1zM5 5h14v10H5V5z"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                  style="height: 24px; width: 24px; fill: #3b82f6">
+                  <path d="M21 16V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1zM5 5h14v10H5V5z" />
                 </svg>
               </div>
               <span>Interactive flashcards</span>
             </div>
             <div class="feature">
               <div class="feature-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  style="height: 24px; width: 24px; fill: #3b82f6"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                  style="height: 24px; width: 24px; fill: #3b82f6">
                   <path
-                    d="M17 2v2c3.39 0 6 2.61 6 6s-2.61 6-6 6-6-2.61-6-6V8h2c1.1 0 2-.9 2-2s-.9-2-2-2h-4c-1.1 0-2 .9-2 2v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V8c0-4.42-3.58-8-8-8z"
-                  />
+                    d="M17 2v2c3.39 0 6 2.61 6 6s-2.61 6-6 6-6-2.61-6-6V8h2c1.1 0 2-.9 2-2s-.9-2-2-2h-4c-1.1 0-2 .9-2 2v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V8c0-4.42-3.58-8-8-8z" />
                 </svg>
               </div>
               <span>Mobile-friendly design</span>
@@ -115,6 +91,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { TranslationService } from '@/services/translation.js'
 import Button from '@/components/Button.vue'
+import Header from '@/components/Header.vue'
 
 const router = useRouter()
 
@@ -567,6 +544,7 @@ onMounted(async () => {
     margin: 0 1rem;
     padding: 3rem;
   }
+
   .welcome-content h2 {
     font-size: 2.25rem;
   }
@@ -651,6 +629,7 @@ onMounted(async () => {
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
+
   .category-card,
   .language-select {
     transition: none;

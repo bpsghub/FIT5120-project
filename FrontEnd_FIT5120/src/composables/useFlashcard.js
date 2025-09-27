@@ -151,6 +151,19 @@ export function useFlashcard(categoryId, nativeLanguage) {
     { immediate: true },
   )
 
+  // Setters for progress restore
+  const setCurrentPosition = (pos) => {
+    if (typeof pos === 'number' && pos >= 1 && pos <= phrases.value.length) {
+      currentIndex.value = pos - 1
+      markAsViewed(currentIndex.value)
+    }
+  }
+  const setViewedPhrases = (set) => {
+    if (set instanceof Set || Array.isArray(set)) {
+      viewedPhrases.value = new Set(set)
+    }
+  }
+
   return {
     // State
     phrases,
@@ -179,5 +192,7 @@ export function useFlashcard(categoryId, nativeLanguage) {
     markAsViewed,
     markAsCorrect,
     restart,
+    setCurrentPosition,
+    setViewedPhrases,
   }
 }

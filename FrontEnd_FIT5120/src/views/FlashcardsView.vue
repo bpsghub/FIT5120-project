@@ -1,20 +1,9 @@
 <template>
   <div class="flashcards-page">
-    <div class="container">
+    <Header />
+    <div class="container d-flex justify-content-center align-items-center flex-column">
       <!-- Header -->
-      <div class="header-section">
-        <button class="back-btn" @click="goBack">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            style="height: 16px; width: 16px"
-          >
-            <path
-              d="M19 12a1 1 0 0 1-1 1H8.414l1.293 1.293a1 1 0 1 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.414l3-3a1 1 0 0 1 1.414 1.414L8.414 11H18a1 1 0 0 1 1 1z"
-            />
-          </svg>
-          Back to Categories
-        </button>
+      <div class="header-section ">
         <div class="header-content">
           <h1>{{ categoryName }}</h1>
           <p class="language-info">Learning in: {{ getLanguageName(language) }}</p>
@@ -48,56 +37,32 @@
         </div>
 
         <!-- Flashcard Component -->
-        <Flashcard
-          :phrase="currentPhrase"
-          :native-language="language"
-          @flip="onCardFlip"
-          @audio-start="onAudioStart"
-          @audio-end="onAudioEnd"
-        />
+        <Flashcard :phrase="currentPhrase" :native-language="language" @flip="onCardFlip" @audio-start="onAudioStart"
+          @audio-end="onAudioEnd" />
         <!-- Navigation Controls -->
         <div class="controls-section">
           <div class="nav-controls">
             <button class="control-btn" :disabled="!hasPrevious" @click="previousCard">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                style="height: 16px; width: 16px"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 16px; width: 16px">
                 <path
                   d="M19 12a1 1 0 0 1-1 1H8.414l1.293 1.293a1 1 0 1 1-1.414 1.414l-3-3a1 1 0 0 1 0-1.414l3-3a1 1 0 0 1 1.414 1.414L8.414 11H18a1 1 0 0 1 1 1z"
-                  data-name="Left"
-                />
+                  data-name="Left" />
               </svg>
               Previous
             </button>
 
             <div class="middle-controls">
-              <button
-                class="control-btn shuffle-btn"
-                @click="toggleShuffle"
-                :class="{ active: isShuffled }"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  style="height: 16px; width: 16px"
-                >
+              <button class="control-btn shuffle-btn" @click="toggleShuffle" :class="{ active: isShuffled }">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 16px; width: 16px">
                   <path
-                    d="M14 20v-2h2.6l-3.2-3.2 1.4-1.4L18 16.6V14h2v6h-6zM10 4V2H4v6h2V5.4l3.2 3.2 1.4-1.4L7.4 4H10zm4 0h2.6l-3.2 3.2 1.4 1.4L18 5.4V8h2V2h-6v2zM6 20v-2H3.4l3.2-3.2-1.4-1.4L2 16.6V14H0v6h6z"
-                  />
+                    d="M14 20v-2h2.6l-3.2-3.2 1.4-1.4L18 16.6V14h2v6h-6zM10 4V2H4v6h2V5.4l3.2 3.2 1.4-1.4L7.4 4H10zm4 0h2.6l-3.2 3.2 1.4 1.4L18 5.4V8h2V2h-6v2zM6 20v-2H3.4l3.2-3.2-1.4-1.4L2 16.6V14H0v6h6z" />
                 </svg>
                 {{ isShuffled ? 'Shuffled' : 'Order' }}
               </button>
               <button class="control-btn" @click="restart">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  style="height: 16px; width: 16px"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 16px; width: 16px">
                   <path
-                    d="M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"
-                  />
+                    d="M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" />
                 </svg>
                 Restart
               </button>
@@ -105,15 +70,10 @@
 
             <button class="control-btn" :disabled="!hasNext" @click="nextCard">
               Next
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                style="height: 16px; width: 16px"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 16px; width: 16px">
                 <path
                   d="m18.707 12.707-3 3a1 1 0 0 1-1.414-1.414L15.586 13H6a1 1 0 0 1 0-2h9.586l-1.293-1.293a1 1 0 0 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414z"
-                  data-name="Right"
-                />
+                  data-name="Right" />
               </svg>
             </button>
           </div>
@@ -147,10 +107,11 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, watch, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useFlashcard } from '@/composables/useFlashcard.js'
 import Flashcard from '@/components/Flashcard.vue'
+import Header from '@/components/Header.vue'
 
 const props = defineProps({
   category: {
@@ -184,7 +145,40 @@ const {
   resetOrder,
   restart,
   loadPhrases,
+  setCurrentPosition, // Giả sử composable có hàm này, nếu không sẽ hướng dẫn thêm
+  setViewedPhrases,   // Giả sử composable có hàm này, nếu không sẽ hướng dẫn thêm
 } = useFlashcard(props.category, props.language)
+// --- Local Storage Progress ---
+const progressKey = computed(() => `flashcard-progress-${props.category}-${props.language}`)
+
+// Lưu tiến độ mỗi khi viewedPhrases hoặc currentPosition thay đổi
+watch([viewedPhrases, currentPosition], () => {
+  const data = {
+    viewed: Array.from(viewedPhrases.value),
+    pos: currentPosition.value,
+    shuffled: isShuffled.value
+  }
+  localStorage.setItem(progressKey.value, JSON.stringify(data))
+})
+
+// Khôi phục tiến độ khi load xong phrases
+onMounted(() => {
+  // Đợi phrases load xong
+  const restore = () => {
+    const raw = localStorage.getItem(progressKey.value)
+    if (raw) {
+      try {
+        const data = JSON.parse(raw)
+        if (data.viewed && setViewedPhrases) setViewedPhrases(new Set(data.viewed))
+        if (typeof data.pos === 'number' && setCurrentPosition) setCurrentPosition(data.pos)
+        if (data.shuffled && !isShuffled.value && shuffle) shuffle()
+        if (!data.shuffled && isShuffled.value && resetOrder) resetOrder()
+      } catch { }
+    }
+  }
+  if (phrases.value && phrases.value.length > 0) restore()
+  else watch(phrases, (val) => { if (val && val.length > 0) restore() }, { immediate: true })
+})
 
 // Computed properties
 const categoryName = computed(() => {
@@ -649,6 +643,7 @@ const onAudioEnd = () => {
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
+
   .back-btn,
   .control-btn,
   .btn,
