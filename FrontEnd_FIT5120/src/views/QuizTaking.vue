@@ -41,7 +41,6 @@ import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { translateText } from '@/services/translationService.js'
 
-// Lấy lang từ i18n để đồng bộ khi đổi ngôn ngữ
 const { locale } = useI18n()
 const lang = computed(() => locale.value)
 const questions = ref([])
@@ -59,7 +58,6 @@ const staticTexts = ref({
 
 async function translateStatics() {
   if (lang.value === 'en') {
-    // Reset về tiếng Anh nếu chuyển lại
     staticTexts.value = {
       quizTime: 'Quiz Time!',
       congratulations: 'Congratulations!',
@@ -78,7 +76,6 @@ async function translateStatics() {
       staticTexts.value[k] = translated[i]
     })
   } catch {
-    // fallback: keep English if error
   }
 }
 
@@ -90,13 +87,12 @@ onMounted(async () => {
   await translateStatics()
 })
 
-// Theo dõi sự thay đổi ngôn ngữ và dịch lại text tĩnh
 watch(lang, async () => {
   await translateStatics()
 })
 
 function selectAnswer(q, optId) {
-  if (userAnswers.value[q.key] === q.answer) return // Already correct, do not allow reselect
+  if (userAnswers.value[q.key] === q.answer) return
   userAnswers.value[q.key] = optId
 }
 
