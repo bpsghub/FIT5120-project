@@ -3,7 +3,7 @@
     <Header />
     <LearningBanner :title="$t('myki_learning.title')" :subtitle="$t('myki_learning.subtitle')" :particle-count="18" />
     <div class="content-box">
-      <LearningSlider v-model="locale" :lang="locale" csv-url="/Learning about Australia/epic4_myki_keys_final(1).csv"
+      <LearningSlider v-model="locale" :lang="locale" csv-url="/Learning about Australia/epic4_myki_keys_final.csv"
         image-seed-prefix="mykilearning" />
     </div>
   </div>

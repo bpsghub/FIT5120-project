@@ -4,7 +4,7 @@
     <LearningBanner :title="$t('socialnorms.eatingout.title')" :subtitle="$t('socialnorms.eatingout.subtitle')"
       :particle-count="18" />
     <div class="content-box">
-      <LearningSlider :lang="locale" csv-url="/Learning about Australia/epic3_dining_rules_final(1).csv"
+      <LearningSlider :lang="locale" csv-url="/Learning about Australia/epic3_dining_rules_final.csv"
         image-seed-prefix="eatingout" />
     </div>
   </div>
