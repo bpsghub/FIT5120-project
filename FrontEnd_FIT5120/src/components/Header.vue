@@ -2,9 +2,18 @@
   <div class="header-w">
     <nav class="navbar navbar-expand-lg navbar-light header-navbar">
       <div class="container-fluid">
-        <router-link class="navbar-brand fw-bold fs-2 logo-link" to="/">{{ $t('nav.brand') }}</router-link>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <router-link class="navbar-brand fw-bold fs-2 logo-link" to="/">{{
+          $t('nav.brand')
+        }}</router-link>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <TransitionGroup tag="div" class="collapse navbar-collapse" id="navbarNav" name="nav-slide">
@@ -12,18 +21,64 @@
             <li class="nav-item" v-for="(link, index) in navLinks" :key="index">
               <router-link class="nav-link" :to="link.to">{{ $t(link.text) }}</router-link>
             </li>
+            <li class="nav-item" v-for="(link, index) in navLinks_dropdown" :key="index">
+              <router-link
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                :to="link.to"
+              >
+                {{ $t(link.text) }}
+              </router-link>
+              <TransitionGroup
+                v-if="link.children === 'socialNorms'"
+                tag="ul"
+                class="dropdown-menu"
+                name="dropdown-slide"
+              >
+                <li v-for="(link, index) in socialNorms" :key="index">
+                  <!-- <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{
+                    $t(lang.text)
+                  }}</a> -->
+                  <router-link class="nav-link" :to="link.to">{{ $t(link.text) }}</router-link>
+                </li>
+              </TransitionGroup>
+              <TransitionGroup
+                v-if="link.children === 'navigateYourLife'"
+                tag="ul"
+                class="dropdown-menu"
+                name="dropdown-slide"
+              >
+                <li v-for="(link, index) in navigateYourLife" :key="index">
+                  <!-- <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{
+                    $t(lang.text)
+                  }}</a> -->
+                  <router-link class="nav-link" :to="link.to">{{ $t(link.text) }}</router-link>
+                </li>
+              </TransitionGroup>
+            </li>
+
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 {{ $t('nav.language') }}
               </a>
               <TransitionGroup tag="ul" class="dropdown-menu" name="dropdown-slide">
-            <li v-for="lang in languages" :key="lang.code">
-              <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{ $t(lang.text) }}</a>
+                <li v-for="lang in languages" :key="lang.code">
+                  <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{
+                    $t(lang.text)
+                  }}</a>
+                </li>
+              </TransitionGroup>
             </li>
-        </TransitionGroup>
-        </li>
-        </ul>
+          </ul>
         </TransitionGroup>
       </div>
     </nav>
@@ -38,15 +93,71 @@ const { locale } = useI18n()
 const navLinks = [
   { to: '/facilities', text: 'nav.facility' },
   { to: '/learnenglish', text: 'nav.english' },
-  { to: '/socialnorms', text: 'nav.social' },
-  { to: '/navigatelife', text: 'nav.navigate' }
+]
+const navLinks_dropdown = [
+  { to: '/socialnorms', text: 'nav.social', children: 'socialNorms' },
+  { to: '/navigatelife', text: 'nav.navigate', children: 'navigateYourLife' },
+]
+
+const socialNorms = [
+  {
+    text: 'nav.main_view',
+    to: '/socialnorms',
+  },
+  {
+    text: 'socialnorms.meetingpeople.title',
+    to: '/socialnorms/meetingpeople',
+  },
+  {
+    text: 'socialnorms.eatingout.title',
+    to: '/socialnorms/eatingout',
+  },
+]
+
+const navigateYourLife = [
+  {
+    text: 'nav.main_view',
+    to: '/navigatelife',
+  },
+  {
+    text: 'navigate_your_life.cards.publictransportation.title',
+    to: '/publicTransportation',
+  },
+  {
+    text: 'navigate_your_life.cards.grocceriesshopping.title',
+    to: '/grocceriesShopping',
+  },
+  {
+    text: 'navigate_your_life.cards.publictransportation.title',
+    to: '/publicTransportation',
+  },
+  {
+    text: 'navigate_your_life.cards.medicalattention.title',
+    to: '/medicalAttention',
+  },
+  {
+    text: 'navigate_your_life.cards.publictransportation.publictransportation_card.cards.myki.myki_page.title',
+    to: '/mykicardlearning',
+  },
+  {
+    text: 'navigate_your_life.cards.publictransportation.publictransportation_card.cards.bus.bus_page.title',
+    to: '/buslearning',
+  },
+  {
+    text: 'navigate_your_life.cards.publictransportation.publictransportation_card.cards.train.train_page.title',
+    to: '/trainlearning',
+  },
+  {
+    text: 'navigate_your_life.cards.publictransportation.publictransportation_card.cards.tram.tram_page.title',
+    to: '/tramlearning',
+  },
 ]
 
 const languages = [
   { code: 'en', text: 'nav.lang.en' },
   { code: 'zh', text: 'nav.lang.zh' },
   { code: 'vi', text: 'nav.lang.vi' },
-  { code: 'id', text: 'nav.lang.id' }
+  { code: 'id', text: 'nav.lang.id' },
 ]
 
 function setLang(lang) {
@@ -75,13 +186,17 @@ function setLang(lang) {
   box-shadow:
     0 4px 24px rgba(162, 89, 230, 0.08),
     0 1.5px 6px rgba(0, 0, 0, 0.04);
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition:
+    box-shadow 0.3s,
+    transform 0.3s;
 }
 
 .logo-link {
   color: #a259e6 !important;
   letter-spacing: 1px;
-  transition: transform 0.2s, color 0.2s;
+  transition:
+    transform 0.2s,
+    color 0.2s;
 }
 
 .logo-link:hover {
@@ -96,7 +211,10 @@ function setLang(lang) {
   border-radius: 12px;
   padding: 8px 18px;
   margin: 0 4px;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
 }
 
 .navbar-nav .nav-link:hover {
@@ -121,7 +239,9 @@ function setLang(lang) {
 
 .dropdown-menu {
   border-radius: 14px;
-  box-shadow: 0 8px 32px #a259e622, 0 1.5px 6px #a259e611;
+  box-shadow:
+    0 8px 32px #a259e622,
+    0 1.5px 6px #a259e611;
   border: none;
   padding: 8px 0;
   min-width: 170px;
@@ -134,7 +254,10 @@ function setLang(lang) {
   border-radius: 8px;
   margin: 2px 8px;
   padding: 10px 18px;
-  transition: background 0.18s, color 0.18s, transform 0.18s;
+  transition:
+    background 0.18s,
+    color 0.18s,
+    transform 0.18s;
 }
 
 .dropdown-item:hover,
