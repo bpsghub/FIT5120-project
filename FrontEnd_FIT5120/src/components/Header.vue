@@ -93,6 +93,7 @@ const { locale } = useI18n()
 const navLinks = [
   { to: '/facilities', text: 'nav.facility' },
   { to: '/learnenglish', text: 'nav.english' },
+  { to:'/safety', text:'nav.safety'}
 ]
 const navLinks_dropdown = [
   { to: '/socialnorms', text: 'nav.social', children: 'socialNorms' },

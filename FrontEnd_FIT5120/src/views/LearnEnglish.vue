@@ -4,18 +4,18 @@
     <div class="header-section">
       <div class="header-container">
         <div class="hero-content" data-aos="fade-down" data-aos-delay="100">
-          <h1>Learn English</h1>
-          <p class="subtitle">Practice English phrases for everyday situations</p>
+          <h1>{{ $t('learnenglish.title') }}</h1>
+          <p class="subtitle">{{ $t('learnenglish.subtitle') }}</p>
         </div>
       </div>
 
       <!-- Language Selection -->
       <div class="language-selection-wrapper" data-aos="fade-up" data-aos-delay="300">
         <div class="language-selection" data-aos="zoom-in" data-aos-delay="500">
-          <label for="native-language" data-aos="fade-right" data-aos-delay="700">Select your native language:</label>
+          <label for="native-language" data-aos="fade-right" data-aos-delay="700">{{ $t('learnenglish.select_language_label') }}</label>
           <select id="native-language" v-model="selectedLanguage" class="language-select" data-aos="fade-left"
             data-aos-delay="900">
-            <option value="" data-aos="fade-up" data-aos-delay="1000">Choose your language</option>
+            <option value="" data-aos="fade-up" data-aos-delay="1000">{{ $t('learnenglish.select_language_placeholder') }}</option>
             <option v-for="(lang, idx) in availableLanguages" :key="lang.code" :value="lang.code" :data-aos="'fade-up'"
               :data-aos-delay="1000 + (idx + 1) * 100">
               {{ lang.flag }} {{ lang.name }}
@@ -28,8 +28,8 @@
     <div class="categories-section" v-if="selectedLanguage">
       <div class="container">
         <div class="section-header" data-aos="fade-down" data-aos-delay="400">
-          <h2>Choose a Category</h2>
-          <p>Select a topic to start learning English phrases</p>
+          <h2>{{ $t('learnenglish.choose_category') }}</h2>
+          <p>{{ $t('learnenglish.choose_category_desc') }}</p>
         </div>
         <div class="categories-grid">
           <div v-for="category in categories" :key="category.id" class="category-card" @click="selectCategory(category)"
@@ -40,7 +40,7 @@
             </div>
             <h3>{{ category.name }}</h3>
             <p>{{ category.description }}</p>
-            <div class="category-stats">{{ getCategoryPhraseCount(category.id) }} phrases</div>
+            <div class="category-stats">{{ getCategoryPhraseCount(category.id) }} {{ $t('learnenglish.phrases') }}</div>
           </div>
         </div>
       </div>
@@ -50,8 +50,8 @@
     <div class="welcome-section" v-else>
       <div class="container">
         <div class="welcome-content" data-aos="fade-in" data-aos-delay="100">
-          <h2>Welcome to English Learning!</h2>
-          <p>Please select your native language above to start learning English phrases.</p>
+          <h2>{{ $t('learnenglish.welcome_title') }}</h2>
+          <p>{{ $t('learnenglish.welcome_desc') }}</p>
           <div class="features-list">
             <div class="feature">
               <div class="feature-icon">
@@ -61,7 +61,7 @@
                     d="M3 10v4a1 1 0 0 0 1 1h2.22l3.13 3.13a1 1 0 0 0 1.65-.76V6.63a1 1 0 0 0-1.65-.76L6.22 9H4a1 1 0 0 0-1 1zM14 8.24a1 1 0 0 1 1.41 0 5 5 0 0 1 0 7.07 1 1 0 1 1-1.41-1.41 3 3 0 0 0 0-4.24 1 1 0 0 1 0-1.42z" />
                 </svg>
               </div>
-              <span>Audio pronunciation</span>
+              <span>{{ $t('learnenglish.feature_audio') }}</span>
             </div>
             <div class="feature">
               <div class="feature-icon">
@@ -70,7 +70,7 @@
                   <path d="M21 16V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1zM5 5h14v10H5V5z" />
                 </svg>
               </div>
-              <span>Interactive flashcards</span>
+              <span>{{ $t('learnenglish.feature_flashcards') }}</span>
             </div>
             <div class="feature">
               <div class="feature-icon">
@@ -80,7 +80,7 @@
                     d="M17 2v2c3.39 0 6 2.61 6 6s-2.61 6-6 6-6-2.61-6-6V8h2c1.1 0 2-.9 2-2s-.9-2-2-2h-4c-1.1 0-2 .9-2 2v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V8c0-4.42-3.58-8-8-8z" />
                 </svg>
               </div>
-              <span>Mobile-friendly design</span>
+              <span>{{ $t('learnenglish.feature_mobile') }}</span>
             </div>
           </div>
         </div>
