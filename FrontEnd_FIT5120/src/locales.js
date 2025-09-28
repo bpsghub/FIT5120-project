@@ -30,6 +30,7 @@ export default {
       navigate: 'Navigate your Life',
       language: 'Language',
       brand: 'Ankang Life',
+      main_view: 'Main View',
       lang: {
         en: 'English',
         zh: 'Chinese',
@@ -189,6 +190,7 @@ export default {
       navigate: '生活导航',
       language: '语言',
       brand: '安康生活',
+      main_view: '主视图',
       lang: {
         en: '英语',
         zh: '中文',
@@ -334,6 +336,7 @@ export default {
       navigate: 'Điều hướng cuộc sống',
       language: 'Ngôn ngữ',
       brand: 'Ankang Life',
+      main_view: 'Trang chính',
       lang: {
         en: 'Tiếng Anh',
         zh: 'Tiếng Trung',
@@ -495,6 +498,7 @@ export default {
       navigate: 'Navigasi Hidup Anda',
       language: 'Bahasa',
       brand: 'Ankang Life',
+      main_view: 'Tampilan Utama',
       lang: {
         en: 'Inggris',
         zh: 'Cina',

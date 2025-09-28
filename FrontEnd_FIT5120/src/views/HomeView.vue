@@ -19,6 +19,10 @@ function goToNavigate() {
   router.push('/navigatelife')
 }
 
+function scrollToMission() {
+  const el = document.querySelector('.our_mission')
+  if (el) el.scrollIntoView({ behavior: 'smooth' })
+}
 </script>
 
 <template>
@@ -28,7 +32,7 @@ function goToNavigate() {
       <div class="homeview-bg-overlay"></div>
       <div class="homeview-content d-flex align-items-center">
         <!-- Banner section using Bootstrap grid -->
-        <section class="banner-section container ">
+        <section class="banner-section container">
           <div class="row align-items-center">
             <div class="col-12 col-lg-6 text-center">
               <h2 class="banner_title" data-aos="fade-up">{{ t('nav.brand') }}</h2>
@@ -42,8 +46,13 @@ function goToNavigate() {
             </div>
           </div>
           <div class="d-flex flex-column align-items-center mt-5">
-            <span class="get-started-text mb-2" data-aos="fade-up" data-aos-delay="200">{{ t('home.lets_get_started')
-              }}</span>
+            <span
+              class="get-started-text mb-2"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              @click="scrollToMission"
+              >{{ t('home.lets_get_started') }}</span
+            >
             <div class="chevron-animate mt-2" data-aos="fade-down" data-aos-delay="400">
               <i class="fa-solid fa-chevron-down fa-2x"></i>
             </div>
@@ -52,22 +61,39 @@ function goToNavigate() {
       </div>
     </div>
     <section class="our_mission w-100">
-      <div class=" mission_banner text-white w-100 d-flex justify-content-center align-items-center py-5 fw-bold fs-4">
+      <div
+        class="mission_banner text-white w-100 d-flex justify-content-center align-items-center py-5 fw-bold fs-4"
+      >
         <p class="p_ourmission border-white">{{ t('home.helping_older') }}</p>
       </div>
-      <div class="our_mission_main d-flex align-items-stretch" style="min-height: 600px;">
-        <div class="our_mission_left" style="flex: 6 1 0;" data-aos="fade-right" data-aos-delay="200"></div>
-        <div class="our_mission_right d-flex align-items-center position-relative p-0" style="flex: 5 1 0;"
-          data-aos="fade-left" data-aos-delay="400">
+      <div class="our_mission_main d-flex align-items-stretch" style="min-height: 600px">
+        <div
+          class="our_mission_left"
+          style="flex: 6 1 0"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        ></div>
+        <div
+          class="our_mission_right d-flex align-items-center position-relative p-0"
+          style="flex: 5 1 0"
+          data-aos="fade-left"
+          data-aos-delay="400"
+        >
           <div class="ourmission_content w-100 text-start">
-            <h2 class="fw-semibold mb-3" data-aos="fade-up">{{ t('home.our_mission.our_mission_title') }}</h2>
+            <h2 class="fw-semibold mb-3" data-aos="fade-up">
+              {{ t('home.our_mission.our_mission_title') }}
+            </h2>
             <p class="p_subtitle" data-aos="fade-up" data-aos-delay="200">
               {{ t('home.our_mission.our_mission_desc') }}
             </p>
           </div>
         </div>
-        <div class="our_mission_remain our-features-header-yellow-col col-md-1 d-none d-md-flex"
-          style="background-color: rgb(181,88,74) !important;" data-aos="fade-down" data-aos-delay="600">
+        <div
+          class="our_mission_remain our-features-header-yellow-col col-md-1 d-none d-md-flex"
+          style="background-color: rgb(181, 88, 74) !important"
+          data-aos="fade-down"
+          data-aos-delay="600"
+        >
           <span class="vertical-text-mission">{{ t('home.our_mission.our_mission_title') }}</span>
         </div>
       </div>
@@ -76,42 +102,95 @@ function goToNavigate() {
     <!-- Our Features Cards Section -->
     <section class="our_features_section w-100">
       <div class="our-features-section-flex">
-        <div class="our-features-header-yellow-col col-md-1 d-none d-md-flex" data-aos="fade-down" data-aos-delay="200">
+        <div
+          class="our-features-header-yellow-col col-md-1 d-none d-md-flex"
+          data-aos="fade-down"
+          data-aos-delay="200"
+        >
           <span class="vertical-text">{{ t('home.our_features.our_features_title') }}</span>
         </div>
         <div class="our-features-main-content col-md-11">
-          <div class="our-features-header-bg d-flex justify-content-center align-items-center w-100" data-aos="fade-up"
-            data-aos-delay="400">
-            <span class="our-features-header-title">{{ t('home.our_features.our_features_title') }}</span>
+          <div
+            class="our-features-header-bg d-flex justify-content-center align-items-center w-100"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <span class="our-features-header-title">{{
+              t('home.our_features.our_features_title')
+            }}</span>
           </div>
           <div class="features-container">
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="50" @click="goToFacility"
-              style="cursor: pointer;">
+            <div
+              class="feature-card"
+              data-aos="fade-up"
+              data-aos-delay="50"
+              @click="goToFacility"
+              style="cursor: pointer"
+            >
               <div class="feature-icon"><i class="fa-solid fa-map"></i></div>
-              <h3 class="feature-title">{{ t('home.our_features.our_features_cards.facility.facility_title') }}</h3>
-              <p class="feature-desc">{{ t('home.our_features.our_features_cards.facility.description') }}</p>
-              <button class="learn-more-btn" @click.stop="goToFacility">{{ t('button_learnmore.label') }}</button>
+              <h3 class="feature-title">
+                {{ t('home.our_features.our_features_cards.facility.facility_title') }}
+              </h3>
+              <p class="feature-desc">
+                {{ t('home.our_features.our_features_cards.facility.description') }}
+              </p>
+              <button class="learn-more-btn" @click.stop="goToFacility">
+                {{ t('button_learnmore.label') }}
+              </button>
             </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="100" @click="goToEnglish"
-              style="cursor: pointer;">
+            <div
+              class="feature-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              @click="goToEnglish"
+              style="cursor: pointer"
+            >
               <div class="feature-icon"><i class="fa-brands fa-leanpub"></i></div>
-              <h3 class="feature-title">{{ t('home.our_features.our_features_cards.learning.learning_title') }}</h3>
-              <p class="feature-desc">{{ t('home.our_features.our_features_cards.learning.description') }}</p>
-              <button class="learn-more-btn" @click.stop="goToEnglish">{{ t('button_learnmore.label') }}</button>
+              <h3 class="feature-title">
+                {{ t('home.our_features.our_features_cards.learning.learning_title') }}
+              </h3>
+              <p class="feature-desc">
+                {{ t('home.our_features.our_features_cards.learning.description') }}
+              </p>
+              <button class="learn-more-btn" @click.stop="goToEnglish">
+                {{ t('button_learnmore.label') }}
+              </button>
             </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="150" @click="goToSocialNorms"
-              style="cursor: pointer;">
+            <div
+              class="feature-card"
+              data-aos="fade-up"
+              data-aos-delay="150"
+              @click="goToSocialNorms"
+              style="cursor: pointer"
+            >
               <div class="feature-icon"><i class="fa-solid fa-user-group"></i></div>
-              <h3 class="feature-title">{{ t('home.our_features.our_features_cards.social.social_title') }}</h3>
-              <p class="feature-desc">{{ t('home.our_features.our_features_cards.social.description') }}</p>
-              <button class="learn-more-btn" @click.stop="goToSocialNorms">{{ t('button_learnmore.label') }}</button>
+              <h3 class="feature-title">
+                {{ t('home.our_features.our_features_cards.social.social_title') }}
+              </h3>
+              <p class="feature-desc">
+                {{ t('home.our_features.our_features_cards.social.description') }}
+              </p>
+              <button class="learn-more-btn" @click.stop="goToSocialNorms">
+                {{ t('button_learnmore.label') }}
+              </button>
             </div>
-            <div class="feature-card" data-aos="fade-up" data-aos-delay="200" @click="goToNavigate"
-              style="cursor: pointer;">
+            <div
+              class="feature-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              @click="goToNavigate"
+              style="cursor: pointer"
+            >
               <div class="feature-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
-              <h3 class="feature-title">{{ t('home.our_features.our_features_cards.navigate.navigate_title') }}</h3>
-              <p class="feature-desc">{{ t('home.our_features.our_features_cards.navigate.description') }}</p>
-              <button class="learn-more-btn" @click.stop="goToNavigate">{{ t('button_learnmore.label') }}</button>
+              <h3 class="feature-title">
+                {{ t('home.our_features.our_features_cards.navigate.navigate_title') }}
+              </h3>
+              <p class="feature-desc">
+                {{ t('home.our_features.our_features_cards.navigate.description') }}
+              </p>
+              <button class="learn-more-btn" @click.stop="goToNavigate">
+                {{ t('button_learnmore.label') }}
+              </button>
             </div>
           </div>
         </div>
@@ -151,7 +230,7 @@ function goToNavigate() {
 }
 
 h2 {
-  font-size: 2.5rem
+  font-size: 2.5rem;
 }
 
 .p_subtitle {
@@ -274,13 +353,18 @@ h2 {
   color: #fff;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: color 0.2s, text-shadow 0.2s, transform 0.2s;
+  transition:
+    color 0.2s,
+    text-shadow 0.2s,
+    transform 0.2s;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
 
 .get-started-text:hover {
-  color: #BE36EC;
-  text-shadow: 0 4px 16px #be36ec99, 0 2px 8px rgba(0, 0, 0, 0.18);
+  color: #be36ec;
+  text-shadow:
+    0 4px 16px #be36ec99,
+    0 2px 8px rgba(0, 0, 0, 0.18);
   transform: scale(1.08) translateY(-2px);
 }
 
@@ -374,7 +458,6 @@ h2 {
   background-attachment: fixed;
 }
 
-
 .our_mission_main .left_content {
   top: 0;
   height: 600px;
@@ -408,11 +491,11 @@ h2 {
 .our_mission_main .column_remain {
   height: 100%;
   width: 100%;
-  background-color: #BE36EC;
+  background-color: #be36ec;
 }
 
 .mission_banner {
-  background-color: #BE36EC
+  background-color: #be36ec;
 }
 
 .p_ourmission {
@@ -422,7 +505,7 @@ h2 {
 
 /* Thanh vàng bên trái cho Our Mission */
 .our_mission_remain {
-  background: #FACF46 !important;
+  background: #facf46 !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -447,7 +530,7 @@ h2 {
 }
 
 .learn-more-btn {
-  background: #6B46C1;
+  background: #6b46c1;
   color: #fff;
   padding: 10px 24px;
   border: none;
@@ -455,17 +538,18 @@ h2 {
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
-  transition: all 0.3s cubic-bezier(.4, 2, .6, 1), transform 0.3s cubic-bezier(.4, 2, .6, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition:
+    all 0.3s cubic-bezier(0.4, 2, 0.6, 1),
+    transform 0.3s cubic-bezier(0.4, 2, 0.6, 1);
 }
 
 .learn-more-btn:hover {
-  background: #8A4AF3;
+  background: #8a4af3;
   transform: scale(1.05);
 }
 
 /* Our Features Section Redesign */
-
 
 .our-features-header-section {
   width: 100vw;
@@ -492,7 +576,6 @@ h2 {
   font-family: 'Inter', sans-serif;
 }
 
-
 .our_features_section {
   width: 100vw;
   background: #faf7f2;
@@ -510,7 +593,7 @@ h2 {
 }
 
 .our-features-header-yellow-col {
-  background: #FACF46;
+  background: #facf46;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -537,7 +620,6 @@ h2 {
   flex-direction: column;
   align-items: stretch;
 }
-
 
 .our-features-header-title {
   color: #fff;
@@ -573,7 +655,7 @@ h2 {
 .our-features-yellow-col {
   width: 80px;
   min-width: 60px;
-  background: #FACF46;
+  background: #facf46;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -621,20 +703,25 @@ h2 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: box-shadow 0.12s, border-color 0.12s, transform 0.12s;
+  transition:
+    box-shadow 0.12s,
+    border-color 0.12s,
+    transform 0.12s;
   min-height: 370px;
   cursor: pointer;
 }
 
 .feature-card:hover {
-  box-shadow: 0 12px 36px 0 rgba(106, 68, 255, 0.18), 0 2px 8px rgba(190, 54, 236, 0.12);
+  box-shadow:
+    0 12px 36px 0 rgba(106, 68, 255, 0.18),
+    0 2px 8px rgba(190, 54, 236, 0.12);
   border-color: #be36ec;
   transform: translateY(-8px) scale(1.04) !important;
 }
 
 .feature-icon {
   font-size: 3.2rem;
-  color: #6B46C1;
+  color: #6b46c1;
   margin-bottom: 18px;
 }
 
@@ -662,8 +749,7 @@ h2 {
 .our-features-header-bg {
   width: 100vw;
   min-height: 220px;
-  background-image:
-    url('https://www.eatthis.com/wp-content/uploads/sites/4/2021/08/shutterstock_older-man-lifting-weights.jpeg?quality=82&strip=all');
+  background-image: url('https://www.eatthis.com/wp-content/uploads/sites/4/2021/08/shutterstock_older-man-lifting-weights.jpeg?quality=82&strip=all');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -677,7 +763,7 @@ h2 {
 .our-features-header-yellow-col {
   width: 90px;
   min-width: 70px;
-  background: #FACF46;
+  background: #facf46;
   display: flex;
   align-items: center;
   justify-content: center;

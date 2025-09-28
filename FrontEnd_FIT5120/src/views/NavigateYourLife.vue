@@ -3,10 +3,6 @@
     <Header />
     <div class="main-title">
       <span class="main-title-text">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="main-title-icon">
-          <circle cx="16" cy="16" r="16" fill="#D6BCFA" />
-          <path d="M10 16h12M16 10v12" stroke="#6B46C1" stroke-width="2" stroke-linecap="round" />
-        </svg>
         {{ $t('nav.navigate') }}
       </span>
     </div>
@@ -113,7 +109,7 @@ onMounted(() => {
   background-clip: text;
   gap: 16px;
   transition: transform 0.2s cubic-bezier(.4, 2, .6, 1);
-  cursor: pointer;
+  cursor: default;
 }
 
 .main-title-text:hover {
