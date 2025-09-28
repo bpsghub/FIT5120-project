@@ -3,19 +3,21 @@
     <Header />
     <div class="header-section">
       <div class="header-container">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-down" data-aos-delay="100">
           <h1>Learn English</h1>
           <p class="subtitle">Practice English phrases for everyday situations</p>
         </div>
       </div>
 
       <!-- Language Selection -->
-      <div class="language-selection-wrapper">
-        <div class="language-selection">
-          <label for="native-language">Select your native language:</label>
-          <select id="native-language" v-model="selectedLanguage" class="language-select">
-            <option value="">Choose your language</option>
-            <option v-for="lang in availableLanguages" :key="lang.code" :value="lang.code">
+      <div class="language-selection-wrapper" data-aos="fade-up" data-aos-delay="300">
+        <div class="language-selection" data-aos="zoom-in" data-aos-delay="500">
+          <label for="native-language" data-aos="fade-right" data-aos-delay="700">Select your native language:</label>
+          <select id="native-language" v-model="selectedLanguage" class="language-select" data-aos="fade-left"
+            data-aos-delay="900">
+            <option value="" data-aos="fade-up" data-aos-delay="1000">Choose your language</option>
+            <option v-for="(lang, idx) in availableLanguages" :key="lang.code" :value="lang.code" :data-aos="'fade-up'"
+              :data-aos-delay="1000 + (idx + 1) * 100">
               {{ lang.flag }} {{ lang.name }}
             </option>
           </select>
@@ -25,13 +27,14 @@
     <!-- Learning Categories -->
     <div class="categories-section" v-if="selectedLanguage">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-down" data-aos-delay="400">
           <h2>Choose a Category</h2>
           <p>Select a topic to start learning English phrases</p>
         </div>
         <div class="categories-grid">
           <div v-for="category in categories" :key="category.id" class="category-card" @click="selectCategory(category)"
-            tabindex="0" @keydown.enter="selectCategory(category)" @keydown.space="selectCategory(category)">
+            tabindex="0" @keydown.enter="selectCategory(category)" @keydown.space="selectCategory(category)"
+            data-aos="zoom-in" data-aos-delay="100">
             <div class="category-icon" :style="{ backgroundColor: category.color }">
               {{ category.icon }}
             </div>
@@ -46,7 +49,7 @@
     <!-- Welcome Message if no language selected -->
     <div class="welcome-section" v-else>
       <div class="container">
-        <div class="welcome-content">
+        <div class="welcome-content" data-aos="fade-in" data-aos-delay="100">
           <h2>Welcome to English Learning!</h2>
           <p>Please select your native language above to start learning English phrases.</p>
           <div class="features-list">
@@ -158,7 +161,7 @@ onMounted(async () => {
 
 /* Header Section */
 .header-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #896DEB;
   color: white;
   padding: 4rem 0 2rem;
   position: relative;
@@ -172,7 +175,7 @@ onMounted(async () => {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(20, 18, 92, 0.8);
+  background: rgb(60 14 103);
   z-index: 1;
 }
 

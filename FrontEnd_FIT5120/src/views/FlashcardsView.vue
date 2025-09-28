@@ -3,7 +3,7 @@
     <Header />
     <div class="container d-flex justify-content-center align-items-center flex-column">
       <!-- Header -->
-      <div class="header-section ">
+      <div class="header-section" data-aos="fade-down" data-aos-delay="100">
         <div class="header-content">
           <h1>{{ categoryName }}</h1>
           <p class="language-info">Learning in: {{ getLanguageName(language) }}</p>
@@ -11,22 +11,22 @@
       </div>
 
       <!-- Loading State -->
-      <div v-if="isLoading" class="loading-section">
+      <div v-if="isLoading" class="loading-section" data-aos="fade-in" data-aos-delay="200">
         <div class="loading-spinner"></div>
         <p>Loading flashcards...</p>
       </div>
 
       <!-- Error State -->
-      <div v-else-if="error" class="error-section">
+      <div v-else-if="error" class="error-section" data-aos="fade-in" data-aos-delay="200">
         <h2>⚠️ Error Loading Flashcards</h2>
         <p>{{ error }}</p>
         <button class="btn btn-primary" @click="loadPhrases">Try Again</button>
       </div>
 
       <!-- Main Flashcard Interface -->
-      <div v-else-if="currentPhrase" class="flashcard-section">
+      <div v-else-if="currentPhrase" class="flashcard-section" data-aos="fade-up" data-aos-delay="200">
         <!-- Progress Bar -->
-        <div class="progress-section">
+        <div class="progress-section" data-aos="fade-right" data-aos-delay="300">
           <div class="progress-info">
             <span>{{ currentPosition }} / {{ totalPhrases }}</span>
             <span>{{ progress }}% viewed</span>
@@ -38,9 +38,9 @@
 
         <!-- Flashcard Component -->
         <Flashcard :phrase="currentPhrase" :native-language="language" @flip="onCardFlip" @audio-start="onAudioStart"
-          @audio-end="onAudioEnd" />
+          @audio-end="onAudioEnd" data-aos="zoom-in" data-aos-delay="400" />
         <!-- Navigation Controls -->
-        <div class="controls-section">
+        <div class="controls-section" data-aos="fade-left" data-aos-delay="500">
           <div class="nav-controls">
             <button class="control-btn" :disabled="!hasPrevious" @click="previousCard">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 16px; width: 16px">
@@ -80,7 +80,7 @@
         </div>
 
         <!-- Quick Stats -->
-        <div class="stats-section">
+        <div class="stats-section" data-aos="fade-up" data-aos-delay="600">
           <div class="stat-item">
             <span class="stat-value">{{ viewedPhrases.size }}</span>
             <span class="stat-label">Viewed</span>
@@ -97,7 +97,7 @@
       </div>
 
       <!-- No Phrases State -->
-      <div v-else class="empty-section">
+      <div v-else class="empty-section" data-aos="fade-in" data-aos-delay="200">
         <h2>📚 No Phrases Available</h2>
         <p>No phrases found for this category and language combination.</p>
         <button class="btn btn-primary" @click="goBack">Go Back</button>
