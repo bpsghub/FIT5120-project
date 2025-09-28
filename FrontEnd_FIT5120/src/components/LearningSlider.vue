@@ -13,21 +13,33 @@
             <div :class="['slide-card-with-image', 'w-100', displayMode]" data-aos="fade-up"
               :data-aos-delay="Math.min(idx * 50, 150)">
               <template v-if="displayMode === 'grid'">
-                <div class="slide-image w-100 mb-3">
-                  <img :src="getRandomImage(idx)" alt="Slide Image" />
+                <div class="slide-image w-100 mb-3" style="max-height: 250px; height: 200px; min-height: 200px">
+                  <img :src="card.image" alt="Slide Image" class="w-100 h-100" />
                 </div>
                 <div class="slide-card text-center">
                   <h2 class="slide-title">{{ card.translatedTitle }}</h2>
                   <p class="slide-desc">{{ card.translatedDesc }}</p>
                 </div>
+                <div class="d-flex justify-content-center mt-3">
+                  <a class="learn-more-btn" :href="card.link">{{ clickMoreText }}</a>
+                </div>
               </template>
               <template v-else>
-                <div class="slide-card d-flex flex-column justify-content-center align-items-start flex-grow-1">
-                  <h2 class="slide-title">{{ card.translatedTitle }}</h2>
-                  <p class="slide-desc">{{ card.translatedDesc }}</p>
-                </div>
-                <div class="slide-image ms-4 d-flex align-items-center">
-                  <img :src="getRandomImage(idx)" alt="Slide Image" />
+                <div class="d-flex flex-column w-100" style="min-height: 200px;">
+                  <div class="d-flex flex-row align-items-center w-100">
+                    <div class="flex-grow-1 d-flex flex-column justify-content-center" style="height: 100%;">
+                      <h2 class="slide-title">{{ card.translatedTitle }}</h2>
+                      <p class="slide-desc">{{ card.translatedDesc }}</p>
+                    </div>
+                    <div class="slide-image me-4"
+                      style="width: 180px; min-width: 140px; max-width: 220px; height: 180px; display: flex; align-items: center; justify-content: center;">
+                      <img :src="card.image" alt="Slide Image"
+                        style="object-fit: cover; width: 100%; height: 100%; border-radius: 15px;" />
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center mt-3">
+                    <a class="learn-more-btn" :href="card.link">{{ clickMoreText }}</a>
+                  </div>
                 </div>
               </template>
             </div>
@@ -71,6 +83,7 @@ const displayMode = ref('grid')
 const quizBtnText = ref('Take Quiz')
 const gridBtnText = ref('Grid')
 const columnBtnText = ref('Column')
+const clickMoreText = ref('Click more to see')
 
 function getRandomImage(idx) {
   return `https://picsum.photos/seed/${props.imageSeedPrefix}${idx + 1}/180/180`
@@ -82,6 +95,7 @@ function buildTranslationTexts(cards) {
   texts.push('Grid')
   texts.push('Column')
   texts.push('Take Quiz')
+  texts.push('Click more to see')
 
   for (const card of cards) {
     texts.push(card.title)
@@ -97,8 +111,8 @@ function mapTranslationsToCards(cards, translations) {
     // offset by 2 for grid/column
     newCards.push({
       ...cards[i],
-      translatedTitle: translations[3 + i * 2],
-      translatedDesc: translations[3 + i * 2 + 1],
+      translatedTitle: translations[4 + i * 2],
+      translatedDesc: translations[4 + i * 2 + 1],
     })
   }
   return newCards
@@ -119,6 +133,7 @@ async function translateAll() {
     gridBtnText.value = translations[0]
     columnBtnText.value = translations[1]
     quizBtnText.value = translations[2]
+    clickMoreText.value = translations[3]
     translatedCards.value = mapTranslationsToCards(originalCards.value, translations)
   } catch {
     // If error, fallback to English
@@ -136,6 +151,7 @@ function setEnglishTexts() {
   quizBtnText.value = 'Take Quiz'
   gridBtnText.value = 'Grid'
   columnBtnText.value = 'Column'
+  clickMoreText.value = 'Click more to see'
 }
 
 async function loadOriginalCards() {
@@ -284,6 +300,25 @@ onMounted(() => {
   border: none;
   transition: transform 0.5s;
   display: block;
+}
+
+.learn-more-btn {
+  background: #6B46C1;
+  color: #fff;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
+  transition: all 0.3s cubic-bezier(.4, 2, .6, 1), transform 0.3s cubic-bezier(.4, 2, .6, 1);
+  text-decoration: none;
+}
+
+.learn-more-btn:hover {
+  background: #8A4AF3;
+  transform: scale(1.05);
 }
 
 .quiz-btn-bottom-wrapper {

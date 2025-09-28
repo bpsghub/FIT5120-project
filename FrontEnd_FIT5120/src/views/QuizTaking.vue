@@ -75,7 +75,8 @@ async function translateStatics() {
     keys.forEach((k, i) => {
       staticTexts.value[k] = translated[i]
     })
-  } catch {
+  } catch (err) {
+    console.error(err);
   }
 }
 

@@ -4,12 +4,12 @@
     <LearningBanner :title="$t('socialnorms.eatingout.title')" :subtitle="$t('socialnorms.eatingout.subtitle')"
       :particle-count="18" />
     <div class="content-box">
-      <LearningSlider :lang="locale" csv-url="/Learning about Australia/dining_etiquette.csv"
-        image-seed-prefix="eatingout"  />
+      <LearningSlider :lang="locale" csv-url="/Learning about Australia/epic3_dining_rules_final(1).csv"
+        image-seed-prefix="eatingout" />
     </div>
   </div>
 </template>
-
+z
 <script setup>
 import { useI18n } from 'vue-i18n'
 import Header from '@/components/Header.vue'
