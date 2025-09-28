@@ -363,13 +363,14 @@ h2 {
   font-size: 30px;
 }
 
+
 /* Our mission  */
 .our_mission_left {
-  height: 600px;
+  height: auto;
   min-height: 300px;
   background-image: url('https://www.10000steps.org.au/media/images/Physical-Activity-Recommendations-for-Older-Aus.original.png');
   background-size: cover;
-  background-position: left top 10%;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }

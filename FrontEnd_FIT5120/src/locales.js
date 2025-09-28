@@ -208,20 +208,20 @@ export default {
       our_features: {
         our_features_title: '我们的特色',
         our_features_cards: {
-          facility_title: {
-            title: '设施查找器',
+          facility: {
+            facility_title: '设施查找器',
             description: '在您附近发现重要的社区设施和服务，从医疗到休闲，一应俱全。',
           },
-          learning_title: {
-            title: '英语学习中心',
+          learning: {
+            learning_title: '英语学习中心',
             description: '通过实用课程和资源提升您的英语技能，适应澳大利亚的日常生活。',
           },
-          social_title: {
-            title: '澳洲社交规范',
+          social: {
+            social_title: '澳洲社交规范',
             description: '了解当地习俗、礼仪和社交期望，让您在各种场合更自信。',
           },
-          navigate_title: {
-            title: '生活导航',
+          navigate: {
+            navigate_title: '生活导航',
             description: '获取日常生活的建议和指导，从乘坐公共交通到管理您的健康。',
           },
         },
@@ -354,23 +354,23 @@ export default {
       our_features: {
         our_features_title: 'Tính năng nổi bật',
         our_features_cards: {
-          facility_title: {
-            title: 'Tìm kiếm cơ sở',
+          facility: {
+            facility_title: 'Tìm kiếm cơ sở',
             description:
               'Khám phá các cơ sở và dịch vụ cộng đồng thiết yếu gần bạn, từ y tế đến giải trí, tất cả trong một nơi.',
           },
-          learning_title: {
-            title: 'Trung tâm học tiếng Anh',
+          learning: {
+            learning_title: 'Trung tâm học tiếng Anh',
             description:
               'Cải thiện kỹ năng tiếng Anh với các bài học thực tế và tài nguyên dành cho cuộc sống hàng ngày ở Úc.',
           },
-          social_title: {
-            title: 'Chuẩn mực xã hội Úc',
+          social: {
+            social_title: 'Chuẩn mực xã hội Úc',
             description:
               'Hiểu các phong tục, phép lịch sự và kỳ vọng xã hội địa phương để tự tin hơn trong mọi tình huống.',
           },
-          navigate_title: {
-            title: 'Điều hướng cuộc sống',
+          navigate: {
+            navigate_title: 'Điều hướng cuộc sống',
             description:
               'Nhận các mẹo và hướng dẫn cho cuộc sống hàng ngày, từ sử dụng phương tiện công cộng đến chăm sóc sức khỏe tại Úc.',
           },
