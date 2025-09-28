@@ -6,6 +6,7 @@ import PassCode from '@/views/PassCode.vue'
 import SocialNorms from '@/views/socialNorms.vue'
 import MeetingPeople from '@/views/MeetingPeople.vue'
 import EatingOut from '@/views/EatingOut.vue'
+import SafetyPage from '@/views/SafetyPage.vue'
 
 // Check if user is authenticated
 const isAuthenticated = () => {
@@ -131,9 +132,9 @@ const router = createRouter({
       meta: { requiresAuth: true },
     },
     {
-      path: '/quiztaking',
-      name: 'QuizTaking',
-      component: () => import('../views/QuizTaking.vue'),
+      path: '/safety',
+      name: 'safety',
+      component: SafetyPage,
       meta: { requiresAuth: true },
     },
   ],

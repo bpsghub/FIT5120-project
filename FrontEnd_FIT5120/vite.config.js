@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
@@ -10,9 +9,17 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-    server: {
+  server: {
     port: 6773,
-    open: true, // Auto
+    open: true,
+    proxy: {
+      // 把 /api/weather 开头的请求代理到 BOM 数据源
+      '/api/weather': {
+        target: 'http://www.bom.gov.au/fwo', 
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api\/weather/, '') 
+      }
+    }
   },
   resolve: {
     alias: {
