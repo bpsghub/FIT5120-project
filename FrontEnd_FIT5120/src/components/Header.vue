@@ -5,15 +5,8 @@
         <router-link class="navbar-brand fw-bold fs-2 logo-link" to="/">{{
           $t('nav.brand')
         }}</router-link>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <TransitionGroup tag="div" class="collapse navbar-collapse" id="navbarNav" name="nav-slide">
@@ -21,64 +14,44 @@
             <li class="nav-item" v-for="(link, index) in navLinks" :key="index">
               <router-link class="nav-link" :to="link.to">{{ $t(link.text) }}</router-link>
             </li>
-            <li class="nav-item" v-for="(link, index) in navLinks_dropdown" :key="index">
-              <router-link
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                :to="link.to"
-              >
+            <li class="nav-item dropdown" v-for="(link, index) in navLinks_dropdown" :key="index">
+              <router-link class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" :to="link.to">
                 {{ $t(link.text) }}
               </router-link>
-              <TransitionGroup
-                v-if="link.children === 'socialNorms'"
-                tag="ul"
-                class="dropdown-menu"
-                name="dropdown-slide"
-              >
-                <li v-for="(link, index) in socialNorms" :key="index">
-                  <!-- <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{
+              <TransitionGroup v-if="link.children === 'socialNorms'" tag="ul" class="dropdown-menu"
+                name="dropdown-slide">
+            <li v-for="(link, index) in socialNorms" :key="index">
+              <!-- <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{
                     $t(lang.text)
                   }}</a> -->
-                  <router-link class="nav-link" :to="link.to">{{ $t(link.text) }}</router-link>
-                </li>
-              </TransitionGroup>
-              <TransitionGroup
-                v-if="link.children === 'navigateYourLife'"
-                tag="ul"
-                class="dropdown-menu"
-                name="dropdown-slide"
-              >
-                <li v-for="(link, index) in navigateYourLife" :key="index">
-                  <!-- <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{
-                    $t(lang.text)
-                  }}</a> -->
-                  <router-link class="nav-link" :to="link.to">{{ $t(link.text) }}</router-link>
-                </li>
-              </TransitionGroup>
+              <router-link class="nav-link" :to="link.to">{{ $t(link.text) }}</router-link>
             </li>
+        </TransitionGroup>
+        <TransitionGroup v-if="link.children === 'navigateYourLife'" tag="ul" class="dropdown-menu"
+          name="dropdown-slide">
+          <li v-for="(link, index) in navigateYourLife" :key="index">
+            <!-- <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{
+                    $t(lang.text)
+                  }}</a> -->
+            <router-link class="nav-link" :to="link.to">{{ $t(link.text) }}</router-link>
+          </li>
+        </TransitionGroup>
+        </li>
 
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                {{ $t('nav.language') }}
-              </a>
-              <TransitionGroup tag="ul" class="dropdown-menu" name="dropdown-slide">
-                <li v-for="lang in languages" :key="lang.code">
-                  <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{
-                    $t(lang.text)
-                  }}</a>
-                </li>
-              </TransitionGroup>
-            </li>
-          </ul>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ $t('nav.language') }}
+          </a>
+          <TransitionGroup tag="ul" class="dropdown-menu" name="dropdown-slide">
+        <li v-for="lang in languages" :key="lang.code">
+          <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{
+            $t(lang.text)
+            }}</a>
+        </li>
+        </TransitionGroup>
+        </li>
+        </ul>
         </TransitionGroup>
       </div>
     </nav>
@@ -93,7 +66,7 @@ const { locale } = useI18n()
 const navLinks = [
   { to: '/facilities', text: 'nav.facility' },
   { to: '/learnenglish', text: 'nav.english' },
-  { to:'/safety', text:'nav.safety'}
+  { to: '/safety', text: 'nav.safety' }
 ]
 const navLinks_dropdown = [
   { to: '/socialnorms', text: 'nav.social', children: 'socialNorms' },
