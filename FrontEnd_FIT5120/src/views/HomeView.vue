@@ -29,7 +29,10 @@ function scrollToMission() {
   <div>
     <Header />
     <div class="homeview-bg-wrapper w-100">
-      <div class="homeview-bg-overlay"></div>
+      <video autoplay loop muted playsinline class="bg-video w-100">
+        <source src="./../../public/Home_video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div class="homeview-content d-flex align-items-center">
         <!-- Banner section using Bootstrap grid -->
         <section class="banner-section container">
@@ -200,6 +203,16 @@ function scrollToMission() {
 </template>
 
 <style scoped>
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
 @media (max-width: 768px) {
   .ourmission_content {
     padding-top: 20px !important;
@@ -265,18 +278,6 @@ h2 {
   background-attachment: fixed;
   background-size: cover;
   background-position: top center;
-}
-
-/* Overlay with blurred background and opacity */
-.homeview-bg-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://t4.ftcdn.net/jpg/05/97/49/09/360_F_597490918_dugDbSuqx6YSRmCaYiZJ6pCr37cXK3Rv.jpgg');
-  background-size: cover;
-  background-position: left bottom;
-  opacity: 0.3;
-  z-index: 1;
 }
 
 /* Content container */
@@ -446,7 +447,6 @@ h2 {
   margin-top: 50px;
   font-size: 30px;
 }
-
 
 /* Our mission  */
 .our_mission_left {
