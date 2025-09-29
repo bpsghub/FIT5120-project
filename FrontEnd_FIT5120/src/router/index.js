@@ -112,6 +112,7 @@ const router = createRouter({
       component: () => import('../views/BusLearning.vue'),
       meta: { requiresAuth: true },
     },
+    // hello world
     {
       path: '/trainlearning',
       name: 'trainlearning',
