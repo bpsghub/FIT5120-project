@@ -1,0 +1,1114 @@
+{
+  "quiz_version": "2.0",
+  "topic": "australia_dining_etiquette",
+  "languages": [
+    "en",
+    "zh",
+    "vi",
+    "id"
+  ],
+  "items": [
+    {
+      "key": "quiz.q1",
+      "type": "mcq",
+      "prompt": {
+        "en": "Grandma asks: 'I just sat down in the restaurant. Should I put the napkin on my lap, the table, or the plate?'",
+        "zh": "奶奶问：‘我刚坐下，餐巾该放在腿上、桌子上还是盘子上？’",
+        "vi": "Bà hỏi: 'Khi vừa ngồi xuống, tôi nên đặt khăn ăn trên đùi, bàn hay đĩa?'",
+        "id": "Nenek bertanya: 'Saya baru duduk, serbet harus diletakkan di pangkuan, meja, atau piring?'"
+      },
+      "image": "https://images.unsplash.com/photo-1529042410759-befb1204b468",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "On your lap",
+            "zh": "放在腿上",
+            "vi": "Trên đùi",
+            "id": "Di pangkuan"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "On the table",
+            "zh": "放在桌上",
+            "vi": "Trên bàn",
+            "id": "Di meja"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "On the plate",
+            "zh": "放在盘子上",
+            "vi": "Trên đĩa",
+            "id": "Di piring"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "In your pocket",
+            "zh": "放在口袋里",
+            "vi": "Trong túi",
+            "id": "Di saku"
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "en": "The napkin should go on your lap as soon as you sit down.",
+        "zh": "餐巾应该放在腿上。",
+        "vi": "Khăn ăn nên đặt trên đùi.",
+        "id": "Serbet harus diletakkan di pangkuan."
+      }
+    },
+    {
+      "key": "quiz.q2",
+      "type": "truefalse",
+      "prompt": {
+        "en": "Uncle says: 'In Australia, you must always tip 15%.' Is this true?",
+        "zh": "叔叔说：‘在澳洲餐厅必须给15%的小费。’这是对的吗？",
+        "vi": "Chú nói: 'Ở Úc, luôn phải tip 15%.' Đúng không?",
+        "id": "Paman berkata: 'Di Australia, harus selalu memberi tip 15%.' Apakah benar?"
+      },
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Australian_currency.jpg",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "True",
+            "zh": "对",
+            "vi": "Đúng",
+            "id": "Benar"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "False",
+            "zh": "错",
+            "vi": "Sai",
+            "id": "Salah"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "en": "In Australia, tipping is not mandatory, only optional in high-end dining.",
+        "zh": "在澳洲，小费不是必须的，只有在高档餐厅才可能给。",
+        "vi": "Ở Úc, tip không bắt buộc, chỉ tùy chọn ở nhà hàng cao cấp.",
+        "id": "Di Australia, tip tidak wajib, hanya opsional di restoran mewah."
+      }
+    },
+    {
+      "key": "quiz.q3",
+      "type": "mcq",
+      "prompt": {
+        "en": "Your friend asks: 'Who usually pays the bill if you are invited to dinner?'",
+        "zh": "朋友问：‘如果你被邀请吃饭，通常是谁买单？’",
+        "vi": "Bạn hỏi: 'Nếu bạn được mời đi ăn, thường thì ai sẽ trả tiền?'",
+        "id": "Teman bertanya: 'Jika Anda diundang makan, biasanya siapa yang membayar?'"
+      },
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "The guest",
+            "zh": "客人",
+            "vi": "Khách",
+            "id": "Tamu"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "The inviter",
+            "zh": "主人",
+            "vi": "Người mời",
+            "id": "Pengundang"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Split evenly",
+            "zh": "平分",
+            "vi": "Chia đều",
+            "id": "Membagi rata"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "The waiter",
+            "zh": "服务员",
+            "vi": "Nhân viên phục vụ",
+            "id": "Pelayan"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "en": "Usually the inviter pays, though the guest should offer symbolically.",
+        "zh": "通常是主人买单，客人应象征性提出付款。",
+        "vi": "Thường người mời sẽ trả, khách nên đề nghị tượng trưng.",
+        "id": "Biasanya pengundang yang membayar, tamu sebaiknya menawarkan secara simbolis."
+      }
+    },
+    {
+      "key": "quiz.q4",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 4: What is correct dining etiquette here?",
+        "zh": "对话4：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 4: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 4: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        }
+      ],
+      "answer": "C",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q5",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 5: What is correct dining etiquette here?",
+        "zh": "对话5：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 5: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 5: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        }
+      ],
+      "answer": "D",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q6",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 6: What is correct dining etiquette here?",
+        "zh": "对话6：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 6: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 6: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q7",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 7: What is correct dining etiquette here?",
+        "zh": "对话7：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 7: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 7: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q8",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 8: What is correct dining etiquette here?",
+        "zh": "对话8：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 8: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 8: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        }
+      ],
+      "answer": "C",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q9",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 9: What is correct dining etiquette here?",
+        "zh": "对话9：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 9: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 9: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        }
+      ],
+      "answer": "D",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q10",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 10: What is correct dining etiquette here?",
+        "zh": "对话10：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 10: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 10: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q11",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 11: What is correct dining etiquette here?",
+        "zh": "对话11：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 11: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 11: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q12",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 12: What is correct dining etiquette here?",
+        "zh": "对话12：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 12: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 12: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        }
+      ],
+      "answer": "C",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q13",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 13: What is correct dining etiquette here?",
+        "zh": "对话13：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 13: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 13: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        }
+      ],
+      "answer": "D",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q14",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 14: What is correct dining etiquette here?",
+        "zh": "对话14：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 14: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 14: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q15",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 15: What is correct dining etiquette here?",
+        "zh": "对话15：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 15: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 15: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q16",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 16: What is correct dining etiquette here?",
+        "zh": "对话16：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 16: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 16: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        }
+      ],
+      "answer": "C",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q17",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 17: What is correct dining etiquette here?",
+        "zh": "对话17：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 17: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 17: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        }
+      ],
+      "answer": "D",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q18",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 18: What is correct dining etiquette here?",
+        "zh": "对话18：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 18: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 18: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        }
+      ],
+      "answer": "A",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q19",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 19: What is correct dining etiquette here?",
+        "zh": "对话19：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 19: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 19: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        }
+      ],
+      "answer": "B",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    },
+    {
+      "key": "quiz.q20",
+      "type": "mcq",
+      "prompt": {
+        "en": "Conversation 20: What is correct dining etiquette here?",
+        "zh": "对话20：在这里什么是正确的用餐礼仪？",
+        "vi": "Hội thoại 20: Phép lịch sự ăn uống đúng ở đây là gì?",
+        "id": "Percakapan 20: Apa etika makan yang benar di sini?"
+      },
+      "image": "https://images.unsplash.com/photo-1529692236671-f1dc28d2d6d3",
+      "options": [
+        {
+          "id": "A",
+          "label": {
+            "en": "Wrong action",
+            "zh": "错误做法",
+            "vi": "Hành động sai",
+            "id": "Tindakan salah"
+          }
+        },
+        {
+          "id": "B",
+          "label": {
+            "en": "Depends",
+            "zh": "视情况而定",
+            "vi": "Tùy tình huống",
+            "id": "Tergantung situasi"
+          }
+        },
+        {
+          "id": "C",
+          "label": {
+            "en": "Correct action",
+            "zh": "正确做法",
+            "vi": "Hành động đúng",
+            "id": "Tindakan benar"
+          }
+        },
+        {
+          "id": "D",
+          "label": {
+            "en": "None",
+            "zh": "都不是",
+            "vi": "Không cái nào",
+            "id": "Tidak ada"
+          }
+        }
+      ],
+      "answer": "C",
+      "explanation": {
+        "en": "Choose the polite option.",
+        "zh": "选择礼貌的选项。",
+        "vi": "Chọn phương án lịch sự.",
+        "id": "Pilih opsi sopan."
+      }
+    }
+  ]
+}
