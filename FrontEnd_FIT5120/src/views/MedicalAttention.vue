@@ -1,8 +1,8 @@
 <template>
   <div class="medical-attention-container ">
     <Header />
-    <LearningBanner :title="$t('navigate_your_life.cards.grocceriesshopping.title')"
-      :subtitle="$t('navigate_your_life.cards.grocceriesshopping.subtitle')" :particle-count="18" />
+    <LearningBanner :title="$t('navigate_your_life.cards.medicalattention.title')"
+      :subtitle="$t('navigate_your_life.cards.medicalattention.subtitle')" :particle-count="18" />
 
     <div class="content-box">
       <LearningSlider :lang="locale" v-model="locale" csv-url="/Learning about Australia/epic4_doctor_etiquettes.csv"
