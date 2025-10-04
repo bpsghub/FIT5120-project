@@ -2,8 +2,8 @@
   <div class="passcode-container">
     <div class="passcode-card">
       <div class="logo-section">
-        <h1 class="app-title">FIT5120 Project</h1>
-        <p class="subtitle">Team TE06</p>
+        <h1 class="app-title">Welcome to Ankang Life</h1>
+        <p class="subtitle">Please enter the passcode below</p>
       </div>
 
       <form @submit.prevent="checkPasscode" class="passcode-form">
