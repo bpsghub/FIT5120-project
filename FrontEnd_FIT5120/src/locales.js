@@ -63,7 +63,7 @@ export default {
       our_mission: {
         our_mission_title: 'Our Mission',
         our_mission_desc:
-          'Our mission is to help older adults feel at home in Australia. We offer resources, language support, and community events so everyone can connect, learn, and grow. With our team and volunteers, seniors receive friendly guidance and opportunities to build friendships. We work with local groups to make sure every voice is heard. Together, we create a welcoming community where older adults can thrive and enjoy life.',
+          'Ankang Life exists to empower elderly immigrants in Melbourne by helping them overcome language and cultural barriers, navigate daily life independently, and feel truly included in their community.'  
       },
       our_features: {
         our_features_title: 'Our Features',
@@ -237,7 +237,7 @@ export default {
       our_mission: {
         our_mission_title: '我们的使命',
         our_mission_desc:
-          '我们的使命是帮助年长者在澳大利亚有归属感。我们提供资源、语言支持和社区活动，让每个人都能连接、学习和成长。通过我们的团队和志愿者，长者们获得友善的指导和结交朋友的机会。我们与本地团体合作，确保每个声音都被听见。我们共同营造一个让年长者能够茁壮成长、享受生活的温馨社区。',
+          '安康人寿致力于帮助墨尔本的老年移民克服语言和文化障碍，独立生活，并真正融入社区。',
       },
       our_features: {
         our_features_title: '我们的特色',
@@ -399,7 +399,7 @@ export default {
       our_mission: {
         our_mission_title: 'Sứ mệnh của chúng tôi',
         our_mission_desc:
-          'Sứ mệnh của chúng tôi là giúp người lớn tuổi cảm thấy như ở nhà tại Úc. Chúng tôi cung cấp tài nguyên, hỗ trợ ngôn ngữ và các sự kiện cộng đồng để mọi người có thể kết nối, học hỏi và phát triển. Với đội ngũ và tình nguyện viên, người cao tuổi nhận được sự hướng dẫn thân thiện và cơ hội kết bạn. Chúng tôi hợp tác với các nhóm địa phương để đảm bảo mọi tiếng nói đều được lắng nghe. Cùng nhau, chúng tôi tạo ra một cộng đồng thân thiện nơi người lớn tuổi có thể phát triển và tận hưởng cuộc sống.',
+          'Ankang Life ra đời nhằm trao quyền cho những người nhập cư lớn tuổi ở Melbourne bằng cách giúp họ vượt qua rào cản ngôn ngữ và văn hóa, tự lập trong cuộc sống hàng ngày và cảm thấy thực sự hòa nhập vào cộng đồng của mình.',
       },
       our_features: {
         our_features_title: 'Tính năng nổi bật',
@@ -576,7 +576,7 @@ export default {
       our_mission: {
         our_mission_title: 'Misi Kami',
         our_mission_desc:
-          'Misi kami adalah membantu lansia merasa betah di Australia. Kami menawarkan sumber daya, dukungan bahasa, dan acara komunitas agar semua orang dapat terhubung, belajar, dan berkembang. Dengan tim dan relawan kami, lansia menerima bimbingan ramah dan kesempatan membangun persahabatan. Kami bekerja sama dengan kelompok lokal untuk memastikan setiap suara didengar. Bersama-sama, kami menciptakan komunitas yang ramah di mana lansia dapat berkembang dan menikmati hidup.',
+          'Ankang Life hadir untuk memberdayakan imigran lanjut usia di Melbourne dengan membantu mereka mengatasi kendala bahasa dan budaya, menjalani kehidupan sehari-hari secara mandiri, dan merasa benar-benar terlibat dalam komunitas mereka.',
       },
       our_features: {
         our_features_title: 'Fitur Unggulan',
