@@ -145,7 +145,7 @@ const fetchWeatherData = async () => {
     const bomUrl =
       import.meta.env.MODE === 'development'
         ? '/bom/fwo/IDV60901/IDV60901.95936.json' // 本地用 Vite 代理
-        : 'https://reg.bom.gov.au/fwo/IDV60901/IDV60901.95936.json' // 部署后直接访问 BOM
+        : 'https://corsproxy.io/?https://reg.bom.gov.au/fwo/IDV60901/IDV60901.95936.json' // 部署后直接访问 BOM
 
     const response = await axios.get(bomUrl, { timeout: 10000 })
 
