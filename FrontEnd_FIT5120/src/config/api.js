@@ -1,35 +1,63 @@
 import axios from 'axios'
 
-// Create axios instance with base configuration
+// =========================================================
+// 🌍 Base URL 自动切换（根据环境自动选择本地或云端后端）
+// =========================================================
+// import.meta.env.MODE 是 Vite 自动注入的变量：
+// - 'development' → 本地运行 npm run dev
+// - 'production' → npm run build 后部署的版本
+// =========================================================
+
+const baseURL =
+  import.meta.env.MODE === 'development'
+    ? 'http://localhost:5566/api'        // ✅ 本地 Spring Boot 后端
+    : 'http://54.252.184.10:5566/api'    // ✅ 部署在云服务器的后端（正式环境）
+
+// =========================================================
+// 🚀 创建 axios 实例
+// =========================================================
 const apiClient = axios.create({
-  baseURL: 'http://localhost:5566/api', // Change this to your backend URL
-  timeout: 10000, // 10 seconds timeout
+  baseURL,
+  timeout: 10000, // 请求超时 10 秒
   headers: {
     'Content-Type': 'application/json',
   },
 })
 
-// Add request interceptor (for loading states, auth tokens, etc.)
+// =========================================================
+// 🔧 请求拦截器（可打印日志、加 token 等）
+// =========================================================
 apiClient.interceptors.request.use(
   (config) => {
-    console.log('🚀 API Request:', config.method?.toUpperCase(), config.url)
+    console.log(
+      `🚀 API Request: [${config.method?.toUpperCase()}] ${config.baseURL}${config.url}`
+    )
     return config
   },
   (error) => {
+    console.error('❌ API Request Error:', error.message)
     return Promise.reject(error)
-  },
+  }
 )
 
-// Add response interceptor (for error handling)
+// =========================================================
+// 📦 响应拦截器（统一日志 & 错误处理）
+// =========================================================
 apiClient.interceptors.response.use(
   (response) => {
-    console.log('✅ API Response:', response.status, response.config.url)
+    console.log(`✅ API Response: ${response.status} ${response.config.url}`)
     return response
   },
   (error) => {
-    console.error('❌ API Error:', error.response?.status, error.message)
+    const status = error.response?.status
+    console.error(
+      `❌ API Error: ${status || 'NO_STATUS'} - ${error.message}`
+    )
     return Promise.reject(error)
-  },
+  }
 )
 
+// =========================================================
+// 🧩 导出统一实例
+// =========================================================
 export default apiClient

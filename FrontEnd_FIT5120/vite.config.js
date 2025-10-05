@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
@@ -13,17 +12,17 @@ export default defineConfig({
     port: 6773,
     open: true,
     proxy: {
-      // 把 /api/weather 开头的请求代理到 BOM 数据源
-      '/api/weather': {
-        target: 'http://www.bom.gov.au/fwo', 
+      // ✅ 把 /bom 代理到 BOM 的真实数据源
+      '/bom': {
+        target: 'https://reg.bom.gov.au',
         changeOrigin: true,
-        rewrite: path => path.replace(/^\/api\/weather/, '') 
-      }
-    }
+        rewrite: path => path.replace(/^\/bom/, ''), // 去掉前缀
+      },
+    },
   },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
-  }
+  },
 })

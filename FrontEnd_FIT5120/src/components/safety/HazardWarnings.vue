@@ -84,126 +84,99 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import axios from 'axios'
+import axios from 'axios'  // ✅ 关键：必须显式引入 axios
 
 const { t } = useI18n()
 
-// 响应式数据
 const loading = ref(true)
 const error = ref(false)
 const weatherData = ref(null)
 
-// 计算警告
 const warnings = computed(() => {
   if (!weatherData.value) return []
-
-  const warningList = []
   const data = weatherData.value
+  const list = []
 
-  // 解析数值（移除单位）
-  const windSpeed = parseFloat(data.wind.match(/\d+\.?\d*/)?.[0] || 0)
-  const temperature = parseFloat(data.temperature.replace('°C', ''))
-  const humidity = parseFloat(data.humidity.replace('%', ''))
-  const rainToday = parseFloat(data.rain_today.replace(' mm', ''))
+  const wind = parseFloat(data.wind.match(/\d+\.?\d*/)?.[0] || 0)
+  const temp = parseFloat(data.temperature.replace('°C', ''))
+  const hum = parseFloat(data.humidity.replace('%', ''))
+  const rain = parseFloat(data.rain_today.replace(' mm', ''))
 
-  // 强风警告
-  if (windSpeed > 50) {
-    warningList.push({
-      type: 'strong_wind',
-      severity: 'high',
+  if (wind > 50)
+    list.push({
       icon: '💨',
       title: t('safety.strong_wind_warning', 'Strong Wind Warning'),
-      description: t('safety.strong_wind_desc', 'Avoid outdoor activities, watch for falling objects')
+      description: t('safety.strong_wind_desc', 'Avoid outdoor activities, watch for falling objects'),
+      severity: 'high'
     })
-  }
-
-  // 高温警告
-  if (temperature > 40) {
-    warningList.push({
-      type: 'heat_hazard',
-      severity: 'high',
+  if (temp > 40)
+    list.push({
       icon: '🔥',
       title: t('safety.heat_hazard', 'Heat Hazard'),
-      description: t('safety.heat_desc', 'Stay hydrated, avoid midday sun exposure')
+      description: t('safety.heat_desc', 'Stay hydrated, avoid midday sun exposure'),
+      severity: 'high'
     })
-  }
-
-  // 暴雨警告
-  if (rainToday > 50) {
-    warningList.push({
-      type: 'heavy_rain',
-      severity: 'medium',
+  if (rain > 50)
+    list.push({
       icon: '⛈️',
       title: t('safety.heavy_rain_warning', 'Heavy Rain Warning'),
-      description: t('safety.heavy_rain_desc', 'Avoid driving in flooded areas, stay indoors if possible')
+      description: t('safety.heavy_rain_desc', 'Avoid driving in flooded areas, stay indoors if possible'),
+      severity: 'medium'
     })
-  }
-
-  // 山火风险
-  if (humidity < 20 && temperature > 35) {
-    warningList.push({
-      type: 'bushfire_risk',
-      severity: 'high',
+  if (hum < 20 && temp > 35)
+    list.push({
       icon: '🔥',
       title: t('safety.bushfire_risk', 'Bushfire Risk'),
-      description: t('safety.bushfire_desc', 'High fire danger, avoid outdoor burning')
+      description: t('safety.bushfire_desc', 'High fire danger, avoid outdoor burning'),
+      severity: 'high'
     })
-  }
 
-  return warningList
+  return list
 })
 
-// 获取天气数据
 const fetchWeatherData = async () => {
   loading.value = true
   error.value = false
 
   try {
-    console.log('🌤️ 开始获取BOM天气数据...')
+    console.log('🌤️ Fetching weather data from BOM (via Vite proxy)...')
 
-    // 使用axios通过Vite代理访问澳大利亚气象局API
-    const response = await axios.get('/api/weather/IDV60901/IDV60901.95936.json', {
-      timeout: 10000 // 10秒超时
+    // ✅ 关键修改：访问 /bom/fwo/ 而不是 /bom.gov.au/fwo/
+    const response = await axios.get('/bom/fwo/IDV60901/IDV60901.95936.json', {
+      timeout: 10000,
     })
 
-    console.log('✅ 成功获取BOM数据:', response.data)
-
-    // 提取最新观测数据 (data[0] 是最新的)
-    const latestData = response.data.observations.data[0]
+    const latest = response.data.observations.data[0]
     const header = response.data.observations.header[0]
 
-    // 转换为我们的数据格式
     weatherData.value = {
-      location: header.name || "Melbourne (Olympic Park)",
-      updated: formatDateTime(latestData.local_date_time_full),
-      temperature: `${latestData.air_temp}°C`,
-      feels_like: `${latestData.apparent_t}°C`,
-      wind: formatWind(latestData.wind_dir, latestData.wind_spd_kmh),
-      humidity: `${latestData.rel_hum}%`,
-      rain_today: `${latestData.rain_trace} mm`
+      location: header.name || 'Melbourne (Olympic Park)',
+      updated: formatDateTime(latest.local_date_time_full),
+      temperature: `${latest.air_temp}°C`,
+      feels_like: `${latest.apparent_t}°C`,
+      wind: `${latest.wind_dir} at ${latest.wind_spd_kmh} km/h`,
+      humidity: `${latest.rel_hum}%`,
+      rain_today: `${latest.rain_trace} mm`,
     }
 
-    console.log('✅ 天气数据处理完成:', weatherData.value)
-
+    console.log('✅ Weather data loaded:', weatherData.value)
   } catch (err) {
-    console.error('❌ 获取天气数据失败:', err)
+    console.error('❌ Weather API error:', err)
     error.value = true
   } finally {
     loading.value = false
   }
 }
 
-// 格式化日期时间
-const formatDateTime = (dateTimeStr) => {
-  try {
-    // BOM格式: 20250926123000 -> 2025-09-26 12:30:00
-    const year = dateTimeStr.substring(0, 4)
-    const month = dateTimeStr.substring(4, 6)
-    const day = dateTimeStr.substring(6, 8)
-    const hour = dateTimeStr.substring(8, 10)
-    const minute = dateTimeStr.substring(10, 12)
 
-    const date = new Date(`${year}-${month}-${day}T${hour}:${minute}:00`)
+const formatDateTime = (str) => {
+  try {
+    const y = str.substring(0, 4)
+    const m = str.substring(4, 6)
+    const d = str.substring(6, 8)
+    const h = str.substring(8, 10)
+    const min = str.substring(10, 12)
+    const date = new Date(`${y}-${m}-${d}T${h}:${min}:00`)
     return date.toLocaleString('en-AU', {
       timeZone: 'Australia/Melbourne',
       year: 'numeric',
@@ -212,21 +185,14 @@ const formatDateTime = (dateTimeStr) => {
       hour: '2-digit',
       minute: '2-digit'
     })
-  } catch (err) {
+  } catch {
     return new Date().toLocaleString()
   }
 }
 
-// 格式化风向风速
-const formatWind = (direction, speed) => {
-  if (!direction || !speed) return 'N/A'
-  return `${direction} at ${speed} km/h`
-}
-
-onMounted(() => {
-  fetchWeatherData()
-})
+onMounted(() => fetchWeatherData())
 </script>
+
 
 
 
