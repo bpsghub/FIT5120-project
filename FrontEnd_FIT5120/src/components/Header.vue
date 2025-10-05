@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <router-link class="navbar-brand fw-bold fs-2 logo-link" to="/">{{
           $t('nav.brand')
-        }}</router-link>
+          }}</router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@
         <li v-for="lang in languages" :key="lang.code">
           <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{
             $t(lang.text)
-            }}</a>
+          }}</a>
         </li>
         </TransitionGroup>
         </li>
@@ -100,10 +100,6 @@ const navigateYourLife = [
   {
     text: 'navigate_your_life.cards.grocceriesshopping.title',
     to: '/grocceriesShopping',
-  },
-  {
-    text: 'navigate_your_life.cards.publictransportation.title',
-    to: '/publicTransportation',
   },
   {
     text: 'navigate_your_life.cards.medicalattention.title',
