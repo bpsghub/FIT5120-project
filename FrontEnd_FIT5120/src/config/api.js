@@ -11,7 +11,7 @@ import axios from 'axios'
 const baseURL =
   import.meta.env.MODE === 'development'
     ? 'http://localhost:5566/api'        // ✅ 本地 Spring Boot 后端
-    : 'http://54.252.184.10:5566/api'    // ✅ 部署在云服务器的后端（正式环境）
+    : 'https://corsproxy.io/?http://54.252.184.10:5566/api'    // ✅ 使用 HTTPS 代理防止 Mixed Content
 
 // =========================================================
 // 🚀 创建 axios 实例
