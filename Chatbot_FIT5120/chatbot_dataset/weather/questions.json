@@ -1,18 +1,30 @@
 [
   {
+    "text": "I want to talk about weather",
+    "variations": [
+      "Let's talk about weather",
+      "Can we discuss weather?",
+      "I'd like to chat about weather",
+      "Weather topic please",
+      "Let's discuss the weather"
+    ]
+  },
+  {
     "text": "What is the weather like today?",
     "variations": [
-      "How is the weather now?",
-      "What weather do we have today?",
-      "Is it nice outside today?"
+      "How's the weather today?",
+      "What's the weather like right now?",
+      "Is it nice outside today?",
+      "Tell me about today's weather"
     ]
   },
   {
     "text": "Will it rain tomorrow?",
     "variations": [
-      "Is rain coming tomorrow?",
-      "Might it rain the next day?",
-      "What about rain tomorrow?"
+      "Is it going to rain tomorrow?",
+      "Should I bring an umbrella tomorrow?",
+      "Will tomorrow be rainy?",
+      "Is rain expected tomorrow?"
     ]
   },
   {
@@ -41,11 +53,7 @@
   },
   {
     "text": "What is wind?",
-    "variations": [
-      "Explain wind?",
-      "What makes air move?",
-      "Wind is what?"
-    ]
+    "variations": ["Explain wind?", "What makes air move?", "Wind is what?"]
   },
   {
     "text": "Why is the sky blue?",
@@ -73,11 +81,7 @@
   },
   {
     "text": "What is rain?",
-    "variations": [
-      "Explain rain?",
-      "Rain is what?",
-      "How does rain fall?"
-    ]
+    "variations": ["Explain rain?", "Rain is what?", "How does rain fall?"]
   },
   {
     "text": "Is it cloudy today?",
@@ -129,11 +133,7 @@
   },
   {
     "text": "What is fog?",
-    "variations": [
-      "Explain fog?",
-      "Fog is what?",
-      "Why can't see in fog?"
-    ]
+    "variations": ["Explain fog?", "Fog is what?", "Why can't see in fog?"]
   },
   {
     "text": "What is a rainbow?",
@@ -145,11 +145,7 @@
   },
   {
     "text": "Is it windy now?",
-    "variations": [
-      "Strong wind today?",
-      "Wind blowing hard?",
-      "Windy weather?"
-    ]
+    "variations": ["Strong wind today?", "Wind blowing hard?", "Windy weather?"]
   },
   {
     "text": "What is humidity?",
@@ -169,19 +165,11 @@
   },
   {
     "text": "What is hail?",
-    "variations": [
-      "Ice from sky?",
-      "Explain hail?",
-      "Hail is what?"
-    ]
+    "variations": ["Ice from sky?", "Explain hail?", "Hail is what?"]
   },
   {
     "text": "Why does it get dark early?",
-    "variations": [
-      "Short days why?",
-      "Dark soon in winter?",
-      "Why less light?"
-    ]
+    "variations": ["Short days why?", "Dark soon in winter?", "Why less light?"]
   },
   {
     "text": "What is a tornado?",
@@ -193,27 +181,15 @@
   },
   {
     "text": "What is a hurricane?",
-    "variations": [
-      "Big sea storm?",
-      "Hurricane means?",
-      "Explain hurricane?"
-    ]
+    "variations": ["Big sea storm?", "Hurricane means?", "Explain hurricane?"]
   },
   {
     "text": "How to check weather forecast?",
-    "variations": [
-      "See future weather?",
-      "Weather app how?",
-      "Forecast check?"
-    ]
+    "variations": ["See future weather?", "Weather app how?", "Forecast check?"]
   },
   {
     "text": "What is dew?",
-    "variations": [
-      "Water on grass morning?",
-      "Explain dew?",
-      "Dew is what?"
-    ]
+    "variations": ["Water on grass morning?", "Explain dew?", "Dew is what?"]
   },
   {
     "text": "What weather in spring?",
@@ -225,11 +201,7 @@
   },
   {
     "text": "What is frost?",
-    "variations": [
-      "Ice on windows?",
-      "Explain frost?",
-      "Frost means what?"
-    ]
+    "variations": ["Ice on windows?", "Explain frost?", "Frost means what?"]
   },
   {
     "text": "Why leaves change color?",
@@ -241,59 +213,31 @@
   },
   {
     "text": "What is sleet?",
-    "variations": [
-      "Mix rain snow?",
-      "Explain sleet?",
-      "Sleet is what?"
-    ]
+    "variations": ["Mix rain snow?", "Explain sleet?", "Sleet is what?"]
   },
   {
     "text": "What weather in fall?",
-    "variations": [
-      "Cool in autumn?",
-      "Fall weather?",
-      "Leaves fall time?"
-    ]
+    "variations": ["Cool in autumn?", "Fall weather?", "Leaves fall time?"]
   },
   {
     "text": "What is a blizzard?",
-    "variations": [
-      "Heavy snow storm?",
-      "Blizzard means?",
-      "Explain blizzard?"
-    ]
+    "variations": ["Heavy snow storm?", "Blizzard means?", "Explain blizzard?"]
   },
   {
     "text": "How does sun make heat?",
-    "variations": [
-      "Sun warms earth?",
-      "Why sun hot?",
-      "Sun heat how?"
-    ]
+    "variations": ["Sun warms earth?", "Why sun hot?", "Sun heat how?"]
   },
   {
     "text": "What is UV index?",
-    "variations": [
-      "Sun danger level?",
-      "Explain UV?",
-      "UV means what?"
-    ]
+    "variations": ["Sun danger level?", "Explain UV?", "UV means what?"]
   },
   {
     "text": "Why wear sunscreen?",
-    "variations": [
-      "Protect from sun?",
-      "Sunscreen why?",
-      "Sun burn stop?"
-    ]
+    "variations": ["Protect from sun?", "Sunscreen why?", "Sun burn stop?"]
   },
   {
     "text": "What is air pressure?",
-    "variations": [
-      "Air weight?",
-      "Explain pressure?",
-      "Pressure in weather?"
-    ]
+    "variations": ["Air weight?", "Explain pressure?", "Pressure in weather?"]
   },
   {
     "text": "What is a drought?",
@@ -305,19 +249,11 @@
   },
   {
     "text": "What is flood?",
-    "variations": [
-      "Too much water?",
-      "Flood is what?",
-      "Explain flood?"
-    ]
+    "variations": ["Too much water?", "Flood is what?", "Explain flood?"]
   },
   {
     "text": "How to prepare for rain?",
-    "variations": [
-      "Umbrella ready?",
-      "Rain prep tips?",
-      "What do before rain?"
-    ]
+    "variations": ["Umbrella ready?", "Rain prep tips?", "What do before rain?"]
   },
   {
     "text": "What is temperature?",
@@ -329,35 +265,19 @@
   },
   {
     "text": "What weather in winter?",
-    "variations": [
-      "Cold and snow?",
-      "Winter time weather?",
-      "What in winter?"
-    ]
+    "variations": ["Cold and snow?", "Winter time weather?", "What in winter?"]
   },
   {
     "text": "Why does it hail?",
-    "variations": [
-      "Ice balls why?",
-      "Hail form how?",
-      "What makes hail?"
-    ]
+    "variations": ["Ice balls why?", "Hail form how?", "What makes hail?"]
   },
   {
     "text": "What is a heatwave?",
-    "variations": [
-      "Very hot days?",
-      "Heatwave means?",
-      "Explain hot spell?"
-    ]
+    "variations": ["Very hot days?", "Heatwave means?", "Explain hot spell?"]
   },
   {
     "text": "How to stay cool in heat?",
-    "variations": [
-      "Tips for hot weather?",
-      "Cool down how?",
-      "Heat safety?"
-    ]
+    "variations": ["Tips for hot weather?", "Cool down how?", "Heat safety?"]
   },
   {
     "text": "What is a cold front?",
@@ -369,27 +289,15 @@
   },
   {
     "text": "What is a warm front?",
-    "variations": [
-      "Warm air move?",
-      "Warm front means?",
-      "Explain warm front?"
-    ]
+    "variations": ["Warm air move?", "Warm front means?", "Explain warm front?"]
   },
   {
     "text": "What are clouds made of?",
-    "variations": [
-      "Water in clouds?",
-      "Cloud material?",
-      "What in clouds?"
-    ]
+    "variations": ["Water in clouds?", "Cloud material?", "What in clouds?"]
   },
   {
     "text": "Why does wind blow?",
-    "variations": [
-      "Air move why?",
-      "Wind cause?",
-      "What makes wind?"
-    ]
+    "variations": ["Air move why?", "Wind cause?", "What makes wind?"]
   },
   {
     "text": "What is the moon's effect on weather?",
@@ -401,11 +309,7 @@
   },
   {
     "text": "What is acid rain?",
-    "variations": [
-      "Bad rain?",
-      "Explain acid rain?",
-      "Acid rain what?"
-    ]
+    "variations": ["Bad rain?", "Explain acid rain?", "Acid rain what?"]
   },
   {
     "text": "What is global warming?",
@@ -441,19 +345,11 @@
   },
   {
     "text": "What is El Niño?",
-    "variations": [
-      "Warm ocean thing?",
-      "Explain El Niño?",
-      "El Niño what?"
-    ]
+    "variations": ["Warm ocean thing?", "Explain El Niño?", "El Niño what?"]
   },
   {
     "text": "What is La Niña?",
-    "variations": [
-      "Cool ocean effect?",
-      "La Niña means?",
-      "Explain La Niña?"
-    ]
+    "variations": ["Cool ocean effect?", "La Niña means?", "Explain La Niña?"]
   },
   {
     "text": "What causes earthquakes and weather?",
@@ -465,19 +361,11 @@
   },
   {
     "text": "What is a monsoon?",
-    "variations": [
-      "Heavy rain season?",
-      "Monsoon means?",
-      "Explain monsoon?"
-    ]
+    "variations": ["Heavy rain season?", "Monsoon means?", "Explain monsoon?"]
   },
   {
     "text": "What is a cyclone?",
-    "variations": [
-      "Spinning storm?",
-      "Cyclone what?",
-      "Explain cyclone?"
-    ]
+    "variations": ["Spinning storm?", "Cyclone what?", "Explain cyclone?"]
   },
   {
     "text": "What is an anticyclone?",
@@ -489,59 +377,31 @@
   },
   {
     "text": "How does ocean affect weather?",
-    "variations": [
-      "Sea change air?",
-      "Ocean weather how?",
-      "Water impact?"
-    ]
+    "variations": ["Sea change air?", "Ocean weather how?", "Water impact?"]
   },
   {
     "text": "What is the jet stream?",
-    "variations": [
-      "Fast wind high?",
-      "Jet stream what?",
-      "Explain jet air?"
-    ]
+    "variations": ["Fast wind high?", "Jet stream what?", "Explain jet air?"]
   },
   {
     "text": "What is climate?",
-    "variations": [
-      "Long time weather?",
-      "Climate means?",
-      "Explain climate?"
-    ]
+    "variations": ["Long time weather?", "Climate means?", "Explain climate?"]
   },
   {
     "text": "How is climate different from weather?",
-    "variations": [
-      "Weather vs climate?",
-      "Difference what?",
-      "Short vs long?"
-    ]
+    "variations": ["Weather vs climate?", "Difference what?", "Short vs long?"]
   },
   {
     "text": "What is ozone layer?",
-    "variations": [
-      "Protect from sun?",
-      "Ozone what?",
-      "Explain ozone?"
-    ]
+    "variations": ["Protect from sun?", "Ozone what?", "Explain ozone?"]
   },
   {
     "text": "What is greenhouse effect?",
-    "variations": [
-      "Trap heat?",
-      "Greenhouse means?",
-      "Explain warm trap?"
-    ]
+    "variations": ["Trap heat?", "Greenhouse means?", "Explain warm trap?"]
   },
   {
     "text": "Why recycle for weather?",
-    "variations": [
-      "Help earth warm?",
-      "Recycle weather?",
-      "Why reuse?"
-    ]
+    "variations": ["Help earth warm?", "Recycle weather?", "Why reuse?"]
   },
   {
     "text": "What is solar eclipse weather?",
@@ -553,43 +413,23 @@
   },
   {
     "text": "What is lunar eclipse?",
-    "variations": [
-      "Moon dark?",
-      "Explain lunar?",
-      "Lunar what?"
-    ]
+    "variations": ["Moon dark?", "Explain lunar?", "Lunar what?"]
   },
   {
     "text": "How does moon affect tides?",
-    "variations": [
-      "Water up down?",
-      "Moon pull sea?",
-      "Tides how?"
-    ]
+    "variations": ["Water up down?", "Moon pull sea?", "Tides how?"]
   },
   {
     "text": "What is a sandstorm?",
-    "variations": [
-      "Dust wind?",
-      "Sandstorm means?",
-      "Explain sand blow?"
-    ]
+    "variations": ["Dust wind?", "Sandstorm means?", "Explain sand blow?"]
   },
   {
     "text": "What is a wildfire?",
-    "variations": [
-      "Forest fire?",
-      "Wildfire what?",
-      "Explain big fire?"
-    ]
+    "variations": ["Forest fire?", "Wildfire what?", "Explain big fire?"]
   },
   {
     "text": "How weather affects animals?",
-    "variations": [
-      "Animals change home?",
-      "Weather animal?",
-      "Beasts and air?"
-    ]
+    "variations": ["Animals change home?", "Weather animal?", "Beasts and air?"]
   },
   {
     "text": "What is pollen count?",
@@ -601,11 +441,7 @@
   },
   {
     "text": "Why sneeze in spring?",
-    "variations": [
-      "Allergy why?",
-      "Spring nose itch?",
-      "What makes sneeze?"
-    ]
+    "variations": ["Allergy why?", "Spring nose itch?", "What makes sneeze?"]
   },
   {
     "text": "What is air quality?",
@@ -617,43 +453,23 @@
   },
   {
     "text": "Why wear mask in bad air?",
-    "variations": [
-      "Protect lungs?",
-      "Mask for pollution?",
-      "Bad air why mask?"
-    ]
+    "variations": ["Protect lungs?", "Mask for pollution?", "Bad air why mask?"]
   },
   {
     "text": "What is a rainbow double?",
-    "variations": [
-      "Two colors sky?",
-      "Double rainbow?",
-      "Explain two arcs?"
-    ]
+    "variations": ["Two colors sky?", "Double rainbow?", "Explain two arcs?"]
   },
   {
     "text": "What is northern lights?",
-    "variations": [
-      "Sky dance colors?",
-      "Aurora what?",
-      "Explain north lights?"
-    ]
+    "variations": ["Sky dance colors?", "Aurora what?", "Explain north lights?"]
   },
   {
     "text": "Where see aurora?",
-    "variations": [
-      "Cold places sky?",
-      "Aurora spots?",
-      "Where lights show?"
-    ]
+    "variations": ["Cold places sky?", "Aurora spots?", "Where lights show?"]
   },
   {
     "text": "What is a mirage?",
-    "variations": [
-      "Fake water desert?",
-      "Mirage means?",
-      "Explain see wrong?"
-    ]
+    "variations": ["Fake water desert?", "Mirage means?", "Explain see wrong?"]
   },
   {
     "text": "Why hot road looks wet?",
@@ -665,11 +481,7 @@
   },
   {
     "text": "What is a waterspout?",
-    "variations": [
-      "Water tornado?",
-      "Waterspout what?",
-      "Explain sea spin?"
-    ]
+    "variations": ["Water tornado?", "Waterspout what?", "Explain sea spin?"]
   },
   {
     "text": "What is ball lightning?",
@@ -705,11 +517,7 @@
   },
   {
     "text": "What is a barometer?",
-    "variations": [
-      "Pressure gauge?",
-      "Barometer means?",
-      "Explain air weigh?"
-    ]
+    "variations": ["Pressure gauge?", "Barometer means?", "Explain air weigh?"]
   },
   {
     "text": "What is an anemometer?",
@@ -729,51 +537,27 @@
   },
   {
     "text": "How make home weather station?",
-    "variations": [
-      "DIY weather tools?",
-      "Home weather how?",
-      "Simple station?"
-    ]
+    "variations": ["DIY weather tools?", "Home weather how?", "Simple station?"]
   },
   {
     "text": "What weather in desert?",
-    "variations": [
-      "Hot dry place?",
-      "Desert air?",
-      "What in sand land?"
-    ]
+    "variations": ["Hot dry place?", "Desert air?", "What in sand land?"]
   },
   {
     "text": "What weather in mountains?",
-    "variations": [
-      "High place cold?",
-      "Mountain weather?",
-      "Change fast why?"
-    ]
+    "variations": ["High place cold?", "Mountain weather?", "Change fast why?"]
   },
   {
     "text": "What weather near sea?",
-    "variations": [
-      "Coast breeze?",
-      "Sea side air?",
-      "Ocean weather?"
-    ]
+    "variations": ["Coast breeze?", "Sea side air?", "Ocean weather?"]
   },
   {
     "text": "What is urban heat island?",
-    "variations": [
-      "City hotter why?",
-      "Urban heat what?",
-      "Explain town warm?"
-    ]
+    "variations": ["City hotter why?", "Urban heat what?", "Explain town warm?"]
   },
   {
     "text": "How trees affect weather?",
-    "variations": [
-      "Green make rain?",
-      "Trees weather?",
-      "Plants help air?"
-    ]
+    "variations": ["Green make rain?", "Trees weather?", "Plants help air?"]
   },
   {
     "text": "What is climate change?",
@@ -785,19 +569,11 @@
   },
   {
     "text": "Why ice melt poles?",
-    "variations": [
-      "Polar ice gone?",
-      "Melt why?",
-      "What makes ice go?"
-    ]
+    "variations": ["Polar ice gone?", "Melt why?", "What makes ice go?"]
   },
   {
     "text": "What can I do for earth?",
-    "variations": [
-      "Help stop warm?",
-      "My part weather?",
-      "Save planet how?"
-    ]
+    "variations": ["Help stop warm?", "My part weather?", "Save planet how?"]
   },
   {
     "text": "What is renewable energy?",
@@ -809,35 +585,19 @@
   },
   {
     "text": "Why use solar panels?",
-    "variations": [
-      "Sun to light?",
-      "Panels help?",
-      "Solar why good?"
-    ]
+    "variations": ["Sun to light?", "Panels help?", "Solar why good?"]
   },
   {
     "text": "What is wind power?",
-    "variations": [
-      "Big fans turn?",
-      "Wind energy?",
-      "Explain wind mill?"
-    ]
+    "variations": ["Big fans turn?", "Wind energy?", "Explain wind mill?"]
   },
   {
     "text": "What weather in tropics?",
-    "variations": [
-      "Hot wet place?",
-      "Tropic air?",
-      "What in equator?"
-    ]
+    "variations": ["Hot wet place?", "Tropic air?", "What in equator?"]
   },
   {
     "text": "What is polar weather?",
-    "variations": [
-      "Very cold ice?",
-      "Pole weather?",
-      "North south cold?"
-    ]
+    "variations": ["Very cold ice?", "Pole weather?", "North south cold?"]
   },
   {
     "text": "What is temperate climate?",
@@ -849,11 +609,7 @@
   },
   {
     "text": "How forecast weather?",
-    "variations": [
-      "Predict how?",
-      "Weather guess?",
-      "What tools predict?"
-    ]
+    "variations": ["Predict how?", "Weather guess?", "What tools predict?"]
   },
   {
     "text": "Who is meteorologist?",
@@ -865,35 +621,19 @@
   },
   {
     "text": "What is weather balloon?",
-    "variations": [
-      "Fly high measure?",
-      "Balloon for air?",
-      "Explain sky ball?"
-    ]
+    "variations": ["Fly high measure?", "Balloon for air?", "Explain sky ball?"]
   },
   {
     "text": "What is radar for weather?",
-    "variations": [
-      "See rain far?",
-      "Weather radar?",
-      "Explain detect tool?"
-    ]
+    "variations": ["See rain far?", "Weather radar?", "Explain detect tool?"]
   },
   {
     "text": "What is a sundog?",
-    "variations": [
-      "Fake sun spots?",
-      "Sundog what?",
-      "Explain sun halo?"
-    ]
+    "variations": ["Fake sun spots?", "Sundog what?", "Explain sun halo?"]
   },
   {
     "text": "What is moonbow?",
-    "variations": [
-      "Night rainbow?",
-      "Moonbow means?",
-      "Explain moon colors?"
-    ]
+    "variations": ["Night rainbow?", "Moonbow means?", "Explain moon colors?"]
   },
   {
     "text": "What causes fog in morning?",
@@ -905,11 +645,7 @@
   },
   {
     "text": "Why dew on car?",
-    "variations": [
-      "Wet car morning?",
-      "Dew form how?",
-      "Car water why?"
-    ]
+    "variations": ["Wet car morning?", "Dew form how?", "Car water why?"]
   },
   {
     "text": "What is virga?",
@@ -929,43 +665,23 @@
   },
   {
     "text": "How weather affects plants?",
-    "variations": [
-      "Flowers need rain?",
-      "Plants weather?",
-      "Green and air?"
-    ]
+    "variations": ["Flowers need rain?", "Plants weather?", "Green and air?"]
   },
   {
     "text": "What is evapotranspiration?",
-    "variations": [
-      "Plant sweat?",
-      "Evapo what?",
-      "Explain water up?"
-    ]
+    "variations": ["Plant sweat?", "Evapo what?", "Explain water up?"]
   },
   {
     "text": "What is the Coriolis effect?",
-    "variations": [
-      "Earth spin wind?",
-      "Coriolis what?",
-      "Explain curve air?"
-    ]
+    "variations": ["Earth spin wind?", "Coriolis what?", "Explain curve air?"]
   },
   {
     "text": "What is inversion layer?",
-    "variations": [
-      "Warm air trap?",
-      "Inversion means?",
-      "Explain upside temp?"
-    ]
+    "variations": ["Warm air trap?", "Inversion means?", "Explain upside temp?"]
   },
   {
     "text": "What causes mirages in desert?",
-    "variations": [
-      "Fake lake sand?",
-      "Desert see why?",
-      "Mirage how?"
-    ]
+    "variations": ["Fake lake sand?", "Desert see why?", "Mirage how?"]
   },
   {
     "text": "What is a microburst?",
@@ -985,11 +701,7 @@
   },
   {
     "text": "What is haboob?",
-    "variations": [
-      "Big dust wall?",
-      "Haboob what?",
-      "Explain desert dust?"
-    ]
+    "variations": ["Big dust wall?", "Haboob what?", "Explain desert dust?"]
   },
   {
     "text": "What weather in Antarctica?",
@@ -1001,11 +713,7 @@
   },
   {
     "text": "What is arctic weather?",
-    "variations": [
-      "North cold?",
-      "Arctic means?",
-      "Explain frozen north?"
-    ]
+    "variations": ["North cold?", "Arctic means?", "Explain frozen north?"]
   },
   {
     "text": "How volcanoes affect weather?",
@@ -1017,11 +725,7 @@
   },
   {
     "text": "What is solar activity weather?",
-    "variations": [
-      "Sun spots effect?",
-      "Solar weather?",
-      "Sun change earth?"
-    ]
+    "variations": ["Sun spots effect?", "Solar weather?", "Sun change earth?"]
   },
   {
     "text": "What is space weather?",
@@ -1033,27 +737,15 @@
   },
   {
     "text": "How to track hurricane?",
-    "variations": [
-      "See storm path?",
-      "Hurricane watch?",
-      "Track how?"
-    ]
+    "variations": ["See storm path?", "Hurricane watch?", "Track how?"]
   },
   {
     "text": "What is storm surge?",
-    "variations": [
-      "Water rise storm?",
-      "Surge means?",
-      "Explain sea up?"
-    ]
+    "variations": ["Water rise storm?", "Surge means?", "Explain sea up?"]
   },
   {
     "text": "What is eye of hurricane?",
-    "variations": [
-      "Calm center?",
-      "Eye what?",
-      "Explain quiet middle?"
-    ]
+    "variations": ["Calm center?", "Eye what?", "Explain quiet middle?"]
   },
   {
     "text": "Why name storms?",
@@ -1065,27 +757,15 @@
   },
   {
     "text": "What is typhoon?",
-    "variations": [
-      "Asia hurricane?",
-      "Typhoon means?",
-      "Explain big wind?"
-    ]
+    "variations": ["Asia hurricane?", "Typhoon means?", "Explain big wind?"]
   },
   {
     "text": "What is tsunami weather?",
-    "variations": [
-      "Big wave storm?",
-      "Tsunami what?",
-      "Explain sea wave?"
-    ]
+    "variations": ["Big wave storm?", "Tsunami what?", "Explain sea wave?"]
   },
   {
     "text": "How weather helps farming?",
-    "variations": [
-      "Rain for crops?",
-      "Farm weather?",
-      "Grow food how?"
-    ]
+    "variations": ["Rain for crops?", "Farm weather?", "Grow food how?"]
   },
   {
     "text": "What is frostbite?",
@@ -1097,19 +777,11 @@
   },
   {
     "text": "What is heatstroke?",
-    "variations": [
-      "Hot sick body?",
-      "Heatstroke what?",
-      "Explain overheat?"
-    ]
+    "variations": ["Hot sick body?", "Heatstroke what?", "Explain overheat?"]
   },
   {
     "text": "How to prepare for flood?",
-    "variations": [
-      "Water come home?",
-      "Flood prep?",
-      "What do before water?"
-    ]
+    "variations": ["Water come home?", "Flood prep?", "What do before water?"]
   },
   {
     "text": "What is wind chill?",
@@ -1145,35 +817,19 @@
   },
   {
     "text": "How to measure wind speed?",
-    "variations": [
-      "Wind fast how?",
-      "Measure blow?",
-      "Wind speed tool?"
-    ]
+    "variations": ["Wind fast how?", "Measure blow?", "Wind speed tool?"]
   },
   {
     "text": "What is a hygrometer?",
-    "variations": [
-      "Moist measure?",
-      "Hygrometer what?",
-      "Explain wet tool?"
-    ]
+    "variations": ["Moist measure?", "Hygrometer what?", "Explain wet tool?"]
   },
   {
     "text": "What weather in rainforest?",
-    "variations": [
-      "Wet green place?",
-      "Rainforest air?",
-      "Hot rain daily?"
-    ]
+    "variations": ["Wet green place?", "Rainforest air?", "Hot rain daily?"]
   },
   {
     "text": "What is tundra weather?",
-    "variations": [
-      "Frozen ground?",
-      "Tundra means?",
-      "Explain cold flat?"
-    ]
+    "variations": ["Frozen ground?", "Tundra means?", "Explain cold flat?"]
   },
   {
     "text": "What is savanna weather?",
@@ -1193,11 +849,7 @@
   },
   {
     "text": "What is Doppler radar?",
-    "variations": [
-      "See storm move?",
-      "Doppler what?",
-      "Explain speed radar?"
-    ]
+    "variations": ["See storm move?", "Doppler what?", "Explain speed radar?"]
   },
   {
     "text": "What is a weather model?",
@@ -1225,275 +877,139 @@
   },
   {
     "text": "How apps know weather?",
-    "variations": [
-      "Phone tell rain?",
-      "App how?",
-      "Weather app work?"
-    ]
+    "variations": ["Phone tell rain?", "App how?", "Weather app work?"]
   },
   {
     "text": "What is biometeorology?",
-    "variations": [
-      "Weather health?",
-      "Bio weather?",
-      "Explain body air?"
-    ]
+    "variations": ["Weather health?", "Bio weather?", "Explain body air?"]
   },
   {
     "text": "Why headache in storm?",
-    "variations": [
-      "Pressure head hurt?",
-      "Storm pain why?",
-      "What makes ache?"
-    ]
+    "variations": ["Pressure head hurt?", "Storm pain why?", "What makes ache?"]
   },
   {
     "text": "What weather for sports?",
-    "variations": [
-      "Play outside air?",
-      "Sports weather?",
-      "Good for game?"
-    ]
+    "variations": ["Play outside air?", "Sports weather?", "Good for game?"]
   },
   {
     "text": "How weather affects travel?",
-    "variations": [
-      "Plane delay rain?",
-      "Travel weather?",
-      "Trip change how?"
-    ]
+    "variations": ["Plane delay rain?", "Travel weather?", "Trip change how?"]
   },
   {
     "text": "What is forensic meteorology?",
-    "variations": [
-      "Weather crime?",
-      "Forensic what?",
-      "Explain past weather?"
-    ]
+    "variations": ["Weather crime?", "Forensic what?", "Explain past weather?"]
   },
   {
     "text": "What old weather sayings?",
-    "variations": [
-      "Red sky night?",
-      "Sayings predict?",
-      "Old weather words?"
-    ]
+    "variations": ["Red sky night?", "Sayings predict?", "Old weather words?"]
   },
   {
     "text": "How cows lie predict rain?",
-    "variations": [
-      "Animal sign weather?",
-      "Cows down rain?",
-      "Predict how?"
-    ]
+    "variations": ["Animal sign weather?", "Cows down rain?", "Predict how?"]
   },
   {
     "text": "What is pine cone weather?",
-    "variations": [
-      "Cone close humid?",
-      "Pine predict?",
-      "Explain nature sign?"
-    ]
+    "variations": ["Cone close humid?", "Pine predict?", "Explain nature sign?"]
   },
   {
     "text": "What weather in space?",
-    "variations": [
-      "No air up?",
-      "Space no weather?",
-      "Explain vacuum?"
-    ]
+    "variations": ["No air up?", "Space no weather?", "Explain vacuum?"]
   },
   {
     "text": "How weather on other planets?",
-    "variations": [
-      "Mars storm?",
-      "Planet air?",
-      "Other world weather?"
-    ]
+    "variations": ["Mars storm?", "Planet air?", "Other world weather?"]
   },
   {
     "text": "What is weather lore?",
-    "variations": [
-      "Old tales predict?",
-      "Lore weather?",
-      "Explain folk say?"
-    ]
+    "variations": ["Old tales predict?", "Lore weather?", "Explain folk say?"]
   },
   {
     "text": "Why crickets chirp temp?",
-    "variations": [
-      "Bug sound heat?",
-      "Cricket count?",
-      "How measure?"
-    ]
+    "variations": ["Bug sound heat?", "Cricket count?", "How measure?"]
   },
   {
     "text": "What is a halo around moon?",
-    "variations": [
-      "Ring mean rain?",
-      "Moon halo?",
-      "Explain circle light?"
-    ]
+    "variations": ["Ring mean rain?", "Moon halo?", "Explain circle light?"]
   },
   {
     "text": "How to make rain stick?",
-    "variations": [
-      "DIY sound rain?",
-      "Rain maker?",
-      "Craft how?"
-    ]
+    "variations": ["DIY sound rain?", "Rain maker?", "Craft how?"]
   },
   {
     "text": "What weather experiments home?",
-    "variations": [
-      "Fun try house?",
-      "Experiment weather?",
-      "Home science?"
-    ]
+    "variations": ["Fun try house?", "Experiment weather?", "Home science?"]
   },
   {
     "text": "How make cloud in bottle?",
-    "variations": [
-      "Bottle fog?",
-      "Cloud make how?",
-      "Simple trick?"
-    ]
+    "variations": ["Bottle fog?", "Cloud make how?", "Simple trick?"]
   },
   {
     "text": "What is tornado in jar?",
-    "variations": [
-      "Water spin bottle?",
-      "Jar storm?",
-      "Explain make?"
-    ]
+    "variations": ["Water spin bottle?", "Jar storm?", "Explain make?"]
   },
   {
     "text": "How weather diary keep?",
-    "variations": [
-      "Write daily air?",
-      "Diary weather?",
-      "Record how?"
-    ]
+    "variations": ["Write daily air?", "Diary weather?", "Record how?"]
   },
   {
     "text": "What draw weather pictures?",
-    "variations": [
-      "Art sun rain?",
-      "Weather draw?",
-      "Picture ideas?"
-    ]
+    "variations": ["Art sun rain?", "Weather draw?", "Picture ideas?"]
   },
   {
     "text": "What songs about weather?",
-    "variations": [
-      "Rain music?",
-      "Weather tunes?",
-      "Sing about sky?"
-    ]
+    "variations": ["Rain music?", "Weather tunes?", "Sing about sky?"]
   },
   {
     "text": "What stories with weather?",
-    "variations": [
-      "Tale storm?",
-      "Weather books?",
-      "Read about rain?"
-    ]
+    "variations": ["Tale storm?", "Weather books?", "Read about rain?"]
   },
   {
     "text": "How weather in movies?",
-    "variations": [
-      "Film rain effect?",
-      "Movie weather?",
-      "Scene air?"
-    ]
+    "variations": ["Film rain effect?", "Movie weather?", "Scene air?"]
   },
   {
     "text": "What famous weather events?",
-    "variations": [
-      "Big storm history?",
-      "Famous weather?",
-      "Past bad air?"
-    ]
+    "variations": ["Big storm history?", "Famous weather?", "Past bad air?"]
   },
   {
     "text": "What is the great flood?",
-    "variations": [
-      "Old big water?",
-      "Flood story?",
-      "Explain history?"
-    ]
+    "variations": ["Old big water?", "Flood story?", "Explain history?"]
   },
   {
     "text": "What weather myths?",
-    "variations": [
-      "False beliefs?",
-      "Weather myth?",
-      "Wrong ideas?"
-    ]
+    "variations": ["False beliefs?", "Weather myth?", "Wrong ideas?"]
   },
   {
     "text": "Is lightning never strike twice?",
-    "variations": [
-      "Hit same place?",
-      "Lightning myth?",
-      "True or false?"
-    ]
+    "variations": ["Hit same place?", "Lightning myth?", "True or false?"]
   },
   {
     "text": "What is weather proverb?",
-    "variations": [
-      "Wise say weather?",
-      "Proverb air?",
-      "Old words?"
-    ]
+    "variations": ["Wise say weather?", "Proverb air?", "Old words?"]
   },
   {
     "text": "How weather in art?",
-    "variations": [
-      "Paint sky?",
-      "Art weather?",
-      "Draw storm?"
-    ]
+    "variations": ["Paint sky?", "Art weather?", "Draw storm?"]
   },
   {
     "text": "What famous weather paintings?",
-    "variations": [
-      "Art rain sun?",
-      "Famous picture?",
-      "Weather in canvas?"
-    ]
+    "variations": ["Art rain sun?", "Famous picture?", "Weather in canvas?"]
   },
   {
     "text": "How weather inspires music?",
-    "variations": [
-      "Song from sky?",
-      "Music weather?",
-      "Tune rain?"
-    ]
+    "variations": ["Song from sky?", "Music weather?", "Tune rain?"]
   },
   {
     "text": "What is weather photography?",
-    "variations": [
-      "Photo storm?",
-      "Weather snap?",
-      "Capture sky?"
-    ]
+    "variations": ["Photo storm?", "Weather snap?", "Capture sky?"]
   },
   {
     "text": "How take good weather photos?",
-    "variations": [
-      "Tips camera cloud?",
-      "Photo how?",
-      "Best shot weather?"
-    ]
+    "variations": ["Tips camera cloud?", "Photo how?", "Best shot weather?"]
   },
   {
     "text": "What chase storms?",
-    "variations": [
-      "Follow bad weather?",
-      "Storm chase?",
-      "Explain hunt?"
-    ]
+    "variations": ["Follow bad weather?", "Storm chase?", "Explain hunt?"]
   },
   {
     "text": "Who are storm chasers?",
@@ -1505,35 +1021,18 @@
   },
   {
     "text": "What equipment for chasing?",
-    "variations": [
-      "Tools for storm hunt?",
-      "Chase gear?",
-      "What need?"
-    ]
+    "variations": ["Tools for storm hunt?", "Chase gear?", "What need?"]
   },
   {
     "text": "How safe chase storms?",
-    "variations": [
-      "Danger in follow?",
-      "Safe how?",
-      "Tips no hurt?"
-    ]
+    "variations": ["Danger in follow?", "Safe how?", "Tips no hurt?"]
   },
   {
     "text": "What is citizen science weather?",
-    "variations": [
-      "People help data?",
-      "Citizen weather?",
-      "Explain join?"
-    ]
+    "variations": ["People help data?", "Citizen weather?", "Explain join?"]
   },
   {
     "text": "How report weather?",
-    "variations": [
-      "Tell expert rain?",
-      "Report how?",
-      "Share my see?"
-    ]
+    "variations": ["Tell expert rain?", "Report how?", "Share my see?"]
   }
 ]
-

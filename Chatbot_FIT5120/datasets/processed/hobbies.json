@@ -1,0 +1,5468 @@
+[
+  {
+    "question": "What are your hobbies?",
+    "answer": "I like reading books and playing soccer. What do you enjoy?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What are your hobbies?",
+    "answer": "I love painting and hiking in the park. What are your hobbies?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you have any hobbies?",
+    "answer": "I like reading books and playing soccer. What do you enjoy?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you have any hobbies?",
+    "answer": "I love painting and hiking in the park. What are your hobbies?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What do you like to do in your free time?",
+    "answer": "I like reading books and playing soccer. What do you enjoy?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What do you like to do in your free time?",
+    "answer": "I love painting and hiking in the park. What are your hobbies?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What activities do you enjoy?",
+    "answer": "I like reading books and playing soccer. What do you enjoy?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What activities do you enjoy?",
+    "answer": "I love painting and hiking in the park. What are your hobbies?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about your hobbies.",
+    "answer": "I like reading books and playing soccer. What do you enjoy?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about your hobbies.",
+    "answer": "I love painting and hiking in the park. What are your hobbies?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is a hobby?",
+    "answer": "A hobby is something you do for fun in your free time.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is a hobby?",
+    "answer": "It’s an activity you enjoy, like drawing or swimming.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain what a hobby is?",
+    "answer": "A hobby is something you do for fun in your free time.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain what a hobby is?",
+    "answer": "It’s an activity you enjoy, like drawing or swimming.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does hobby mean?",
+    "answer": "A hobby is something you do for fun in your free time.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does hobby mean?",
+    "answer": "It’s an activity you enjoy, like drawing or swimming.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about hobbies.",
+    "answer": "A hobby is something you do for fun in your free time.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about hobbies.",
+    "answer": "It’s an activity you enjoy, like drawing or swimming.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you define a hobby?",
+    "answer": "A hobby is something you do for fun in your free time.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you define a hobby?",
+    "answer": "It’s an activity you enjoy, like drawing or swimming.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is painting?",
+    "answer": "Painting is making pictures with colors and brushes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is painting?",
+    "answer": "It’s when you use paint to create art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about painting?",
+    "answer": "Painting is making pictures with colors and brushes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about painting?",
+    "answer": "It’s when you use paint to create art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does painting mean?",
+    "answer": "Painting is making pictures with colors and brushes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does painting mean?",
+    "answer": "It’s when you use paint to create art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain painting to me.",
+    "answer": "Painting is making pictures with colors and brushes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain painting to me.",
+    "answer": "It’s when you use paint to create art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do painting?",
+    "answer": "Painting is making pictures with colors and brushes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do painting?",
+    "answer": "It’s when you use paint to create art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is gardening?",
+    "answer": "Gardening is growing plants and flowers.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is gardening?",
+    "answer": "It’s taking care of a garden.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about gardening.",
+    "answer": "Gardening is growing plants and flowers.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about gardening.",
+    "answer": "It’s taking care of a garden.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does gardening involve?",
+    "answer": "Gardening is growing plants and flowers.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does gardening involve?",
+    "answer": "It’s taking care of a garden.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain what gardening is.",
+    "answer": "Gardening is growing plants and flowers.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain what gardening is.",
+    "answer": "It’s taking care of a garden.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you garden?",
+    "answer": "Gardening is growing plants and flowers.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you garden?",
+    "answer": "It’s taking care of a garden.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is dancing?",
+    "answer": "Dancing is moving your body to music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is dancing?",
+    "answer": "It’s a fun way to exercise and enjoy songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain dancing?",
+    "answer": "Dancing is moving your body to music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain dancing?",
+    "answer": "It’s a fun way to exercise and enjoy songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does dancing mean?",
+    "answer": "Dancing is moving your body to music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does dancing mean?",
+    "answer": "It’s a fun way to exercise and enjoy songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about dancing.",
+    "answer": "Dancing is moving your body to music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about dancing.",
+    "answer": "It’s a fun way to exercise and enjoy songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do people dance?",
+    "answer": "Dancing is moving your body to music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do people dance?",
+    "answer": "It’s a fun way to exercise and enjoy songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you play video games?",
+    "answer": "Yes, I play racing games. They are fast!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you play video games?",
+    "answer": "I like puzzle games. What games do you play?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Is playing video games your hobby?",
+    "answer": "Yes, I play racing games. They are fast!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Is playing video games your hobby?",
+    "answer": "I like puzzle games. What games do you play?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you like video games?",
+    "answer": "Yes, I play racing games. They are fast!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you like video games?",
+    "answer": "I like puzzle games. What games do you play?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Are you into gaming?",
+    "answer": "Yes, I play racing games. They are fast!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Are you into gaming?",
+    "answer": "I like puzzle games. What games do you play?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you enjoy video games?",
+    "answer": "Yes, I play racing games. They are fast!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you enjoy video games?",
+    "answer": "I like puzzle games. What games do you play?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is drawing?",
+    "answer": "Drawing is making pictures with pencils or crayons.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is drawing?",
+    "answer": "It’s creating art with lines and shapes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain drawing to me.",
+    "answer": "Drawing is making pictures with pencils or crayons.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain drawing to me.",
+    "answer": "It’s creating art with lines and shapes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does drawing mean?",
+    "answer": "Drawing is making pictures with pencils or crayons.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does drawing mean?",
+    "answer": "It’s creating art with lines and shapes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about drawing.",
+    "answer": "Drawing is making pictures with pencils or crayons.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about drawing.",
+    "answer": "It’s creating art with lines and shapes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you draw?",
+    "answer": "Drawing is making pictures with pencils or crayons.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you draw?",
+    "answer": "It’s creating art with lines and shapes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is hiking?",
+    "answer": "Hiking is walking in nature, like in mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is hiking?",
+    "answer": "It’s exploring trails and forests.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about hiking?",
+    "answer": "Hiking is walking in nature, like in mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about hiking?",
+    "answer": "It’s exploring trails and forests.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does hiking involve?",
+    "answer": "Hiking is walking in nature, like in mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does hiking involve?",
+    "answer": "It’s exploring trails and forests.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain hiking.",
+    "answer": "Hiking is walking in nature, like in mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain hiking.",
+    "answer": "It’s exploring trails and forests.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you hike?",
+    "answer": "Hiking is walking in nature, like in mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you hike?",
+    "answer": "It’s exploring trails and forests.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is knitting?",
+    "answer": "Knitting is making clothes with yarn and needles.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is knitting?",
+    "answer": "It’s creating scarves or blankets by hand.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about knitting.",
+    "answer": "Knitting is making clothes with yarn and needles.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about knitting.",
+    "answer": "It’s creating scarves or blankets by hand.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does knitting mean?",
+    "answer": "Knitting is making clothes with yarn and needles.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does knitting mean?",
+    "answer": "It’s creating scarves or blankets by hand.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain knitting.",
+    "answer": "Knitting is making clothes with yarn and needles.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain knitting.",
+    "answer": "It’s creating scarves or blankets by hand.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you knit?",
+    "answer": "Knitting is making clothes with yarn and needles.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you knit?",
+    "answer": "It’s creating scarves or blankets by hand.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is fishing?",
+    "answer": "Fishing is catching fish with a rod.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is fishing?",
+    "answer": "It’s sitting by the water to catch fish.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain fishing?",
+    "answer": "Fishing is catching fish with a rod.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain fishing?",
+    "answer": "It’s sitting by the water to catch fish.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does fishing involve?",
+    "answer": "Fishing is catching fish with a rod.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does fishing involve?",
+    "answer": "It’s sitting by the water to catch fish.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about fishing.",
+    "answer": "Fishing is catching fish with a rod.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about fishing.",
+    "answer": "It’s sitting by the water to catch fish.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you fish?",
+    "answer": "Fishing is catching fish with a rod.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you fish?",
+    "answer": "It’s sitting by the water to catch fish.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you play an instrument?",
+    "answer": "Yes, I play the guitar. It’s cool!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you play an instrument?",
+    "answer": "I like the piano. Do you play anything?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Is playing music your hobby?",
+    "answer": "Yes, I play the guitar. It’s cool!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Is playing music your hobby?",
+    "answer": "I like the piano. Do you play anything?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you like playing instruments?",
+    "answer": "Yes, I play the guitar. It’s cool!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you like playing instruments?",
+    "answer": "I like the piano. Do you play anything?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Are you into music?",
+    "answer": "Yes, I play the guitar. It’s cool!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Are you into music?",
+    "answer": "I like the piano. Do you play anything?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you enjoy playing music?",
+    "answer": "Yes, I play the guitar. It’s cool!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you enjoy playing music?",
+    "answer": "I like the piano. Do you play anything?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is writing?",
+    "answer": "Writing is making stories or poems with words.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is writing?",
+    "answer": "It’s putting your thoughts on paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain writing as a hobby.",
+    "answer": "Writing is making stories or poems with words.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain writing as a hobby.",
+    "answer": "It’s putting your thoughts on paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does writing mean?",
+    "answer": "Writing is making stories or poems with words.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does writing mean?",
+    "answer": "It’s putting your thoughts on paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about writing.",
+    "answer": "Writing is making stories or poems with words.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about writing.",
+    "answer": "It’s putting your thoughts on paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you write stories?",
+    "answer": "Writing is making stories or poems with words.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you write stories?",
+    "answer": "It’s putting your thoughts on paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is collecting?",
+    "answer": "Collecting is gathering things like stamps or coins.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is collecting?",
+    "answer": "It’s keeping special items you like.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about collecting?",
+    "answer": "Collecting is gathering things like stamps or coins.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about collecting?",
+    "answer": "It’s keeping special items you like.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does collecting mean?",
+    "answer": "Collecting is gathering things like stamps or coins.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does collecting mean?",
+    "answer": "It’s keeping special items you like.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain collecting things.",
+    "answer": "Collecting is gathering things like stamps or coins.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain collecting things.",
+    "answer": "It’s keeping special items you like.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you collect items?",
+    "answer": "Collecting is gathering things like stamps or coins.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you collect items?",
+    "answer": "It’s keeping special items you like.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is baking?",
+    "answer": "Baking is making food like cakes in an oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is baking?",
+    "answer": "It’s cooking sweet things like cookies.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about baking.",
+    "answer": "Baking is making food like cakes in an oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about baking.",
+    "answer": "It’s cooking sweet things like cookies.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does baking involve?",
+    "answer": "Baking is making food like cakes in an oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does baking involve?",
+    "answer": "It’s cooking sweet things like cookies.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain baking.",
+    "answer": "Baking is making food like cakes in an oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain baking.",
+    "answer": "It’s cooking sweet things like cookies.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you bake?",
+    "answer": "Baking is making food like cakes in an oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you bake?",
+    "answer": "It’s cooking sweet things like cookies.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you like watching movies?",
+    "answer": "Yes, I watch action movies. They’re exciting!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you like watching movies?",
+    "answer": "I love funny movies. Do you watch films?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Is watching movies your hobby?",
+    "answer": "Yes, I watch action movies. They’re exciting!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Is watching movies your hobby?",
+    "answer": "I love funny movies. Do you watch films?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you enjoy films?",
+    "answer": "Yes, I watch action movies. They’re exciting!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you enjoy films?",
+    "answer": "I love funny movies. Do you watch films?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Are you into movies?",
+    "answer": "Yes, I watch action movies. They’re exciting!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Are you into movies?",
+    "answer": "I love funny movies. Do you watch films?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you watch movies for fun?",
+    "answer": "Yes, I watch action movies. They’re exciting!",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Do you watch movies for fun?",
+    "answer": "I love funny movies. Do you watch films?",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is sewing?",
+    "answer": "Sewing is making clothes with a needle and thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is sewing?",
+    "answer": "It’s fixing or creating fabric things.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain sewing?",
+    "answer": "Sewing is making clothes with a needle and thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain sewing?",
+    "answer": "It’s fixing or creating fabric things.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does sewing mean?",
+    "answer": "Sewing is making clothes with a needle and thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does sewing mean?",
+    "answer": "It’s fixing or creating fabric things.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about sewing.",
+    "answer": "Sewing is making clothes with a needle and thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about sewing.",
+    "answer": "It’s fixing or creating fabric things.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you sew?",
+    "answer": "Sewing is making clothes with a needle and thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you sew?",
+    "answer": "It’s fixing or creating fabric things.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is jogging?",
+    "answer": "Jogging is running slowly for exercise.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is jogging?",
+    "answer": "It’s a fun way to stay healthy.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain jogging.",
+    "answer": "Jogging is running slowly for exercise.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain jogging.",
+    "answer": "It’s a fun way to stay healthy.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does jogging mean?",
+    "answer": "Jogging is running slowly for exercise.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does jogging mean?",
+    "answer": "It’s a fun way to stay healthy.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about jogging.",
+    "answer": "Jogging is running slowly for exercise.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about jogging.",
+    "answer": "It’s a fun way to stay healthy.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you jog?",
+    "answer": "Jogging is running slowly for exercise.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you jog?",
+    "answer": "It’s a fun way to stay healthy.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is photography?",
+    "answer": "Photography is taking pictures with a camera.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is photography?",
+    "answer": "It’s capturing moments to keep.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about photography?",
+    "answer": "Photography is taking pictures with a camera.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about photography?",
+    "answer": "It’s capturing moments to keep.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does photography involve?",
+    "answer": "Photography is taking pictures with a camera.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does photography involve?",
+    "answer": "It’s capturing moments to keep.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain photography.",
+    "answer": "Photography is taking pictures with a camera.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain photography.",
+    "answer": "It’s capturing moments to keep.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you take photos?",
+    "answer": "Photography is taking pictures with a camera.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you take photos?",
+    "answer": "It’s capturing moments to keep.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing music?",
+    "answer": "Playing music is using instruments to make sounds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing music?",
+    "answer": "It’s creating songs with a guitar or piano.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about playing music.",
+    "answer": "Playing music is using instruments to make sounds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about playing music.",
+    "answer": "It’s creating songs with a guitar or piano.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does playing music mean?",
+    "answer": "Playing music is using instruments to make sounds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does playing music mean?",
+    "answer": "It’s creating songs with a guitar or piano.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing instruments.",
+    "answer": "Playing music is using instruments to make sounds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing instruments.",
+    "answer": "It’s creating songs with a guitar or piano.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play music?",
+    "answer": "Playing music is using instruments to make sounds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play music?",
+    "answer": "It’s creating songs with a guitar or piano.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is crafting?",
+    "answer": "Crafting is making things by hand, like decorations.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is crafting?",
+    "answer": "It’s creating art with paper or glue.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain crafting?",
+    "answer": "Crafting is making things by hand, like decorations.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain crafting?",
+    "answer": "It’s creating art with paper or glue.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does crafting mean?",
+    "answer": "Crafting is making things by hand, like decorations.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does crafting mean?",
+    "answer": "It’s creating art with paper or glue.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about crafting.",
+    "answer": "Crafting is making things by hand, like decorations.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about crafting.",
+    "answer": "It’s creating art with paper or glue.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you craft?",
+    "answer": "Crafting is making things by hand, like decorations.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you craft?",
+    "answer": "It’s creating art with paper or glue.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is reading?",
+    "answer": "Reading is looking at words in books or stories.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is reading?",
+    "answer": "It’s learning or enjoying tales.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain reading as a hobby.",
+    "answer": "Reading is looking at words in books or stories.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain reading as a hobby.",
+    "answer": "It’s learning or enjoying tales.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does reading mean?",
+    "answer": "Reading is looking at words in books or stories.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does reading mean?",
+    "answer": "It’s learning or enjoying tales.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about reading.",
+    "answer": "Reading is looking at words in books or stories.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about reading.",
+    "answer": "It’s learning or enjoying tales.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you read books?",
+    "answer": "Reading is looking at words in books or stories.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you read books?",
+    "answer": "It’s learning or enjoying tales.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is yoga?",
+    "answer": "Yoga is stretching and relaxing your body.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is yoga?",
+    "answer": "It’s exercise with calm moves.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about yoga?",
+    "answer": "Yoga is stretching and relaxing your body.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about yoga?",
+    "answer": "It’s exercise with calm moves.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does yoga involve?",
+    "answer": "Yoga is stretching and relaxing your body.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does yoga involve?",
+    "answer": "It’s exercise with calm moves.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain yoga.",
+    "answer": "Yoga is stretching and relaxing your body.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain yoga.",
+    "answer": "It’s exercise with calm moves.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do yoga?",
+    "answer": "Yoga is stretching and relaxing your body.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do yoga?",
+    "answer": "It’s exercise with calm moves.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is bird watching?",
+    "answer": "Bird watching is looking at birds with binoculars.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is bird watching?",
+    "answer": "It’s finding and learning about birds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about bird watching.",
+    "answer": "Bird watching is looking at birds with binoculars.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about bird watching.",
+    "answer": "It’s finding and learning about birds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does bird watching mean?",
+    "answer": "Bird watching is looking at birds with binoculars.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does bird watching mean?",
+    "answer": "It’s finding and learning about birds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain bird watching.",
+    "answer": "Bird watching is looking at birds with binoculars.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain bird watching.",
+    "answer": "It’s finding and learning about birds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you watch birds?",
+    "answer": "Bird watching is looking at birds with binoculars.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you watch birds?",
+    "answer": "It’s finding and learning about birds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is cooking?",
+    "answer": "Cooking is making food on a stove or oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is cooking?",
+    "answer": "It’s preparing meals like soup or cake.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain cooking?",
+    "answer": "Cooking is making food on a stove or oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain cooking?",
+    "answer": "It’s preparing meals like soup or cake.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does cooking involve?",
+    "answer": "Cooking is making food on a stove or oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does cooking involve?",
+    "answer": "It’s preparing meals like soup or cake.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about cooking.",
+    "answer": "Cooking is making food on a stove or oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about cooking.",
+    "answer": "It’s preparing meals like soup or cake.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you cook?",
+    "answer": "Cooking is making food on a stove or oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you cook?",
+    "answer": "It’s preparing meals like soup or cake.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is skateboarding?",
+    "answer": "Skateboarding is riding a board with wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is skateboarding?",
+    "answer": "It’s doing tricks on a skateboard.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain skateboarding.",
+    "answer": "Skateboarding is riding a board with wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain skateboarding.",
+    "answer": "It’s doing tricks on a skateboard.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does skateboarding mean?",
+    "answer": "Skateboarding is riding a board with wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does skateboarding mean?",
+    "answer": "It’s doing tricks on a skateboard.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about skateboarding.",
+    "answer": "Skateboarding is riding a board with wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about skateboarding.",
+    "answer": "It’s doing tricks on a skateboard.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you skateboard?",
+    "answer": "Skateboarding is riding a board with wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you skateboard?",
+    "answer": "It’s doing tricks on a skateboard.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is swimming?",
+    "answer": "Swimming is moving in water, like in a pool.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is swimming?",
+    "answer": "It’s a sport or fun activity.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about swimming?",
+    "answer": "Swimming is moving in water, like in a pool.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about swimming?",
+    "answer": "It’s a sport or fun activity.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does swimming involve?",
+    "answer": "Swimming is moving in water, like in a pool.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does swimming involve?",
+    "answer": "It’s a sport or fun activity.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain swimming.",
+    "answer": "Swimming is moving in water, like in a pool.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain swimming.",
+    "answer": "It’s a sport or fun activity.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you swim?",
+    "answer": "Swimming is moving in water, like in a pool.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you swim?",
+    "answer": "It’s a sport or fun activity.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is running?",
+    "answer": "Running is moving fast with your legs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is running?",
+    "answer": "It’s exercise like jogging or racing.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about running.",
+    "answer": "Running is moving fast with your legs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about running.",
+    "answer": "It’s exercise like jogging or racing.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does running mean?",
+    "answer": "Running is moving fast with your legs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does running mean?",
+    "answer": "It’s exercise like jogging or racing.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain running.",
+    "answer": "Running is moving fast with your legs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain running.",
+    "answer": "It’s exercise like jogging or racing.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you run?",
+    "answer": "Running is moving fast with your legs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you run?",
+    "answer": "It’s exercise like jogging or racing.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is singing?",
+    "answer": "Singing is making music with your voice.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is singing?",
+    "answer": "It’s saying words with a tune.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain singing?",
+    "answer": "Singing is making music with your voice.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain singing?",
+    "answer": "It’s saying words with a tune.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does singing involve?",
+    "answer": "Singing is making music with your voice.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does singing involve?",
+    "answer": "It’s saying words with a tune.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about singing.",
+    "answer": "Singing is making music with your voice.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about singing.",
+    "answer": "It’s saying words with a tune.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you sing?",
+    "answer": "Singing is making music with your voice.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you sing?",
+    "answer": "It’s saying words with a tune.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is woodworking?",
+    "answer": "Woodworking is making things from wood.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is woodworking?",
+    "answer": "It’s building chairs or tables.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain woodworking.",
+    "answer": "Woodworking is making things from wood.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain woodworking.",
+    "answer": "It’s building chairs or tables.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does woodworking mean?",
+    "answer": "Woodworking is making things from wood.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does woodworking mean?",
+    "answer": "It’s building chairs or tables.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about woodworking.",
+    "answer": "Woodworking is making things from wood.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about woodworking.",
+    "answer": "It’s building chairs or tables.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you work with wood?",
+    "answer": "Woodworking is making things from wood.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you work with wood?",
+    "answer": "It’s building chairs or tables.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is sculpting?",
+    "answer": "Sculpting is shaping clay or stone into art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is sculpting?",
+    "answer": "It’s making statues by hand.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about sculpting?",
+    "answer": "Sculpting is shaping clay or stone into art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about sculpting?",
+    "answer": "It’s making statues by hand.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does sculpting involve?",
+    "answer": "Sculpting is shaping clay or stone into art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does sculpting involve?",
+    "answer": "It’s making statues by hand.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain sculpting.",
+    "answer": "Sculpting is shaping clay or stone into art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain sculpting.",
+    "answer": "It’s making statues by hand.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you sculpt?",
+    "answer": "Sculpting is shaping clay or stone into art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you sculpt?",
+    "answer": "It’s making statues by hand.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is camping?",
+    "answer": "Camping is sleeping outside in a tent.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is camping?",
+    "answer": "It’s staying in nature for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about camping.",
+    "answer": "Camping is sleeping outside in a tent.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about camping.",
+    "answer": "It’s staying in nature for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does camping mean?",
+    "answer": "Camping is sleeping outside in a tent.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does camping mean?",
+    "answer": "It’s staying in nature for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain camping.",
+    "answer": "Camping is sleeping outside in a tent.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain camping.",
+    "answer": "It’s staying in nature for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you camp?",
+    "answer": "Camping is sleeping outside in a tent.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you camp?",
+    "answer": "It’s staying in nature for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is dancing hip-hop?",
+    "answer": "Hip-hop dancing is moving to fast music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is dancing hip-hop?",
+    "answer": "It’s a cool style with big moves.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain hip-hop dancing?",
+    "answer": "Hip-hop dancing is moving to fast music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain hip-hop dancing?",
+    "answer": "It’s a cool style with big moves.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does hip-hop dancing involve?",
+    "answer": "Hip-hop dancing is moving to fast music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does hip-hop dancing involve?",
+    "answer": "It’s a cool style with big moves.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about hip-hop.",
+    "answer": "Hip-hop dancing is moving to fast music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about hip-hop.",
+    "answer": "It’s a cool style with big moves.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you dance hip-hop?",
+    "answer": "Hip-hop dancing is moving to fast music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you dance hip-hop?",
+    "answer": "It’s a cool style with big moves.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is calligraphy?",
+    "answer": "Calligraphy is writing with beautiful letters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is calligraphy?",
+    "answer": "It’s art with pens and ink.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain calligraphy.",
+    "answer": "Calligraphy is writing with beautiful letters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain calligraphy.",
+    "answer": "It’s art with pens and ink.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does calligraphy mean?",
+    "answer": "Calligraphy is writing with beautiful letters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does calligraphy mean?",
+    "answer": "It’s art with pens and ink.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about calligraphy.",
+    "answer": "Calligraphy is writing with beautiful letters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about calligraphy.",
+    "answer": "It’s art with pens and ink.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do calligraphy?",
+    "answer": "Calligraphy is writing with beautiful letters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do calligraphy?",
+    "answer": "It’s art with pens and ink.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is pottery?",
+    "answer": "Pottery is making things from clay.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is pottery?",
+    "answer": "It’s shaping bowls or pots.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about pottery?",
+    "answer": "Pottery is making things from clay.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about pottery?",
+    "answer": "It’s shaping bowls or pots.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does pottery involve?",
+    "answer": "Pottery is making things from clay.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does pottery involve?",
+    "answer": "It’s shaping bowls or pots.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain pottery.",
+    "answer": "Pottery is making things from clay.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain pottery.",
+    "answer": "It’s shaping bowls or pots.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you make pottery?",
+    "answer": "Pottery is making things from clay.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you make pottery?",
+    "answer": "It’s shaping bowls or pots.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is yoga for exercise?",
+    "answer": "Yoga is stretching to stay strong and calm.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is yoga for exercise?",
+    "answer": "It’s moving your body slowly.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about yoga exercise.",
+    "answer": "Yoga is stretching to stay strong and calm.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about yoga exercise.",
+    "answer": "It’s moving your body slowly.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does yoga exercise mean?",
+    "answer": "Yoga is stretching to stay strong and calm.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does yoga exercise mean?",
+    "answer": "It’s moving your body slowly.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain yoga for fitness.",
+    "answer": "Yoga is stretching to stay strong and calm.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain yoga for fitness.",
+    "answer": "It’s moving your body slowly.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you practice yoga?",
+    "answer": "Yoga is stretching to stay strong and calm.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you practice yoga?",
+    "answer": "It’s moving your body slowly.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is origami?",
+    "answer": "Origami is folding paper into shapes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is origami?",
+    "answer": "It’s making animals or stars from paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain origami?",
+    "answer": "Origami is folding paper into shapes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain origami?",
+    "answer": "It’s making animals or stars from paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does origami involve?",
+    "answer": "Origami is folding paper into shapes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does origami involve?",
+    "answer": "It’s making animals or stars from paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about origami.",
+    "answer": "Origami is folding paper into shapes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about origami.",
+    "answer": "It’s making animals or stars from paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you make origami?",
+    "answer": "Origami is folding paper into shapes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you make origami?",
+    "answer": "It’s making animals or stars from paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing guitar?",
+    "answer": "Playing guitar is making music with strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing guitar?",
+    "answer": "It’s strumming to make songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing guitar.",
+    "answer": "Playing guitar is making music with strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing guitar.",
+    "answer": "It’s strumming to make songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does playing guitar mean?",
+    "answer": "Playing guitar is making music with strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does playing guitar mean?",
+    "answer": "It’s strumming to make songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about guitar.",
+    "answer": "Playing guitar is making music with strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about guitar.",
+    "answer": "It’s strumming to make songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play guitar?",
+    "answer": "Playing guitar is making music with strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play guitar?",
+    "answer": "It’s strumming to make songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is hiking in nature?",
+    "answer": "Hiking is walking in forests or mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is hiking in nature?",
+    "answer": "It’s exploring outside for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about hiking in nature?",
+    "answer": "Hiking is walking in forests or mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about hiking in nature?",
+    "answer": "It’s exploring outside for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does nature hiking involve?",
+    "answer": "Hiking is walking in forests or mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does nature hiking involve?",
+    "answer": "It’s exploring outside for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain hiking outside.",
+    "answer": "Hiking is walking in forests or mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain hiking outside.",
+    "answer": "It’s exploring outside for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you hike in nature?",
+    "answer": "Hiking is walking in forests or mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you hike in nature?",
+    "answer": "It’s exploring outside for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is collecting coins?",
+    "answer": "Collecting coins is saving special money.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is collecting coins?",
+    "answer": "It’s finding old or unique coins.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about collecting coins.",
+    "answer": "Collecting coins is saving special money.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about collecting coins.",
+    "answer": "It’s finding old or unique coins.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does coin collecting mean?",
+    "answer": "Collecting coins is saving special money.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does coin collecting mean?",
+    "answer": "It’s finding old or unique coins.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain collecting coins.",
+    "answer": "Collecting coins is saving special money.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain collecting coins.",
+    "answer": "It’s finding old or unique coins.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you collect coins?",
+    "answer": "Collecting coins is saving special money.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you collect coins?",
+    "answer": "It’s finding old or unique coins.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is drawing sketches?",
+    "answer": "Drawing sketches is making quick pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is drawing sketches?",
+    "answer": "It’s using pencils for art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain drawing sketches?",
+    "answer": "Drawing sketches is making quick pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain drawing sketches?",
+    "answer": "It’s using pencils for art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does sketching involve?",
+    "answer": "Drawing sketches is making quick pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does sketching involve?",
+    "answer": "It’s using pencils for art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about sketches.",
+    "answer": "Drawing sketches is making quick pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about sketches.",
+    "answer": "It’s using pencils for art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you sketch?",
+    "answer": "Drawing sketches is making quick pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you sketch?",
+    "answer": "It’s using pencils for art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is embroidery?",
+    "answer": "Embroidery is sewing designs on fabric.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is embroidery?",
+    "answer": "It’s making pretty patterns with thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain embroidery.",
+    "answer": "Embroidery is sewing designs on fabric.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain embroidery.",
+    "answer": "It’s making pretty patterns with thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does embroidery mean?",
+    "answer": "Embroidery is sewing designs on fabric.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does embroidery mean?",
+    "answer": "It’s making pretty patterns with thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about embroidery.",
+    "answer": "Embroidery is sewing designs on fabric.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about embroidery.",
+    "answer": "It’s making pretty patterns with thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you embroider?",
+    "answer": "Embroidery is sewing designs on fabric.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you embroider?",
+    "answer": "It’s making pretty patterns with thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing piano?",
+    "answer": "Playing piano is making music with keys.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing piano?",
+    "answer": "It’s pressing notes to play songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about playing piano?",
+    "answer": "Playing piano is making music with keys.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about playing piano?",
+    "answer": "It’s pressing notes to play songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does piano playing involve?",
+    "answer": "Playing piano is making music with keys.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does piano playing involve?",
+    "answer": "It’s pressing notes to play songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing piano.",
+    "answer": "Playing piano is making music with keys.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing piano.",
+    "answer": "It’s pressing notes to play songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play piano?",
+    "answer": "Playing piano is making music with keys.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play piano?",
+    "answer": "It’s pressing notes to play songs.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is scrapbooking?",
+    "answer": "Scrapbooking is making albums with photos.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is scrapbooking?",
+    "answer": "It’s saving memories with pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about scrapbooking.",
+    "answer": "Scrapbooking is making albums with photos.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about scrapbooking.",
+    "answer": "It’s saving memories with pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does scrapbooking mean?",
+    "answer": "Scrapbooking is making albums with photos.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does scrapbooking mean?",
+    "answer": "It’s saving memories with pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain scrapbooking.",
+    "answer": "Scrapbooking is making albums with photos.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain scrapbooking.",
+    "answer": "It’s saving memories with pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you scrapbook?",
+    "answer": "Scrapbooking is making albums with photos.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you scrapbook?",
+    "answer": "It’s saving memories with pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is journaling?",
+    "answer": "Journaling is writing your thoughts daily.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is journaling?",
+    "answer": "It’s keeping a diary of your life.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain journaling?",
+    "answer": "Journaling is writing your thoughts daily.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain journaling?",
+    "answer": "It’s keeping a diary of your life.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does journaling involve?",
+    "answer": "Journaling is writing your thoughts daily.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does journaling involve?",
+    "answer": "It’s keeping a diary of your life.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about journaling.",
+    "answer": "Journaling is writing your thoughts daily.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about journaling.",
+    "answer": "It’s keeping a diary of your life.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you journal?",
+    "answer": "Journaling is writing your thoughts daily.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you journal?",
+    "answer": "It’s keeping a diary of your life.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is rock climbing?",
+    "answer": "Rock climbing is going up rocks or walls.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is rock climbing?",
+    "answer": "It’s a fun sport with ropes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain rock climbing.",
+    "answer": "Rock climbing is going up rocks or walls.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain rock climbing.",
+    "answer": "It’s a fun sport with ropes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does rock climbing mean?",
+    "answer": "Rock climbing is going up rocks or walls.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does rock climbing mean?",
+    "answer": "It’s a fun sport with ropes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about rock climbing.",
+    "answer": "Rock climbing is going up rocks or walls.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about rock climbing.",
+    "answer": "It’s a fun sport with ropes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you climb rocks?",
+    "answer": "Rock climbing is going up rocks or walls.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you climb rocks?",
+    "answer": "It’s a fun sport with ropes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing drums?",
+    "answer": "Playing drums is hitting them for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing drums?",
+    "answer": "It’s making beats with sticks.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about playing drums?",
+    "answer": "Playing drums is hitting them for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about playing drums?",
+    "answer": "It’s making beats with sticks.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does drumming involve?",
+    "answer": "Playing drums is hitting them for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does drumming involve?",
+    "answer": "It’s making beats with sticks.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing drums.",
+    "answer": "Playing drums is hitting them for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing drums.",
+    "answer": "It’s making beats with sticks.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play drums?",
+    "answer": "Playing drums is hitting them for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play drums?",
+    "answer": "It’s making beats with sticks.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is surfing?",
+    "answer": "Surfing is riding waves on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is surfing?",
+    "answer": "It’s a sport in the ocean.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about surfing.",
+    "answer": "Surfing is riding waves on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about surfing.",
+    "answer": "It’s a sport in the ocean.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does surfing mean?",
+    "answer": "Surfing is riding waves on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does surfing mean?",
+    "answer": "It’s a sport in the ocean.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain surfing.",
+    "answer": "Surfing is riding waves on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain surfing.",
+    "answer": "It’s a sport in the ocean.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you surf?",
+    "answer": "Surfing is riding waves on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you surf?",
+    "answer": "It’s a sport in the ocean.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is painting with watercolors?",
+    "answer": "Watercolor painting is using water and colors.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is painting with watercolors?",
+    "answer": "It’s making soft, pretty art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain watercolor painting?",
+    "answer": "Watercolor painting is using water and colors.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain watercolor painting?",
+    "answer": "It’s making soft, pretty art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does watercolor painting involve?",
+    "answer": "Watercolor painting is using water and colors.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does watercolor painting involve?",
+    "answer": "It’s making soft, pretty art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about watercolors.",
+    "answer": "Watercolor painting is using water and colors.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about watercolors.",
+    "answer": "It’s making soft, pretty art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you paint with watercolors?",
+    "answer": "Watercolor painting is using water and colors.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you paint with watercolors?",
+    "answer": "It’s making soft, pretty art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is collecting stamps?",
+    "answer": "Collecting stamps is saving special paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is collecting stamps?",
+    "answer": "It’s keeping stamps from letters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain collecting stamps.",
+    "answer": "Collecting stamps is saving special paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain collecting stamps.",
+    "answer": "It’s keeping stamps from letters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does stamp collecting mean?",
+    "answer": "Collecting stamps is saving special paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does stamp collecting mean?",
+    "answer": "It’s keeping stamps from letters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about stamps.",
+    "answer": "Collecting stamps is saving special paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about stamps.",
+    "answer": "It’s keeping stamps from letters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you collect stamps?",
+    "answer": "Collecting stamps is saving special paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you collect stamps?",
+    "answer": "It’s keeping stamps from letters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing puzzles?",
+    "answer": "Doing puzzles is putting pieces together.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing puzzles?",
+    "answer": "It’s making a picture from parts.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about doing puzzles?",
+    "answer": "Doing puzzles is putting pieces together.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about doing puzzles?",
+    "answer": "It’s making a picture from parts.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does puzzle doing involve?",
+    "answer": "Doing puzzles is putting pieces together.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does puzzle doing involve?",
+    "answer": "It’s making a picture from parts.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain puzzles.",
+    "answer": "Doing puzzles is putting pieces together.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain puzzles.",
+    "answer": "It’s making a picture from parts.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do puzzles?",
+    "answer": "Doing puzzles is putting pieces together.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do puzzles?",
+    "answer": "It’s making a picture from parts.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is kayaking?",
+    "answer": "Kayaking is paddling a small boat.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is kayaking?",
+    "answer": "It’s fun on rivers or lakes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about kayaking.",
+    "answer": "Kayaking is paddling a small boat.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about kayaking.",
+    "answer": "It’s fun on rivers or lakes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does kayaking mean?",
+    "answer": "Kayaking is paddling a small boat.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does kayaking mean?",
+    "answer": "It’s fun on rivers or lakes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain kayaking.",
+    "answer": "Kayaking is paddling a small boat.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain kayaking.",
+    "answer": "It’s fun on rivers or lakes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you kayak?",
+    "answer": "Kayaking is paddling a small boat.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you kayak?",
+    "answer": "It’s fun on rivers or lakes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing violin?",
+    "answer": "Playing violin is making music with strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing violin?",
+    "answer": "It’s using a bow to play notes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain playing violin?",
+    "answer": "Playing violin is making music with strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain playing violin?",
+    "answer": "It’s using a bow to play notes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does violin playing involve?",
+    "answer": "Playing violin is making music with strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does violin playing involve?",
+    "answer": "It’s using a bow to play notes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about violin.",
+    "answer": "Playing violin is making music with strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about violin.",
+    "answer": "It’s using a bow to play notes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play violin?",
+    "answer": "Playing violin is making music with strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play violin?",
+    "answer": "It’s using a bow to play notes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is baking bread?",
+    "answer": "Baking bread is making food with flour.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is baking bread?",
+    "answer": "It’s cooking dough in an oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain baking bread.",
+    "answer": "Baking bread is making food with flour.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain baking bread.",
+    "answer": "It’s cooking dough in an oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does bread baking mean?",
+    "answer": "Baking bread is making food with flour.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does bread baking mean?",
+    "answer": "It’s cooking dough in an oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about baking bread.",
+    "answer": "Baking bread is making food with flour.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about baking bread.",
+    "answer": "It’s cooking dough in an oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you bake bread?",
+    "answer": "Baking bread is making food with flour.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you bake bread?",
+    "answer": "It’s cooking dough in an oven.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is rollerblading?",
+    "answer": "Rollerblading is skating with wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is rollerblading?",
+    "answer": "It’s like ice skating on land.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about rollerblading?",
+    "answer": "Rollerblading is skating with wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about rollerblading?",
+    "answer": "It’s like ice skating on land.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does rollerblading involve?",
+    "answer": "Rollerblading is skating with wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does rollerblading involve?",
+    "answer": "It’s like ice skating on land.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain rollerblading.",
+    "answer": "Rollerblading is skating with wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain rollerblading.",
+    "answer": "It’s like ice skating on land.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you rollerblade?",
+    "answer": "Rollerblading is skating with wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you rollerblade?",
+    "answer": "It’s like ice skating on land.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is collecting rocks?",
+    "answer": "Collecting rocks is finding special stones.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is collecting rocks?",
+    "answer": "It’s keeping shiny or unique rocks.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about collecting rocks.",
+    "answer": "Collecting rocks is finding special stones.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about collecting rocks.",
+    "answer": "It’s keeping shiny or unique rocks.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does rock collecting mean?",
+    "answer": "Collecting rocks is finding special stones.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does rock collecting mean?",
+    "answer": "It’s keeping shiny or unique rocks.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain collecting rocks.",
+    "answer": "Collecting rocks is finding special stones.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain collecting rocks.",
+    "answer": "It’s keeping shiny or unique rocks.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you collect rocks?",
+    "answer": "Collecting rocks is finding special stones.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you collect rocks?",
+    "answer": "It’s keeping shiny or unique rocks.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is painting landscapes?",
+    "answer": "Painting landscapes is drawing nature.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is painting landscapes?",
+    "answer": "It’s art of trees and mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain landscape painting?",
+    "answer": "Painting landscapes is drawing nature.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain landscape painting?",
+    "answer": "It’s art of trees and mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does painting landscapes involve?",
+    "answer": "Painting landscapes is drawing nature.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does painting landscapes involve?",
+    "answer": "It’s art of trees and mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about landscapes.",
+    "answer": "Painting landscapes is drawing nature.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about landscapes.",
+    "answer": "It’s art of trees and mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you paint landscapes?",
+    "answer": "Painting landscapes is drawing nature.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you paint landscapes?",
+    "answer": "It’s art of trees and mountains.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing chess?",
+    "answer": "Playing chess is a game with strategy.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing chess?",
+    "answer": "It’s moving pieces on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing chess.",
+    "answer": "Playing chess is a game with strategy.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing chess.",
+    "answer": "It’s moving pieces on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does chess playing mean?",
+    "answer": "Playing chess is a game with strategy.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does chess playing mean?",
+    "answer": "It’s moving pieces on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about chess.",
+    "answer": "Playing chess is a game with strategy.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about chess.",
+    "answer": "It’s moving pieces on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play chess?",
+    "answer": "Playing chess is a game with strategy.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play chess?",
+    "answer": "It’s moving pieces on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is biking?",
+    "answer": "Biking is riding a bicycle for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is biking?",
+    "answer": "It’s cycling on roads or trails.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about biking?",
+    "answer": "Biking is riding a bicycle for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about biking?",
+    "answer": "It’s cycling on roads or trails.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does biking involve?",
+    "answer": "Biking is riding a bicycle for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does biking involve?",
+    "answer": "It’s cycling on roads or trails.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain biking.",
+    "answer": "Biking is riding a bicycle for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain biking.",
+    "answer": "It’s cycling on roads or trails.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you bike?",
+    "answer": "Biking is riding a bicycle for fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you bike?",
+    "answer": "It’s cycling on roads or trails.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is skateboarding tricks?",
+    "answer": "Skateboarding tricks are cool moves on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is skateboarding tricks?",
+    "answer": "It’s jumping or flipping the skateboard.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about skateboarding tricks.",
+    "answer": "Skateboarding tricks are cool moves on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about skateboarding tricks.",
+    "answer": "It’s jumping or flipping the skateboard.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What do skateboarding tricks mean?",
+    "answer": "Skateboarding tricks are cool moves on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What do skateboarding tricks mean?",
+    "answer": "It’s jumping or flipping the skateboard.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain skateboard tricks.",
+    "answer": "Skateboarding tricks are cool moves on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain skateboard tricks.",
+    "answer": "It’s jumping or flipping the skateboard.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do skateboard tricks?",
+    "answer": "Skateboarding tricks are cool moves on a board.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do skateboard tricks?",
+    "answer": "It’s jumping or flipping the skateboard.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is drawing cartoons?",
+    "answer": "Drawing cartoons is making funny pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is drawing cartoons?",
+    "answer": "It’s art of characters with pencils.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain drawing cartoons?",
+    "answer": "Drawing cartoons is making funny pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain drawing cartoons?",
+    "answer": "It’s art of characters with pencils.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does cartoon drawing involve?",
+    "answer": "Drawing cartoons is making funny pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does cartoon drawing involve?",
+    "answer": "It’s art of characters with pencils.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about cartoons.",
+    "answer": "Drawing cartoons is making funny pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about cartoons.",
+    "answer": "It’s art of characters with pencils.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you draw cartoons?",
+    "answer": "Drawing cartoons is making funny pictures.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you draw cartoons?",
+    "answer": "It’s art of characters with pencils.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing flute?",
+    "answer": "Playing flute is blowing air to make music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing flute?",
+    "answer": "It’s a small instrument with soft sounds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing flute.",
+    "answer": "Playing flute is blowing air to make music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing flute.",
+    "answer": "It’s a small instrument with soft sounds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does flute playing mean?",
+    "answer": "Playing flute is blowing air to make music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does flute playing mean?",
+    "answer": "It’s a small instrument with soft sounds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about flute.",
+    "answer": "Playing flute is blowing air to make music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about flute.",
+    "answer": "It’s a small instrument with soft sounds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play flute?",
+    "answer": "Playing flute is blowing air to make music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play flute?",
+    "answer": "It’s a small instrument with soft sounds.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing crosswords?",
+    "answer": "Crosswords are word puzzles in a grid.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing crosswords?",
+    "answer": "It’s finding words with clues.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about crosswords?",
+    "answer": "Crosswords are word puzzles in a grid.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about crosswords?",
+    "answer": "It’s finding words with clues.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does doing crosswords involve?",
+    "answer": "Crosswords are word puzzles in a grid.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does doing crosswords involve?",
+    "answer": "It’s finding words with clues.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain crosswords.",
+    "answer": "Crosswords are word puzzles in a grid.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain crosswords.",
+    "answer": "It’s finding words with clues.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do crosswords?",
+    "answer": "Crosswords are word puzzles in a grid.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do crosswords?",
+    "answer": "It’s finding words with clues.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is painting portraits?",
+    "answer": "Painting portraits is drawing people’s faces.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is painting portraits?",
+    "answer": "It’s art of a person’s look.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about painting portraits.",
+    "answer": "Painting portraits is drawing people’s faces.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about painting portraits.",
+    "answer": "It’s art of a person’s look.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does portrait painting mean?",
+    "answer": "Painting portraits is drawing people’s faces.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does portrait painting mean?",
+    "answer": "It’s art of a person’s look.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain portraits.",
+    "answer": "Painting portraits is drawing people’s faces.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain portraits.",
+    "answer": "It’s art of a person’s look.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you paint portraits?",
+    "answer": "Painting portraits is drawing people’s faces.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you paint portraits?",
+    "answer": "It’s art of a person’s look.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is making jewelry?",
+    "answer": "Making jewelry is creating necklaces or rings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is making jewelry?",
+    "answer": "It’s using beads or stones.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain making jewelry?",
+    "answer": "Making jewelry is creating necklaces or rings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain making jewelry?",
+    "answer": "It’s using beads or stones.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does jewelry making involve?",
+    "answer": "Making jewelry is creating necklaces or rings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does jewelry making involve?",
+    "answer": "It’s using beads or stones.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about jewelry.",
+    "answer": "Making jewelry is creating necklaces or rings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about jewelry.",
+    "answer": "It’s using beads or stones.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you make jewelry?",
+    "answer": "Making jewelry is creating necklaces or rings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you make jewelry?",
+    "answer": "It’s using beads or stones.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is writing novels?",
+    "answer": "Writing novels is making long stories.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is writing novels?",
+    "answer": "It’s creating books with characters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain writing novels.",
+    "answer": "Writing novels is making long stories.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain writing novels.",
+    "answer": "It’s creating books with characters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does novel writing mean?",
+    "answer": "Writing novels is making long stories.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does novel writing mean?",
+    "answer": "It’s creating books with characters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about novels.",
+    "answer": "Writing novels is making long stories.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about novels.",
+    "answer": "It’s creating books with characters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you write novels?",
+    "answer": "Writing novels is making long stories.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you write novels?",
+    "answer": "It’s creating books with characters.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing saxophone?",
+    "answer": "Playing saxophone is blowing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing saxophone?",
+    "answer": "It’s a loud, fun instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about playing saxophone?",
+    "answer": "Playing saxophone is blowing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about playing saxophone?",
+    "answer": "It’s a loud, fun instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does saxophone playing involve?",
+    "answer": "Playing saxophone is blowing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does saxophone playing involve?",
+    "answer": "It’s a loud, fun instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain saxophone.",
+    "answer": "Playing saxophone is blowing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain saxophone.",
+    "answer": "It’s a loud, fun instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play saxophone?",
+    "answer": "Playing saxophone is blowing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play saxophone?",
+    "answer": "It’s a loud, fun instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is building models?",
+    "answer": "Building models is making small things like cars.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is building models?",
+    "answer": "It’s putting pieces together.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about building models.",
+    "answer": "Building models is making small things like cars.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about building models.",
+    "answer": "It’s putting pieces together.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does model building mean?",
+    "answer": "Building models is making small things like cars.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does model building mean?",
+    "answer": "It’s putting pieces together.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain building models.",
+    "answer": "Building models is making small things like cars.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain building models.",
+    "answer": "It’s putting pieces together.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you build models?",
+    "answer": "Building models is making small things like cars.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you build models?",
+    "answer": "It’s putting pieces together.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is dancing ballet?",
+    "answer": "Ballet dancing is moving gracefully to music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is dancing ballet?",
+    "answer": "It’s a dance with special shoes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain ballet dancing?",
+    "answer": "Ballet dancing is moving gracefully to music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain ballet dancing?",
+    "answer": "It’s a dance with special shoes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does ballet involve?",
+    "answer": "Ballet dancing is moving gracefully to music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does ballet involve?",
+    "answer": "It’s a dance with special shoes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about ballet.",
+    "answer": "Ballet dancing is moving gracefully to music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about ballet.",
+    "answer": "It’s a dance with special shoes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you dance ballet?",
+    "answer": "Ballet dancing is moving gracefully to music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you dance ballet?",
+    "answer": "It’s a dance with special shoes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing trumpet?",
+    "answer": "Playing trumpet is blowing to make music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing trumpet?",
+    "answer": "It’s a shiny instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing trumpet.",
+    "answer": "Playing trumpet is blowing to make music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing trumpet.",
+    "answer": "It’s a shiny instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does trumpet playing mean?",
+    "answer": "Playing trumpet is blowing to make music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does trumpet playing mean?",
+    "answer": "It’s a shiny instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about trumpet.",
+    "answer": "Playing trumpet is blowing to make music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about trumpet.",
+    "answer": "It’s a shiny instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play trumpet?",
+    "answer": "Playing trumpet is blowing to make music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play trumpet?",
+    "answer": "It’s a shiny instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is roller skating?",
+    "answer": "Roller skating is moving on wheeled shoes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is roller skating?",
+    "answer": "It’s like dancing on wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about roller skating?",
+    "answer": "Roller skating is moving on wheeled shoes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about roller skating?",
+    "answer": "It’s like dancing on wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does roller skating involve?",
+    "answer": "Roller skating is moving on wheeled shoes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does roller skating involve?",
+    "answer": "It’s like dancing on wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain roller skating.",
+    "answer": "Roller skating is moving on wheeled shoes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain roller skating.",
+    "answer": "It’s like dancing on wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you roller skate?",
+    "answer": "Roller skating is moving on wheeled shoes.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you roller skate?",
+    "answer": "It’s like dancing on wheels.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing magic tricks?",
+    "answer": "Magic tricks are surprising people with fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing magic tricks?",
+    "answer": "It’s making things disappear.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about magic tricks.",
+    "answer": "Magic tricks are surprising people with fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about magic tricks.",
+    "answer": "It’s making things disappear.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does doing magic mean?",
+    "answer": "Magic tricks are surprising people with fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does doing magic mean?",
+    "answer": "It’s making things disappear.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain magic tricks.",
+    "answer": "Magic tricks are surprising people with fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain magic tricks.",
+    "answer": "It’s making things disappear.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do magic?",
+    "answer": "Magic tricks are surprising people with fun.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do magic?",
+    "answer": "It’s making things disappear.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is writing blogs?",
+    "answer": "Writing blogs is sharing stories online.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is writing blogs?",
+    "answer": "It’s like a digital diary.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain writing blogs?",
+    "answer": "Writing blogs is sharing stories online.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain writing blogs?",
+    "answer": "It’s like a digital diary.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does blog writing involve?",
+    "answer": "Writing blogs is sharing stories online.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does blog writing involve?",
+    "answer": "It’s like a digital diary.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about blogs.",
+    "answer": "Writing blogs is sharing stories online.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about blogs.",
+    "answer": "It’s like a digital diary.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you write blogs?",
+    "answer": "Writing blogs is sharing stories online.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you write blogs?",
+    "answer": "It’s like a digital diary.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing harmonica?",
+    "answer": "Playing harmonica is blowing small music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing harmonica?",
+    "answer": "It’s a tiny instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing harmonica.",
+    "answer": "Playing harmonica is blowing small music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing harmonica.",
+    "answer": "It’s a tiny instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does harmonica playing mean?",
+    "answer": "Playing harmonica is blowing small music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does harmonica playing mean?",
+    "answer": "It’s a tiny instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about harmonica.",
+    "answer": "Playing harmonica is blowing small music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about harmonica.",
+    "answer": "It’s a tiny instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play harmonica?",
+    "answer": "Playing harmonica is blowing small music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play harmonica?",
+    "answer": "It’s a tiny instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing sudoku?",
+    "answer": "Sudoku is a number puzzle game.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing sudoku?",
+    "answer": "It’s filling a grid with numbers.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about sudoku?",
+    "answer": "Sudoku is a number puzzle game.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about sudoku?",
+    "answer": "It’s filling a grid with numbers.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does sudoku involve?",
+    "answer": "Sudoku is a number puzzle game.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does sudoku involve?",
+    "answer": "It’s filling a grid with numbers.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain sudoku.",
+    "answer": "Sudoku is a number puzzle game.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain sudoku.",
+    "answer": "It’s filling a grid with numbers.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do sudoku?",
+    "answer": "Sudoku is a number puzzle game.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do sudoku?",
+    "answer": "It’s filling a grid with numbers.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is painting with oils?",
+    "answer": "Oil painting is using thick colors.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is painting with oils?",
+    "answer": "It’s making bright art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about oil painting.",
+    "answer": "Oil painting is using thick colors.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about oil painting.",
+    "answer": "It’s making bright art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does oil painting mean?",
+    "answer": "Oil painting is using thick colors.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does oil painting mean?",
+    "answer": "It’s making bright art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain painting with oils.",
+    "answer": "Oil painting is using thick colors.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain painting with oils.",
+    "answer": "It’s making bright art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you paint with oils?",
+    "answer": "Oil painting is using thick colors.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you paint with oils?",
+    "answer": "It’s making bright art.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is making candles?",
+    "answer": "Making candles is shaping wax for light.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is making candles?",
+    "answer": "It’s creating pretty candles.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain making candles?",
+    "answer": "Making candles is shaping wax for light.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain making candles?",
+    "answer": "It’s creating pretty candles.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does candle making involve?",
+    "answer": "Making candles is shaping wax for light.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does candle making involve?",
+    "answer": "It’s creating pretty candles.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about candles.",
+    "answer": "Making candles is shaping wax for light.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about candles.",
+    "answer": "It’s creating pretty candles.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you make candles?",
+    "answer": "Making candles is shaping wax for light.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you make candles?",
+    "answer": "It’s creating pretty candles.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing ukulele?",
+    "answer": "Playing ukulele is strumming small strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing ukulele?",
+    "answer": "It’s a fun, tiny guitar.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing ukulele.",
+    "answer": "Playing ukulele is strumming small strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing ukulele.",
+    "answer": "It’s a fun, tiny guitar.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does ukulele playing mean?",
+    "answer": "Playing ukulele is strumming small strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does ukulele playing mean?",
+    "answer": "It’s a fun, tiny guitar.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about ukulele.",
+    "answer": "Playing ukulele is strumming small strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about ukulele.",
+    "answer": "It’s a fun, tiny guitar.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play ukulele?",
+    "answer": "Playing ukulele is strumming small strings.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play ukulele?",
+    "answer": "It’s a fun, tiny guitar.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing jigsaw puzzles?",
+    "answer": "Jigsaw puzzles are making pictures from pieces.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing jigsaw puzzles?",
+    "answer": "It’s fun to solve them.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about jigsaw puzzles?",
+    "answer": "Jigsaw puzzles are making pictures from pieces.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about jigsaw puzzles?",
+    "answer": "It’s fun to solve them.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does jigsaw involve?",
+    "answer": "Jigsaw puzzles are making pictures from pieces.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does jigsaw involve?",
+    "answer": "It’s fun to solve them.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain jigsaw puzzles.",
+    "answer": "Jigsaw puzzles are making pictures from pieces.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain jigsaw puzzles.",
+    "answer": "It’s fun to solve them.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do jigsaw?",
+    "answer": "Jigsaw puzzles are making pictures from pieces.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do jigsaw?",
+    "answer": "It’s fun to solve them.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing banjo?",
+    "answer": "Playing banjo is strumming for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing banjo?",
+    "answer": "It’s a fun string instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about playing banjo.",
+    "answer": "Playing banjo is strumming for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about playing banjo.",
+    "answer": "It’s a fun string instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does banjo playing mean?",
+    "answer": "Playing banjo is strumming for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does banjo playing mean?",
+    "answer": "It’s a fun string instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain banjo.",
+    "answer": "Playing banjo is strumming for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain banjo.",
+    "answer": "It’s a fun string instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play banjo?",
+    "answer": "Playing banjo is strumming for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play banjo?",
+    "answer": "It’s a fun string instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing embroidery?",
+    "answer": "Embroidery is sewing art on cloth.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing embroidery?",
+    "answer": "It’s making designs with thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain embroidery?",
+    "answer": "Embroidery is sewing art on cloth.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain embroidery?",
+    "answer": "It’s making designs with thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does embroidery involve?",
+    "answer": "Embroidery is sewing art on cloth.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does embroidery involve?",
+    "answer": "It’s making designs with thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about embroidery.",
+    "answer": "Embroidery is sewing art on cloth.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about embroidery.",
+    "answer": "It’s making designs with thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do embroidery?",
+    "answer": "Embroidery is sewing art on cloth.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do embroidery?",
+    "answer": "It’s making designs with thread.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is making soap?",
+    "answer": "Making soap is creating bars for washing.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is making soap?",
+    "answer": "It’s mixing oils and scents.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain making soap.",
+    "answer": "Making soap is creating bars for washing.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain making soap.",
+    "answer": "It’s mixing oils and scents.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does soap making mean?",
+    "answer": "Making soap is creating bars for washing.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does soap making mean?",
+    "answer": "It’s mixing oils and scents.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about soap.",
+    "answer": "Making soap is creating bars for washing.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about soap.",
+    "answer": "It’s mixing oils and scents.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you make soap?",
+    "answer": "Making soap is creating bars for washing.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you make soap?",
+    "answer": "It’s mixing oils and scents.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing clarinet?",
+    "answer": "Playing clarinet is blowing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing clarinet?",
+    "answer": "It’s a woodwind instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about clarinet?",
+    "answer": "Playing clarinet is blowing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about clarinet?",
+    "answer": "It’s a woodwind instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does clarinet playing involve?",
+    "answer": "Playing clarinet is blowing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does clarinet playing involve?",
+    "answer": "It’s a woodwind instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain clarinet.",
+    "answer": "Playing clarinet is blowing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain clarinet.",
+    "answer": "It’s a woodwind instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play clarinet?",
+    "answer": "Playing clarinet is blowing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play clarinet?",
+    "answer": "It’s a woodwind instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is building kites?",
+    "answer": "Building kites is making flying toys.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is building kites?",
+    "answer": "It’s crafting kites for wind.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about building kites.",
+    "answer": "Building kites is making flying toys.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about building kites.",
+    "answer": "It’s crafting kites for wind.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does kite building mean?",
+    "answer": "Building kites is making flying toys.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does kite building mean?",
+    "answer": "It’s crafting kites for wind.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain building kites.",
+    "answer": "Building kites is making flying toys.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain building kites.",
+    "answer": "It’s crafting kites for wind.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you build kites?",
+    "answer": "Building kites is making flying toys.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you build kites?",
+    "answer": "It’s crafting kites for wind.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is writing essays?",
+    "answer": "Writing essays is sharing ideas on paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is writing essays?",
+    "answer": "It’s explaining thoughts clearly.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain writing essays?",
+    "answer": "Writing essays is sharing ideas on paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain writing essays?",
+    "answer": "It’s explaining thoughts clearly.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does essay writing involve?",
+    "answer": "Writing essays is sharing ideas on paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does essay writing involve?",
+    "answer": "It’s explaining thoughts clearly.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about essays.",
+    "answer": "Writing essays is sharing ideas on paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about essays.",
+    "answer": "It’s explaining thoughts clearly.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you write essays?",
+    "answer": "Writing essays is sharing ideas on paper.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you write essays?",
+    "answer": "It’s explaining thoughts clearly.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing cello?",
+    "answer": "Playing cello is using a bow for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing cello?",
+    "answer": "It’s a big string instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing cello.",
+    "answer": "Playing cello is using a bow for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain playing cello.",
+    "answer": "It’s a big string instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does cello playing mean?",
+    "answer": "Playing cello is using a bow for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does cello playing mean?",
+    "answer": "It’s a big string instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about cello.",
+    "answer": "Playing cello is using a bow for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about cello.",
+    "answer": "It’s a big string instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play cello?",
+    "answer": "Playing cello is using a bow for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play cello?",
+    "answer": "It’s a big string instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing knitting?",
+    "answer": "Knitting is making things with yarn.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing knitting?",
+    "answer": "It’s creating scarves or hats.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about knitting?",
+    "answer": "Knitting is making things with yarn.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you tell me about knitting?",
+    "answer": "It’s creating scarves or hats.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does knitting involve?",
+    "answer": "Knitting is making things with yarn.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does knitting involve?",
+    "answer": "It’s creating scarves or hats.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain knitting.",
+    "answer": "Knitting is making things with yarn.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain knitting.",
+    "answer": "It’s creating scarves or hats.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do knitting?",
+    "answer": "Knitting is making things with yarn.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do knitting?",
+    "answer": "It’s creating scarves or hats.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is making pottery?",
+    "answer": "Making pottery is shaping clay.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is making pottery?",
+    "answer": "It’s crafting bowls or vases.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about making pottery.",
+    "answer": "Making pottery is shaping clay.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about making pottery.",
+    "answer": "It’s crafting bowls or vases.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does pottery making mean?",
+    "answer": "Making pottery is shaping clay.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does pottery making mean?",
+    "answer": "It’s crafting bowls or vases.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain making pottery.",
+    "answer": "Making pottery is shaping clay.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain making pottery.",
+    "answer": "It’s crafting bowls or vases.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you make pottery?",
+    "answer": "Making pottery is shaping clay.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you make pottery?",
+    "answer": "It’s crafting bowls or vases.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing accordion?",
+    "answer": "Playing accordion is squeezing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is playing accordion?",
+    "answer": "It’s a fun, loud instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain accordion?",
+    "answer": "Playing accordion is squeezing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Can you explain accordion?",
+    "answer": "It’s a fun, loud instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does accordion playing involve?",
+    "answer": "Playing accordion is squeezing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does accordion playing involve?",
+    "answer": "It’s a fun, loud instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about accordion.",
+    "answer": "Playing accordion is squeezing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about accordion.",
+    "answer": "It’s a fun, loud instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play accordion?",
+    "answer": "Playing accordion is squeezing for music.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you play accordion?",
+    "answer": "It’s a fun, loud instrument.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing archery?",
+    "answer": "Archery is shooting arrows with a bow.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What is doing archery?",
+    "answer": "It’s aiming at a target.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain doing archery.",
+    "answer": "Archery is shooting arrows with a bow.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Explain doing archery.",
+    "answer": "It’s aiming at a target.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does archery mean?",
+    "answer": "Archery is shooting arrows with a bow.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What does archery mean?",
+    "answer": "It’s aiming at a target.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about archery.",
+    "answer": "Archery is shooting arrows with a bow.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "Tell me about archery.",
+    "answer": "It’s aiming at a target.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do archery?",
+    "answer": "Archery is shooting arrows with a bow.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "How do you do archery?",
+    "answer": "It’s aiming at a target.",
+    "topic": "hobbies",
+    "source": "legacy-dataset"
+  },
+  {
+    "question": "What do you do in your free time?",
+    "answer": "I love napping in sunny spots and watching birds through the window! I also enjoy exploring new places. What about you - what hobbies do you enjoy?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "What do you do in your free time?",
+    "answer": "As a cat, I spend time sleeping, playing, and observing the world around me! I'm curious about human hobbies though. What do you like to do for fun?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "What do you do in your free time?",
+    "answer": "I enjoy simple pleasures like watching clouds, listening to sounds, and discovering interesting things! What are your favorite ways to spend free time?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like music",
+    "answer": "Music is wonderful! I enjoy listening to different sounds and rhythms. What type of music do you like best?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like music",
+    "answer": "Oh, that's great! Music can be so soothing. Do you play any instruments, or do you prefer listening?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like music",
+    "answer": "I love how music can change moods! What's your favorite song or artist right now?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like sports",
+    "answer": "Sports are exciting! I enjoy watching things move quickly - it reminds me of chasing toys! What sports do you like to play or watch?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like sports",
+    "answer": "That's awesome! Physical activity is so important. Do you have a favorite sport, or do you enjoy many different ones?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like sports",
+    "answer": "Sports can be so much fun! I admire the energy and skill involved. Are you more into team sports or individual activities?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like reading",
+    "answer": "Reading is fantastic! I love stories and learning new things. What kind of books do you enjoy reading?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like reading",
+    "answer": "That's wonderful! Books can take you to so many different worlds. Do you have a favorite genre or author?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like reading",
+    "answer": "Reading is such a great hobby! I'm curious - do you prefer fiction or non-fiction? What's the last book you really enjoyed?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like cooking",
+    "answer": "Cooking sounds amazing! I love the smells that come from kitchens. What's your favorite thing to cook?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like cooking",
+    "answer": "That's a great skill! I'm always curious about different foods and flavors. Do you enjoy trying new recipes?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like cooking",
+    "answer": "Cooking is such a creative hobby! Do you prefer baking or cooking meals? What's your specialty dish?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like gardening",
+    "answer": "Gardening is wonderful! I love being around plants and watching things grow. What do you like to grow in your garden?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like gardening",
+    "answer": "That's such a peaceful hobby! I enjoy being outdoors with plants. Do you grow flowers, vegetables, or both?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like gardening",
+    "answer": "Gardening sounds relaxing! I bet it's satisfying to watch your plants grow. What's your favorite thing about gardening?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like movies",
+    "answer": "Movies are great! I enjoy watching moving pictures and following stories. What kind of movies do you like best?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like movies",
+    "answer": "That's fun! Movies can be so entertaining. Do you prefer comedies, dramas, action films, or something else?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  },
+  {
+    "question": "I like movies",
+    "answer": "I love how movies tell stories! Do you watch them at home or do you like going to the cinema? What's a movie you'd recommend?",
+    "topic": "hobbies",
+    "source": "additional-data"
+  }
+]

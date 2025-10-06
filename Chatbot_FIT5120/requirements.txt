@@ -1,0 +1,9 @@
+flask
+flask-cors
+nltk
+scikit-learn
+pandas
+numpy
+requests
+datasets
+sentence-transformers

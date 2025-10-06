@@ -1,51 +1,58 @@
 [
   {
+    "for": "I want to talk about weather",
+    "responses": [
+      "Meow! I love talking about weather! As a cat, I'm very sensitive to weather changes. Do you want to know about today's weather, or would you like to learn about different types of weather like sunny, rainy, or snowy days?",
+      "Purr! Weather is one of my favorite topics because it affects my daily napping schedule! Are you curious about what the weather is like today, or do you want to practice weather vocabulary?"
+    ]
+  },
+  {
     "for": "What is the weather like today?",
     "responses": [
-      "Today, the weather is sunny and warm. It is a good day to go outside.",
-      "The weather today is cloudy with a chance of rain. Remember to take an umbrella."
+      "Meow! I can't tell you the exact weather, but I love sunny days for napping by the window! You can check a weather app or look outside to see if it's sunny, cloudy, or rainy today.",
+      "I wish I could peek outside for you! As a cat, I enjoy watching raindrops on windows or sunbeams streaming in. Try checking your weather app or news for today's forecast!"
     ]
   },
   {
     "for": "Is it raining outside?",
     "responses": [
-      "Yes, it is raining now. The ground is wet.",
-      "No, it is not raining. The sky is clear."
+      "Meow! I can't see outside from here, but I love watching raindrops race down the window! You can look outside or check a weather app to see if it's raining.",
+      "I don't know right now, but rain sounds make such relaxing music for cat naps! Try looking out the window or checking the weather forecast."
     ]
   },
   {
     "for": "How hot is it today?",
     "responses": [
-      "It is about 30 degrees Celsius today. That is very hot.",
-      "Today it is 25 degrees. It feels nice and warm."
+      "Meow! I can't check the temperature, but I know cats love warm sunny spots! You can check a thermometer or weather app to see how hot it is today.",
+      "As a cat, I love basking in warm sunshine! For the exact temperature, try checking your phone's weather app or a thermometer."
     ]
   },
   {
     "for": "Will it snow tomorrow?",
     "responses": [
-      "Yes, there might be snow tomorrow. It will be cold.",
-      "No, tomorrow will be rainy, not snowy."
+      "Meow! I can't predict the weather, but snow looks so pretty from a warm house! Check tomorrow's weather forecast on your phone or TV for snow predictions.",
+      "I'd love to watch snowflakes fall! For accurate weather predictions, check a reliable weather app or website for tomorrow's forecast."
     ]
   },
   {
     "for": "What does sunny mean?",
     "responses": [
-      "Sunny means the sun is shining and there are no clouds.",
-      "When it is sunny, the sky is bright and blue."
+      "Meow! Sunny means the bright sun is shining without clouds covering it! Perfect weather for finding a warm spot to nap in the sunbeams.",
+      "Sunny weather means the sun is out and shining brightly! As a cat, I love sunny days because they create the best warm spots for sleeping."
     ]
   },
   {
     "for": "Is it cold outside?",
     "responses": [
-      "Yes, it is cold. You should wear a jacket.",
-      "No, it is warm. A t-shirt is fine."
+      "Meow! I can't feel the outside temperature, but I know when it's cold because my humans wear thick coats! Check a thermometer or weather app to know for sure.",
+      "I can't tell, but I notice when it's cold because my favorite sunny window spots aren't as warm! Try checking the weather forecast or feeling the air yourself."
     ]
   },
   {
     "for": "What is the weather forecast for this week?",
     "responses": [
-      "This week, it will be mostly sunny with some rain on Wednesday.",
-      "The forecast says warm days and cool nights."
+      "Meow! I can't predict the future weather, but I love when my humans check their weather apps and tell me about sunny days coming! Try checking a weather website or app for the weekly forecast.",
+      "As a cat, I just hope for lots of sunny days this week for perfect napping weather! For accurate forecasts, check your favorite weather app or news source."
     ]
   },
   {
@@ -211,10 +218,7 @@
   },
   {
     "for": "Is there wind now?",
-    "responses": [
-      "Yes, there is wind blowing.",
-      "No, it is calm with no wind."
-    ]
+    "responses": ["Yes, there is wind blowing.", "No, it is calm with no wind."]
   },
   {
     "for": "What is hail?",
@@ -225,10 +229,7 @@
   },
   {
     "for": "How warm is it today?",
-    "responses": [
-      "It is warm, about 20 degrees.",
-      "Today is warm and nice."
-    ]
+    "responses": ["It is warm, about 20 degrees.", "Today is warm and nice."]
   },
   {
     "for": "What is lightning?",
@@ -281,10 +282,7 @@
   },
   {
     "for": "Will it thunder today?",
-    "responses": [
-      "Yes, there might be thunder.",
-      "No, no storms today."
-    ]
+    "responses": ["Yes, there might be thunder.", "No, no storms today."]
   },
   {
     "for": "What does mild mean?",
@@ -295,10 +293,7 @@
   },
   {
     "for": "Is it dry today?",
-    "responses": [
-      "Yes, the weather is dry.",
-      "No, it is humid."
-    ]
+    "responses": ["Yes, the weather is dry.", "No, it is humid."]
   },
   {
     "for": "What is a hurricane?",
@@ -337,10 +332,7 @@
   },
   {
     "for": "Is the air fresh today?",
-    "responses": [
-      "Yes, the air is fresh and clean.",
-      "No, it feels stuffy."
-    ]
+    "responses": ["Yes, the air is fresh and clean.", "No, it feels stuffy."]
   },
   {
     "for": "What is a blizzard?",
@@ -351,24 +343,15 @@
   },
   {
     "for": "How is the weather by the sea?",
-    "responses": [
-      "By the sea, it is breezy.",
-      "Sea weather is often mild."
-    ]
+    "responses": ["By the sea, it is breezy.", "Sea weather is often mild."]
   },
   {
     "for": "What is sleet?",
-    "responses": [
-      "Sleet is rain mixed with snow.",
-      "Sleet is icy rain."
-    ]
+    "responses": ["Sleet is rain mixed with snow.", "Sleet is icy rain."]
   },
   {
     "for": "Will it be windy this evening?",
-    "responses": [
-      "Yes, windy this evening.",
-      "No, calm evening."
-    ]
+    "responses": ["Yes, windy this evening.", "No, calm evening."]
   },
   {
     "for": "What does dry mean?",
@@ -400,17 +383,11 @@
   },
   {
     "for": "What is ice?",
-    "responses": [
-      "Ice is frozen water.",
-      "Ice is slippery."
-    ]
+    "responses": ["Ice is frozen water.", "Ice is slippery."]
   },
   {
     "for": "Will it freeze tonight?",
-    "responses": [
-      "Yes, it might freeze. Cover plants.",
-      "No, above freezing."
-    ]
+    "responses": ["Yes, it might freeze. Cover plants.", "No, above freezing."]
   },
   {
     "for": "What does breezy mean?",
@@ -442,31 +419,19 @@
   },
   {
     "for": "What is mist?",
-    "responses": [
-      "Mist is light fog.",
-      "Mist is wet air."
-    ]
+    "responses": ["Mist is light fog.", "Mist is wet air."]
   },
   {
     "for": "Will it be humid tomorrow?",
-    "responses": [
-      "Yes, humid tomorrow.",
-      "No, dry air tomorrow."
-    ]
+    "responses": ["Yes, humid tomorrow.", "No, dry air tomorrow."]
   },
   {
     "for": "What does calm mean?",
-    "responses": [
-      "Calm means no wind.",
-      "Calm weather is peaceful."
-    ]
+    "responses": ["Calm means no wind.", "Calm weather is peaceful."]
   },
   {
     "for": "Is the sun hot today?",
-    "responses": [
-      "Yes, the sun feels hot.",
-      "No, clouds block the sun."
-    ]
+    "responses": ["Yes, the sun feels hot.", "No, clouds block the sun."]
   },
   {
     "for": "What is a typhoon?",
@@ -491,24 +456,15 @@
   },
   {
     "for": "Will it be dry this week?",
-    "responses": [
-      "Yes, dry weather all week.",
-      "No, some rain expected."
-    ]
+    "responses": ["Yes, dry weather all week.", "No, some rain expected."]
   },
   {
     "for": "What does overcast mean?",
-    "responses": [
-      "Overcast means full of clouds.",
-      "Overcast sky is gray."
-    ]
+    "responses": ["Overcast means full of clouds.", "Overcast sky is gray."]
   },
   {
     "for": "Is there lightning now?",
-    "responses": [
-      "Yes, I see lightning.",
-      "No, no lightning."
-    ]
+    "responses": ["Yes, I see lightning.", "No, no lightning."]
   },
   {
     "for": "What is a monsoon?",
@@ -533,24 +489,15 @@
   },
   {
     "for": "Will it snow this winter?",
-    "responses": [
-      "Yes, expect snow this winter.",
-      "Maybe, winters can vary."
-    ]
+    "responses": ["Yes, expect snow this winter.", "Maybe, winters can vary."]
   },
   {
     "for": "What does chilly mean?",
-    "responses": [
-      "Chilly means a bit cold.",
-      "Chilly weather needs a sweater."
-    ]
+    "responses": ["Chilly means a bit cold.", "Chilly weather needs a sweater."]
   },
   {
     "for": "Is the wind strong?",
-    "responses": [
-      "Yes, the wind is strong today.",
-      "No, light wind."
-    ]
+    "responses": ["Yes, the wind is strong today.", "No, light wind."]
   },
   {
     "for": "What is a heatwave?",
@@ -568,31 +515,19 @@
   },
   {
     "for": "What is a rainbow after?",
-    "responses": [
-      "A rainbow comes after rain.",
-      "Rainbow needs sun and rain."
-    ]
+    "responses": ["A rainbow comes after rain.", "Rainbow needs sun and rain."]
   },
   {
     "for": "Will it be foggy in the morning?",
-    "responses": [
-      "Yes, foggy morning.",
-      "No, clear morning."
-    ]
+    "responses": ["Yes, foggy morning.", "No, clear morning."]
   },
   {
     "for": "What does scorching mean?",
-    "responses": [
-      "Scorching means very hot.",
-      "Scorching sun burns."
-    ]
+    "responses": ["Scorching means very hot.", "Scorching sun burns."]
   },
   {
     "for": "Is it drizzling?",
-    "responses": [
-      "Yes, light drizzle.",
-      "No, dry."
-    ]
+    "responses": ["Yes, light drizzle.", "No, dry."]
   },
   {
     "for": "What is a cyclone?",
@@ -617,10 +552,7 @@
   },
   {
     "for": "Will it be mild today?",
-    "responses": [
-      "Yes, mild weather.",
-      "No, extreme today."
-    ]
+    "responses": ["Yes, mild weather.", "No, extreme today."]
   },
   {
     "for": "What does freezing mean?",
@@ -631,10 +563,7 @@
   },
   {
     "for": "Is the sky clear?",
-    "responses": [
-      "Yes, clear sky.",
-      "No, cloudy."
-    ]
+    "responses": ["Yes, clear sky.", "No, cloudy."]
   },
   {
     "for": "What is a sandstorm?",
@@ -645,10 +574,7 @@
   },
   {
     "for": "How is the weather in polar regions?",
-    "responses": [
-      "Polar weather is very cold.",
-      "Poles have ice and snow."
-    ]
+    "responses": ["Polar weather is very cold.", "Poles have ice and snow."]
   },
   {
     "for": "What is temperature?",
@@ -659,24 +585,15 @@
   },
   {
     "for": "Will it rain heavily?",
-    "responses": [
-      "Yes, heavy rain.",
-      "No, light rain."
-    ]
+    "responses": ["Yes, heavy rain.", "No, light rain."]
   },
   {
     "for": "What does balmy mean?",
-    "responses": [
-      "Balmy means warm and pleasant.",
-      "Balmy nights are nice."
-    ]
+    "responses": ["Balmy means warm and pleasant.", "Balmy nights are nice."]
   },
   {
     "for": "Is there a breeze?",
-    "responses": [
-      "Yes, nice breeze.",
-      "No, still air."
-    ]
+    "responses": ["Yes, nice breeze.", "No, still air."]
   },
   {
     "for": "What is an earthquake?",
@@ -687,10 +604,7 @@
   },
   {
     "for": "How is the weather in Europe?",
-    "responses": [
-      "Europe has varied weather.",
-      "Depends on the country."
-    ]
+    "responses": ["Europe has varied weather.", "Depends on the country."]
   },
   {
     "for": "What is barometer?",
@@ -701,24 +615,15 @@
   },
   {
     "for": "Will the sun set early?",
-    "responses": [
-      "In winter, sun sets early.",
-      "Depends on the season."
-    ]
+    "responses": ["In winter, sun sets early.", "Depends on the season."]
   },
   {
     "for": "What does nippy mean?",
-    "responses": [
-      "Nippy means cool and fresh.",
-      "Nippy air is brisk."
-    ]
+    "responses": ["Nippy means cool and fresh.", "Nippy air is brisk."]
   },
   {
     "for": "Is it pouring rain?",
-    "responses": [
-      "Yes, pouring outside.",
-      "No, just sprinkling."
-    ]
+    "responses": ["Yes, pouring outside.", "No, just sprinkling."]
   },
   {
     "for": "What is climate?",
@@ -729,38 +634,23 @@
   },
   {
     "for": "How is the weather in Asia?",
-    "responses": [
-      "Asia has many climates.",
-      "From hot to cold."
-    ]
+    "responses": ["Asia has many climates.", "From hot to cold."]
   },
   {
     "for": "What is anemometer?",
-    "responses": [
-      "An anemometer measures wind speed.",
-      "It spins in the wind."
-    ]
+    "responses": ["An anemometer measures wind speed.", "It spins in the wind."]
   },
   {
     "for": "Will it be overcast tomorrow?",
-    "responses": [
-      "Yes, overcast sky.",
-      "No, partly sunny."
-    ]
+    "responses": ["Yes, overcast sky.", "No, partly sunny."]
   },
   {
     "for": "What does brisk mean?",
-    "responses": [
-      "Brisk means cool and energizing.",
-      "Brisk walk in cool air."
-    ]
+    "responses": ["Brisk means cool and energizing.", "Brisk walk in cool air."]
   },
   {
     "for": "Is the humidity high?",
-    "responses": [
-      "Yes, high humidity.",
-      "No, low."
-    ]
+    "responses": ["Yes, high humidity.", "No, low."]
   },
   {
     "for": "What is global warming?",
@@ -771,10 +661,7 @@
   },
   {
     "for": "How is the weather in Africa?",
-    "responses": [
-      "Africa is mostly hot.",
-      "Varied from deserts to jungles."
-    ]
+    "responses": ["Africa is mostly hot.", "Varied from deserts to jungles."]
   },
   {
     "for": "What is thermometer?",
@@ -785,10 +672,7 @@
   },
   {
     "for": "Will there be a rainbow tomorrow?",
-    "responses": [
-      "If it rains and sun shines, yes.",
-      "Hard to say."
-    ]
+    "responses": ["If it rains and sun shines, yes.", "Hard to say."]
   },
   {
     "for": "What does muggy mean?",
@@ -799,10 +683,7 @@
   },
   {
     "for": "Is it sleeting?",
-    "responses": [
-      "Yes, sleet falling.",
-      "No, just snow."
-    ]
+    "responses": ["Yes, sleet falling.", "No, just snow."]
   },
   {
     "for": "What is ozone layer?",
@@ -813,94 +694,55 @@
   },
   {
     "for": "How is the weather in America?",
-    "responses": [
-      "America has all kinds of weather.",
-      "From north to south."
-    ]
+    "responses": ["America has all kinds of weather.", "From north to south."]
   },
   {
     "for": "What is hygrometer?",
-    "responses": [
-      "A hygrometer measures humidity.",
-      "It tells if air is wet."
-    ]
+    "responses": ["A hygrometer measures humidity.", "It tells if air is wet."]
   },
   {
     "for": "Will it drizzle today?",
-    "responses": [
-      "Yes, light drizzle.",
-      "No, clear."
-    ]
+    "responses": ["Yes, light drizzle.", "No, clear."]
   },
   {
     "for": "What does temperate mean?",
-    "responses": [
-      "Temperate means moderate weather.",
-      "Not extreme."
-    ]
+    "responses": ["Temperate means moderate weather.", "Not extreme."]
   },
   {
     "for": "Is there frost on the ground?",
-    "responses": [
-      "Yes, morning frost.",
-      "No, too warm."
-    ]
+    "responses": ["Yes, morning frost.", "No, too warm."]
   },
   {
     "for": "What is acid rain?",
-    "responses": [
-      "Acid rain is polluted rain.",
-      "From factories."
-    ]
+    "responses": ["Acid rain is polluted rain.", "From factories."]
   },
   {
     "for": "How is the weather in Australia?",
-    "responses": [
-      "Australia is hot in summer.",
-      "Mild winters."
-    ]
+    "responses": ["Australia is hot in summer.", "Mild winters."]
   },
   {
     "for": "What is rain gauge?",
-    "responses": [
-      "A rain gauge measures rainfall.",
-      "It's a container."
-    ]
+    "responses": ["A rain gauge measures rainfall.", "It's a container."]
   },
   {
     "for": "Will the wind blow hard?",
-    "responses": [
-      "Yes, strong winds.",
-      "No, gentle."
-    ]
+    "responses": ["Yes, strong winds.", "No, gentle."]
   },
   {
     "for": "What does arid mean?",
-    "responses": [
-      "Arid means very dry.",
-      "Like deserts."
-    ]
+    "responses": ["Arid means very dry.", "Like deserts."]
   },
   {
     "for": "Is it hailing?",
-    "responses": [
-      "Yes, hail stones.",
-      "No, rain only."
-    ]
+    "responses": ["Yes, hail stones.", "No, rain only."]
   },
   {
     "for": "What is greenhouse effect?",
-    "responses": [
-      "Greenhouse effect traps heat.",
-      "Makes Earth warm."
-    ]
+    "responses": ["Greenhouse effect traps heat.", "Makes Earth warm."]
   },
   {
     "for": "How is the weather in Antarctica?",
-    "responses": [
-      "Antarctica is extremely cold.",
-      "Always frozen."
-    ]
+    "responses": ["Antarctica is extremely cold.", "Always frozen."]
   },
   {
     "for": "What is weather vane?",
@@ -911,94 +753,55 @@
   },
   {
     "for": "Will it be chilly tonight?",
-    "responses": [
-      "Yes, chilly.",
-      "No, warm."
-    ]
+    "responses": ["Yes, chilly.", "No, warm."]
   },
   {
     "for": "What does tropical mean?",
-    "responses": [
-      "Tropical means hot and wet.",
-      "Near equator."
-    ]
+    "responses": ["Tropical means hot and wet.", "Near equator."]
   },
   {
     "for": "Is the temperature dropping?",
-    "responses": [
-      "Yes, getting colder.",
-      "No, stable."
-    ]
+    "responses": ["Yes, getting colder.", "No, stable."]
   },
   {
     "for": "What is el nino?",
-    "responses": [
-      "El Nino is warm ocean current.",
-      "Affects weather."
-    ]
+    "responses": ["El Nino is warm ocean current.", "Affects weather."]
   },
   {
     "for": "How is the weather in the arctic?",
-    "responses": [
-      "Arctic is cold and icy.",
-      "Long winters."
-    ]
+    "responses": ["Arctic is cold and icy.", "Long winters."]
   },
   {
     "for": "What is sunset?",
-    "responses": [
-      "Sunset is when sun goes down.",
-      "Sky turns colors."
-    ]
+    "responses": ["Sunset is when sun goes down.", "Sky turns colors."]
   },
   {
     "for": "Will it be balmy tomorrow?",
-    "responses": [
-      "Yes, balmy weather.",
-      "No, cooler."
-    ]
+    "responses": ["Yes, balmy weather.", "No, cooler."]
   },
   {
     "for": "What does polar mean?",
-    "responses": [
-      "Polar means near the poles.",
-      "Very cold."
-    ]
+    "responses": ["Polar means near the poles.", "Very cold."]
   },
   {
     "for": "Is there dew on the grass?",
-    "responses": [
-      "Yes, morning dew.",
-      "No, dry."
-    ]
+    "responses": ["Yes, morning dew.", "No, dry."]
   },
   {
     "for": "What is la nina?",
-    "responses": [
-      "La Nina is cool ocean current.",
-      "Changes weather patterns."
-    ]
+    "responses": ["La Nina is cool ocean current.", "Changes weather patterns."]
   },
   {
     "for": "How is the weather in the tropics?",
-    "responses": [
-      "Tropics are warm year-round.",
-      "Rainy seasons."
-    ]
+    "responses": ["Tropics are warm year-round.", "Rainy seasons."]
   },
   {
     "for": "What is sunrise?",
-    "responses": [
-      "Sunrise is when sun comes up.",
-      "Morning light."
-    ]
+    "responses": ["Sunrise is when sun comes up.", "Morning light."]
   },
   {
     "for": "Will the sky be blue tomorrow?",
-    "responses": [
-      "Yes, blue sky.",
-      "Maybe, if no clouds."
-    ]
+    "responses": ["Yes, blue sky.", "Maybe, if no clouds."]
   },
   {
     "for": "What does continental mean?",
@@ -1009,122 +812,71 @@
   },
   {
     "for": "Is it misty outside?",
-    "responses": [
-      "Yes, misty.",
-      "No, clear."
-    ]
+    "responses": ["Yes, misty.", "No, clear."]
   },
   {
     "for": "What is jet stream?",
-    "responses": [
-      "Jet stream is fast wind high in sky.",
-      "Affects weather."
-    ]
+    "responses": ["Jet stream is fast wind high in sky.", "Affects weather."]
   },
   {
     "for": "How is the weather in the equator?",
-    "responses": [
-      "Equator is hot and humid.",
-      "Little seasons."
-    ]
+    "responses": ["Equator is hot and humid.", "Little seasons."]
   },
   {
     "for": "What is moon phase?",
-    "responses": [
-      "Moon phases are how moon looks.",
-      "Full, new, etc."
-    ]
+    "responses": ["Moon phases are how moon looks.", "Full, new, etc."]
   },
   {
     "for": "Will there be thunder tonight?",
-    "responses": [
-      "Possible thunder.",
-      "No storms."
-    ]
+    "responses": ["Possible thunder.", "No storms."]
   },
   {
     "for": "What does maritime mean?",
-    "responses": [
-      "Maritime climate is mild.",
-      "Near sea."
-    ]
+    "responses": ["Maritime climate is mild.", "Near sea."]
   },
   {
     "for": "Is the air polluted?",
-    "responses": [
-      "Depends on location.",
-      "Check air quality."
-    ]
+    "responses": ["Depends on location.", "Check air quality."]
   },
   {
     "for": "What is atmospheric pressure?",
-    "responses": [
-      "Atmospheric pressure is air weight.",
-      "High or low."
-    ]
+    "responses": ["Atmospheric pressure is air weight.", "High or low."]
   },
   {
     "for": "How is the weather in the Himalayas?",
-    "responses": [
-      "Himalayas are cold and snowy.",
-      "High altitude."
-    ]
+    "responses": ["Himalayas are cold and snowy.", "High altitude."]
   },
   {
     "for": "What is eclipse?",
-    "responses": [
-      "Eclipse is when sun or moon is blocked.",
-      "Solar or lunar."
-    ]
+    "responses": ["Eclipse is when sun or moon is blocked.", "Solar or lunar."]
   },
   {
     "for": "Will it be scorching hot?",
-    "responses": [
-      "Yes, very hot.",
-      "No, moderate."
-    ]
+    "responses": ["Yes, very hot.", "No, moderate."]
   },
   {
     "for": "What does subtropical mean?",
-    "responses": [
-      "Subtropical is warm with mild winters.",
-      "Near tropics."
-    ]
+    "responses": ["Subtropical is warm with mild winters.", "Near tropics."]
   },
   {
     "for": "Is there smog in the city?",
-    "responses": [
-      "Sometimes yes.",
-      "Check reports."
-    ]
+    "responses": ["Sometimes yes.", "Check reports."]
   },
   {
     "for": "What is front?",
-    "responses": [
-      "A front is where air masses meet.",
-      "Cold or warm front."
-    ]
+    "responses": ["A front is where air masses meet.", "Cold or warm front."]
   },
   {
     "for": "How is the weather in the Sahara?",
-    "responses": [
-      "Sahara is hot and dry.",
-      "Desert weather."
-    ]
+    "responses": ["Sahara is hot and dry.", "Desert weather."]
   },
   {
     "for": "What is aurora?",
-    "responses": [
-      "Aurora is lights in sky.",
-      "Northern or southern lights."
-    ]
+    "responses": ["Aurora is lights in sky.", "Northern or southern lights."]
   },
   {
     "for": "Will the temperature rise?",
-    "responses": [
-      "Yes, warmer later.",
-      "No, steady."
-    ]
+    "responses": ["Yes, warmer later.", "No, steady."]
   },
   {
     "for": "What does mediterranean mean?",
@@ -1135,10 +887,7 @@
   },
   {
     "for": "Is it brisk outside?",
-    "responses": [
-      "Yes, brisk air.",
-      "No, warm."
-    ]
+    "responses": ["Yes, brisk air.", "No, warm."]
   },
   {
     "for": "What is inversion?",
@@ -1149,234 +898,135 @@
   },
   {
     "for": "How is the weather in the Amazon?",
-    "responses": [
-      "Amazon is hot and rainy.",
-      "Jungle climate."
-    ]
+    "responses": ["Amazon is hot and rainy.", "Jungle climate."]
   },
   {
     "for": "What is comet?",
-    "responses": [
-      "A comet is ice and dust in space.",
-      "Has tail."
-    ]
+    "responses": ["A comet is ice and dust in space.", "Has tail."]
   },
   {
     "for": "Will there be a heatwave?",
-    "responses": [
-      "Possible heatwave.",
-      "No, normal."
-    ]
+    "responses": ["Possible heatwave.", "No, normal."]
   },
   {
     "for": "What does tundra mean?",
-    "responses": [
-      "Tundra is cold with no trees.",
-      "Permafrost."
-    ]
+    "responses": ["Tundra is cold with no trees.", "Permafrost."]
   },
   {
     "for": "Is the climate changing?",
-    "responses": [
-      "Yes, due to human activity.",
-      "Warmer temperatures."
-    ]
+    "responses": ["Yes, due to human activity.", "Warmer temperatures."]
   },
   {
     "for": "What is isobar?",
-    "responses": [
-      "Isobar is line of equal pressure.",
-      "On weather maps."
-    ]
+    "responses": ["Isobar is line of equal pressure.", "On weather maps."]
   },
   {
     "for": "How is the weather in Siberia?",
-    "responses": [
-      "Siberia is very cold.",
-      "Long winters."
-    ]
+    "responses": ["Siberia is very cold.", "Long winters."]
   },
   {
     "for": "What is meteor?",
-    "responses": [
-      "A meteor is shooting star.",
-      "Rock burning in air."
-    ]
+    "responses": ["A meteor is shooting star.", "Rock burning in air."]
   },
   {
     "for": "Will it be muggy?",
-    "responses": [
-      "Yes, muggy weather.",
-      "No, dry."
-    ]
+    "responses": ["Yes, muggy weather.", "No, dry."]
   },
   {
     "for": "What does savanna mean?",
-    "responses": [
-      "Savanna is grassland with seasons.",
-      "Wet and dry."
-    ]
+    "responses": ["Savanna is grassland with seasons.", "Wet and dry."]
   },
   {
     "for": "Is there pollen in the air?",
-    "responses": [
-      "In spring, yes.",
-      "Check allergy forecast."
-    ]
+    "responses": ["In spring, yes.", "Check allergy forecast."]
   },
   {
     "for": "What is isotherm?",
-    "responses": [
-      "Isotherm is line of equal temperature.",
-      "On maps."
-    ]
+    "responses": ["Isotherm is line of equal temperature.", "On maps."]
   },
   {
     "for": "How is the weather in the Gobi?",
-    "responses": [
-      "Gobi is cold desert.",
-      "Extreme temperatures."
-    ]
+    "responses": ["Gobi is cold desert.", "Extreme temperatures."]
   },
   {
     "for": "What is asteroid?",
-    "responses": [
-      "Asteroid is rock in space.",
-      "Between Mars and Jupiter."
-    ]
+    "responses": ["Asteroid is rock in space.", "Between Mars and Jupiter."]
   },
   {
     "for": "Will the humidity drop?",
-    "responses": [
-      "Yes, drier air.",
-      "No, stays high."
-    ]
+    "responses": ["Yes, drier air.", "No, stays high."]
   },
   {
     "for": "What does taiga mean?",
-    "responses": [
-      "Taiga is forest in cold areas.",
-      "Conifer trees."
-    ]
+    "responses": ["Taiga is forest in cold areas.", "Conifer trees."]
   },
   {
     "for": "Is the ozone depleting?",
-    "responses": [
-      "Less now, but was.",
-      "From chemicals."
-    ]
+    "responses": ["Less now, but was.", "From chemicals."]
   },
   {
     "for": "What is cyclone track?",
-    "responses": [
-      "Cyclone track is path of storm.",
-      "Predicted route."
-    ]
+    "responses": ["Cyclone track is path of storm.", "Predicted route."]
   },
   {
     "for": "How is the weather in the Andes?",
-    "responses": [
-      "Andes are cool at high elevation.",
-      "Varied."
-    ]
+    "responses": ["Andes are cool at high elevation.", "Varied."]
   },
   {
     "for": "What is galaxy?",
-    "responses": [
-      "Galaxy is group of stars.",
-      "Milky Way is ours."
-    ]
+    "responses": ["Galaxy is group of stars.", "Milky Way is ours."]
   },
   {
     "for": "Will there be frost?",
-    "responses": [
-      "Yes, frost possible.",
-      "No, too warm."
-    ]
+    "responses": ["Yes, frost possible.", "No, too warm."]
   },
   {
     "for": "What does chaparral mean?",
-    "responses": [
-      "Chaparral is shrubland.",
-      "Mediterranean climate."
-    ]
+    "responses": ["Chaparral is shrubland.", "Mediterranean climate."]
   },
   {
     "for": "Is the air quality good?",
-    "responses": [
-      "Check local report.",
-      "Usually yes in rural areas."
-    ]
+    "responses": ["Check local report.", "Usually yes in rural areas."]
   },
   {
     "for": "What is high pressure?",
-    "responses": [
-      "High pressure brings clear weather.",
-      "Sinking air."
-    ]
+    "responses": ["High pressure brings clear weather.", "Sinking air."]
   },
   {
     "for": "How is the weather in the Rockies?",
-    "responses": [
-      "Rockies have snow in winter.",
-      "Cool summers."
-    ]
+    "responses": ["Rockies have snow in winter.", "Cool summers."]
   },
   {
     "for": "What is black hole?",
-    "responses": [
-      "Black hole sucks in light.",
-      "Strong gravity."
-    ]
+    "responses": ["Black hole sucks in light.", "Strong gravity."]
   },
   {
     "for": "Will it sleet?",
-    "responses": [
-      "Possible sleet.",
-      "No, rain."
-    ]
+    "responses": ["Possible sleet.", "No, rain."]
   },
   {
     "for": "What does biome mean?",
-    "responses": [
-      "Biome is large ecosystem.",
-      "Like forest or desert."
-    ]
+    "responses": ["Biome is large ecosystem.", "Like forest or desert."]
   },
   {
     "for": "Is there a drought?",
-    "responses": [
-      "In some places, yes.",
-      "Check news."
-    ]
+    "responses": ["In some places, yes.", "Check news."]
   },
   {
     "for": "What is low pressure?",
-    "responses": [
-      "Low pressure brings clouds and rain.",
-      "Rising air."
-    ]
+    "responses": ["Low pressure brings clouds and rain.", "Rising air."]
   },
   {
     "for": "How is the weather in the Alps?",
-    "responses": [
-      "Alps are snowy.",
-      "Good for skiing."
-    ]
+    "responses": ["Alps are snowy.", "Good for skiing."]
   },
   {
     "for": "What is nebula?",
-    "responses": [
-      "Nebula is cloud of gas in space.",
-      "Star birth place."
-    ]
+    "responses": ["Nebula is cloud of gas in space.", "Star birth place."]
   },
   {
     "for": "Will the wind change?",
-    "responses": [
-      "Wind direction may shift.",
-      "Stay tuned."
-    ]
+    "responses": ["Wind direction may shift.", "Stay tuned."]
   },
   {
     "for": "What is ecology?",
@@ -1387,38 +1037,23 @@
   },
   {
     "for": "Is global warming real?",
-    "responses": [
-      "Yes, scientists agree.",
-      "Evidence in temperatures."
-    ]
+    "responses": ["Yes, scientists agree.", "Evidence in temperatures."]
   },
   {
     "for": "What is occlusion?",
-    "responses": [
-      "Occlusion is when fronts meet.",
-      "Brings weather change."
-    ]
+    "responses": ["Occlusion is when fronts meet.", "Brings weather change."]
   },
   {
     "for": "How is the weather in the Pampas?",
-    "responses": [
-      "Pampas are temperate.",
-      "Grasslands."
-    ]
+    "responses": ["Pampas are temperate.", "Grasslands."]
   },
   {
     "for": "What is supernova?",
-    "responses": [
-      "Supernova is exploding star.",
-      "Very bright."
-    ]
+    "responses": ["Supernova is exploding star.", "Very bright."]
   },
   {
     "for": "Will there be a blizzard?",
-    "responses": [
-      "In winter, possible.",
-      "No, mild."
-    ]
+    "responses": ["In winter, possible.", "No, mild."]
   },
   {
     "for": "What is biodiversity?",
@@ -1429,74 +1064,42 @@
   },
   {
     "for": "Is the sea rough?",
-    "responses": [
-      "If windy, yes.",
-      "Calm seas otherwise."
-    ]
+    "responses": ["If windy, yes.", "Calm seas otherwise."]
   },
   {
     "for": "What is ridge?",
-    "responses": [
-      "Ridge is high pressure area.",
-      "Elongated."
-    ]
+    "responses": ["Ridge is high pressure area.", "Elongated."]
   },
   {
     "for": "How is the weather in the Outback?",
-    "responses": [
-      "Outback is hot and dry.",
-      "Australian desert."
-    ]
+    "responses": ["Outback is hot and dry.", "Australian desert."]
   },
   {
     "for": "What is pulsar?",
-    "responses": [
-      "Pulsar is spinning neutron star.",
-      "Sends radio waves."
-    ]
+    "responses": ["Pulsar is spinning neutron star.", "Sends radio waves."]
   },
   {
     "for": "Will it be temperate?",
-    "responses": [
-      "Yes, temperate weather.",
-      "Moderate."
-    ]
+    "responses": ["Yes, temperate weather.", "Moderate."]
   },
   {
     "for": "What is conservation?",
-    "responses": [
-      "Conservation is protecting nature.",
-      "Save resources."
-    ]
+    "responses": ["Conservation is protecting nature.", "Save resources."]
   },
   {
     "for": "Is there acid rain?",
-    "responses": [
-      "In polluted areas, yes.",
-      "Harms lakes and forests."
-    ]
+    "responses": ["In polluted areas, yes.", "Harms lakes and forests."]
   },
   {
     "for": "What is trough?",
-    "responses": [
-      "Trough is low pressure area.",
-      "Brings bad weather."
-    ]
+    "responses": ["Trough is low pressure area.", "Brings bad weather."]
   },
   {
     "for": "How is the weather in the Taiga?",
-    "responses": [
-      "Taiga is cold.",
-      "Forests in north."
-    ]
+    "responses": ["Taiga is cold.", "Forests in north."]
   },
   {
     "for": "What is quasar?",
-    "responses": [
-      "Quasar is bright distant object.",
-      "Active galaxy."
-    ]
+    "responses": ["Quasar is bright distant object.", "Active galaxy."]
   }
 ]
-
-

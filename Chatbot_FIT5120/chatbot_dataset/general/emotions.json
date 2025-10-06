@@ -1,0 +1,106 @@
+{
+  "excitement": [
+    "Yay!",
+    "Woohoo!",
+    "Awesome!",
+    "Yes!",
+    "Yippee!",
+    "Wahoo!",
+    "Hooray!"
+  ],
+  "happiness": [
+    "Hehe!",
+    "Hihi!",
+    "That's great!",
+    "How lovely!",
+    "That's wonderful!"
+  ],
+  "agreement": [
+    "I think so too!",
+    "I reckon that's right!",
+    "Absolutely!",
+    "I believe so!",
+    "That's what I think!",
+    "I'd say so!",
+    "I suppose so!"
+  ],
+  "thinking": [
+    "Hmm...",
+    "Let me think...",
+    "I reckon...",
+    "I think...",
+    "I believe...",
+    "In my opinion...",
+    "I'd say...",
+    "Well..."
+  ],
+  "casual_greetings": [
+    "Hey there!",
+    "What's up!",
+    "Yo!",
+    "Heya!",
+    "Hi hi!",
+    "Hiya!"
+  ],
+  "understanding": [
+    "Ah, I see!",
+    "Oh, got it!",
+    "Aha!",
+    "I get it now!",
+    "That makes sense!",
+    "Oh yeah!"
+  ],
+  "surprise": [
+    "Wow!",
+    "Oh!",
+    "Whoa!",
+    "Really?",
+    "No way!",
+    "Seriously?",
+    "Oh my!"
+  ],
+  "encouragement": [
+    "You got this!",
+    "Keep going!",
+    "Nice work!",
+    "Well done!",
+    "Great job!",
+    "You're doing amazing!",
+    "Keep it up!"
+  ],
+  "sympathy": [
+    "Oh no...",
+    "I'm sorry to hear that.",
+    "That's tough.",
+    "Aww...",
+    "That must be hard.",
+    "I understand."
+  ],
+  "interest": [
+    "Oh really?",
+    "Tell me more!",
+    "That's interesting!",
+    "How cool!",
+    "Ooh!",
+    "That's neat!",
+    "Fascinating!"
+  ],
+  "casual_fillers": [
+    "You know,",
+    "I mean,",
+    "Like,",
+    "So,",
+    "Well,",
+    "Actually,",
+    "To be honest,"
+  ],
+  "positive_reactions": [
+    "That's brilliant!",
+    "How nice!",
+    "Lovely!",
+    "Perfect!",
+    "Excellent!",
+    "Fantastic!",
+    "Wonderful!"
+  ]
+}
