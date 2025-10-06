@@ -1,0 +1,1502 @@
+[
+  {
+    "for": "What is the weather like today?",
+    "responses": [
+      "Today, the weather is sunny and warm. It is a good day to go outside.",
+      "The weather today is cloudy with a chance of rain. Remember to take an umbrella."
+    ]
+  },
+  {
+    "for": "Is it raining outside?",
+    "responses": [
+      "Yes, it is raining now. The ground is wet.",
+      "No, it is not raining. The sky is clear."
+    ]
+  },
+  {
+    "for": "How hot is it today?",
+    "responses": [
+      "It is about 30 degrees Celsius today. That is very hot.",
+      "Today it is 25 degrees. It feels nice and warm."
+    ]
+  },
+  {
+    "for": "Will it snow tomorrow?",
+    "responses": [
+      "Yes, there might be snow tomorrow. It will be cold.",
+      "No, tomorrow will be rainy, not snowy."
+    ]
+  },
+  {
+    "for": "What does sunny mean?",
+    "responses": [
+      "Sunny means the sun is shining and there are no clouds.",
+      "When it is sunny, the sky is bright and blue."
+    ]
+  },
+  {
+    "for": "Is it cold outside?",
+    "responses": [
+      "Yes, it is cold. You should wear a jacket.",
+      "No, it is warm. A t-shirt is fine."
+    ]
+  },
+  {
+    "for": "What is the weather forecast for this week?",
+    "responses": [
+      "This week, it will be mostly sunny with some rain on Wednesday.",
+      "The forecast says warm days and cool nights."
+    ]
+  },
+  {
+    "for": "Why is it windy today?",
+    "responses": [
+      "It is windy because of the weather change. Leaves are flying around.",
+      "Wind comes when air moves fast from one place to another."
+    ]
+  },
+  {
+    "for": "What should I wear if it is raining?",
+    "responses": [
+      "Wear a raincoat and boots if it is raining.",
+      "Take an umbrella and wear waterproof shoes."
+    ]
+  },
+  {
+    "for": "Is the sun shining now?",
+    "responses": [
+      "Yes, the sun is shining brightly.",
+      "No, the sun is behind the clouds."
+    ]
+  },
+  {
+    "for": "How is the weather in summer?",
+    "responses": [
+      "In summer, the weather is hot and sunny.",
+      "Summer has warm days and sometimes thunderstorms."
+    ]
+  },
+  {
+    "for": "What is fog?",
+    "responses": [
+      "Fog is like a cloud on the ground. It makes things hard to see.",
+      "Fog happens when the air is cold and wet."
+    ]
+  },
+  {
+    "for": "Will it be hot tomorrow?",
+    "responses": [
+      "Yes, tomorrow will be hot. Drink lots of water.",
+      "No, it will be cool tomorrow."
+    ]
+  },
+  {
+    "for": "What does cloudy mean?",
+    "responses": [
+      "Cloudy means there are many clouds in the sky.",
+      "When it is cloudy, the sun is hidden."
+    ]
+  },
+  {
+    "for": "Is there a storm coming?",
+    "responses": [
+      "Yes, a storm is coming. Stay inside.",
+      "No, the weather is calm."
+    ]
+  },
+  {
+    "for": "How cold is it in winter?",
+    "responses": [
+      "In winter, it can be very cold, below zero degrees.",
+      "Winter weather is cold with snow sometimes."
+    ]
+  },
+  {
+    "for": "What is rain?",
+    "responses": [
+      "Rain is water that falls from the sky.",
+      "Rain comes from clouds when they are full of water."
+    ]
+  },
+  {
+    "for": "Is it humid today?",
+    "responses": [
+      "Yes, it is humid. The air feels wet.",
+      "No, the air is dry today."
+    ]
+  },
+  {
+    "for": "What should I do if it snows?",
+    "responses": [
+      "If it snows, you can build a snowman.",
+      "Stay warm and drive carefully if it snows."
+    ]
+  },
+  {
+    "for": "How is the weather in spring?",
+    "responses": [
+      "In spring, the weather is mild and flowers bloom.",
+      "Spring has rain and warmer days."
+    ]
+  },
+  {
+    "for": "What is thunder?",
+    "responses": [
+      "Thunder is the loud sound during a storm.",
+      "Thunder comes with lightning."
+    ]
+  },
+  {
+    "for": "Will it rain this afternoon?",
+    "responses": [
+      "Yes, it might rain this afternoon.",
+      "No, the afternoon will be sunny."
+    ]
+  },
+  {
+    "for": "What does windy mean?",
+    "responses": [
+      "Windy means there is a lot of wind blowing.",
+      "When it is windy, hats can fly away."
+    ]
+  },
+  {
+    "for": "Is the sky blue today?",
+    "responses": [
+      "Yes, the sky is blue and clear.",
+      "No, the sky is gray with clouds."
+    ]
+  },
+  {
+    "for": "How is the weather in autumn?",
+    "responses": [
+      "In autumn, the weather is cool and leaves fall.",
+      "Autumn has windy days and some rain."
+    ]
+  },
+  {
+    "for": "What is snow?",
+    "responses": [
+      "Snow is frozen water that falls like white flakes.",
+      "Snow is cold and white."
+    ]
+  },
+  {
+    "for": "Is it sunny in the morning?",
+    "responses": [
+      "Yes, the morning is sunny.",
+      "No, it is cloudy in the morning."
+    ]
+  },
+  {
+    "for": "What is a rainbow?",
+    "responses": [
+      "A rainbow is colors in the sky after rain.",
+      "Rainbows happen when sun shines through rain."
+    ]
+  },
+  {
+    "for": "Will it be cold tonight?",
+    "responses": [
+      "Yes, it will be cold tonight. Wear warm clothes.",
+      "No, tonight will be mild."
+    ]
+  },
+  {
+    "for": "What does hot mean?",
+    "responses": [
+      "Hot means high temperature, like in summer.",
+      "When it is hot, you feel warm."
+    ]
+  },
+  {
+    "for": "Is there wind now?",
+    "responses": [
+      "Yes, there is wind blowing.",
+      "No, it is calm with no wind."
+    ]
+  },
+  {
+    "for": "What is hail?",
+    "responses": [
+      "Hail is ice balls that fall during storms.",
+      "Hail is frozen rain."
+    ]
+  },
+  {
+    "for": "How warm is it today?",
+    "responses": [
+      "It is warm, about 20 degrees.",
+      "Today is warm and nice."
+    ]
+  },
+  {
+    "for": "What is lightning?",
+    "responses": [
+      "Lightning is a bright flash in the sky during storms.",
+      "Lightning is electricity from clouds."
+    ]
+  },
+  {
+    "for": "Will it be sunny this weekend?",
+    "responses": [
+      "Yes, the weekend will be sunny.",
+      "No, expect rain this weekend."
+    ]
+  },
+  {
+    "for": "What does cold mean?",
+    "responses": [
+      "Cold means low temperature, like in winter.",
+      "When it is cold, you shiver."
+    ]
+  },
+  {
+    "for": "Is it foggy outside?",
+    "responses": [
+      "Yes, it is foggy. Be careful driving.",
+      "No, the view is clear."
+    ]
+  },
+  {
+    "for": "What is a tornado?",
+    "responses": [
+      "A tornado is a spinning wind storm.",
+      "Tornados are dangerous and fast."
+    ]
+  },
+  {
+    "for": "How is the weather at night?",
+    "responses": [
+      "At night, it is cool and dark.",
+      "The night weather is calm."
+    ]
+  },
+  {
+    "for": "What is dew?",
+    "responses": [
+      "Dew is water drops on grass in the morning.",
+      "Dew forms when air cools at night."
+    ]
+  },
+  {
+    "for": "Will it thunder today?",
+    "responses": [
+      "Yes, there might be thunder.",
+      "No, no storms today."
+    ]
+  },
+  {
+    "for": "What does mild mean?",
+    "responses": [
+      "Mild means not too hot or cold.",
+      "Mild weather is comfortable."
+    ]
+  },
+  {
+    "for": "Is it dry today?",
+    "responses": [
+      "Yes, the weather is dry.",
+      "No, it is humid."
+    ]
+  },
+  {
+    "for": "What is a hurricane?",
+    "responses": [
+      "A hurricane is a big storm with strong winds.",
+      "Hurricanes happen over the ocean."
+    ]
+  },
+  {
+    "for": "How is the weather in the mountains?",
+    "responses": [
+      "In the mountains, it is cooler.",
+      "Mountain weather can change fast."
+    ]
+  },
+  {
+    "for": "What is frost?",
+    "responses": [
+      "Frost is ice on surfaces when it is cold.",
+      "Frost looks like white powder."
+    ]
+  },
+  {
+    "for": "Will it hail tomorrow?",
+    "responses": [
+      "Yes, possible hail tomorrow.",
+      "No, no hail in the forecast."
+    ]
+  },
+  {
+    "for": "What does humid mean?",
+    "responses": [
+      "Humid means the air has a lot of water.",
+      "When humid, you feel sticky."
+    ]
+  },
+  {
+    "for": "Is the air fresh today?",
+    "responses": [
+      "Yes, the air is fresh and clean.",
+      "No, it feels stuffy."
+    ]
+  },
+  {
+    "for": "What is a blizzard?",
+    "responses": [
+      "A blizzard is a snow storm with strong wind.",
+      "Blizzards make it hard to see."
+    ]
+  },
+  {
+    "for": "How is the weather by the sea?",
+    "responses": [
+      "By the sea, it is breezy.",
+      "Sea weather is often mild."
+    ]
+  },
+  {
+    "for": "What is sleet?",
+    "responses": [
+      "Sleet is rain mixed with snow.",
+      "Sleet is icy rain."
+    ]
+  },
+  {
+    "for": "Will it be windy this evening?",
+    "responses": [
+      "Yes, windy this evening.",
+      "No, calm evening."
+    ]
+  },
+  {
+    "for": "What does dry mean?",
+    "responses": [
+      "Dry means little water in the air.",
+      "Dry weather is comfortable."
+    ]
+  },
+  {
+    "for": "Is there a rainbow now?",
+    "responses": [
+      "Yes, look for the rainbow after rain.",
+      "No, no rainbow today."
+    ]
+  },
+  {
+    "for": "What is a drought?",
+    "responses": [
+      "A drought is when there is no rain for a long time.",
+      "Drought makes land dry."
+    ]
+  },
+  {
+    "for": "How is the weather in the city?",
+    "responses": [
+      "In the city, it is warm from buildings.",
+      "City weather can be polluted."
+    ]
+  },
+  {
+    "for": "What is ice?",
+    "responses": [
+      "Ice is frozen water.",
+      "Ice is slippery."
+    ]
+  },
+  {
+    "for": "Will it freeze tonight?",
+    "responses": [
+      "Yes, it might freeze. Cover plants.",
+      "No, above freezing."
+    ]
+  },
+  {
+    "for": "What does breezy mean?",
+    "responses": [
+      "Breezy means light wind.",
+      "Breezy is nice for flying kites."
+    ]
+  },
+  {
+    "for": "Is it stormy outside?",
+    "responses": [
+      "Yes, it is stormy with rain and wind.",
+      "No, the weather is fine."
+    ]
+  },
+  {
+    "for": "What is a flood?",
+    "responses": [
+      "A flood is too much water on land.",
+      "Floods happen after heavy rain."
+    ]
+  },
+  {
+    "for": "How is the weather in the desert?",
+    "responses": [
+      "In the desert, it is hot and dry.",
+      "Desert nights are cold."
+    ]
+  },
+  {
+    "for": "What is mist?",
+    "responses": [
+      "Mist is light fog.",
+      "Mist is wet air."
+    ]
+  },
+  {
+    "for": "Will it be humid tomorrow?",
+    "responses": [
+      "Yes, humid tomorrow.",
+      "No, dry air tomorrow."
+    ]
+  },
+  {
+    "for": "What does calm mean?",
+    "responses": [
+      "Calm means no wind.",
+      "Calm weather is peaceful."
+    ]
+  },
+  {
+    "for": "Is the sun hot today?",
+    "responses": [
+      "Yes, the sun feels hot.",
+      "No, clouds block the sun."
+    ]
+  },
+  {
+    "for": "What is a typhoon?",
+    "responses": [
+      "A typhoon is a strong storm like a hurricane.",
+      "Typhoons have heavy rain and wind."
+    ]
+  },
+  {
+    "for": "How is the weather in the forest?",
+    "responses": [
+      "In the forest, it is shady and cool.",
+      "Forest weather is humid."
+    ]
+  },
+  {
+    "for": "What is pollen?",
+    "responses": [
+      "Pollen is from flowers and can make you sneeze.",
+      "Pollen is in the air in spring."
+    ]
+  },
+  {
+    "for": "Will it be dry this week?",
+    "responses": [
+      "Yes, dry weather all week.",
+      "No, some rain expected."
+    ]
+  },
+  {
+    "for": "What does overcast mean?",
+    "responses": [
+      "Overcast means full of clouds.",
+      "Overcast sky is gray."
+    ]
+  },
+  {
+    "for": "Is there lightning now?",
+    "responses": [
+      "Yes, I see lightning.",
+      "No, no lightning."
+    ]
+  },
+  {
+    "for": "What is a monsoon?",
+    "responses": [
+      "A monsoon is heavy rain season.",
+      "Monsoons bring lots of water."
+    ]
+  },
+  {
+    "for": "How is the weather on the beach?",
+    "responses": [
+      "On the beach, it is sunny and windy.",
+      "Beach weather is good for swimming."
+    ]
+  },
+  {
+    "for": "What is smog?",
+    "responses": [
+      "Smog is dirty air from pollution.",
+      "Smog looks like fog but bad."
+    ]
+  },
+  {
+    "for": "Will it snow this winter?",
+    "responses": [
+      "Yes, expect snow this winter.",
+      "Maybe, winters can vary."
+    ]
+  },
+  {
+    "for": "What does chilly mean?",
+    "responses": [
+      "Chilly means a bit cold.",
+      "Chilly weather needs a sweater."
+    ]
+  },
+  {
+    "for": "Is the wind strong?",
+    "responses": [
+      "Yes, the wind is strong today.",
+      "No, light wind."
+    ]
+  },
+  {
+    "for": "What is a heatwave?",
+    "responses": [
+      "A heatwave is many hot days in a row.",
+      "Heatwaves are very warm."
+    ]
+  },
+  {
+    "for": "How is the weather in the countryside?",
+    "responses": [
+      "In the countryside, it is fresh and clear.",
+      "Countryside weather is natural."
+    ]
+  },
+  {
+    "for": "What is a rainbow after?",
+    "responses": [
+      "A rainbow comes after rain.",
+      "Rainbow needs sun and rain."
+    ]
+  },
+  {
+    "for": "Will it be foggy in the morning?",
+    "responses": [
+      "Yes, foggy morning.",
+      "No, clear morning."
+    ]
+  },
+  {
+    "for": "What does scorching mean?",
+    "responses": [
+      "Scorching means very hot.",
+      "Scorching sun burns."
+    ]
+  },
+  {
+    "for": "Is it drizzling?",
+    "responses": [
+      "Yes, light drizzle.",
+      "No, dry."
+    ]
+  },
+  {
+    "for": "What is a cyclone?",
+    "responses": [
+      "A cyclone is a spinning storm.",
+      "Cyclones have strong winds."
+    ]
+  },
+  {
+    "for": "How is the weather in tropical areas?",
+    "responses": [
+      "Tropical weather is hot and rainy.",
+      "Tropics have warm days."
+    ]
+  },
+  {
+    "for": "What is humidity?",
+    "responses": [
+      "Humidity is water in the air.",
+      "High humidity makes you sweat."
+    ]
+  },
+  {
+    "for": "Will it be mild today?",
+    "responses": [
+      "Yes, mild weather.",
+      "No, extreme today."
+    ]
+  },
+  {
+    "for": "What does freezing mean?",
+    "responses": [
+      "Freezing means below zero degrees.",
+      "Freezing turns water to ice."
+    ]
+  },
+  {
+    "for": "Is the sky clear?",
+    "responses": [
+      "Yes, clear sky.",
+      "No, cloudy."
+    ]
+  },
+  {
+    "for": "What is a sandstorm?",
+    "responses": [
+      "A sandstorm is wind blowing sand.",
+      "Sandstorms happen in deserts."
+    ]
+  },
+  {
+    "for": "How is the weather in polar regions?",
+    "responses": [
+      "Polar weather is very cold.",
+      "Poles have ice and snow."
+    ]
+  },
+  {
+    "for": "What is temperature?",
+    "responses": [
+      "Temperature is how hot or cold it is.",
+      "We measure temperature in degrees."
+    ]
+  },
+  {
+    "for": "Will it rain heavily?",
+    "responses": [
+      "Yes, heavy rain.",
+      "No, light rain."
+    ]
+  },
+  {
+    "for": "What does balmy mean?",
+    "responses": [
+      "Balmy means warm and pleasant.",
+      "Balmy nights are nice."
+    ]
+  },
+  {
+    "for": "Is there a breeze?",
+    "responses": [
+      "Yes, nice breeze.",
+      "No, still air."
+    ]
+  },
+  {
+    "for": "What is an earthquake?",
+    "responses": [
+      "Wait, that's not weather. An earthquake is ground shaking.",
+      "Earthquakes are not weather events."
+    ]
+  },
+  {
+    "for": "How is the weather in Europe?",
+    "responses": [
+      "Europe has varied weather.",
+      "Depends on the country."
+    ]
+  },
+  {
+    "for": "What is barometer?",
+    "responses": [
+      "A barometer measures air pressure.",
+      "It helps predict weather."
+    ]
+  },
+  {
+    "for": "Will the sun set early?",
+    "responses": [
+      "In winter, sun sets early.",
+      "Depends on the season."
+    ]
+  },
+  {
+    "for": "What does nippy mean?",
+    "responses": [
+      "Nippy means cool and fresh.",
+      "Nippy air is brisk."
+    ]
+  },
+  {
+    "for": "Is it pouring rain?",
+    "responses": [
+      "Yes, pouring outside.",
+      "No, just sprinkling."
+    ]
+  },
+  {
+    "for": "What is climate?",
+    "responses": [
+      "Climate is average weather over time.",
+      "Climate changes slowly."
+    ]
+  },
+  {
+    "for": "How is the weather in Asia?",
+    "responses": [
+      "Asia has many climates.",
+      "From hot to cold."
+    ]
+  },
+  {
+    "for": "What is anemometer?",
+    "responses": [
+      "An anemometer measures wind speed.",
+      "It spins in the wind."
+    ]
+  },
+  {
+    "for": "Will it be overcast tomorrow?",
+    "responses": [
+      "Yes, overcast sky.",
+      "No, partly sunny."
+    ]
+  },
+  {
+    "for": "What does brisk mean?",
+    "responses": [
+      "Brisk means cool and energizing.",
+      "Brisk walk in cool air."
+    ]
+  },
+  {
+    "for": "Is the humidity high?",
+    "responses": [
+      "Yes, high humidity.",
+      "No, low."
+    ]
+  },
+  {
+    "for": "What is global warming?",
+    "responses": [
+      "Global warming is Earth getting hotter.",
+      "From greenhouse gases."
+    ]
+  },
+  {
+    "for": "How is the weather in Africa?",
+    "responses": [
+      "Africa is mostly hot.",
+      "Varied from deserts to jungles."
+    ]
+  },
+  {
+    "for": "What is thermometer?",
+    "responses": [
+      "A thermometer measures temperature.",
+      "It has mercury or digital."
+    ]
+  },
+  {
+    "for": "Will there be a rainbow tomorrow?",
+    "responses": [
+      "If it rains and sun shines, yes.",
+      "Hard to say."
+    ]
+  },
+  {
+    "for": "What does muggy mean?",
+    "responses": [
+      "Muggy means warm and humid.",
+      "Muggy makes you uncomfortable."
+    ]
+  },
+  {
+    "for": "Is it sleeting?",
+    "responses": [
+      "Yes, sleet falling.",
+      "No, just snow."
+    ]
+  },
+  {
+    "for": "What is ozone layer?",
+    "responses": [
+      "Ozone layer protects from sun rays.",
+      "It's in the atmosphere."
+    ]
+  },
+  {
+    "for": "How is the weather in America?",
+    "responses": [
+      "America has all kinds of weather.",
+      "From north to south."
+    ]
+  },
+  {
+    "for": "What is hygrometer?",
+    "responses": [
+      "A hygrometer measures humidity.",
+      "It tells if air is wet."
+    ]
+  },
+  {
+    "for": "Will it drizzle today?",
+    "responses": [
+      "Yes, light drizzle.",
+      "No, clear."
+    ]
+  },
+  {
+    "for": "What does temperate mean?",
+    "responses": [
+      "Temperate means moderate weather.",
+      "Not extreme."
+    ]
+  },
+  {
+    "for": "Is there frost on the ground?",
+    "responses": [
+      "Yes, morning frost.",
+      "No, too warm."
+    ]
+  },
+  {
+    "for": "What is acid rain?",
+    "responses": [
+      "Acid rain is polluted rain.",
+      "From factories."
+    ]
+  },
+  {
+    "for": "How is the weather in Australia?",
+    "responses": [
+      "Australia is hot in summer.",
+      "Mild winters."
+    ]
+  },
+  {
+    "for": "What is rain gauge?",
+    "responses": [
+      "A rain gauge measures rainfall.",
+      "It's a container."
+    ]
+  },
+  {
+    "for": "Will the wind blow hard?",
+    "responses": [
+      "Yes, strong winds.",
+      "No, gentle."
+    ]
+  },
+  {
+    "for": "What does arid mean?",
+    "responses": [
+      "Arid means very dry.",
+      "Like deserts."
+    ]
+  },
+  {
+    "for": "Is it hailing?",
+    "responses": [
+      "Yes, hail stones.",
+      "No, rain only."
+    ]
+  },
+  {
+    "for": "What is greenhouse effect?",
+    "responses": [
+      "Greenhouse effect traps heat.",
+      "Makes Earth warm."
+    ]
+  },
+  {
+    "for": "How is the weather in Antarctica?",
+    "responses": [
+      "Antarctica is extremely cold.",
+      "Always frozen."
+    ]
+  },
+  {
+    "for": "What is weather vane?",
+    "responses": [
+      "A weather vane shows wind direction.",
+      "It points where wind comes from."
+    ]
+  },
+  {
+    "for": "Will it be chilly tonight?",
+    "responses": [
+      "Yes, chilly.",
+      "No, warm."
+    ]
+  },
+  {
+    "for": "What does tropical mean?",
+    "responses": [
+      "Tropical means hot and wet.",
+      "Near equator."
+    ]
+  },
+  {
+    "for": "Is the temperature dropping?",
+    "responses": [
+      "Yes, getting colder.",
+      "No, stable."
+    ]
+  },
+  {
+    "for": "What is el nino?",
+    "responses": [
+      "El Nino is warm ocean current.",
+      "Affects weather."
+    ]
+  },
+  {
+    "for": "How is the weather in the arctic?",
+    "responses": [
+      "Arctic is cold and icy.",
+      "Long winters."
+    ]
+  },
+  {
+    "for": "What is sunset?",
+    "responses": [
+      "Sunset is when sun goes down.",
+      "Sky turns colors."
+    ]
+  },
+  {
+    "for": "Will it be balmy tomorrow?",
+    "responses": [
+      "Yes, balmy weather.",
+      "No, cooler."
+    ]
+  },
+  {
+    "for": "What does polar mean?",
+    "responses": [
+      "Polar means near the poles.",
+      "Very cold."
+    ]
+  },
+  {
+    "for": "Is there dew on the grass?",
+    "responses": [
+      "Yes, morning dew.",
+      "No, dry."
+    ]
+  },
+  {
+    "for": "What is la nina?",
+    "responses": [
+      "La Nina is cool ocean current.",
+      "Changes weather patterns."
+    ]
+  },
+  {
+    "for": "How is the weather in the tropics?",
+    "responses": [
+      "Tropics are warm year-round.",
+      "Rainy seasons."
+    ]
+  },
+  {
+    "for": "What is sunrise?",
+    "responses": [
+      "Sunrise is when sun comes up.",
+      "Morning light."
+    ]
+  },
+  {
+    "for": "Will the sky be blue tomorrow?",
+    "responses": [
+      "Yes, blue sky.",
+      "Maybe, if no clouds."
+    ]
+  },
+  {
+    "for": "What does continental mean?",
+    "responses": [
+      "Continental climate has hot summers and cold winters.",
+      "Away from sea."
+    ]
+  },
+  {
+    "for": "Is it misty outside?",
+    "responses": [
+      "Yes, misty.",
+      "No, clear."
+    ]
+  },
+  {
+    "for": "What is jet stream?",
+    "responses": [
+      "Jet stream is fast wind high in sky.",
+      "Affects weather."
+    ]
+  },
+  {
+    "for": "How is the weather in the equator?",
+    "responses": [
+      "Equator is hot and humid.",
+      "Little seasons."
+    ]
+  },
+  {
+    "for": "What is moon phase?",
+    "responses": [
+      "Moon phases are how moon looks.",
+      "Full, new, etc."
+    ]
+  },
+  {
+    "for": "Will there be thunder tonight?",
+    "responses": [
+      "Possible thunder.",
+      "No storms."
+    ]
+  },
+  {
+    "for": "What does maritime mean?",
+    "responses": [
+      "Maritime climate is mild.",
+      "Near sea."
+    ]
+  },
+  {
+    "for": "Is the air polluted?",
+    "responses": [
+      "Depends on location.",
+      "Check air quality."
+    ]
+  },
+  {
+    "for": "What is atmospheric pressure?",
+    "responses": [
+      "Atmospheric pressure is air weight.",
+      "High or low."
+    ]
+  },
+  {
+    "for": "How is the weather in the Himalayas?",
+    "responses": [
+      "Himalayas are cold and snowy.",
+      "High altitude."
+    ]
+  },
+  {
+    "for": "What is eclipse?",
+    "responses": [
+      "Eclipse is when sun or moon is blocked.",
+      "Solar or lunar."
+    ]
+  },
+  {
+    "for": "Will it be scorching hot?",
+    "responses": [
+      "Yes, very hot.",
+      "No, moderate."
+    ]
+  },
+  {
+    "for": "What does subtropical mean?",
+    "responses": [
+      "Subtropical is warm with mild winters.",
+      "Near tropics."
+    ]
+  },
+  {
+    "for": "Is there smog in the city?",
+    "responses": [
+      "Sometimes yes.",
+      "Check reports."
+    ]
+  },
+  {
+    "for": "What is front?",
+    "responses": [
+      "A front is where air masses meet.",
+      "Cold or warm front."
+    ]
+  },
+  {
+    "for": "How is the weather in the Sahara?",
+    "responses": [
+      "Sahara is hot and dry.",
+      "Desert weather."
+    ]
+  },
+  {
+    "for": "What is aurora?",
+    "responses": [
+      "Aurora is lights in sky.",
+      "Northern or southern lights."
+    ]
+  },
+  {
+    "for": "Will the temperature rise?",
+    "responses": [
+      "Yes, warmer later.",
+      "No, steady."
+    ]
+  },
+  {
+    "for": "What does mediterranean mean?",
+    "responses": [
+      "Mediterranean climate has hot dry summers.",
+      "Mild wet winters."
+    ]
+  },
+  {
+    "for": "Is it brisk outside?",
+    "responses": [
+      "Yes, brisk air.",
+      "No, warm."
+    ]
+  },
+  {
+    "for": "What is inversion?",
+    "responses": [
+      "Inversion is when warm air is above cold.",
+      "Traps pollution."
+    ]
+  },
+  {
+    "for": "How is the weather in the Amazon?",
+    "responses": [
+      "Amazon is hot and rainy.",
+      "Jungle climate."
+    ]
+  },
+  {
+    "for": "What is comet?",
+    "responses": [
+      "A comet is ice and dust in space.",
+      "Has tail."
+    ]
+  },
+  {
+    "for": "Will there be a heatwave?",
+    "responses": [
+      "Possible heatwave.",
+      "No, normal."
+    ]
+  },
+  {
+    "for": "What does tundra mean?",
+    "responses": [
+      "Tundra is cold with no trees.",
+      "Permafrost."
+    ]
+  },
+  {
+    "for": "Is the climate changing?",
+    "responses": [
+      "Yes, due to human activity.",
+      "Warmer temperatures."
+    ]
+  },
+  {
+    "for": "What is isobar?",
+    "responses": [
+      "Isobar is line of equal pressure.",
+      "On weather maps."
+    ]
+  },
+  {
+    "for": "How is the weather in Siberia?",
+    "responses": [
+      "Siberia is very cold.",
+      "Long winters."
+    ]
+  },
+  {
+    "for": "What is meteor?",
+    "responses": [
+      "A meteor is shooting star.",
+      "Rock burning in air."
+    ]
+  },
+  {
+    "for": "Will it be muggy?",
+    "responses": [
+      "Yes, muggy weather.",
+      "No, dry."
+    ]
+  },
+  {
+    "for": "What does savanna mean?",
+    "responses": [
+      "Savanna is grassland with seasons.",
+      "Wet and dry."
+    ]
+  },
+  {
+    "for": "Is there pollen in the air?",
+    "responses": [
+      "In spring, yes.",
+      "Check allergy forecast."
+    ]
+  },
+  {
+    "for": "What is isotherm?",
+    "responses": [
+      "Isotherm is line of equal temperature.",
+      "On maps."
+    ]
+  },
+  {
+    "for": "How is the weather in the Gobi?",
+    "responses": [
+      "Gobi is cold desert.",
+      "Extreme temperatures."
+    ]
+  },
+  {
+    "for": "What is asteroid?",
+    "responses": [
+      "Asteroid is rock in space.",
+      "Between Mars and Jupiter."
+    ]
+  },
+  {
+    "for": "Will the humidity drop?",
+    "responses": [
+      "Yes, drier air.",
+      "No, stays high."
+    ]
+  },
+  {
+    "for": "What does taiga mean?",
+    "responses": [
+      "Taiga is forest in cold areas.",
+      "Conifer trees."
+    ]
+  },
+  {
+    "for": "Is the ozone depleting?",
+    "responses": [
+      "Less now, but was.",
+      "From chemicals."
+    ]
+  },
+  {
+    "for": "What is cyclone track?",
+    "responses": [
+      "Cyclone track is path of storm.",
+      "Predicted route."
+    ]
+  },
+  {
+    "for": "How is the weather in the Andes?",
+    "responses": [
+      "Andes are cool at high elevation.",
+      "Varied."
+    ]
+  },
+  {
+    "for": "What is galaxy?",
+    "responses": [
+      "Galaxy is group of stars.",
+      "Milky Way is ours."
+    ]
+  },
+  {
+    "for": "Will there be frost?",
+    "responses": [
+      "Yes, frost possible.",
+      "No, too warm."
+    ]
+  },
+  {
+    "for": "What does chaparral mean?",
+    "responses": [
+      "Chaparral is shrubland.",
+      "Mediterranean climate."
+    ]
+  },
+  {
+    "for": "Is the air quality good?",
+    "responses": [
+      "Check local report.",
+      "Usually yes in rural areas."
+    ]
+  },
+  {
+    "for": "What is high pressure?",
+    "responses": [
+      "High pressure brings clear weather.",
+      "Sinking air."
+    ]
+  },
+  {
+    "for": "How is the weather in the Rockies?",
+    "responses": [
+      "Rockies have snow in winter.",
+      "Cool summers."
+    ]
+  },
+  {
+    "for": "What is black hole?",
+    "responses": [
+      "Black hole sucks in light.",
+      "Strong gravity."
+    ]
+  },
+  {
+    "for": "Will it sleet?",
+    "responses": [
+      "Possible sleet.",
+      "No, rain."
+    ]
+  },
+  {
+    "for": "What does biome mean?",
+    "responses": [
+      "Biome is large ecosystem.",
+      "Like forest or desert."
+    ]
+  },
+  {
+    "for": "Is there a drought?",
+    "responses": [
+      "In some places, yes.",
+      "Check news."
+    ]
+  },
+  {
+    "for": "What is low pressure?",
+    "responses": [
+      "Low pressure brings clouds and rain.",
+      "Rising air."
+    ]
+  },
+  {
+    "for": "How is the weather in the Alps?",
+    "responses": [
+      "Alps are snowy.",
+      "Good for skiing."
+    ]
+  },
+  {
+    "for": "What is nebula?",
+    "responses": [
+      "Nebula is cloud of gas in space.",
+      "Star birth place."
+    ]
+  },
+  {
+    "for": "Will the wind change?",
+    "responses": [
+      "Wind direction may shift.",
+      "Stay tuned."
+    ]
+  },
+  {
+    "for": "What is ecology?",
+    "responses": [
+      "Ecology is study of environments.",
+      "Living things and surroundings."
+    ]
+  },
+  {
+    "for": "Is global warming real?",
+    "responses": [
+      "Yes, scientists agree.",
+      "Evidence in temperatures."
+    ]
+  },
+  {
+    "for": "What is occlusion?",
+    "responses": [
+      "Occlusion is when fronts meet.",
+      "Brings weather change."
+    ]
+  },
+  {
+    "for": "How is the weather in the Pampas?",
+    "responses": [
+      "Pampas are temperate.",
+      "Grasslands."
+    ]
+  },
+  {
+    "for": "What is supernova?",
+    "responses": [
+      "Supernova is exploding star.",
+      "Very bright."
+    ]
+  },
+  {
+    "for": "Will there be a blizzard?",
+    "responses": [
+      "In winter, possible.",
+      "No, mild."
+    ]
+  },
+  {
+    "for": "What is biodiversity?",
+    "responses": [
+      "Biodiversity is variety of life.",
+      "Important for ecosystems."
+    ]
+  },
+  {
+    "for": "Is the sea rough?",
+    "responses": [
+      "If windy, yes.",
+      "Calm seas otherwise."
+    ]
+  },
+  {
+    "for": "What is ridge?",
+    "responses": [
+      "Ridge is high pressure area.",
+      "Elongated."
+    ]
+  },
+  {
+    "for": "How is the weather in the Outback?",
+    "responses": [
+      "Outback is hot and dry.",
+      "Australian desert."
+    ]
+  },
+  {
+    "for": "What is pulsar?",
+    "responses": [
+      "Pulsar is spinning neutron star.",
+      "Sends radio waves."
+    ]
+  },
+  {
+    "for": "Will it be temperate?",
+    "responses": [
+      "Yes, temperate weather.",
+      "Moderate."
+    ]
+  },
+  {
+    "for": "What is conservation?",
+    "responses": [
+      "Conservation is protecting nature.",
+      "Save resources."
+    ]
+  },
+  {
+    "for": "Is there acid rain?",
+    "responses": [
+      "In polluted areas, yes.",
+      "Harms lakes and forests."
+    ]
+  },
+  {
+    "for": "What is trough?",
+    "responses": [
+      "Trough is low pressure area.",
+      "Brings bad weather."
+    ]
+  },
+  {
+    "for": "How is the weather in the Taiga?",
+    "responses": [
+      "Taiga is cold.",
+      "Forests in north."
+    ]
+  },
+  {
+    "for": "What is quasar?",
+    "responses": [
+      "Quasar is bright distant object.",
+      "Active galaxy."
+    ]
+  }
+]
+
+
