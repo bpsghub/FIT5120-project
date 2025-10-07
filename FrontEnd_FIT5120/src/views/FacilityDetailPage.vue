@@ -393,7 +393,7 @@ onUnmounted(() => {
   margin: 0 auto;
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #f3e8ff 0%, #ddd6fe 100%);
   min-height: 100vh;
   position: relative;
 }
@@ -405,7 +405,7 @@ onUnmounted(() => {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0.08) 100%);
   pointer-events: none;
 }
 
@@ -413,27 +413,27 @@ onUnmounted(() => {
   margin-bottom: 30px;
   padding: 12px 24px;
   background: rgba(255, 255, 255, 0.95);
-  border: 2px solid rgba(0, 208, 132, 0.2);
+  border: 2px solid rgba(139, 92, 246, 0.2);
   border-radius: 25px;
   cursor: pointer;
   font-weight: 600;
   font-size: 14px;
-  color: #00d084;
+  color: #8B5CF6;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 15px rgba(0, 208, 132, 0.1);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.1);
   position: relative;
   z-index: 1;
 }
 
 .back-btn:hover {
-  background: rgba(0, 208, 132, 0.1);
-  border-color: rgba(0, 208, 132, 0.4);
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.4);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 208, 132, 0.2);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.2);
 }
 
 .loading {
@@ -442,15 +442,15 @@ onUnmounted(() => {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 25px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 15px 35px rgba(0, 208, 132, 0.1);
-  border: 1px solid rgba(0, 208, 132, 0.1);
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.1);
   position: relative;
   z-index: 1;
 }
 
 .spinner {
-  border: 4px solid rgba(0, 208, 132, 0.2);
-  border-top: 4px solid #00d084;
+  border: 4px solid rgba(139, 92, 246, 0.2);
+  border-top: 4px solid #8B5CF6;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -464,7 +464,7 @@ onUnmounted(() => {
 }
 
 .loading p {
-  color: #00d084;
+  color: #8B5CF6;
   font-weight: 600;
   font-size: 18px;
 }
@@ -512,8 +512,8 @@ onUnmounted(() => {
   padding: 30px;
   border-radius: 25px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 15px 35px rgba(0, 208, 132, 0.1);
-  border: 1px solid rgba(0, 208, 132, 0.1);
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.1);
   position: relative;
   z-index: 1;
 }
@@ -554,7 +554,7 @@ onUnmounted(() => {
   color: #2d3748;
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #00d084, #4de6a3);
+  background: linear-gradient(135deg, #8B5CF6, #A78BFA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -588,9 +588,9 @@ onUnmounted(() => {
 .detail-tabs {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 25px;
-  box-shadow: 0 15px 35px rgba(0, 208, 132, 0.1);
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 208, 132, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.1);
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -690,8 +690,8 @@ onUnmounted(() => {
 .address-card {
   margin: 20px 0;
   border-radius: 15px;
-  border: 1px solid rgba(0, 208, 132, 0.1);
-  box-shadow: 0 4px 15px rgba(0, 208, 132, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.08);
 }
 
 .address-content {
@@ -701,7 +701,7 @@ onUnmounted(() => {
 }
 
 .address-icon {
-  color: #00d084;
+  color: #8B5CF6;
   font-size: 18px;
 }
 
@@ -737,13 +737,13 @@ onUnmounted(() => {
 
 .facility-tabs :deep(.el-tabs__header) {
   margin: 0;
-  background: rgba(0, 208, 132, 0.05);
+  background: rgba(139, 92, 246, 0.05);
   border-radius: 20px 20px 0 0;
 }
 
 .facility-tabs :deep(.el-tabs__nav-wrap::after) {
   height: 1px;
-  background-color: rgba(0, 208, 132, 0.2);
+  background-color: rgba(139, 92, 246, 0.2);
 }
 
 .facility-tabs :deep(.el-tabs__item) {
@@ -755,12 +755,12 @@ onUnmounted(() => {
 }
 
 .facility-tabs :deep(.el-tabs__item.is-active) {
-  color: #00d084;
-  background: rgba(0, 208, 132, 0.1);
+  color: #8B5CF6;
+  background: rgba(139, 92, 246, 0.1);
 }
 
 .facility-tabs :deep(.el-tabs__active-bar) {
-  background-color: #00d084;
+  background-color: #8B5CF6;
 }
 
 .tab-content {
@@ -773,7 +773,7 @@ onUnmounted(() => {
   color: #2d3748;
   font-size: 1.8rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #00d084, #4de6a3);
+  background: linear-gradient(135deg, #8B5CF6, #A78BFA);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -782,8 +782,8 @@ onUnmounted(() => {
 .info-card {
   margin-bottom: 20px;
   border-radius: 15px;
-  border: 1px solid rgba(0, 208, 132, 0.1);
-  box-shadow: 0 4px 15px rgba(0, 208, 132, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.08);
 }
 
 .card-header {
@@ -795,7 +795,7 @@ onUnmounted(() => {
 }
 
 .card-header .el-icon {
-  color: #00d084;
+  color: #8B5CF6;
   font-size: 18px;
 }
 
@@ -829,8 +829,8 @@ onUnmounted(() => {
   border-radius: 15px;
   margin-bottom: 25px;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0, 208, 132, 0.15);
-  border: 1px solid rgba(0, 208, 132, 0.1);
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.15);
+  border: 1px solid rgba(139, 92, 246, 0.1);
 }
 
 .map-actions {
@@ -844,16 +844,16 @@ onUnmounted(() => {
 }
 
 :deep(.el-button--primary) {
-  background: linear-gradient(135deg, #00d084, #4de6a3);
+  background: linear-gradient(135deg, #8B5CF6, #A78BFA);
   border-color: transparent;
-  box-shadow: 0 4px 15px rgba(0, 208, 132, 0.3);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
 }
 
 :deep(.el-button--primary:hover) {
-  background: linear-gradient(135deg, #4de6a3, #00d084);
+  background: linear-gradient(135deg, #A78BFA, #8B5CF6);
   border-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 208, 132, 0.4);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
 }
 
 :deep(.el-button--success) {
@@ -870,25 +870,25 @@ onUnmounted(() => {
 }
 
 :deep(.el-tag--success) {
-  background-color: rgba(0, 208, 132, 0.1);
-  border-color: rgba(0, 208, 132, 0.2);
-  color: #00d084;
+  background-color: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.2);
+  color: #8B5CF6;
 }
 
 :deep(.el-tag--info) {
-  background-color: rgba(0, 208, 132, 0.05);
-  border-color: rgba(0, 208, 132, 0.1);
-  color: #00d084;
+  background-color: rgba(139, 92, 246, 0.05);
+  border-color: rgba(139, 92, 246, 0.1);
+  color: #8B5CF6;
 }
 
 :deep(.el-tag--primary) {
-  background: linear-gradient(135deg, rgba(0, 208, 132, 0.1), rgba(77, 230, 163, 0.1));
-  border-color: rgba(0, 208, 132, 0.2);
-  color: #00d084;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(167, 139, 250, 0.1));
+  border-color: rgba(139, 92, 246, 0.2);
+  color: #8B5CF6;
 }
 
 :deep(.el-card__header) {
-  background: rgba(0, 208, 132, 0.05);
-  border-bottom: 1px solid rgba(0, 208, 132, 0.1);
+  background: rgba(139, 92, 246, 0.05);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
 }
 </style>

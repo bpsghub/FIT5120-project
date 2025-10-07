@@ -2,16 +2,13 @@
   <div class="find-page">
     <Header />
     <div class="page-header">
-      <h1>Find {{ activeTab === 'facilities' ? 'Facilities' : 'Events' }}</h1>
+      <h1>{{ t('facility_finder.title') }}</h1>
 
       <div class="controls">
-        <button @click="toggleTab" class="toggle-btn"
-          :class="activeTab === 'facilities' ? 'facility-active' : 'event-active'">
-          {{ activeTab === 'facilities' ? 'Switch to Events' : 'Switch to Facilities' }}
-        </button>
+
 
         <button @click="showFilters = !showFilters" class="filter-btn">
-          <i class="filter-icon">⚙️</i> Filters
+          <i class="filter-icon">⚙️</i> {{ t('facility_finder.filters.title') }}
         </button>
       </div>
     </div>
@@ -19,48 +16,47 @@
     <!-- Filter panel -->
     <div v-if="showFilters" class="filters-panel">
       <div class="filter-group">
-        <label>Distance Range</label>
+        <label>{{ t('facility_finder.filters.distance') }}</label>
         <select v-model="filters.distance">
-          <option value="1">Within 1 km</option>
-          <option value="5">Within 5 km</option>
-          <option value="10">Within 10 km</option>
-          <option value="20">Within 20 km</option>
+          <option value="1">{{ t('facility_finder.filters.distance_options.1') }}</option>
+          <option value="5">{{ t('facility_finder.filters.distance_options.5') }}</option>
+          <option value="10">{{ t('facility_finder.filters.distance_options.10') }}</option>
+          <option value="20">{{ t('facility_finder.filters.distance_options.20') }}</option>
         </select>
       </div>
 
       <div class="filter-group">
-        <label>Rating</label>
+        <label>{{ t('facility_finder.filters.rating') }}</label>
         <select v-model="filters.minRating">
-          <option value="0">Any rating</option>
-          <option value="3">3 stars and above</option>
-          <option value="4">4 stars and above</option>
-          <option value="5">5 stars and above</option>
+          <option value="0">{{ t('facility_finder.filters.rating_options.0') }}</option>
+          <option value="3">{{ t('facility_finder.filters.rating_options.3') }}</option>
+          <option value="4">{{ t('facility_finder.filters.rating_options.4') }}</option>
+          <option value="5">{{ t('facility_finder.filters.rating_options.5') }}</option>
         </select>
       </div>
 
       <div class="filter-group">
-        <label v-if="activeTab === 'facilities'">Open Now</label>
-        <label v-if="activeTab === 'events'">Active Events</label>
+        <label>{{ t('facility_finder.filters.open_now') }}</label>
         <input type="checkbox" v-model="filters.openNow">
       </div>
 
       <!-- Category filter -->
       <div class="filter-group" v-if="activeTab === 'facilities'">
-        <label>Category</label>
+        <label>{{ t('facility_finder.filters.category') }}</label>
         <select v-model="filters.category">
-          <option value="">Any category</option>
-          <option value="supermarket">Supermarket</option>
-          <option value="clinic">Clinic</option>
-          <option value="chinese_restaurant">Chinese restaurant</option>
-          <option value="vietnamese_restaurant">Vietnamese restaurant</option>
-          <option value="indonesian_restaurant">Indonesian restaurant</option>
-          <option value="shopping_mall">Shopping mall</option>
+          <option value="">{{ t('facility_finder.filters.category_options.all') }}</option>
+          <option value="supermarket">{{ t('facility_finder.filters.category_options.supermarket') }}</option>
+          <option value="clinic">{{ t('facility_finder.filters.category_options.clinic') }}</option>
+          <option value="chinese_restaurant">{{ t('facility_finder.filters.category_options.chinese_restaurant') }}</option>
+          <option value="vietnamese_restaurant">{{ t('facility_finder.filters.category_options.vietnamese_restaurant') }}</option>
+          <option value="indonesian_restaurant">{{ t('facility_finder.filters.category_options.indonesian_restaurant') }}</option>
+          <option value="shopping_mall">{{ t('facility_finder.filters.category_options.shopping_mall') }}</option>
         </select>
       </div>
 
       <div class="filter-actions">
-        <button @click="applyFilters" class="apply-btn">Apply Filters</button>
-        <button @click="resetFilters" class="reset-btn">Reset</button>
+        <button @click="applyFilters" class="apply-btn">{{ t('facility_finder.apply_filters') }}</button>
+        <button @click="resetFilters" class="reset-btn">{{ t('facility_finder.reset') }}</button>
       </div>
     </div>
 
@@ -70,17 +66,17 @@
       <div class="results-list">
         <div v-if="loading" class="loading">
           <div class="spinner"></div>
-          <p>Loading {{ activeTab }}...</p>
+          <p>{{ t('facility_finder.loading') }}</p>
         </div>
 
         <div v-if="error && !loading" class="error-message">
           <p>❌ {{ error }}</p>
-          <button @click="loadData" class="retry-btn">Try Again</button>
+          <button @click="loadData" class="retry-btn">{{ t('facility_finder.try_again') }}</button>
         </div>
 
         <div v-if="!loading && !error && items.length === 0" class="no-results">
-          <p>No {{ activeTab }} found matching your criteria.</p>
-          <button @click="resetFilters" class="reset-btn">Clear Filters</button>
+          <p>{{ t('facility_finder.no_results') }}</p>
+          <button @click="resetFilters" class="reset-btn">{{ t('facility_finder.clear_filters') }}</button>
         </div>
 
         <div v-if="!loading && !error && items.length > 0" class="cards-container">
@@ -100,11 +96,14 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import { useI18n } from 'vue-i18n'
 import FacilityCard from '@/components/FacilityCard.vue'
 import EventCard from '@/components/EventCard.vue'
 import facilityService from '@/services/facilityService'
 import eventService from '@/services/eventService'
 import Header from '@/components/Header.vue'
+
+const { t } = useI18n()
 
 const activeTab = ref('facilities')
 const showFilters = ref(false)
@@ -273,7 +272,7 @@ onUnmounted(() => {
 
 /* Page layout */
 .find-page {
-  background: #f7fafc;
+  background: linear-gradient(135deg, #f3e8ff 0%, #ddd6fe 100%);
   min-height: 100vh;
   padding: 1.5rem;
 }
@@ -286,8 +285,8 @@ onUnmounted(() => {
   padding: 1rem;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 208, 132, 0.1);
-  box-shadow: 0 2px 12px rgba(0, 208, 132, 0.08);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+  box-shadow: 0 2px 12px rgba(139, 92, 246, 0.08);
   max-width: 1400px;
   margin: 0 auto;
   border-radius: 1.5rem 1.5rem 0 0;
@@ -306,7 +305,7 @@ onUnmounted(() => {
 .page-header h1::before {
   content: '📍';
   font-size: 2rem;
-  color: #00d084;
+  color: #8B5CF6;
 }
 
 .controls {
@@ -324,16 +323,16 @@ onUnmounted(() => {
   font-weight: 600;
   font-size: 14px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 12px rgba(0, 208, 132, 0.08);
+  box-shadow: 0 2px 12px rgba(139, 92, 246, 0.08);
   position: relative;
   overflow: hidden;
   min-width: 140px;
 }
 
 .facility-active {
-  background: linear-gradient(135deg, #00d084, #4de6a3);
+  background: linear-gradient(135deg, #8B5CF6, #A78BFA);
   color: white;
-  box-shadow: 0 4px 20px rgba(0, 208, 132, 0.12);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.12);
 }
 
 .event-active {
@@ -345,24 +344,24 @@ onUnmounted(() => {
 .toggle-btn:not(.facility-active):not(.event-active) {
   background: #ffffff;
   color: #2d3748;
-  border: 2px solid rgba(0, 208, 132, 0.2);
+  border: 2px solid rgba(139, 92, 246, 0.2);
 }
 
 .toggle-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 208, 132, 0.12);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.12);
 }
 
 /* Filter button */
 .filter-btn {
   padding: 12px 24px;
   background: #ffffff;
-  border: 2px solid rgba(0, 208, 132, 0.2);
+  border: 2px solid rgba(139, 92, 246, 0.2);
   border-radius: 1rem;
   cursor: pointer;
   font-weight: 600;
   font-size: 14px;
-  color: #00d084;
+  color: #8B5CF6;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
   display: flex;
@@ -371,10 +370,10 @@ onUnmounted(() => {
 }
 
 .filter-btn:hover {
-  background: rgba(0, 208, 132, 0.1);
-  border-color: #00d084;
+  background: rgba(139, 92, 246, 0.1);
+  border-color: #8B5CF6;
   transform: translateY(-2px);
-  box-shadow: 0 2px 12px rgba(0, 208, 132, 0.08);
+  box-shadow: 0 2px 12px rgba(139, 92, 246, 0.08);
 }
 
 .filter-icon {
@@ -386,12 +385,12 @@ onUnmounted(() => {
   padding: 1rem;
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 208, 132, 0.1);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
-  box-shadow: 0 2px 12px rgba(0, 208, 132, 0.08);
+  box-shadow: 0 2px 12px rgba(139, 92, 246, 0.08);
   max-width: 1400px;
   margin: 0 auto;
   border-radius: 0 0 1.5rem 1.5rem;
@@ -413,7 +412,7 @@ onUnmounted(() => {
 .filter-group select,
 .filter-group input[type="checkbox"] {
   padding: 10px 15px;
-  border: 2px solid rgba(0, 208, 132, 0.2);
+  border: 2px solid rgba(139, 92, 246, 0.2);
   border-radius: 0.75rem;
   background: #ffffff;
   transition: all 0.3s ease;
@@ -423,15 +422,15 @@ onUnmounted(() => {
 .filter-group select:focus,
 .filter-group input[type="checkbox"]:focus {
   outline: none;
-  border-color: #00d084;
-  box-shadow: 0 0 0 3px rgba(0, 208, 132, 0.1);
+  border-color: #8B5CF6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
 }
 
 .filter-group input[type="checkbox"] {
   padding: 0;
   width: 20px;
   height: 20px;
-  accent-color: #00d084;
+  accent-color: #8B5CF6;
 }
 
 .filter-actions {
@@ -441,7 +440,7 @@ onUnmounted(() => {
 }
 
 .apply-btn {
-  background: linear-gradient(135deg, #00d084, #4de6a3);
+  background: linear-gradient(135deg, #8B5CF6, #A78BFA);
   color: white;
   border: none;
   padding: 12px 24px;
@@ -449,12 +448,12 @@ onUnmounted(() => {
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 12px rgba(0, 208, 132, 0.08);
+  box-shadow: 0 2px 12px rgba(139, 92, 246, 0.08);
 }
 
 .apply-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 208, 132, 0.12);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.12);
 }
 
 .reset-btn {
@@ -495,8 +494,8 @@ onUnmounted(() => {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 1.5rem;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 208, 132, 0.12);
-  border: 1px solid rgba(0, 208, 132, 0.1);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.1);
 }
 
 .cards-container {
@@ -511,8 +510,8 @@ onUnmounted(() => {
   height: 100%;
   border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 208, 132, 0.12);
-  border: 1px solid rgba(0, 208, 132, 0.1);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.1);
   position: relative;
 }
 
@@ -531,8 +530,8 @@ onUnmounted(() => {
 }
 
 .spinner {
-  border: 4px solid rgba(0, 208, 132, 0.1);
-  border-top: 4px solid #00d084;
+  border: 4px solid rgba(139, 92, 246, 0.1);
+  border-top: 4px solid #8B5CF6;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -551,7 +550,7 @@ onUnmounted(() => {
 }
 
 .loading p {
-  color: #00d084;
+  color: #8B5CF6;
   font-weight: 600;
   font-size: 16px;
 }
@@ -602,17 +601,17 @@ onUnmounted(() => {
 }
 
 .results-list::-webkit-scrollbar-track {
-  background: rgba(0, 208, 132, 0.1);
+  background: rgba(139, 92, 246, 0.1);
   border-radius: 4px;
 }
 
 .results-list::-webkit-scrollbar-thumb {
-  background: #00d084;
+  background: #8B5CF6;
   border-radius: 4px;
 }
 
 .results-list::-webkit-scrollbar-thumb:hover {
-  background: #4de6a3;
+  background: #A78BFA;
 }
 
 /* Responsive design */

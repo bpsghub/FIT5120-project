@@ -377,9 +377,9 @@ const createHeatmapEffect = (map) => {
     const popupContent = `
       <div class="map-popup">
         <h4>${area.name}</h4>
-        <p><strong>Police Region:</strong> ${area.policeRegion}</p>
-        <p><strong>Total Offences:</strong> ${area.offenceCount.toLocaleString()}</p>
-        <p><strong>Crime Level:</strong> <span class="${getCrimeLevel(normalizedIntensity).class}">${getCrimeLevel(normalizedIntensity).text}</span></p>
+        <p><strong>${t('safety.police_region', 'Police Region')}:</strong> ${area.policeRegion}</p>
+        <p><strong>${t('safety.total_offences', 'Total Offences')}:</strong> ${area.offenceCount.toLocaleString()}</p>
+        <p><strong>${t('safety.crime_level', 'Crime Level')}:</strong> <span class="${getCrimeLevel(normalizedIntensity).class}">${getCrimeLevel(normalizedIntensity).text}</span></p>
       </div>
     `
 

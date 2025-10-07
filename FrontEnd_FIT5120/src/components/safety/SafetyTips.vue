@@ -7,7 +7,7 @@
     </div>
 
     <div class="module-content">
-      <!-- 紧急联系区域 -->
+      <!-- Emergency contacts section -->
       <div class="emergency-contacts">
         <h3 class="section-title emergency-title">
           🚨 {{ t('safety.emergency_contacts', 'Emergency Contacts') }}
@@ -30,7 +30,7 @@
         </div>
       </div>
 
-      <!-- 安全提示分类 -->
+      <!-- Safety tips categories -->
       <div class="tips-sections">
         <div
           v-for="category in safetyCategories"
@@ -64,13 +64,13 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-// 紧急联系人
-const emergencyContacts = ref([
+// Emergency contacts
+const emergencyContacts = computed(() => [
   {
     id: 1,
     number: '000',
@@ -101,8 +101,8 @@ const emergencyContacts = ref([
   }
 ])
 
-// 安全提示分类
-const safetyCategories = ref([
+// Safety tips categories
+const safetyCategories = computed(() => [
   {
     id: 1,
     icon: '🏠',
@@ -174,8 +174,8 @@ const safetyCategories = ref([
   }
 ])
 
-// 重要提醒
-const importantReminders = ref([
+// Important reminders
+const importantReminders = computed(() => [
   {
     id: 1,
     type: 'critical',
@@ -199,8 +199,8 @@ const importantReminders = ref([
   }
 ])
 
-// 快速行动
-const quickActions = ref([
+// Quick actions
+const quickActions = computed(() => [
   {
     id: 1,
     icon: '📞',
@@ -227,8 +227,8 @@ const quickActions = ref([
   }
 ])
 
-// 有用资源
-const helpfulResources = ref([
+// Helpful resources
+const helpfulResources = computed(() => [
   {
     id: 1,
     icon: '🛡️',
@@ -259,15 +259,15 @@ const helpfulResources = ref([
   }
 ])
 
-// 拨打电话
+// Make phone call
 const makeCall = (number, name) => {
   const cleanNumber = number.replace(/\s/g, '')
-  if (confirm(t('safety.call_confirm', `Do you want to call ${name} at ${number}?`))) {
+  if (confirm(t('safety.call_confirm', 'Do you want to call {name} at {number}?', { name, number }))) {
     window.location.href = `tel:${cleanNumber}`
   }
 }
 
-// 处理快速行动
+// Handle quick actions
 const handleQuickAction = (action) => {
   switch (action) {
     case 'call_000':
@@ -280,11 +280,11 @@ const handleQuickAction = (action) => {
         navigator.geolocation.getCurrentPosition(
           (position) => {
             const { latitude, longitude } = position.coords
-            const locationText = `My location: https://maps.google.com/?q=${latitude},${longitude}`
+            const locationText = `${t('safety.my_location', 'My location')}: https://maps.google.com/?q=${latitude},${longitude}`
 
             if (navigator.share) {
               navigator.share({
-                title: 'My Emergency Location',
+                title: t('safety.my_emergency_location', 'My Emergency Location'),
                 text: locationText
               })
             } else {
@@ -300,7 +300,7 @@ const handleQuickAction = (action) => {
       }
       break
     case 'sound_alarm':
-      // 这里可以实现声音警报功能
+      // Implement sound alarm functionality
       if ('vibrate' in navigator) {
         navigator.vibrate([200, 100, 200, 100, 200])
       }
@@ -341,7 +341,7 @@ const handleQuickAction = (action) => {
   overflow-y: auto;
 }
 
-/* 紧急联系区域 */
+/* Emergency contacts area */
 .emergency-contacts {
   margin-bottom: 2rem;
 }
@@ -420,7 +420,7 @@ const handleQuickAction = (action) => {
   opacity: 0.9;
 }
 
-/* 安全提示分类 */
+/* Safety tips categories */
 .tips-sections {
   margin-bottom: 2rem;
 }
@@ -483,7 +483,7 @@ const handleQuickAction = (action) => {
   font-size: 0.95rem;
 }
 
-/* 重要提醒 */
+/* Important reminders */
 .important-reminders {
   margin-bottom: 2rem;
 }
@@ -536,7 +536,7 @@ const handleQuickAction = (action) => {
   line-height: 1.4;
 }
 
-/* 快速行动 */
+/* Quick actions */
 .quick-actions {
   margin-bottom: 2rem;
 }
@@ -576,7 +576,7 @@ const handleQuickAction = (action) => {
   text-align: center;
 }
 
-/* 资源链接 */
+/* Resource links */
 .resources-section {
   margin-bottom: 1rem;
 }
@@ -632,7 +632,7 @@ const handleQuickAction = (action) => {
   color: #007bff;
 }
 
-/* 响应式设计 */
+/* Responsive design */
 @media (max-width: 768px) {
   .contacts-grid {
     grid-template-columns: 1fr;
@@ -662,7 +662,7 @@ const handleQuickAction = (action) => {
   }
 }
 
-/* 高对比度支持 */
+/* High contrast support */
 @media (prefers-contrast: high) {
   .tip-card,
   .reminder-card,
