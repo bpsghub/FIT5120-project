@@ -82,7 +82,7 @@ async function translateStatics() {
 
 
 onMounted(async () => {
-  const res = await fetch('/Learning about Australia/FrontEnd_FIT5120/public/Learning about Australia/quiz_dining_multilang_finalversion.json')
+  const res = await fetch('/Learning about Australia/quiz_dining_multilang_finalversion.json')
   const data = await res.json()
   questions.value = data.items
   await translateStatics()
