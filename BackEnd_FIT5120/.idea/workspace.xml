@@ -4,52 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2aee50b-624e-4268-b559-0eef2116651c" name="Changes" comment="repair som function">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/FacilityFinderApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/FacilityFinderApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/config/CategoryConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/config/CategoryConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/config/CorsConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/config/CsvReaderUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/config/CsvReaderUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/config/MyBatisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/config/MyBatisConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/controller/CrimeStatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/controller/CrimeStatisticsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/controller/FacilityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/controller/FacilityController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/controller/ItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/controller/ItemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/controller/PhraseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/controller/PhraseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/controller/ScamReportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/controller/ScamReportController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/dto/CrimeStatisticsDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/dto/CrimeStatisticsDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/dto/FacilityDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/dto/FacilityDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/mapper/CrimeStatisticsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/mapper/CrimeStatisticsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/mapper/ScamReportMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/mapper/ScamReportMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/Coordinates.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/Coordinates.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/CrimeStatistics.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/CrimeStatistics.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/CsvTranslation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/CsvTranslation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/Facility.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/Facility.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/FacilityApiResponse$Fields.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/FacilityApiResponse$Fields.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/FacilityApiResponse$Record.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/FacilityApiResponse$Record.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/FacilityApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/FacilityApiResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/FacilityResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/FacilityResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/Item$Coordinates.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/Item$Coordinates.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/Phrase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/Phrase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/ScamReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/model/ScamReport.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/CrimeStatisticsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/CrimeStatisticsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/FacilityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/FacilityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/FacilityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/FacilityServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/ItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/ItemService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/ItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/ItemServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/MelbourneDataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/MelbourneDataService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/PhraseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/PhraseRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/PhraseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/PhraseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/PhraseServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/PhraseServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/ScamReportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/ScamReportService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/impl/CrimeStatisticsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/impl/CrimeStatisticsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/impl/ScamReportServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/facilityfinder/service/impl/ScamReportServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd_FIT5120/src/locales.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd_FIT5120/src/locales.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd_FIT5120/src/views/FacilityEvent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd_FIT5120/src/views/FacilityEvent.vue" afterDir="false" />
-    </list>
+    <list default="true" id="f2aee50b-624e-4268-b559-0eef2116651c" name="Changes" comment="repair som function" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,6 +47,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.melbourne-facility-finder [clean].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -166,7 +122,7 @@
       <workItem from="1759056206813" duration="21000" />
       <workItem from="1759056277585" duration="776000" />
       <workItem from="1759835565700" duration="2456000" />
-      <workItem from="1759849212876" duration="2463000" />
+      <workItem from="1759849212876" duration="2844000" />
     </task>
     <task id="LOCAL-00001" summary="repair som function">
       <option name="closed" value="true" />
