@@ -12,6 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/facilities")
+@CrossOrigin(origins = "*")
 public class FacilityController {
 
     private final FacilityService facilityService;

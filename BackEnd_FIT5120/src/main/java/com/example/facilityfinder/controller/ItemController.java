@@ -10,6 +10,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class ItemController {
 
     private final ItemService itemService;
@@ -18,6 +19,10 @@ public class ItemController {
         this.itemService = itemService;
     }
 
+    @GetMapping("test")
+    public String test(){
+        return "test";
+    }
 
     @GetMapping("/AllItem")
     public ResponseEntity<List<Item>> getAllItems(
