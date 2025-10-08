@@ -8,10 +8,11 @@ import axios from 'axios'
 // - 'production' → npm run build 后部署的版本
 // =========================================================
 
-const baseURL =
-  import.meta.env.MODE === 'development'
-    ? 'http://localhost:5566/api'        // ✅ 本地 Spring Boot 后端
-    : 'https://api.allorigins.win/raw?url=http://54.252.184.10:5566/api'    // ✅ 使用 HTTPS 代理防止 Mixed Content
+const baseURL='http://54.252.184.10:5566/api'
+// const baseURL =
+//   import.meta.env.MODE === 'development'
+//     ? 'http://localhost:5566/api'        // ✅ 本地 Spring Boot 后端
+//     : 'https://api.allorigins.win/raw?url=http://54.252.184.10:5566/api'    // ✅ 使用 HTTPS 代理防止 Mixed Content
 
 // =========================================================
 // 🚀 创建 axios 实例
