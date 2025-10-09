@@ -247,13 +247,13 @@ export function useSpeechRecognition() {
     const similarity = calculateSimilarity(referenceText, transcribedText)
     const finalScore = Math.round(similarity * confidence)
 
-    // Tách từ để so sánh chi tiết
+    // Split words for detailed comparison
     const refWords = referenceText.trim().toLowerCase().split(/\s+/)
     const transWords = transcribedText.trim().toLowerCase().split(/\s+/)
     let wrongWords = []
     let missingWords = []
 
-    // So sánh từng từ
+    // Compare each word
     refWords.forEach((word, idx) => {
       if (!transWords[idx] || transWords[idx] !== word) {
         wrongWords.push(word)
@@ -265,20 +265,56 @@ export function useSpeechRecognition() {
 
     let feedback = ''
     let level = ''
+    let celebrationMessage = ''
 
-    if (finalScore >= 90 && wrongWords.length === 0) {
-      feedback = 'Phát âm rất tốt! Bạn nói rất chính xác.'
-      level = 'good'
+    // Celebration messages for excellent pronunciation
+    const excellentMessages = [
+      'Excellent! Perfect pronunciation!',
+      'Outstanding! Your pronunciation is perfect!',
+      'Amazing! You speak English very well!',
+      'Perfect! 100% accurate pronunciation!',
+      'Wonderful! You are a pronunciation star!'
+    ]
+
+    const goodMessages = [
+      'Great job! Very clear pronunciation!',
+      'Well done! You are improving!',
+      'Good! Keep up the great work!',
+      'Very good! Natural pronunciation!',
+      'Nice! Your pronunciation is great!'
+    ]
+
+    const encouragementMessages = [
+      'Keep practicing! You are learning well!',
+      'Continue practicing! You will improve!',
+      'Don\'t give up! Try again!',
+      'Almost there! Practice a little more!',
+      'Good effort! Listen and try again!'
+    ]
+
+    if (finalScore >= 95 && wrongWords.length === 0) {
+      // Perfect pronunciation
+      feedback = excellentMessages[Math.floor(Math.random() * excellentMessages.length)]
+      level = 'excellent'
+      celebrationMessage = 'Perfect pronunciation!'
+    } else if (finalScore >= 85 && wrongWords.length === 0) {
+      // Very good pronunciation
+      feedback = excellentMessages[Math.floor(Math.random() * excellentMessages.length)]
+      level = 'excellent'
     } else if (finalScore >= 75 && wrongWords.length <= 1) {
-      feedback = 'Khá tốt! Bạn chỉ sai ở từ: ' + wrongWords.join(', ')
+      // Good pronunciation
+      feedback = goodMessages[Math.floor(Math.random() * goodMessages.length)]
+      if (wrongWords.length > 0) {
+        feedback += ` Just watch the word: "${wrongWords.join(', ')}"`
+      }
       level = 'good'
     } else if (finalScore >= 60) {
-      feedback = 'Keep practicing. Listen carefully and try again.'
-      level = 'bad'
+      // Needs improvement
+      feedback = encouragementMessages[Math.floor(Math.random() * encouragementMessages.length)]
+      level = 'neutral'
     } else {
-      feedback =
-        'Phát âm chưa tốt. Bạn nói thiếu hoặc sai các từ: ' +
-        wrongWords.concat(missingWords).join(', ')
+      // Needs more practice
+      feedback = 'Listen carefully and try again! Focus on: ' + wrongWords.concat(missingWords).join(', ')
       level = 'bad'
     }
 
@@ -288,6 +324,7 @@ export function useSpeechRecognition() {
       confidence: Math.round(confidence * 100),
       feedback,
       level,
+      celebrationMessage,
       reference: referenceText,
       transcribed: transcribedText,
       wrongWords,
