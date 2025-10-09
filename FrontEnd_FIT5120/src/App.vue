@@ -1,14 +1,18 @@
 <template>
   <div id="app">
+    <Header />
     <router-view v-slot="{ Component, route }">
       <component :is="Component" :class="route.name === 'passcode' ? '' : ''" />
     </router-view>
+    <Footer />
   </div>
 </template>
 
 <script setup>
 import { onMounted } from 'vue'
 import AOS from 'aos'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
 onMounted(() => {
   AOS.init({

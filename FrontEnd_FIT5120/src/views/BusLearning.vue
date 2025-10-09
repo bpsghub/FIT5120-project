@@ -1,6 +1,5 @@
 <template>
   <div class="bus-learning-container">
-    <Header />
     <LearningBanner :title="$t('bus_learning.title')" :subtitle="$t('bus_learning.subtitle')" :particle-count="18" />
     <div class="content-box">
       <LearningSlider v-model="locale" :lang="locale" csv-url="/Learning about Australia/epic4_bus_keys_final.csv"
@@ -10,7 +9,6 @@
 </template>
 
 <script setup>
-import Header from '@/components/Header.vue';
 import LearningSlider from '@/components/LearningSlider.vue';
 import LearningBanner from '@/components/LearningBanner.vue';
 import { useI18n } from 'vue-i18n';

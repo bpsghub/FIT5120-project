@@ -1,6 +1,5 @@
 <template>
   <div class="modern-sections">
-    <Header />
     <div class="main-title">
       <span class="main-title-text">
         {{ $t('nav.navigate') }}
@@ -32,7 +31,6 @@
 import { computed, onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
-import Header from '@/components/Header.vue';
 const router = useRouter();
 const { t } = useI18n();
 

@@ -1,6 +1,5 @@
 <template>
   <div class="find-page">
-    <Header />
     <div class="page-header">
       <h1>Find {{ activeTab === 'facilities' ? 'Facilities' : 'Events' }}</h1>
 
@@ -104,7 +103,6 @@ import FacilityCard from '@/components/FacilityCard.vue'
 import EventCard from '@/components/EventCard.vue'
 import facilityService from '@/services/facilityService'
 import eventService from '@/services/eventService'
-import Header from '@/components/Header.vue'
 
 const activeTab = ref('facilities')
 const showFilters = ref(false)

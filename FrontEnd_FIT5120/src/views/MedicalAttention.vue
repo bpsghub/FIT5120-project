@@ -1,6 +1,5 @@
 <template>
   <div class="medical-attention-container ">
-    <Header />
     <LearningBanner :title="$t('navigate_your_life.cards.medicalattention.title')"
       :subtitle="$t('navigate_your_life.cards.medicalattention.subtitle')" :particle-count="18" />
 
@@ -13,7 +12,6 @@
 
 <script setup>
 import { ref } from 'vue'
-import Header from '@/components/Header.vue'
 import LearningSlider from '@/components/LearningSlider.vue'
 import { useI18n } from 'vue-i18n'
 import LearningBanner from '@/components/LearningBanner.vue'

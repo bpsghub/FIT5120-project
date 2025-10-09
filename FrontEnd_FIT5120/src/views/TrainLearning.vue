@@ -1,6 +1,5 @@
 <template>
   <div class="bus-learning-container">
-    <Header />
     <LearningBanner :title="$t('train_learning.title')" :subtitle="$t('train_learning.subtitle')"
       :particle-count="18" />
     <div class="content-box">
@@ -12,7 +11,6 @@
 
 <script setup>
 import { ref } from 'vue';
-import Header from '@/components/Header.vue';
 import LearningSlider from '@/components/LearningSlider.vue';
 import LearningBanner from '@/components/LearningBanner.vue';
 import { useI18n } from 'vue-i18n';

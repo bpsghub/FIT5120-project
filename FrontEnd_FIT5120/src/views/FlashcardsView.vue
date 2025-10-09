@@ -1,6 +1,5 @@
 <template>
   <div class="flashcards-page">
-    <Header />
     <div class="container d-flex justify-content-center align-items-center flex-column">
       <!-- Header -->
       <div class="header-section" data-aos="fade-down" data-aos-delay="100">
@@ -111,7 +110,6 @@ import { computed, watch, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useFlashcard } from '@/composables/useFlashcard.js'
 import Flashcard from '@/components/Flashcard.vue'
-import Header from '@/components/Header.vue'
 
 const props = defineProps({
   category: {

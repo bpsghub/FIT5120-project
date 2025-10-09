@@ -1,6 +1,5 @@
 <template>
   <div class="eating-out-container">
-    <Header />
     <LearningBanner :title="$t('socialnorms.eatingout.title')" :subtitle="$t('socialnorms.eatingout.subtitle')"
       :particle-count="18" />
     <div class="content-box">
@@ -12,7 +11,6 @@
 z
 <script setup>
 import { useI18n } from 'vue-i18n'
-import Header from '@/components/Header.vue'
 import LearningBanner from '@/components/LearningBanner.vue'
 import LearningSlider from '@/components/LearningSlider.vue'
 

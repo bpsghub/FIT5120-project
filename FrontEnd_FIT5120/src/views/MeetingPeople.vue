@@ -1,6 +1,5 @@
 <template>
   <div class="meeting-people-container">
-    <Header />
     <!-- Hero Banner -->
     <LearningBanner :title="$t('meetingpeople_title')" :subtitle="$t('meetingpeople_subtitle')" :particle-count="18" />
     <!-- Learning section -->
@@ -13,7 +12,6 @@
 
 <script setup>
 import { useI18n } from 'vue-i18n'
-import Header from '@/components/Header.vue'
 import LearningSlider from '@/components/LearningSlider.vue'
 import LearningBanner from '@/components/LearningBanner.vue'
 

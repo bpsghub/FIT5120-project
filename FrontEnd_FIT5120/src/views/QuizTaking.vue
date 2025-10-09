@@ -1,7 +1,6 @@
 <template>
 
   <div class="quiztaking">
-    <Header />
     <div class="quiztaking-w container mt-5 mb-5" v-if="!allCorrect">
       <h2 class="quiz-header">{{ staticTexts.quizTime }}</h2>
       <div v-for="(q, idx) in questions" :key="q.key" class="quiz-question-block">
@@ -35,7 +34,6 @@
 </template>
 
 <script setup>
-import Header from '@/components/Header.vue'
 import { ref, computed, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'

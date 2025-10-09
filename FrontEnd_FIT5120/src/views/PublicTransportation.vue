@@ -1,6 +1,5 @@
 <template>
   <div class="modern-sections">
-    <Header />
     <div class="main-title">
       <span class="main-title-text">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="main-title-icon">
@@ -43,7 +42,6 @@
 
 <script setup>
 import { ref } from 'vue';
-import Header from '@/components/Header.vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 

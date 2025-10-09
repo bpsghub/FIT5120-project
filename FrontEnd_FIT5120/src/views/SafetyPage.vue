@@ -1,6 +1,5 @@
 <template>
   <div class="safety-page">
-    <Header />
     
     <!-- 页面标题 -->
     <div class="safety-header">
@@ -53,7 +52,6 @@
 
 <script setup>
 import { useI18n } from 'vue-i18n'
-import Header from '@/components/Header.vue'
 import HazardWarnings from '@/components/safety/HazardWarnings.vue'
 import CrimeHotspots from '@/components/safety/CrimeHotspots.vue'
 import ScamAlerts from '@/components/safety/ScamAlerts.vue'

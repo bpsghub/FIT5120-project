@@ -144,6 +144,18 @@ const router = createRouter({
       component: () => import('../views/QuizTaking.vue'),
       meta: { requiresAuth: true },
     },
+    {
+      path: '/testchatbot',
+      name: 'testchatbot',
+      component: () => import('../views/testView.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/chatbot',
+      name: 'chatbot',
+      component: () => import('../views/ChatbotView.vue'),
+      meta: { requiresAuth: true },
+    },
   ],
 })
 
