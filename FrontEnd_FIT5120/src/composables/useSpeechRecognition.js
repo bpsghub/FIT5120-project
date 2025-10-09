@@ -247,21 +247,39 @@ export function useSpeechRecognition() {
     const similarity = calculateSimilarity(referenceText, transcribedText)
     const finalScore = Math.round(similarity * confidence)
 
+    // Tách từ để so sánh chi tiết
+    const refWords = referenceText.trim().toLowerCase().split(/\s+/)
+    const transWords = transcribedText.trim().toLowerCase().split(/\s+/)
+    let wrongWords = []
+    let missingWords = []
+
+    // So sánh từng từ
+    refWords.forEach((word, idx) => {
+      if (!transWords[idx] || transWords[idx] !== word) {
+        wrongWords.push(word)
+      }
+    })
+    if (transWords.length < refWords.length) {
+      missingWords = refWords.slice(transWords.length)
+    }
+
     let feedback = ''
     let level = ''
 
-    if (finalScore >= 90) {
-      feedback = 'Excellent! Your pronunciation is very accurate.'
-      level = 'excellent'
-    } else if (finalScore >= 75) {
-      feedback = 'Good job! Your pronunciation is clear.'
+    if (finalScore >= 90 && wrongWords.length === 0) {
+      feedback = 'Phát âm rất tốt! Bạn nói rất chính xác.'
+      level = 'good'
+    } else if (finalScore >= 75 && wrongWords.length <= 1) {
+      feedback = 'Khá tốt! Bạn chỉ sai ở từ: ' + wrongWords.join(', ')
       level = 'good'
     } else if (finalScore >= 60) {
-      feedback = 'Not bad, but try to practice more.'
-      level = 'fair'
-    } else {
       feedback = 'Keep practicing. Listen carefully and try again.'
-      level = 'needs-improvement'
+      level = 'bad'
+    } else {
+      feedback =
+        'Phát âm chưa tốt. Bạn nói thiếu hoặc sai các từ: ' +
+        wrongWords.concat(missingWords).join(', ')
+      level = 'bad'
     }
 
     pronunciationScore.value = {
@@ -272,6 +290,8 @@ export function useSpeechRecognition() {
       level,
       reference: referenceText,
       transcribed: transcribedText,
+      wrongWords,
+      missingWords,
     }
 
     return pronunciationScore.value

@@ -57,7 +57,19 @@
 
           <!-- Pronunciation Result (Simple Feedback Only) -->
           <div v-if="pronunciationResult" class="pronunciation-result">
-            <div class="result-feedback">{{ pronunciationResult.feedback }}</div>
+            <div :class="['result-feedback', pronunciationResult.level === 'good' ? 'feedback-good' : 'feedback-bad']">
+              {{ pronunciationResult.feedback }}
+              <template v-if="pronunciationResult.wrongWords && pronunciationResult.wrongWords.length">
+                <br>
+                <span class="feedback-detail">Sai từ: <span class="wrong-word"
+                    v-for="w in pronunciationResult.wrongWords" :key="w">{{ w }}</span></span>
+              </template>
+              <template v-if="pronunciationResult.missingWords && pronunciationResult.missingWords.length">
+                <br>
+                <span class="feedback-detail">Thiếu từ: <span class="missing-word"
+                    v-for="w in pronunciationResult.missingWords" :key="w">{{ w }}</span></span>
+              </template>
+            </div>
           </div>
         </div>
       </div>
@@ -183,11 +195,15 @@ const handleTalk = async () => {
   } catch (error) {
     console.error('Talk handler error:', error)
     pronunciationResult.value = {
-      success: false,
-      score: 0,
       feedback: `Error: ${error.message || 'Please try again.'}`,
-      level: 'error'
+      level: 'bad'
     }
+
+    // Auto-clear result after 5 seconds
+    setTimeout(() => {
+      pronunciationResult.value = null
+    }, 5000)
+
     isRecording.value = false
     isAssessing.value = false
   }
@@ -242,7 +258,9 @@ const handleWebSpeechPronunciation = async () => {
 
       pronunciationResult.value = {
         feedback: result.feedback,
-        method: 'web-speech-api'
+        level: result.level,
+        wrongWords: result.wrongWords,
+        missingWords: result.missingWords
       }
 
       // Auto-clear result after 5 seconds
@@ -254,7 +272,7 @@ const handleWebSpeechPronunciation = async () => {
       console.warn('No speech detected by Web Speech API')
       pronunciationResult.value = {
         feedback: 'No speech detected. Please speak clearly and try again.',
-        method: 'web-speech-api'
+        level: 'bad'
       }
 
       // Auto-clear result after 5 seconds
@@ -271,7 +289,7 @@ const handleWebSpeechPronunciation = async () => {
 
     pronunciationResult.value = {
       feedback: `Speech recognition error: ${error.message}. Please try again.`,
-      method: 'web-speech-api'
+      level: 'bad'
     }
 
     // Auto-clear result after 5 seconds
@@ -279,9 +297,7 @@ const handleWebSpeechPronunciation = async () => {
       pronunciationResult.value = null
     }, 5000)
   }
-}
-
-// Auto-flip functionality
+}// Auto-flip functionality
 if (props.autoFlip) {
   setTimeout(() => flip(), 2000)
 }
@@ -515,16 +531,44 @@ defineExpose({
   font-weight: 500;
 }
 
+/* Dynamic feedback color */
 .result-feedback {
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
   margin-bottom: 0.5rem;
-  color: #22c55e;
-  background: #e6fbe6;
   border-radius: 6px;
   padding: 0.5rem 1rem;
+}
+
+.feedback-good {
+  color: #22c55e !important;
+  background: #e6fbe6 !important;
   box-shadow: 0 2px 8px rgba(34, 197, 94, 0.08);
+}
+
+.feedback-bad {
+  color: #ef4444 !important;
+  background: #fee2e2 !important;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.08);
+}
+
+.feedback-detail {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.wrong-word {
+  color: #ef4444;
+  font-weight: 700;
+  margin: 0 2px;
+}
+
+.missing-word {
+  color: #f59e0b;
+  font-weight: 700;
+  margin: 0 2px;
 }
 
 .result-transcribed {
