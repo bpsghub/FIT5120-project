@@ -1,4 +1,4 @@
-import LearnEnglish from "./views/LearnEnglish.vue";
+import LearnEnglish from './views/LearnEnglish.vue'
 
 export default {
   en: {
@@ -33,7 +33,8 @@ export default {
       language: 'Language',
       brand: 'Ankang Life',
       main_view: 'Main View',
-      safety:' Safety Tips',
+      safety: 'Safety Tips',
+      chatbot: 'Practice English',
       lang: {
         en: 'English',
         zh: 'Chinese',
@@ -63,7 +64,7 @@ export default {
       our_mission: {
         our_mission_title: 'Our Mission',
         our_mission_desc:
-          'Ankang Life exists to empower elderly immigrants in Melbourne by helping them overcome language and cultural barriers, navigate daily life independently, and feel truly included in their community.'  
+          'Ankang Life exists to empower elderly immigrants in Melbourne by helping them overcome language and cultural barriers, navigate daily life independently, and feel truly included in their community.',
       },
       our_features: {
         our_features_title: 'Our Features',
@@ -208,7 +209,8 @@ export default {
       language: '语言',
       brand: '安康生活',
       main_view: '主视图',
-      safety:' 安全提示',
+      safety: ' 安全提示',
+      chatbot: '练习英语',
       lang: {
         en: '英语',
         zh: '中文',
@@ -369,7 +371,8 @@ export default {
       language: 'Ngôn ngữ',
       brand: 'Ankang Life',
       main_view: 'Trang chính',
-      safety:' Mẹo An Toàn',
+      safety: ' Mẹo An Toàn',
+      chatbot: 'Luyện tập tiếng Anh',
       lang: {
         en: 'Tiếng Anh',
         zh: 'Tiếng Trung',
@@ -385,7 +388,8 @@ export default {
       choose_category: 'Chọn một chủ đề',
       choose_category_desc: 'Chọn một chủ đề để bắt đầu học các cụm từ tiếng Anh',
       welcome_title: 'Chào mừng đến với học tiếng Anh!',
-      welcome_desc: 'Vui lòng chọn ngôn ngữ mẹ đẻ của bạn ở trên để bắt đầu học các cụm từ tiếng Anh.',
+      welcome_desc:
+        'Vui lòng chọn ngôn ngữ mẹ đẻ của bạn ở trên để bắt đầu học các cụm từ tiếng Anh.',
       feature_audio: 'Phát âm bằng âm thanh',
       feature_flashcards: 'Thẻ ghi nhớ tương tác',
       feature_mobile: 'Thiết kế thân thiện với di động',
@@ -546,7 +550,8 @@ export default {
       language: 'Bahasa',
       brand: 'Ankang Life',
       main_view: 'Tampilan Utama',
-      safety:'Tips Keamanan',
+      safety: 'Tips Keamanan',
+      chatbot: 'Latihan Bahasa Inggris',
       lang: {
         en: 'Inggris',
         zh: 'Cina',
@@ -562,7 +567,8 @@ export default {
       choose_category: 'Pilih Kategori',
       choose_category_desc: 'Pilih topik untuk mulai belajar frasa bahasa Inggris',
       welcome_title: 'Selamat datang di Pembelajaran Bahasa Inggris!',
-      welcome_desc: 'Silakan pilih bahasa ibu Anda di atas untuk mulai belajar frasa bahasa Inggris.',
+      welcome_desc:
+        'Silakan pilih bahasa ibu Anda di atas untuk mulai belajar frasa bahasa Inggris.',
       feature_audio: 'Pelafalan audio',
       feature_flashcards: 'Kartu flash interaktif',
       feature_mobile: 'Desain ramah seluler',
