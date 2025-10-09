@@ -251,7 +251,6 @@ h2 {
 
 /* Banner title styling */
 .banner_title {
-  font-family: 'Inter', sans-serif;
   font-weight: 900;
   font-size: clamp(2.5rem, 8vw, 5rem);
   margin-bottom: 1rem;
@@ -470,7 +469,6 @@ h2 {
   letter-spacing: 0.12em;
   text-align: center;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-  font-family: 'Inter', sans-serif;
 }
 
 /* Our Feature  */
@@ -522,7 +520,6 @@ h2 {
   font-weight: 900;
   letter-spacing: 0.08em;
   text-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  font-family: 'Inter', sans-serif;
 }
 
 .our_features_section {
@@ -560,7 +557,6 @@ h2 {
   letter-spacing: 0.12em;
   text-align: center;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-  font-family: 'Inter', sans-serif;
 }
 
 .our-features-main-content {
@@ -576,7 +572,6 @@ h2 {
   font-weight: 900;
   letter-spacing: 0.08em;
   text-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  font-family: 'Inter', sans-serif;
 }
 
 .features-container {
@@ -730,7 +725,6 @@ h2 {
   letter-spacing: 0.12em;
   text-align: center;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-  font-family: 'Inter', sans-serif;
 }
 
 .our-features-header-main {
@@ -748,7 +742,6 @@ h2 {
   font-weight: 900;
   letter-spacing: 0.08em;
   text-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  font-family: 'Inter', sans-serif;
 }
 
 @media (max-width: 1200px) {

@@ -1,17 +1,8 @@
 <template>
   <div class="modern-sections">
-    <div class="main-title">
-      <span class="main-title-text">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" class="main-title-icon">
-          <circle cx="16" cy="16" r="16" fill="#D6BCFA" />
-          <path d="M10 16h12M16 10v12" stroke="#6B46C1" stroke-width="2" stroke-linecap="round" />
-        </svg>
-        {{ $t('navigate_your_life.cards.publictransportation.title') }}
-      </span>
-    </div>
-    <div class="main-description text-white">
-      {{ $t('navigate_your_life.cards.publictransportation.subtitle') }}
-    </div>
+    <BannerMeteor :title="$t('navigate_your_life.cards.publictransportation.title')"
+      :subtitle="$t('navigate_your_life.cards.publictransportation.subtitle')" />
+
     <div>
       <section v-for="(card, idx) in cards" :key="card.route" :class="[
         'service-section',
@@ -21,7 +12,6 @@
         <div class="section-img">
           <div class="img-hover-wrapper" @click="goTo(card.route)">
             <img :src="card.img" :alt="card.title()" class="card-img-top" />
-            <div class="img-overlay"></div>
             <div class="portfolio__overlay">
               <div class="overlay-title">{{ card.title() }}</div>
               <!-- <div class="overlay-desc">{{ card.desc() }}</div> -->
@@ -41,9 +31,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
+import BannerMeteor from '@/components/BannerMeteor.vue'
 
 const { t, locale } = useI18n({ useScope: 'global' });
 const router = useRouter();
@@ -81,75 +71,11 @@ function goTo(route) {
 
 <style scoped>
 .modern-sections {
-  background: url("https://a-us.storyblok.com/f/1018766/3000x1993/3b2b7ad9b4/sydney_australia.jpeg/m/1534x1019/filters:focal(1426x1709:1427x1710)") no-repeat center center fixed;
-  background-size: cover;
+  background: #ffffff;
   width: 100%;
   min-height: 100vh;
   padding: 0 0 40px 0;
   font-family: 'Roboto', 'Arial', sans-serif;
-}
-
-.main-title {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto 32px auto;
-  padding-top: 36px;
-  animation: fadeInTitle 1s cubic-bezier(.4, 2, .6, 1);
-}
-
-.main-title-text {
-  display: flex;
-  align-items: center;
-  font-size: 2.3rem;
-  font-weight: 800;
-  color: #6B46C1;
-  letter-spacing: 1px;
-  background: linear-gradient(90deg, #6B46C1 60%, #8A4AF3 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  gap: 16px;
-  transition: transform 0.2s cubic-bezier(.4, 2, .6, 1);
-  cursor: pointer;
-}
-
-.main-title-text:hover {
-  transform: scale(1.04) translateY(-2px);
-  text-shadow: 0 4px 24px #D6BCFA;
-}
-
-.main-title-icon {
-  margin-right: 8px;
-  vertical-align: middle;
-  transition: transform 0.3s cubic-bezier(.4, 2, .6, 1);
-}
-
-.main-title-text:hover .main-title-icon {
-  transform: rotate(20deg) scale(1.1);
-}
-
-
-.main-description {
-  width: 100%;
-  text-align: center;
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 32px;
-  font-family: 'Roboto', 'Arial', sans-serif;
-}
-
-@keyframes fadeInTitle {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .service-section {
@@ -250,7 +176,7 @@ function goTo(route) {
   min-height: 300px;
   object-fit: cover;
   border-radius: 10px;
-  opacity: 0.7;
+  opacity: 1;
   z-index: 1;
   transition: filter 0.5s, transform 0.5s;
 }
@@ -258,17 +184,6 @@ function goTo(route) {
 .img-hover-wrapper:hover .card-img-top {
   filter: brightness(0.7);
   transform: scale(1.08);
-}
-
-.img-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 10px;
-  background: linear-gradient(135deg, rgba(107, 70, 193, 0.08), rgba(214, 188, 250, 0.18));
-  z-index: 2;
 }
 
 .portfolio__overlay {

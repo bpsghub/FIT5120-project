@@ -1,17 +1,11 @@
 <template>
   <div class="safety-page">
-    
-    <!-- 页面标题 -->
-    <div class="safety-header">
-      <div class="container">
-        <h1 class="safety-title">
-          🛡️ {{ t('safety.title', 'Safety Information') }}
-        </h1>
-        <p class="safety-subtitle">
-          {{ t('safety.subtitle', 'Stay safe and informed with real-time warnings, crime alerts, and safety tips') }}
-        </p>
-      </div>
-    </div>
+
+    <!-- BannerBubble -->
+    <BannerBubble :title="t('safety.title', 'Safety Information')"
+      :subtitle="t('safety.subtitle', 'Stay safe and informed with real-time warnings, crime alerts, and safety tips')"
+      :bubbleTexts="['Safe', '000', 'Help', 'Alert', 'Warning', 'Police', 'Fire', 'Ambulance', 'Emergency', 'Danger', 'Caution', 'SOS']"
+      :customIcon="safetyIcon" />
 
     <!-- 主要内容区 -->
     <div class="safety-content container">
@@ -51,11 +45,18 @@
 </template>
 
 <script setup>
+import { h } from 'vue'
 import { useI18n } from 'vue-i18n'
+import BannerBubble from '@/components/BannerBubble.vue'
 import HazardWarnings from '@/components/safety/HazardWarnings.vue'
 import CrimeHotspots from '@/components/safety/CrimeHotspots.vue'
 import ScamAlerts from '@/components/safety/ScamAlerts.vue'
 import SafetyTips from '@/components/safety/SafetyTips.vue'
+
+// Safety icon (shield)
+const safetyIcon = () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+  h('path', { d: 'M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z' })
+])
 
 const { t } = useI18n()
 
@@ -69,30 +70,7 @@ const callEmergency = () => {
 <style scoped>
 .safety-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
-}
-
-.safety-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 3rem 0;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
-}
-
-.safety-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.safety-subtitle {
-  font-size: 1.2rem;
-  text-align: center;
-  opacity: 0.9;
-  margin-bottom: 0;
+  background: #ffffff;
 }
 
 .safety-content {
@@ -173,25 +151,25 @@ const callEmergency = () => {
     width: 90%;
     padding: 0;
   }
-  
+
   .safety-header {
     padding: 1.5rem 0;
     margin-bottom: 1rem;
   }
-  
+
   .safety-title {
     font-size: 2rem;
   }
-  
+
   .safety-subtitle {
     font-size: 1.1rem;
   }
-  
+
   .emergency-section {
     width: 90%;
     margin: 1.5rem auto;
   }
-  
+
   .emergency-btn {
     padding: 1.2rem 2rem;
     font-size: 1.3rem;
@@ -203,21 +181,21 @@ const callEmergency = () => {
   .safety-content {
     padding: 0 0.5rem;
   }
-  
+
   .safety-grid {
     width: 95%;
     gap: 0.8rem;
   }
-  
+
   .emergency-section {
     width: 95%;
     margin: 1rem auto;
   }
-  
+
   .safety-title {
     font-size: 1.8rem;
   }
-  
+
   .safety-subtitle {
     font-size: 1rem;
   }
@@ -228,7 +206,7 @@ const callEmergency = () => {
   .safety-module {
     border: 2px solid #333;
   }
-  
+
   .emergency-btn {
     border: 3px solid #fff;
   }
@@ -246,6 +224,7 @@ const callEmergency = () => {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

@@ -96,6 +96,9 @@ export default {
       label: 'Learn More',
     },
     socialnorms: {
+      title: 'Social Norms',
+      subtitle:
+        'Learn Australian customs, everyday manners, and social etiquette to feel confident in any situation',
       meetingpeople: {
         title: 'Meeting New People',
         subtitle:
@@ -108,6 +111,8 @@ export default {
     },
     navigate_your_life: {
       title: 'Navigate Your Life Independently',
+      subtitle:
+        'Practical guides to help you manage daily tasks and feel confident living in Australia',
       cards: {
         publictransportation: {
           title: 'Ride Public Transportation',
@@ -267,6 +272,8 @@ export default {
       label: '了解更多',
     },
     socialnorms: {
+      title: '社交规范',
+      subtitle: '了解澳大利亚的习俗、日常礼仪和社交礼节，让你在任何情况下都能充满自信',
       meetingpeople: {
         title: '结识新朋友',
         subtitle: '你好！了解如何在澳大利亚通过微笑、握手和友好的问候结识新朋友。',
@@ -278,6 +285,7 @@ export default {
     },
     navigate_your_life: {
       title: '独立导航你的生活',
+      subtitle: '实用指南，帮助你处理日常事务，自信地生活在澳大利亚',
       cards: {
         publictransportation: {
           title: '乘坐公共交通',
@@ -435,6 +443,9 @@ export default {
       label: 'Tìm hiểu thêm',
     },
     socialnorms: {
+      title: 'Chuẩn mực xã hội',
+      subtitle:
+        'Tìm hiểu phong tục, phép lịch sự hàng ngày và nghi thức xã hội của Úc để tự tin trong mọi tình huống',
       meetingpeople: {
         title: 'Gặp gỡ người mới',
         subtitle:
@@ -447,6 +458,7 @@ export default {
     },
     navigate_your_life: {
       title: 'Tự chủ cuộc sống của bạn',
+      subtitle: 'Hướng dẫn thực tế giúp bạn quản lý các công việc hàng ngày và tự tin sống ở Úc',
       cards: {
         publictransportation: {
           title: 'Đi phương tiện công cộng',
@@ -614,6 +626,9 @@ export default {
       label: 'Pelajari Lebih Lanjut',
     },
     socialnorms: {
+      title: 'Norma Sosial',
+      subtitle:
+        'Pelajari adat istiadat Australia, sopan santun sehari-hari, dan etiket sosial untuk merasa percaya diri dalam situasi apa pun',
       meetingpeople: {
         title: 'Bertemu Orang Baru',
         subtitle:
@@ -627,6 +642,8 @@ export default {
     },
     navigate_your_life: {
       title: 'Navigasi Hidup Anda Secara Mandiri',
+      subtitle:
+        'Panduan praktis untuk membantu Anda mengelola tugas sehari-hari dan merasa percaya diri tinggal di Australia',
       cards: {
         publictransportation: {
           title: 'Naik Transportasi Umum',

@@ -1,14 +1,11 @@
 <template>
   <div class="flashcards-page">
-    <div class="container d-flex justify-content-center align-items-center flex-column">
-      <!-- Header -->
-      <div class="header-section" data-aos="fade-down" data-aos-delay="100">
-        <div class="header-content">
-          <h1>{{ categoryName }}</h1>
-          <p class="language-info">Learning in: {{ getLanguageName(language) }}</p>
-        </div>
-      </div>
+    <!-- BannerBubble -->
+    <BannerBubble :title="categoryName" :subtitle="`Learning in: ${getLanguageName(language)}`"
+      :bubbleTexts="['Card', 'Flip', 'Learn', 'Quiz', 'Study', 'Memory', 'Word', 'Review', 'Practice', 'Test', 'Know', 'Remember']"
+      :customIcon="flashcardIcon" />
 
+    <div class="container d-flex justify-content-center align-items-center flex-column">
       <!-- Loading State -->
       <div v-if="isLoading" class="loading-section" data-aos="fade-in" data-aos-delay="200">
         <div class="loading-spinner"></div>
@@ -106,10 +103,16 @@
 </template>
 
 <script setup>
-import { computed, watch, onMounted } from 'vue'
+import { computed, watch, onMounted, h } from 'vue'
 import { useRouter } from 'vue-router'
 import { useFlashcard } from '@/composables/useFlashcard.js'
 import Flashcard from '@/components/Flashcard.vue'
+import BannerBubble from '@/components/BannerBubble.vue'
+
+// Flashcard icon
+const flashcardIcon = () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+  h('path', { d: 'M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z' })
+])
 
 const props = defineProps({
   category: {

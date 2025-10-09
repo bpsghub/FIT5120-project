@@ -25,7 +25,7 @@
           <div class="language-label">English</div>
           <div class="text-content">{{ phrase.english }}</div>
           <div class="flip-hint">Click to see {{ getLanguageName(nativeLanguage) }}</div>
-          
+
           <!-- Audio Controls -->
           <div class="audio-controls">
             <button class="audio-btn" @click.stop="playAudio(phrase.english, 'en')" :disabled="isPlayingAudio">
@@ -39,9 +39,11 @@
             </button>
 
             <button class="talk-btn" @click.stop="handleTalk" :disabled="isRecording || isAssessing">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="height: 16px; width: 16px">
-                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
-                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                style="height: 16px; width: 16px">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" />
+                <path
+                  d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" />
               </svg>
               {{ isRecording ? 'Recording...' : isAssessing ? 'Assessing...' : 'Talk' }}
             </button>
@@ -50,8 +52,8 @@
           <!-- Pronunciation Result -->
           <div v-if="pronunciationResult" class="pronunciation-result" :class="`result-${pronunciationResult.level}`">
             <div class="result-score">
-              <span class="score-value">{{ pronunciationResult.score }}</span>
-              <span class="score-label">/100</span>
+              <!-- <span class="score-value">{{ pronunciationResult.score }}</span>
+              <span class="score-label">/100</span> -->
             </div>
             <div class="result-feedback">{{ pronunciationResult.feedback }}</div>
             <div v-if="pronunciationResult.transcribed" class="result-transcribed">
@@ -195,24 +197,24 @@ const handleTalk = async () => {
 // Azure Speech Service pronunciation assessment
 const handleAzurePronunciation = async () => {
   isRecording.value = true
-  
+
   // Start recording
   await startRecordingForAzure()
-  
+
   // Record for 5 seconds
   await new Promise(resolve => setTimeout(resolve, 5000))
-  
+
   // Stop recording
   stopRecording()
   isRecording.value = false
   isAssessing.value = true
-  
+
   // Get audio blob
   const audioBlob = await getAudioBlob()
-  
+
   // Assess pronunciation with Azure
   const result = await assessPronunciation(audioBlob, props.phrase.english, 'en-US')
-  
+
   pronunciationResult.value = result
   isAssessing.value = false
 }
@@ -220,10 +222,10 @@ const handleAzurePronunciation = async () => {
 // Web Speech API pronunciation assessment (fallback)
 const handleWebSpeechPronunciation = async () => {
   isRecording.value = true
-  
+
   // Start Web Speech Recognition
   await startRecordingWebAPI('en-US')
-  
+
   // Wait for recognition result
   await new Promise((resolve) => {
     const checkInterval = setInterval(() => {
@@ -232,7 +234,7 @@ const handleWebSpeechPronunciation = async () => {
         resolve()
       }
     }, 100)
-    
+
     // Timeout after 10 seconds
     setTimeout(() => {
       clearInterval(checkInterval)
@@ -240,10 +242,10 @@ const handleWebSpeechPronunciation = async () => {
       resolve()
     }, 10000)
   })
-  
+
   isRecording.value = false
   isAssessing.value = true
-  
+
   // Evaluate pronunciation
   if (recognitionResult.value && recognitionResult.value.text) {
     const result = evaluatePronunciation(
@@ -251,7 +253,7 @@ const handleWebSpeechPronunciation = async () => {
       recognitionResult.value.text,
       recognitionResult.value.confidence || 1
     )
-    
+
     pronunciationResult.value = result
   } else {
     pronunciationResult.value = {
@@ -262,7 +264,7 @@ const handleWebSpeechPronunciation = async () => {
       transcribed: transcript.value || ''
     }
   }
-  
+
   isAssessing.value = false
 }
 
@@ -473,6 +475,7 @@ defineExpose({
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

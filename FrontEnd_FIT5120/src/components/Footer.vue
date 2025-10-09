@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer bg-dark text-light py-5">
+  <footer class="footer py-5">
     <div class="container">
       <!-- Main Footer Content -->
       <div class="row g-4">
@@ -95,7 +95,8 @@
       <hr class="my-4">
       <div class="row align-items-center">
         <div class="col-md-6 col-12 text-center text-md-start">
-          <p class="mb-0">&copy; 2025 Ankang Life. All rights reserved. Supporting older adults in Australia.</p>
+          <p class="mb-0 text-white">&copy; 2025 Ankang Life. All rights reserved. Supporting older adults in Australia.
+          </p>
         </div>
         <div class="col-md-6 col-12 text-center text-md-end mt-3 mt-md-0">
           <div class="footer-bottom-links">
@@ -115,44 +116,48 @@
 
 <style scoped>
 .footer {
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-  border-top: 3px solid #be36ec;
+  background: linear-gradient(135deg, #512885 0%, #471a80 100%);
+  background-color: white;
   margin-top: auto;
+  filter: brightness(0.85) contrast(1.15);
 }
 
 .footer-title {
-  color: #be36ec;
+  color: #f093fb;
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   margin-bottom: 1rem;
+  letter-spacing: 1px;
 }
 
 .footer-subtitle {
-  color: #facf46;
+  color: #f5e9ff;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   margin-bottom: 1rem;
+  letter-spacing: 0.5px;
 }
 
 .footer-description {
-  color: #bdc3c7;
-  line-height: 1.6;
-  font-size: 0.95rem;
+  color: white;
+  line-height: 1.7;
+  font-size: 1.15rem;
 }
 
 .footer-link {
-  color: #ecf0f1;
+  color: white;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   transition: all 0.3s ease;
   display: block;
   padding: 0.25rem 0;
 }
 
 .footer-link:hover {
-  color: #be36ec;
+  color: #f093fb;
   text-decoration: none;
   transform: translateX(5px);
+  filter: brightness(1.2);
 }
 
 .social-links {
@@ -165,8 +170,8 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: rgba(190, 54, 236, 0.2);
-  color: #be36ec;
+  background: rgba(240, 147, 251, 0.2);
+  color: #f093fb;
   border-radius: 50%;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -174,36 +179,37 @@
 }
 
 .social-link:hover {
-  background: #be36ec;
+  background: #f093fb;
   color: white;
   transform: translateY(-3px);
 }
 
 .contact-info {
-  color: #bdc3c7;
+  color: white;
 }
 
 .contact-item {
-  font-size: 0.9rem;
-  line-height: 1.4;
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
 .contact-item i {
-  color: #be36ec;
+  color: #f093fb;
   width: 16px;
   flex-shrink: 0;
 }
 
 .footer-bottom-link {
-  color: #bdc3c7;
+  color: white;
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 .footer-bottom-link:hover {
-  color: #facf46;
+  color: #f093fb;
   text-decoration: none;
+  filter: brightness(1.2);
 }
 
 /* Mobile Responsive */

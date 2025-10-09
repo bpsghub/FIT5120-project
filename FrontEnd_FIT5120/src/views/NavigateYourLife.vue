@@ -1,10 +1,8 @@
 <template>
   <div class="modern-sections">
-    <div class="main-title">
-      <span class="main-title-text">
-        {{ $t('nav.navigate') }}
-      </span>
-    </div>
+    <BannerMeteor :title="$t('navigate_your_life.title')"
+      :subtitle="$t('navigate_your_life.subtitle', 'Your comprehensive guide to daily life in Australia')" />
+
     <div>
       <section v-for="(card, idx) in cards" :key="card.key" :class="[
         'service-section',
@@ -13,7 +11,6 @@
       ]" :style="{ animationDelay: `${0.2 * idx}s` }" aria-label="Navigate Your Life Section">
         <div class="section-img">
           <img :src="card.img" :alt="card.title" />
-          <div class="img-overlay"></div>
         </div>
         <div class="section-content">
           <h2 class="section-title">{{ card.title }}</h2>
@@ -31,6 +28,8 @@
 import { computed, onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
+import BannerMeteor from '@/components/BannerMeteor.vue'
+
 const router = useRouter();
 const { t } = useI18n();
 
@@ -75,66 +74,9 @@ onMounted(() => {
 .modern-sections {
   width: 100%;
   min-height: 100vh;
-  background-image: url("https://bookmestatic.net.nz/bookme-product-images/products/72238/72238_image2_UASR_M2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
+  background: #ffffff;
   padding: 0 0 40px 0;
   font-family: 'Roboto', 'Arial', sans-serif;
-}
-
-.main-title {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto 32px auto;
-  padding-top: 36px;
-  animation: fadeInTitle 1s cubic-bezier(.4, 2, .6, 1);
-}
-
-.main-title-text {
-  display: flex;
-  align-items: center;
-  font-size: 2.3rem;
-  font-weight: 800;
-  color: #6B46C1;
-  letter-spacing: 1px;
-  background: linear-gradient(90deg, #6B46C1 60%, #8A4AF3 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  gap: 16px;
-  transition: transform 0.2s cubic-bezier(.4, 2, .6, 1);
-  cursor: default;
-}
-
-.main-title-text:hover {
-  transform: scale(1.04) translateY(-2px);
-  text-shadow: 0 4px 24px #D6BCFA;
-}
-
-.main-title-icon {
-  margin-right: 8px;
-  vertical-align: middle;
-  transition: transform 0.3s cubic-bezier(.4, 2, .6, 1);
-}
-
-.main-title-text:hover .main-title-icon {
-  transform: rotate(20deg) scale(1.1);
-}
-
-@keyframes fadeInTitle {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .service-section {
@@ -145,11 +87,19 @@ onMounted(() => {
   max-width: 1100px;
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(107, 70, 193, 0.08);
+  border: 2px solid #e0d4f7;
+  box-shadow: 0 4px 16px rgba(107, 70, 193, 0.12);
   overflow: hidden;
   position: relative;
   opacity: 0;
   animation: fadeInSection 0.8s forwards;
+  transition: all 0.3s ease;
+}
+
+.service-section:hover {
+  border-color: #a259e6;
+  box-shadow: 0 8px 24px rgba(162, 89, 230, 0.2);
+  transform: translateY(-4px);
 }
 
 /* Directional animation classes */
@@ -205,7 +155,7 @@ onMounted(() => {
   min-height: 300px;
   object-fit: cover;
   border-radius: 10px;
-  opacity: 0.7;
+  opacity: 1;
   z-index: 1;
 }
 

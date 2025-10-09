@@ -5,7 +5,7 @@
         <div class="logo-bg">
           <router-link class="navbar-brand fw-bold fs-2 logo-link" to="/">{{
             $t('nav.brand')
-            }}</router-link>
+          }}</router-link>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,8 +17,8 @@
               <router-link class="nav-link" :to="link.to">{{ $t(link.text) }}</router-link>
             </li>
             <li class="nav-item dropdown" v-for="(link, index) in navLinks_dropdown" :key="index">
-              <div class="nav-link dropdown-toggle dropdown-hover" @click="navigateDropdown(link.to)">
-                {{ $t(link.text) }}
+              <div class="nav-link dropdown-hover">
+                <span @click="navigateDropdown(link.to)">{{ $t(link.text) }}</span>
                 <ul v-if="link.children === 'socialNorms'" class="dropdown-menu">
                   <li v-for="(item, idx) in socialNorms.slice(1)" :key="idx">
                     <router-link class="dropdown-item" :to="item.to">{{ $t(item.text) }}</router-link>
@@ -33,13 +33,14 @@
             </li>
 
             <li class="nav-item dropdown">
-              <div class="nav-link dropdown-toggle dropdown-hover">
+              <div class="nav-link dropdown-hover">
                 <span>{{ $t('nav.language') }}: <strong>{{ $t(currentLangText) }}</strong></span>
                 <ul class="dropdown-menu">
                   <li v-for="lang in languages" :key="lang.code">
-                    <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">
-                      <span v-if="locale === lang.code" style="color:#a259e6;font-weight:bold;">&#10003; </span>{{
+                    <a class="dropdown-item d-flex gap-4" href="#" @click.prevent="setLang(lang.code)">
+                      {{
                         $t(lang.text) }}
+                      <span v-if="locale === lang.code" style="color:#a259e6;font-weight:bold;">&#10003; </span>
                     </a>
                   </li>
                 </ul>
@@ -149,6 +150,12 @@ function setLang(lang) {
 .dropdown-hover {
   position: relative;
   cursor: pointer;
+}
+
+.dropdown-hover span {
+  cursor: pointer;
+  display: block;
+  width: 100%;
 }
 
 .dropdown-hover .dropdown-menu {

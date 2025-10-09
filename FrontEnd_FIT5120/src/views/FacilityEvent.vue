@@ -1,97 +1,100 @@
 <template>
   <div class="find-page">
-    <div class="page-header">
-      <h1>Find {{ activeTab === 'facilities' ? 'Facilities' : 'Events' }}</h1>
+    <BannerMeteor :title="`Find ${activeTab === 'facilities' ? 'Facilities' : 'Events'}`"
+      :subtitle="activeTab === 'facilities' ? 'Discover nearby services and amenities' : 'Explore community events and activities'" />
 
-      <div class="controls">
-        <button @click="toggleTab" class="toggle-btn"
-          :class="activeTab === 'facilities' ? 'facility-active' : 'event-active'">
-          {{ activeTab === 'facilities' ? 'Switch to Events' : 'Switch to Facilities' }}
-        </button>
+    <div class="content-wrapper">
+      <div class="controls-container my-3">
+        <div class="controls">
+          <button @click="toggleTab" class="toggle-btn"
+            :class="activeTab === 'facilities' ? 'facility-active' : 'event-active'">
+            <span class="btn-text">{{ activeTab === 'facilities' ? 'Switch to Events' : 'Switch to Facilities' }}</span>
+          </button>
 
-        <button @click="showFilters = !showFilters" class="filter-btn">
-          <i class="filter-icon">⚙️</i> Filters
-        </button>
-      </div>
-    </div>
-
-    <!-- Filter panel -->
-    <div v-if="showFilters" class="filters-panel">
-      <div class="filter-group">
-        <label>Distance Range</label>
-        <select v-model="filters.distance">
-          <option value="1">Within 1 km</option>
-          <option value="5">Within 5 km</option>
-          <option value="10">Within 10 km</option>
-          <option value="20">Within 20 km</option>
-        </select>
-      </div>
-
-      <div class="filter-group">
-        <label>Rating</label>
-        <select v-model="filters.minRating">
-          <option value="0">Any rating</option>
-          <option value="3">3 stars and above</option>
-          <option value="4">4 stars and above</option>
-          <option value="5">5 stars and above</option>
-        </select>
-      </div>
-
-      <div class="filter-group">
-        <label v-if="activeTab === 'facilities'">Open Now</label>
-        <label v-if="activeTab === 'events'">Active Events</label>
-        <input type="checkbox" v-model="filters.openNow">
-      </div>
-
-      <!-- Category filter -->
-      <div class="filter-group" v-if="activeTab === 'facilities'">
-        <label>Category</label>
-        <select v-model="filters.category">
-          <option value="">Any category</option>
-          <option value="supermarket">Supermarket</option>
-          <option value="clinic">Clinic</option>
-          <option value="chinese_restaurant">Chinese restaurant</option>
-          <option value="vietnamese_restaurant">Vietnamese restaurant</option>
-          <option value="indonesian_restaurant">Indonesian restaurant</option>
-          <option value="shopping_mall">Shopping mall</option>
-        </select>
-      </div>
-
-      <div class="filter-actions">
-        <button @click="applyFilters" class="apply-btn">Apply Filters</button>
-        <button @click="resetFilters" class="reset-btn">Reset</button>
-      </div>
-    </div>
-
-    <!-- Main content -->
-    <div class="main-content">
-      <!-- Left side list -->
-      <div class="results-list">
-        <div v-if="loading" class="loading">
-          <div class="spinner"></div>
-          <p>Loading {{ activeTab }}...</p>
-        </div>
-
-        <div v-if="error && !loading" class="error-message">
-          <p>❌ {{ error }}</p>
-          <button @click="loadData" class="retry-btn">Try Again</button>
-        </div>
-
-        <div v-if="!loading && !error && items.length === 0" class="no-results">
-          <p>No {{ activeTab }} found matching your criteria.</p>
-          <button @click="resetFilters" class="reset-btn">Clear Filters</button>
-        </div>
-
-        <div v-if="!loading && !error && items.length > 0" class="cards-container">
-          <FacilityCard v-for="item in items" :key="item.id" :facility="item" v-if="activeTab === 'facilities'" />
-
-          <EventCard v-for="item in items" :key="item.id" :event="item" v-if="activeTab === 'events'" />
+          <button @click="showFilters = !showFilters" class="filter-btn" :class="{ 'filter-active': showFilters }">
+            <span class="btn-text">Filters</span>
+          </button>
         </div>
       </div>
 
-      <!-- Right side map -->
-      <div class="map-container">
-        <div id="mainMap" class="map"></div>
+      <!-- Filter panel -->
+      <div v-if="showFilters" class="filters-panel">
+        <div class="filter-group">
+          <label>Distance Range</label>
+          <select v-model="filters.distance">
+            <option value="1">Within 1 km</option>
+            <option value="5">Within 5 km</option>
+            <option value="10">Within 10 km</option>
+            <option value="20">Within 20 km</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Rating</label>
+          <select v-model="filters.minRating">
+            <option value="0">Any rating</option>
+            <option value="3">3 stars and above</option>
+            <option value="4">4 stars and above</option>
+            <option value="5">5 stars and above</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label v-if="activeTab === 'facilities'">Open Now</label>
+          <label v-if="activeTab === 'events'">Active Events</label>
+          <input type="checkbox" v-model="filters.openNow">
+        </div>
+
+        <!-- Category filter -->
+        <div class="filter-group" v-if="activeTab === 'facilities'">
+          <label>Category</label>
+          <select v-model="filters.category">
+            <option value="">Any category</option>
+            <option value="supermarket">Supermarket</option>
+            <option value="clinic">Clinic</option>
+            <option value="chinese_restaurant">Chinese restaurant</option>
+            <option value="vietnamese_restaurant">Vietnamese restaurant</option>
+            <option value="indonesian_restaurant">Indonesian restaurant</option>
+            <option value="shopping_mall">Shopping mall</option>
+          </select>
+        </div>
+
+        <div class="filter-actions">
+          <button @click="applyFilters" class="apply-btn">Apply Filters</button>
+          <button @click="resetFilters" class="reset-btn">Reset</button>
+        </div>
+      </div>
+
+      <!-- Main content -->
+      <div class="main-content">
+        <!-- Left side list -->
+        <div class="results-list">
+          <div v-if="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading {{ activeTab }}...</p>
+          </div>
+
+          <div v-if="error && !loading" class="error-message">
+            <p>❌ {{ error }}</p>
+            <button @click="loadData" class="retry-btn">Try Again</button>
+          </div>
+
+          <div v-if="!loading && !error && items.length === 0" class="no-results">
+            <p>No {{ activeTab }} found matching your criteria.</p>
+            <button @click="resetFilters" class="reset-btn">Clear Filters</button>
+          </div>
+
+          <div v-if="!loading && !error && items.length > 0" class="cards-container">
+            <FacilityCard v-for="item in items" :key="item.id" :facility="item" v-if="activeTab === 'facilities'" />
+
+            <EventCard v-for="item in items" :key="item.id" :event="item" v-if="activeTab === 'events'" />
+          </div>
+        </div>
+
+        <!-- Right side map -->
+        <div class="map-container">
+          <div id="mainMap" class="map"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -101,6 +104,7 @@
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
 import FacilityCard from '@/components/FacilityCard.vue'
 import EventCard from '@/components/EventCard.vue'
+import BannerMeteor from '@/components/BannerMeteor.vue'
 import facilityService from '@/services/facilityService'
 import eventService from '@/services/eventService'
 
@@ -269,110 +273,120 @@ onUnmounted(() => {
 <style scoped>
 /* Fresh color scheme - consistent with homepage and navbar */
 
-/* Page layout */
-.find-page {
-  background: #f7fafc;
-  min-height: 100vh;
-  padding: 1.5rem;
-}
-
 /* Page header */
-.page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 208, 132, 0.1);
-  box-shadow: 0 2px 12px rgba(0, 208, 132, 0.08);
-  max-width: 1400px;
-  margin: 0 auto;
-  border-radius: 1.5rem 1.5rem 0 0;
-}
 
-.page-header h1 {
-  margin: 0;
-  color: #2d3748;
-  font-size: 2.2rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.page-header h1::before {
-  content: '📍';
-  font-size: 2rem;
-  color: #00d084;
+.controls-container {
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+  padding: 0 1rem;
 }
 
 .controls {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  border-radius: 1.5rem;
+  /* box-shadow: 0 4px 16px rgba(107, 70, 193, 0.12); */
+  /* border: 2px solid #e0d4f7; */
+  transition: all 0.3s ease;
 }
 
 /* Toggle button */
 .toggle-btn {
-  padding: 12px 24px;
+  flex: 1;
+  min-width: 200px;
+  padding: 14px 24px;
   border: none;
   border-radius: 1rem;
   cursor: pointer;
   font-weight: 600;
-  font-size: 14px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 12px rgba(0, 208, 132, 0.08);
+  font-size: 15px;
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  min-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: white;
+  border: 2px solid #e0d4f7;
+}
+
+.btn-icon {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.btn-text {
+  transition: all 0.3s ease;
 }
 
 .facility-active {
-  background: linear-gradient(135deg, #00d084, #4de6a3);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  box-shadow: 0 4px 20px rgba(0, 208, 132, 0.12);
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
 }
 
 .event-active {
-  background: linear-gradient(135deg, #ff7675, #fda085);
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   color: white;
-  box-shadow: 0 4px 20px rgba(255, 118, 117, 0.3);
-}
-
-.toggle-btn:not(.facility-active):not(.event-active) {
-  background: #ffffff;
-  color: #2d3748;
-  border: 2px solid rgba(0, 208, 132, 0.2);
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(240, 147, 251, 0.3);
 }
 
 .toggle-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 208, 132, 0.12);
+  box-shadow: 0 6px 20px rgba(107, 70, 193, 0.2);
+  border-color: #a259e6;
+}
+
+.toggle-btn:hover .btn-icon {
+  transform: scale(1.1);
+}
+
+.facility-active:hover,
+.event-active:hover {
+  box-shadow: 0 6px 24px rgba(102, 126, 234, 0.4);
 }
 
 /* Filter button */
 .filter-btn {
-  padding: 12px 24px;
+  flex: 0 0 auto;
+  min-width: 140px;
+  padding: 14px 24px;
   background: #ffffff;
-  border: 2px solid rgba(0, 208, 132, 0.2);
+  border: 2px solid #e0d4f7;
   border-radius: 1rem;
   cursor: pointer;
   font-weight: 600;
-  font-size: 14px;
-  color: #00d084;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(10px);
+  font-size: 15px;
+  color: #667eea;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 .filter-btn:hover {
-  background: rgba(0, 208, 132, 0.1);
-  border-color: #00d084;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  border-color: #a259e6;
   transform: translateY(-2px);
-  box-shadow: 0 2px 12px rgba(0, 208, 132, 0.08);
+  box-shadow: 0 4px 16px rgba(107, 70, 193, 0.2);
+}
+
+.filter-btn:hover .btn-icon {
+  transform: rotate(90deg);
+}
+
+.filter-active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
 }
 
 .filter-icon {
@@ -619,6 +633,10 @@ onUnmounted(() => {
     padding: 1rem;
   }
 
+  .controls-container {
+    padding: 0 0.5rem;
+  }
+
   .page-header,
   .filters-panel,
   .main-content {
@@ -671,6 +689,22 @@ onUnmounted(() => {
     padding: 0.5rem;
   }
 
+  .controls-container {
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    padding: 0.75rem;
+  }
+
+  .toggle-btn,
+  .filter-btn {
+    min-width: 100%;
+    width: 100%;
+  }
+
   .page-header {
     flex-direction: column;
     gap: 1.5rem;
@@ -680,17 +714,6 @@ onUnmounted(() => {
 
   .page-header h1 {
     font-size: 1.8rem;
-  }
-
-  .controls {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .toggle-btn,
-  .filter-btn {
-    flex: 1;
-    min-width: auto;
   }
 
   .filters-panel {
@@ -724,6 +747,16 @@ onUnmounted(() => {
     padding: 0.25rem;
   }
 
+  .controls {
+    border-radius: 1rem;
+  }
+
+  .toggle-btn,
+  .filter-btn {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
   .page-header {
     padding: 1rem;
     border-radius: 0.75rem 0.75rem 0 0;
@@ -731,16 +764,6 @@ onUnmounted(() => {
 
   .page-header h1 {
     font-size: 1.5rem;
-  }
-
-  .controls {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .toggle-btn,
-  .filter-btn {
-    width: 100%;
   }
 
   .filters-panel {
