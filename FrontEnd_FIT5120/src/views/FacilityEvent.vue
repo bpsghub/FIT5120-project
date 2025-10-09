@@ -1,16 +1,11 @@
 <template>
   <div class="find-page">
-    <BannerMeteor :title="`Find ${activeTab === 'facilities' ? 'Facilities' : 'Events'}`"
-      :subtitle="activeTab === 'facilities' ? 'Discover nearby services and amenities' : 'Explore community events and activities'" />
+    <BannerMeteor :title="$t('facility.title')" :subtitle="$t('facility.subtitle')" :badges="facilityBadges"
+      :main-icon="facilityMainIcon" />
 
     <div class="content-wrapper">
       <div class="controls-container my-3">
         <div class="controls">
-          <button @click="toggleTab" class="toggle-btn"
-            :class="activeTab === 'facilities' ? 'facility-active' : 'event-active'">
-            <span class="btn-text">{{ activeTab === 'facilities' ? 'Switch to Events' : 'Switch to Facilities' }}</span>
-          </button>
-
           <button @click="showFilters = !showFilters" class="filter-btn" :class="{ 'filter-active': showFilters }">
             <span class="btn-text">Filters</span>
           </button>
@@ -40,13 +35,12 @@
         </div>
 
         <div class="filter-group">
-          <label v-if="activeTab === 'facilities'">Open Now</label>
-          <label v-if="activeTab === 'events'">Active Events</label>
+          <label>Open Now</label>
           <input type="checkbox" v-model="filters.openNow">
         </div>
 
         <!-- Category filter -->
-        <div class="filter-group" v-if="activeTab === 'facilities'">
+        <div class="filter-group">
           <label>Category</label>
           <select v-model="filters.category">
             <option value="">Any category</option>
@@ -71,7 +65,7 @@
         <div class="results-list">
           <div v-if="loading" class="loading">
             <div class="spinner"></div>
-            <p>Loading {{ activeTab }}...</p>
+            <p>Loading facilities...</p>
           </div>
 
           <div v-if="error && !loading" class="error-message">
@@ -80,14 +74,12 @@
           </div>
 
           <div v-if="!loading && !error && items.length === 0" class="no-results">
-            <p>No {{ activeTab }} found matching your criteria.</p>
+            <p>No facilities found matching your criteria.</p>
             <button @click="resetFilters" class="reset-btn">Clear Filters</button>
           </div>
 
           <div v-if="!loading && !error && items.length > 0" class="cards-container">
-            <FacilityCard v-for="item in items" :key="item.id" :facility="item" v-if="activeTab === 'facilities'" />
-
-            <EventCard v-for="item in items" :key="item.id" :event="item" v-if="activeTab === 'events'" />
+            <FacilityCard v-for="item in items" :key="item.id" :facility="item" />
           </div>
         </div>
 
@@ -101,14 +93,64 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick, h } from 'vue'
 import FacilityCard from '@/components/FacilityCard.vue'
-import EventCard from '@/components/EventCard.vue'
 import BannerMeteor from '@/components/BannerMeteor.vue'
 import facilityService from '@/services/facilityService'
-import eventService from '@/services/eventService'
 
-const activeTab = ref('facilities')
+// Custom main icon for facility finder
+const facilityMainIcon = () => h('svg', {
+  xmlns: 'http://www.w3.org/2000/svg',
+  viewBox: '0 0 24 24',
+  width: '48',
+  height: '48',
+  fill: '#ffffff',
+}, [
+  h('g', {
+    fill: 'none',
+    stroke: '#ffffff',
+    'stroke-linecap': 'round',
+    'stroke-miterlimit': '10',
+    'stroke-width': '1.5',
+  }, [
+    h('path', { d: 'M21.5 12h-2.111M12 2.5v2.111M2.5 12h2.111M12 21.5v-2.111m0 0A7.389 7.389 0 1 0 12 4.61a7.389 7.389 0 0 0 0 14.778Z' }),
+    h('path', { d: 'M12 16.222a4.222 4.222 0 1 0 0-8.444a4.222 4.222 0 0 0 0 8.444Z' })
+  ])
+]);
+
+// Facility badges
+const facilityBadges = [
+  {
+    icon: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z' })
+    ]),
+    text: 'Location',
+    translationKey: 'facility.badges.location'
+  },
+  {
+    icon: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z' })
+    ]),
+    text: 'Restaurants',
+    translationKey: 'facility.badges.restaurants'
+  },
+  {
+    icon: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z' })
+    ]),
+    text: 'Shopping Malls',
+    translationKey: 'facility.badges.shopping'
+  },
+  {
+    icon: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z' })
+    ]),
+    text: 'Schools',
+    translationKey: 'facility.badges.schools'
+  },
+
+]
+
 const showFilters = ref(false)
 const loading = ref(false)
 const error = ref('')
@@ -139,12 +181,6 @@ const getOpenStatus = (facility) => {
   return false
 }
 
-const toggleTab = () => {
-  activeTab.value = activeTab.value === 'facilities' ? 'events' : 'facilities'
-  clearMarkers()
-  loadData()
-}
-
 const getUserLocation = () => {
   return new Promise((resolve) => {
     if (!navigator.geolocation) {
@@ -170,36 +206,24 @@ const loadData = async () => {
   error.value = ''
 
   try {
-    if (activeTab.value === 'facilities') {
-      const filterParams = {
-        latitude: userLocation.value.lat,
-        longitude: userLocation.value.lng,
-        page: 1,
-        limit: 20,
-        distance: filters.value.distance,
-        minRating: filters.value.minRating,
-        openNow: filters.value.openNow,
-        category: filters.value.category   // Pass category filter to backend
-      }
-
-      const response = await facilityService.searchFacilitiesWithFilters(filterParams)
-      console.log("响应数据 is ", response.data)
-      items.value = (response.data || []).map(f => ({
-        ...f,
-        isOpen: getOpenStatus(f)
-      }))
-      console.log("响应数据 is  items is ", items.value)
-    } else {
-      const response = await eventService.getNearbyEvents(
-        userLocation.value.lat,
-        userLocation.value.lng,
-        1,
-        20
-      )
-      items.value = response.data
-
-
+    const filterParams = {
+      latitude: userLocation.value.lat,
+      longitude: userLocation.value.lng,
+      page: 1,
+      limit: 20,
+      distance: filters.value.distance,
+      minRating: filters.value.minRating,
+      openNow: filters.value.openNow,
+      category: filters.value.category   // Pass category filter to backend
     }
+
+    const response = await facilityService.searchFacilitiesWithFilters(filterParams)
+    console.log("Response data is ", response.data)
+    items.value = (response.data || []).map(f => ({
+      ...f,
+      isOpen: getOpenStatus(f)
+    }))
+    console.log("Response data items is ", items.value)
 
     updateMapMarkers()
   } catch (err) {
@@ -213,7 +237,8 @@ const initializeMap = async () => {
   await nextTick()
   const mapElement = document.getElementById('mainMap')
   if (!mapElement) return
-  const L = window.L || $L
+  const L = window.L
+  if (!L) return
   map.value = L.map(mapElement).setView([userLocation.value.lat, userLocation.value.lng], 13)
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
@@ -229,11 +254,12 @@ const clearMarkers = () => {
 const updateMapMarkers = () => {
   if (!map.value || !items.value.length) return
   clearMarkers()
-  const L = window.L || $L
-  console.log("items value isisisis ", items.value)
+  const L = window.L
+  if (!L) return
+  console.log("items value is ", items.value)
   items.value.forEach(item => {
     if (!item.location) return
-    console.log("item value loacltoion  ", item.location)
+    console.log("item location ", item.location)
     const marker = L.marker([item.location.latitude, item.location.longitude]).addTo(map.value)
     marker.bindPopup(`<b>${item.name}</b><br>${item.formattedAddress || ''}`)
     markers.value.push(marker)
@@ -283,6 +309,7 @@ onUnmounted(() => {
 
 .controls {
   display: flex;
+  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
   background: rgba(255, 255, 255, 0.95);

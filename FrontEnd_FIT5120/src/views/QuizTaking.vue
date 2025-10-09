@@ -1,6 +1,8 @@
 <template>
-
   <div class="quiztaking">
+    <!-- Add BannerBubble -->
+    <BannerBubble :title="$t('quiz.title')" :subtitle="$t('quiz.subtitle')" />
+
     <div class="quiztaking-w container mt-5 mb-5" v-if="!allCorrect">
       <h2 class="quiz-header">{{ staticTexts.quizTime }}</h2>
       <div v-for="(q, idx) in questions" :key="q.key" class="quiz-question-block">
@@ -38,6 +40,7 @@ import { ref, computed, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { translateText } from '@/services/translationService.js'
+import BannerBubble from '@/components/BannerBubble.vue'
 
 const { locale } = useI18n()
 const lang = computed(() => locale.value)
@@ -80,7 +83,7 @@ async function translateStatics() {
 
 
 onMounted(async () => {
-  const res = await fetch('/Learning about Australia/quiz_dining_multilang.json')
+  const res = await fetch('/Learning about Australia/quiz_dining_multilang_finalversion.json')
   const data = await res.json()
   questions.value = data.items
   await translateStatics()

@@ -2,6 +2,10 @@ import LearnEnglish from './views/LearnEnglish.vue'
 
 export default {
   en: {
+    quiz: {
+      title: 'Quiz',
+      subtitle: 'Test your knowledge with our interactive quizzes',
+    },
     meetingpeople_title: 'Meeting New People',
     myki_learning: {
       title: 'Learning About Myki Card',
@@ -26,7 +30,7 @@ export default {
     meetingpeople_subtitle:
       'This guide helps you feel confident when meeting new people in Australia.',
     nav: {
-      facility: 'Find Facility / Event',
+      facility: 'Find Facility',
       english: 'Learn English',
       social: 'Social Norms',
       navigate: 'Navigate your Life',
@@ -40,6 +44,16 @@ export default {
         zh: 'Chinese',
         vi: 'Vietnamese',
         id: 'Indonesian',
+      },
+    },
+    facility: {
+      title: 'Find Facility',
+      subtitle: 'Locate essential services and community resources near you',
+      badges: {
+        location: 'Location',
+        restaurants: 'Restaurants',
+        shopping: 'Shopping Malls',
+        schools: 'Schools',
       },
     },
     learnenglish: {
@@ -188,6 +202,10 @@ export default {
     },
   },
   zh: {
+    quiz: {
+      title: '测验',
+      subtitle: '通过我们的互动测验测试您的知识',
+    },
     meetingpeople_title: '结识新朋友',
     myki_learning: {
       title: '了解 Myki 卡',
@@ -207,7 +225,7 @@ export default {
     },
     meetingpeople_subtitle: '本指南帮助你在澳大利亚结识新朋友时充满自信。',
     nav: {
-      facility: '查找设施/活动',
+      facility: '查找设施',
       english: '学英语',
       social: '社交规范',
       navigate: '生活导航',
@@ -221,6 +239,16 @@ export default {
         zh: '中文',
         vi: '越南语',
         id: '印尼语',
+      },
+    },
+    facility: {
+      title: '查找设施',
+      subtitle: '定位您附近的重要服务和社区资源',
+      badges: {
+        location: '位置',
+        restaurants: '餐厅',
+        shopping: '购物中心',
+        schools: '学校',
       },
     },
     learnenglish: {
@@ -349,6 +377,10 @@ export default {
     },
   },
   vi: {
+    quiz: {
+      title: 'Quiz',
+      subtitle: 'Kiểm tra kiến thức của bạn với các bài kiểm tra tương tác của chúng tôi',
+    },
     meetingpeople_title: 'Gặp gỡ người mới',
     myki_learning: {
       title: 'Học về thẻ Myki',
@@ -372,7 +404,7 @@ export default {
     },
     meetingpeople_subtitle: 'Hướng dẫn này giúp bạn tự tin khi gặp gỡ người mới ở Úc.',
     nav: {
-      facility: 'Tìm Cơ sở / Sự kiện',
+      facility: 'Tìm Cơ sở',
       english: 'Học Tiếng Anh',
       social: 'Chuẩn mực xã hội',
       navigate: 'Điều hướng cuộc sống',
@@ -386,6 +418,16 @@ export default {
         zh: 'Tiếng Trung',
         vi: 'Tiếng Việt',
         id: 'Tiếng Indonesia',
+      },
+    },
+    facility: {
+      title: 'Tìm Cơ sở',
+      subtitle: 'Định vị các dịch vụ và tài nguyên cộng đồng thiết yếu gần bạn',
+      badges: {
+        location: 'Vị trí',
+        restaurants: 'Nhà hàng',
+        shopping: 'Trung tâm mua sắm',
+        schools: 'Trường học',
       },
     },
     learnenglish: {
@@ -531,6 +573,10 @@ export default {
     },
   },
   id: {
+    quiz: {
+      title: 'Kuis',
+      subtitle: 'Uji pengetahuan Anda dengan kuis interaktif kami',
+    },
     meetingpeople_title: 'Bertemu Orang Baru',
     myki_learning: {
       title: 'Belajar Kartu Myki',
@@ -555,7 +601,7 @@ export default {
     meetingpeople_subtitle:
       'Panduan ini membantu Anda merasa percaya diri saat bertemu orang baru di Australia.',
     nav: {
-      facility: 'Cari Fasilitas / Acara',
+      facility: 'Cari Fasilitas',
       english: 'Belajar Bahasa Inggris',
       social: 'Norma Sosial',
       navigate: 'Navigasi Hidup Anda',
@@ -569,6 +615,16 @@ export default {
         zh: 'Cina',
         vi: 'Vietnam',
         id: 'Indonesia',
+      },
+    },
+    facility: {
+      title: 'Cari Fasilitas',
+      subtitle: 'Temukan layanan penting dan sumber daya komunitas di dekat Anda',
+      badges: {
+        location: 'Lokasi',
+        restaurants: 'Restoran',
+        shopping: 'Pusat Perbelanjaan',
+        schools: 'Sekolah',
       },
     },
     learnenglish: {

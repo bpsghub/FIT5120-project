@@ -1,14 +1,13 @@
 <template>
   <div class="modern-sections">
     <BannerMeteor :title="$t('navigate_your_life.title')"
-      :subtitle="$t('navigate_your_life.subtitle', 'Your comprehensive guide to daily life in Australia')" />
+      :subtitle="$t('navigate_your_life.subtitle', 'Your comprehensive guide to daily life in Australia')"
+      :badges="lifeBadges" :mainIcon="mainIcon" />
 
     <div>
-      <section v-for="(card, idx) in cards" :key="card.key" :class="[
-        'service-section',
-        idx % 2 === 1 ? 'reverse' : '',
-        idx === 0 ? 'slide-in-right' : idx === 1 ? 'slide-in-left' : 'slide-in-right'
-      ]" :style="{ animationDelay: `${0.2 * idx}s` }" aria-label="Navigate Your Life Section">
+      <section v-for="(card, idx) in cards" :key="card.key" class="service-section" :class="{ reverse: idx % 2 === 1 }"
+        :data-aos="idx % 2 === 0 ? 'fade-right' : 'fade-left'" :data-aos-delay="`${200 + idx * 100}`"
+        aria-label="Navigate Your Life Section">
         <div class="section-img">
           <img :src="card.img" :alt="card.title" />
         </div>
@@ -25,13 +24,51 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted, ref, h } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import BannerMeteor from '@/components/BannerMeteor.vue'
 
 const router = useRouter();
 const { t } = useI18n();
+
+const mainIcon = () => h('svg', {
+  xmlns: 'http://www.w3.org/2000/svg',
+  viewBox: '0 0 512 512',
+  width: '48',
+  height: '48',
+}, [
+  h('path', {
+    fill: 'none',
+    stroke: '#ffffff',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
+    'stroke-width': '32',
+    d: 'M448 64L64 240.14h200a8 8 0 0 1 8 8V448Z'
+  })
+]);
+
+// Life navigation badges
+const lifeBadges = [
+  {
+    icon: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z' })
+    ]),
+    text: 'Transport'
+  },
+  {
+    icon: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z' })
+    ]),
+    text: 'Shopping'
+  },
+  {
+    icon: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z' })
+    ]),
+    text: 'Healthcare'
+  }
+]
 
 const cardKeys = [
   'publictransportation',
@@ -91,48 +128,13 @@ onMounted(() => {
   box-shadow: 0 4px 16px rgba(107, 70, 193, 0.12);
   overflow: hidden;
   position: relative;
-  opacity: 0;
-  animation: fadeInSection 0.8s forwards;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .service-section:hover {
   border-color: #a259e6;
   box-shadow: 0 8px 24px rgba(162, 89, 230, 0.2);
-  transform: translateY(-4px);
-}
-
-/* Directional animation classes */
-.slide-in-right {
-  animation-name: slideInRight;
-}
-
-.slide-in-left {
-  animation-name: slideInLeft;
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(80px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-80px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  transform: translateY(-20px) scale(1.04);
 }
 
 .service-section.reverse {
@@ -147,6 +149,27 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   background: #D6BCFA;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.section-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  transition: left 0.75s cubic-bezier(.4, 2, .6, 1);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.section-img:hover::before {
+  left: 125%;
 }
 
 .section-img img {
@@ -157,6 +180,12 @@ onMounted(() => {
   border-radius: 10px;
   opacity: 1;
   z-index: 1;
+  transition: filter 0.5s, transform 0.5s;
+}
+
+.section-img:hover img {
+  filter: brightness(0.7);
+  transform: scale(1.08);
 }
 
 /* .img-overlay {
