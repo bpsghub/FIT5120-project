@@ -1,5 +1,3 @@
-import LearnEnglish from './views/LearnEnglish.vue'
-
 export default {
   en: {
     quiz: {
@@ -223,7 +221,8 @@ export default {
       healthdirect_desc: '24/7 health advice line',
       idcare_desc: 'Identity theft support service',
       my_location: 'My location',
-      my_emergency_location: 'My Emergency Location'
+      my_emergency_location: 'My Emergency Location',
+    },
     facility: {
       title: 'Find Facility',
       subtitle: 'Locate essential services and community resources near you',
@@ -233,8 +232,8 @@ export default {
         shopping: 'Shopping Malls',
         schools: 'Schools',
       },
-    },
-    learnenglish: {
+  },
+  learnenglish: {
       title: 'Learn English',
       subtitle: 'Practice English phrases for everyday situations',
       select_language_label: 'Select your native language:',
@@ -596,7 +595,8 @@ export default {
       healthdirect_desc: '24/7健康建议热线',
       idcare_desc: '身份盗用支持服务',
       my_location: '我的位置',
-      my_emergency_location: '我的紧急位置'
+      my_emergency_location: '我的紧急位置',
+    },
     facility: {
       title: '查找设施',
       subtitle: '定位您附近的重要服务和社区资源',
@@ -953,7 +953,8 @@ export default {
       healthdirect_desc: 'Đường dây tư vấn sức khỏe 24/7',
       idcare_desc: 'Dịch vụ hỗ trợ trộm danh tính',
       my_location: 'Vị trí của tôi',
-      my_emergency_location: 'Vị trí khẩn cấp của tôi'
+      my_emergency_location: 'Vị trí khẩn cấp của tôi',
+    },
     facility: {
       title: 'Tìm Cơ sở',
       subtitle: 'Định vị các dịch vụ và tài nguyên cộng đồng thiết yếu gần bạn',
@@ -1328,7 +1329,8 @@ export default {
       healthdirect_desc: 'Saluran saran kesehatan 24/7',
       idcare_desc: 'Layanan dukungan pencurian identitas',
       my_location: 'Lokasi saya',
-      my_emergency_location: 'Lokasi Darurat Saya'
+      my_emergency_location: 'Lokasi Darurat Saya',
+    },
     facility: {
       title: 'Cari Fasilitas',
       subtitle: 'Temukan layanan penting dan sumber daya komunitas di dekat Anda',
