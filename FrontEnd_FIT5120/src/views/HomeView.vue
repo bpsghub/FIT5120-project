@@ -74,7 +74,7 @@ function scrollToMission() {
           </div>
         </div>
         <div class="our_mission_remain our-features-header-yellow-col col-md-1 d-none d-md-flex"
-          style="background-color: rgb(181, 88, 74) !important" data-aos="fade-down" data-aos-delay="600">
+          style="background-color: #9955A4 !important" data-aos="fade-down" data-aos-delay="600">
           <span class="vertical-text-mission">{{ t('home.our_mission.our_mission_title') }}</span>
         </div>
       </div>
@@ -91,7 +91,7 @@ function scrollToMission() {
             data-aos-delay="400">
             <span class="our-features-header-title">{{
               t('home.our_features.our_features_title')
-              }}</span>
+            }}</span>
           </div>
           <div class="features-container">
             <div class="feature-card" data-aos="fade-up" data-aos-delay="50" @click="goToFacility"
@@ -541,15 +541,15 @@ h2 {
   min-height: 100%;
 }
 
-.our-features-header-yellow-col {
-  background: #facf46;
+/* .our-features-header-yellow-col {
+  background: #D796FF;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 2;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.07);
-}
+} */
 
 .vertical-text {
   writing-mode: vertical-rl;
@@ -712,7 +712,7 @@ h2 {
 .our-features-header-yellow-col {
   width: 90px;
   min-width: 70px;
-  background: #facf46;
+  background: #D796FF;
   display: flex;
   align-items: center;
   justify-content: center;
