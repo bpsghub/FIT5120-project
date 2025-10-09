@@ -1,29 +1,27 @@
 <template>
   <div class="learn-english-page">
-    <Header />
-    <div class="header-section">
-      <div class="header-container">
-        <div class="hero-content" data-aos="fade-down" data-aos-delay="100">
-          <h1>{{ $t('learnenglish.title') }}</h1>
-          <p class="subtitle">{{ $t('learnenglish.subtitle') }}</p>
-        </div>
-      </div>
+    <!-- BannerBubble -->
+    <BannerBubble :title="$t('learnenglish.title')" :subtitle="$t('learnenglish.subtitle')"
+      :bubbleTexts="['ABC', 'Hello!', '123', 'Learn', 'Study', 'Read', 'Write', 'Speak', 'Listen', 'Practice', 'Words', 'Grammar']"
+      :customIcon="bookIcon" />
 
-      <!-- Language Selection -->
-      <div class="language-selection-wrapper" data-aos="fade-up" data-aos-delay="300">
-        <div class="language-selection" data-aos="zoom-in" data-aos-delay="500">
-          <label for="native-language" data-aos="fade-right" data-aos-delay="700">{{ $t('learnenglish.select_language_label') }}</label>
-          <select id="native-language" v-model="selectedLanguage" class="language-select" data-aos="fade-left"
-            data-aos-delay="900">
-            <option value="" data-aos="fade-up" data-aos-delay="1000">{{ $t('learnenglish.select_language_placeholder') }}</option>
-            <option v-for="(lang, idx) in availableLanguages" :key="lang.code" :value="lang.code" :data-aos="'fade-up'"
-              :data-aos-delay="1000 + (idx + 1) * 100">
-              {{ lang.flag }} {{ lang.name }}
-            </option>
-          </select>
-        </div>
+    <!-- Language Selection -->
+    <div class="language-selection-wrapper" data-aos="fade-up" data-aos-delay="300">
+      <div class="language-selection" data-aos="zoom-in" data-aos-delay="500">
+        <label for="native-language" data-aos="fade-right" data-aos-delay="700">{{
+          $t('learnenglish.select_language_label') }}</label>
+        <select id="native-language" v-model="selectedLanguage" class="language-select" data-aos="fade-left"
+          data-aos-delay="900">
+          <option value="" data-aos="fade-up" data-aos-delay="1000">{{ $t('learnenglish.select_language_placeholder')
+            }}</option>
+          <option v-for="(lang, idx) in availableLanguages" :key="lang.code" :value="lang.code" :data-aos="'fade-up'"
+            :data-aos-delay="1000 + (idx + 1) * 100">
+            {{ lang.flag }} {{ lang.name }}
+          </option>
+        </select>
       </div>
     </div>
+
     <!-- Learning Categories -->
     <div class="categories-section" v-if="selectedLanguage">
       <div class="container">
@@ -87,14 +85,19 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, h } from 'vue'
 import { useRouter } from 'vue-router'
 import { TranslationService } from '@/services/translation.js'
-import Button from '@/components/Button.vue'
-import Header from '@/components/Header.vue'
+import BannerBubble from '@/components/BannerBubble.vue'
+
+// Book icon for English learning
+const bookIcon = () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+  h('path', { d: 'M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z' })
+])
 
 const router = useRouter()
 
@@ -159,69 +162,12 @@ onMounted(async () => {
   padding: 0 1rem;
 }
 
-/* Header Section */
-.header-section {
-  background: #896DEB;
-  color: white;
-  padding: 4rem 0 2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.header-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgb(60 14 103);
-  z-index: 1;
-}
-
-.header-container {
-  position: relative;
-  z-index: 2;
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.header-controls {
-  margin-bottom: 3rem;
-}
-
-.back-button {
-  display: inline-block;
-}
-
-.hero-content {
-  text-align: center;
-  padding: 2rem 0;
-}
-
-.hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.subtitle {
-  font-size: 1.375rem;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 400;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
 /* Language Selection Wrapper */
 .language-selection-wrapper {
   position: relative;
   z-index: 2;
-  padding: 0 1rem 2rem;
+  padding: 2rem 1rem;
+  background: #f8fafc;
 }
 
 /* Language Selection */

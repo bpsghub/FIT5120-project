@@ -2,9 +2,11 @@
   <div class="header-w">
     <nav class="navbar navbar-expand-lg navbar-light header-navbar">
       <div class="container-fluid">
-        <router-link class="navbar-brand fw-bold fs-2 logo-link" to="/">{{
-          $t('nav.brand')
+        <div class="logo-bg">
+          <router-link class="navbar-brand fw-bold fs-2 logo-link" to="/">{{
+            $t('nav.brand')
           }}</router-link>
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -15,43 +17,36 @@
               <router-link class="nav-link" :to="link.to">{{ $t(link.text) }}</router-link>
             </li>
             <li class="nav-item dropdown" v-for="(link, index) in navLinks_dropdown" :key="index">
-              <router-link class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false" :to="link.to">
-                {{ $t(link.text) }}
-              </router-link>
-              <TransitionGroup v-if="link.children === 'socialNorms'" tag="ul" class="dropdown-menu"
-                name="dropdown-slide">
-            <li v-for="(link, index) in socialNorms" :key="index">
-              <!-- <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{
-                    $t(lang.text)
-                  }}</a> -->
-              <router-link class="nav-link" :to="link.to">{{ $t(link.text) }}</router-link>
+              <div class="nav-link dropdown-hover">
+                <span @click="navigateDropdown(link.to)">{{ $t(link.text) }}</span>
+                <ul v-if="link.children === 'socialNorms'" class="dropdown-menu">
+                  <li v-for="(item, idx) in socialNorms.slice(1)" :key="idx">
+                    <router-link class="dropdown-item" :to="item.to">{{ $t(item.text) }}</router-link>
+                  </li>
+                </ul>
+                <ul v-if="link.children === 'navigateYourLife'" class="dropdown-menu">
+                  <li v-for="(item, idx) in navigateYourLife.slice(1, 4)" :key="idx">
+                    <router-link class="dropdown-item" :to="item.to">{{ $t(item.text) }}</router-link>
+                  </li>
+                </ul>
+              </div>
             </li>
-        </TransitionGroup>
-        <TransitionGroup v-if="link.children === 'navigateYourLife'" tag="ul" class="dropdown-menu"
-          name="dropdown-slide">
-          <li v-for="(link, index) in navigateYourLife" :key="index">
-            <!-- <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{
-                    $t(lang.text)
-                  }}</a> -->
-            <router-link class="nav-link" :to="link.to">{{ $t(link.text) }}</router-link>
-          </li>
-        </TransitionGroup>
-        </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            {{ $t('nav.language') }}
-          </a>
-          <TransitionGroup tag="ul" class="dropdown-menu" name="dropdown-slide">
-        <li v-for="lang in languages" :key="lang.code">
-          <a class="dropdown-item" href="#" @click.prevent="setLang(lang.code)">{{
-            $t(lang.text)
-          }}</a>
-        </li>
-        </TransitionGroup>
-        </li>
-        </ul>
+            <li class="nav-item dropdown">
+              <div class="nav-link dropdown-hover">
+                <span>{{ $t('nav.language') }}: <strong>{{ $t(currentLangText) }}</strong></span>
+                <ul class="dropdown-menu">
+                  <li v-for="lang in languages" :key="lang.code">
+                    <a class="dropdown-item d-flex gap-4" href="#" @click.prevent="setLang(lang.code)">
+                      {{
+                        $t(lang.text) }}
+                      <span v-if="locale === lang.code" style="color:#a259e6;font-weight:bold;">&#10003; </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </TransitionGroup>
       </div>
     </nav>
@@ -59,13 +54,28 @@
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 
+function navigateDropdown(path) {
+  router.push(path)
+}
+
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
 const { locale } = useI18n()
+
+if (!locale.value) locale.value = 'en'
+
+const currentLangText = computed(() => {
+  const found = languages.find(l => l.code === locale.value)
+  return found ? found.text : 'nav.lang.en'
+})
 
 const navLinks = [
   { to: '/facilities', text: 'nav.facility' },
   { to: '/learnenglish', text: 'nav.english' },
+  { to: '/chatbot', text: 'nav.chatbot' },
   { to: '/safety', text: 'nav.safety' }
 ]
 const navLinks_dropdown = [
@@ -137,6 +147,44 @@ function setLang(lang) {
 </script>
 
 <style scoped>
+.dropdown-hover {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-hover span {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.dropdown-hover .dropdown-menu {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 170px;
+  z-index: 999;
+  transform: translateY(-10px);
+  transition: opacity 0.35s cubic-bezier(.4, 0, .2, 1), transform 0.35s cubic-bezier(.4, 0, .2, 1);
+}
+
+.dropdown-hover:hover .dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.logo-bg {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #eee;
+  padding: 4px 18px;
+  display: inline-block;
+}
+
 .header-w {
   position: sticky;
   top: 0;

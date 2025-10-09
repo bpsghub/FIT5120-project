@@ -44,12 +44,12 @@ const props = defineProps({
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(107, 70, 193, 0.12);
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid #e0d4f7;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   position: relative;
 }
 
@@ -70,8 +70,9 @@ const props = defineProps({
 }
 
 .facility-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: #a259e6;
+  box-shadow: 0 8px 24px rgba(162, 89, 230, 0.2);
+  transform: translateY(-4px);
 }
 
 .card-image {

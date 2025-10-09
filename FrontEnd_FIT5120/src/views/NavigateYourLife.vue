@@ -1,20 +1,15 @@
 <template>
   <div class="modern-sections">
-    <Header />
-    <div class="main-title">
-      <span class="main-title-text">
-        {{ $t('nav.navigate') }}
-      </span>
-    </div>
+    <BannerMeteor :title="$t('navigate_your_life.title')"
+      :subtitle="$t('navigate_your_life.subtitle', 'Your comprehensive guide to daily life in Australia')"
+      :badges="lifeBadges" :mainIcon="mainIcon" />
+
     <div>
-      <section v-for="(card, idx) in cards" :key="card.key" :class="[
-        'service-section',
-        idx % 2 === 1 ? 'reverse' : '',
-        idx === 0 ? 'slide-in-right' : idx === 1 ? 'slide-in-left' : 'slide-in-right'
-      ]" :style="{ animationDelay: `${0.2 * idx}s` }" aria-label="Navigate Your Life Section">
+      <section v-for="(card, idx) in cards" :key="card.key" class="service-section" :class="{ reverse: idx % 2 === 1 }"
+        :data-aos="idx % 2 === 0 ? 'fade-right' : 'fade-left'" :data-aos-delay="`${200 + idx * 100}`"
+        aria-label="Navigate Your Life Section">
         <div class="section-img">
           <img :src="card.img" :alt="card.title" />
-          <div class="img-overlay"></div>
         </div>
         <div class="section-content">
           <h2 class="section-title">{{ card.title }}</h2>
@@ -29,12 +24,51 @@
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted, ref, h } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
-import Header from '@/components/Header.vue';
+import BannerMeteor from '@/components/BannerMeteor.vue'
+
 const router = useRouter();
 const { t } = useI18n();
+
+const mainIcon = () => h('svg', {
+  xmlns: 'http://www.w3.org/2000/svg',
+  viewBox: '0 0 512 512',
+  width: '48',
+  height: '48',
+}, [
+  h('path', {
+    fill: 'none',
+    stroke: '#ffffff',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
+    'stroke-width': '32',
+    d: 'M448 64L64 240.14h200a8 8 0 0 1 8 8V448Z'
+  })
+]);
+
+// Life navigation badges
+const lifeBadges = [
+  {
+    icon: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z' })
+    ]),
+    text: 'Transport'
+  },
+  {
+    icon: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z' })
+    ]),
+    text: 'Shopping'
+  },
+  {
+    icon: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z' })
+    ]),
+    text: 'Healthcare'
+  }
+]
 
 const cardKeys = [
   'publictransportation',
@@ -77,66 +111,9 @@ onMounted(() => {
 .modern-sections {
   width: 100%;
   min-height: 100vh;
-  background-image: url("https://bookmestatic.net.nz/bookme-product-images/products/72238/72238_image2_UASR_M2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
+  background: #ffffff;
   padding: 0 0 40px 0;
   font-family: 'Roboto', 'Arial', sans-serif;
-}
-
-.main-title {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto 32px auto;
-  padding-top: 36px;
-  animation: fadeInTitle 1s cubic-bezier(.4, 2, .6, 1);
-}
-
-.main-title-text {
-  display: flex;
-  align-items: center;
-  font-size: 2.3rem;
-  font-weight: 800;
-  color: #6B46C1;
-  letter-spacing: 1px;
-  background: linear-gradient(90deg, #6B46C1 60%, #8A4AF3 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  gap: 16px;
-  transition: transform 0.2s cubic-bezier(.4, 2, .6, 1);
-  cursor: default;
-}
-
-.main-title-text:hover {
-  transform: scale(1.04) translateY(-2px);
-  text-shadow: 0 4px 24px #D6BCFA;
-}
-
-.main-title-icon {
-  margin-right: 8px;
-  vertical-align: middle;
-  transition: transform 0.3s cubic-bezier(.4, 2, .6, 1);
-}
-
-.main-title-text:hover .main-title-icon {
-  transform: rotate(20deg) scale(1.1);
-}
-
-@keyframes fadeInTitle {
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .service-section {
@@ -147,44 +124,17 @@ onMounted(() => {
   max-width: 1100px;
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(107, 70, 193, 0.08);
+  border: 2px solid #e0d4f7;
+  box-shadow: 0 4px 16px rgba(107, 70, 193, 0.12);
   overflow: hidden;
   position: relative;
-  opacity: 0;
-  animation: fadeInSection 0.8s forwards;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
-/* Directional animation classes */
-.slide-in-right {
-  animation-name: slideInRight;
-}
-
-.slide-in-left {
-  animation-name: slideInLeft;
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(80px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-80px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.service-section:hover {
+  border-color: #a259e6;
+  box-shadow: 0 8px 24px rgba(162, 89, 230, 0.2);
+  transform: translateY(-20px) scale(1.04);
 }
 
 .service-section.reverse {
@@ -199,6 +149,27 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   background: #D6BCFA;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.section-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  transition: left 0.75s cubic-bezier(.4, 2, .6, 1);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.section-img:hover::before {
+  left: 125%;
 }
 
 .section-img img {
@@ -207,8 +178,14 @@ onMounted(() => {
   min-height: 300px;
   object-fit: cover;
   border-radius: 10px;
-  opacity: 0.7;
+  opacity: 1;
   z-index: 1;
+  transition: filter 0.5s, transform 0.5s;
+}
+
+.section-img:hover img {
+  filter: brightness(0.7);
+  transform: scale(1.08);
 }
 
 /* .img-overlay {

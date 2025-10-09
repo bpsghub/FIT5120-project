@@ -25,15 +25,41 @@
           <div class="language-label">English</div>
           <div class="text-content">{{ phrase.english }}</div>
           <div class="flip-hint">Click to see {{ getLanguageName(nativeLanguage) }}</div>
-          <button class="audio-btn" @click.stop="playAudio(phrase.english, 'en')" :disabled="isPlayingAudio">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 16px; width: 16px">
-              <path
-                d="M3 10v4a1 1 0 0 0 1 1h2.22l3.13 3.13a1 1 0 0 0 1.65-.76V6.63a1 1 0 0 0-1.65-.76L6.22 9H4a1 1 0 0 0-1 1zM14 8.24a1 1 0 0 1 1.41 0 5 5 0 0 1 0 7.07 1 1 0 1 1-1.41-1.41 3 3 0 0 0 0-4.24 1 1 0 0 1 0-1.42z" />
-              <path
-                d="M17.7 5.14a1 1 0 1 1 1.41 1.41 9 9 0 0 1 0 12.73 1 1 0 0 1-1.41-1.41 7 7 0 0 0 0-9.9 1 1 0 0 1 0-1.42z" />
-            </svg>
-            {{ isPlayingAudio ? 'Playing...' : 'Listen' }}
-          </button>
+
+          <!-- Audio Controls -->
+          <div class="audio-controls">
+            <button class="audio-btn" @click.stop="playAudio(phrase.english, 'en')" :disabled="isPlayingAudio">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 16px; width: 16px">
+                <path
+                  d="M3 10v4a1 1 0 0 0 1 1h2.22l3.13 3.13a1 1 0 0 0 1.65-.76V6.63a1 1 0 0 0-1.65-.76L6.22 9H4a1 1 0 0 0-1 1zM14 8.24a1 1 0 0 1 1.41 0 5 5 0 0 1 0 7.07 1 1 0 1 1-1.41-1.41 3 3 0 0 0 0-4.24 1 1 0 0 1 0-1.42z" />
+                <path
+                  d="M17.7 5.14a1 1 0 1 1 1.41 1.41 9 9 0 0 1 0 12.73 1 1 0 0 1-1.41-1.41 7 7 0 0 0 0-9.9 1 1 0 0 1 0-1.42z" />
+              </svg>
+              {{ isPlayingAudio ? 'Playing...' : 'Listen' }}
+            </button>
+
+            <button class="talk-btn" @click.stop="handleTalk" :disabled="isRecording || isAssessing">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                style="height: 16px; width: 16px">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" />
+                <path
+                  d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" />
+              </svg>
+              {{ isRecording ? 'Recording...' : isAssessing ? 'Assessing...' : 'Talk' }}
+            </button>
+          </div>
+
+          <!-- Pronunciation Result -->
+          <div v-if="pronunciationResult" class="pronunciation-result" :class="`result-${pronunciationResult.level}`">
+            <div class="result-score">
+              <!-- <span class="score-value">{{ pronunciationResult.score }}</span>
+              <span class="score-label">/100</span> -->
+            </div>
+            <div class="result-feedback">{{ pronunciationResult.feedback }}</div>
+            <div v-if="pronunciationResult.transcribed" class="result-transcribed">
+              <strong>You said:</strong> "{{ pronunciationResult.transcribed }}"
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -42,7 +68,8 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import Header from './Header.vue'
+import { useSpeechRecognition } from '@/composables/useSpeechRecognition.js'
+import { assessPronunciation, isAzureConfigured } from '@/services/azureSpeechService.js'
 
 const props = defineProps({
   phrase: {
@@ -64,6 +91,20 @@ const emit = defineEmits(['flip', 'audio-start', 'audio-end'])
 // Reactive state
 const isFlipped = ref(false)
 const isPlayingAudio = ref(false)
+const isRecording = ref(false)
+const isAssessing = ref(false)
+const pronunciationResult = ref(null)
+
+// Speech recognition composable
+const {
+  startRecordingWebAPI,
+  startRecordingForAzure,
+  stopRecording,
+  getAudioBlob,
+  evaluatePronunciation,
+  transcript,
+  recognitionResult
+} = useSpeechRecognition()
 
 // Computed properties
 const getLanguageName = computed(() => {
@@ -120,6 +161,111 @@ const playAudio = async (text, langCode) => {
     isPlayingAudio.value = false
     emit('audio-end')
   }
+}
+
+// Handle "Talk" button click
+const handleTalk = async () => {
+  if (isRecording.value || isAssessing.value) return
+
+  // Reset previous result
+  pronunciationResult.value = null
+
+  try {
+    // Check if Azure is configured
+    const useAzure = isAzureConfigured()
+
+    if (useAzure) {
+      // Use Azure Speech Service
+      await handleAzurePronunciation()
+    } else {
+      // Fallback to Web Speech API
+      await handleWebSpeechPronunciation()
+    }
+  } catch (error) {
+    console.error('Talk handler error:', error)
+    pronunciationResult.value = {
+      success: false,
+      score: 0,
+      feedback: `Error: ${error.message || 'Please try again.'}`,
+      level: 'error'
+    }
+    isRecording.value = false
+    isAssessing.value = false
+  }
+}
+
+// Azure Speech Service pronunciation assessment
+const handleAzurePronunciation = async () => {
+  isRecording.value = true
+
+  // Start recording
+  await startRecordingForAzure()
+
+  // Record for 5 seconds
+  await new Promise(resolve => setTimeout(resolve, 5000))
+
+  // Stop recording
+  stopRecording()
+  isRecording.value = false
+  isAssessing.value = true
+
+  // Get audio blob
+  const audioBlob = await getAudioBlob()
+
+  // Assess pronunciation with Azure
+  const result = await assessPronunciation(audioBlob, props.phrase.english, 'en-US')
+
+  pronunciationResult.value = result
+  isAssessing.value = false
+}
+
+// Web Speech API pronunciation assessment (fallback)
+const handleWebSpeechPronunciation = async () => {
+  isRecording.value = true
+
+  // Start Web Speech Recognition
+  await startRecordingWebAPI('en-US')
+
+  // Wait for recognition result
+  await new Promise((resolve) => {
+    const checkInterval = setInterval(() => {
+      if (!isRecording.value || recognitionResult.value) {
+        clearInterval(checkInterval)
+        resolve()
+      }
+    }, 100)
+
+    // Timeout after 10 seconds
+    setTimeout(() => {
+      clearInterval(checkInterval)
+      stopRecording()
+      resolve()
+    }, 10000)
+  })
+
+  isRecording.value = false
+  isAssessing.value = true
+
+  // Evaluate pronunciation
+  if (recognitionResult.value && recognitionResult.value.text) {
+    const result = evaluatePronunciation(
+      props.phrase.english,
+      recognitionResult.value.text,
+      recognitionResult.value.confidence || 1
+    )
+
+    pronunciationResult.value = result
+  } else {
+    pronunciationResult.value = {
+      success: false,
+      score: 0,
+      feedback: 'Could not recognize speech. Please try again.',
+      level: 'error',
+      transcribed: transcript.value || ''
+    }
+  }
+
+  isAssessing.value = false
 }
 
 // Auto-flip functionality
@@ -267,6 +413,189 @@ defineExpose({
   opacity: 0.5;
   cursor: not-allowed;
   transform: none;
+}
+
+/* Audio Controls Container */
+.audio-controls {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Talk Button */
+.talk-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 100px;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.talk-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+}
+
+.talk-btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.talk-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+}
+
+/* Pronunciation Result */
+.pronunciation-result {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  animation: slideIn 0.3s ease-out;
+  width: 100%;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-score {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.score-label {
+  font-size: 1rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.result-feedback {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #475569;
+}
+
+.result-transcribed {
+  font-size: 0.8125rem;
+  color: #64748b;
+  text-align: center;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Result Level Colors */
+.result-excellent {
+  border-color: #22c55e;
+  background: #f0fdf4;
+}
+
+.result-excellent .score-value {
+  color: #16a34a;
+}
+
+.result-excellent .result-feedback {
+  color: #15803d;
+}
+
+.result-great {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.result-great .score-value {
+  color: #2563eb;
+}
+
+.result-great .result-feedback {
+  color: #1d4ed8;
+}
+
+.result-good {
+  border-color: #eab308;
+  background: #fefce8;
+}
+
+.result-good .score-value {
+  color: #ca8a04;
+}
+
+.result-good .result-feedback {
+  color: #a16207;
+}
+
+.result-fair {
+  border-color: #f59e0b;
+  background: #fff7ed;
+}
+
+.result-fair .score-value {
+  color: #d97706;
+}
+
+.result-fair .result-feedback {
+  color: #b45309;
+}
+
+.result-needs-improvement {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.result-needs-improvement .score-value {
+  color: #dc2626;
+}
+
+.result-needs-improvement .result-feedback {
+  color: #b91c1c;
+}
+
+.result-error {
+  border-color: #dc2626;
+  background: #fef2f2;
+}
+
+.result-error .score-value {
+  color: #991b1b;
+}
+
+.result-error .result-feedback {
+  color: #7f1d1d;
 }
 
 /* Responsive Design */

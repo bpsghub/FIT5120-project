@@ -1,5 +1,4 @@
 <script setup>
-import Header from '@/components/Header.vue'
 import { useI18n } from 'vue-i18n'
 
 import { useRouter } from 'vue-router'
@@ -27,7 +26,6 @@ function scrollToMission() {
 
 <template>
   <div>
-    <Header />
     <div class="homeview-bg-wrapper w-100">
       <video autoplay loop muted playsinline class="bg-video w-100">
         <source src="./../../public/Home_video.mp4" type="video/mp4" />
@@ -49,13 +47,8 @@ function scrollToMission() {
             </div>
           </div>
           <div class="d-flex flex-column align-items-center mt-5">
-            <span
-              class="get-started-text mb-2"
-              data-aos="fade-up"
-              data-aos-delay="200"
-              @click="scrollToMission"
-              >{{ t('home.lets_get_started') }}</span
-            >
+            <span class="get-started-text mb-2" data-aos="fade-up" data-aos-delay="200" @click="scrollToMission">{{
+              t('home.lets_get_started') }}</span>
             <div class="chevron-animate mt-2" data-aos="fade-down" data-aos-delay="400">
               <i class="fa-solid fa-chevron-down fa-2x"></i>
             </div>
@@ -64,24 +57,13 @@ function scrollToMission() {
       </div>
     </div>
     <section class="our_mission w-100">
-      <div
-        class="mission_banner text-white w-100 d-flex justify-content-center align-items-center py-5 fw-bold fs-4"
-      >
+      <div class="mission_banner text-white w-100 d-flex justify-content-center align-items-center py-5 fw-bold fs-4">
         <p class="p_ourmission border-white">{{ t('home.helping_older') }}</p>
       </div>
       <div class="our_mission_main d-flex align-items-stretch" style="min-height: 600px">
-        <div
-          class="our_mission_left"
-          style="flex: 6 1 0"
-          data-aos="fade-right"
-          data-aos-delay="200"
-        ></div>
-        <div
-          class="our_mission_right d-flex align-items-center position-relative p-0"
-          style="flex: 5 1 0"
-          data-aos="fade-left"
-          data-aos-delay="400"
-        >
+        <div class="our_mission_left" style="flex: 6 1 0" data-aos="fade-right" data-aos-delay="200"></div>
+        <div class="our_mission_right d-flex align-items-center position-relative p-0" style="flex: 5 1 0"
+          data-aos="fade-left" data-aos-delay="400">
           <div class="ourmission_content w-100 text-start">
             <h2 class="fw-semibold mb-3" data-aos="fade-up">
               {{ t('home.our_mission.our_mission_title') }}
@@ -91,12 +73,8 @@ function scrollToMission() {
             </p>
           </div>
         </div>
-        <div
-          class="our_mission_remain our-features-header-yellow-col col-md-1 d-none d-md-flex"
-          style="background-color: rgb(181, 88, 74) !important"
-          data-aos="fade-down"
-          data-aos-delay="600"
-        >
+        <div class="our_mission_remain our-features-header-yellow-col col-md-1 d-none d-md-flex"
+          style="background-color: #9955A4 !important" data-aos="fade-down" data-aos-delay="600">
           <span class="vertical-text-mission">{{ t('home.our_mission.our_mission_title') }}</span>
         </div>
       </div>
@@ -113,23 +91,15 @@ function scrollToMission() {
           <span class="vertical-text">{{ t('home.our_features.our_features_title') }}</span>
         </div>
         <div class="our-features-main-content col-md-11">
-          <div
-            class="our-features-header-bg d-flex justify-content-center align-items-center w-100"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
+          <div class="our-features-header-bg d-flex justify-content-center align-items-center w-100" data-aos="fade-up"
+            data-aos-delay="400">
             <span class="our-features-header-title">{{
               t('home.our_features.our_features_title')
             }}</span>
           </div>
           <div class="features-container">
-            <div
-              class="feature-card"
-              data-aos="fade-up"
-              data-aos-delay="50"
-              @click="goToFacility"
-              style="cursor: pointer"
-            >
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="50" @click="goToFacility"
+              style="cursor: pointer">
               <div class="feature-icon"><i class="fa-solid fa-map"></i></div>
               <h3 class="feature-title">
                 {{ t('home.our_features.our_features_cards.facility.facility_title') }}
@@ -141,13 +111,8 @@ function scrollToMission() {
                 {{ t('button_learnmore.label') }}
               </button>
             </div>
-            <div
-              class="feature-card"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              @click="goToEnglish"
-              style="cursor: pointer"
-            >
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100" @click="goToEnglish"
+              style="cursor: pointer">
               <div class="feature-icon"><i class="fa-brands fa-leanpub"></i></div>
               <h3 class="feature-title">
                 {{ t('home.our_features.our_features_cards.learning.learning_title') }}
@@ -159,13 +124,8 @@ function scrollToMission() {
                 {{ t('button_learnmore.label') }}
               </button>
             </div>
-            <div
-              class="feature-card"
-              data-aos="fade-up"
-              data-aos-delay="150"
-              @click="goToSocialNorms"
-              style="cursor: pointer"
-            >
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="150" @click="goToSocialNorms"
+              style="cursor: pointer">
               <div class="feature-icon"><i class="fa-solid fa-user-group"></i></div>
               <h3 class="feature-title">
                 {{ t('home.our_features.our_features_cards.social.social_title') }}
@@ -177,13 +137,8 @@ function scrollToMission() {
                 {{ t('button_learnmore.label') }}
               </button>
             </div>
-            <div
-              class="feature-card"
-              data-aos="fade-up"
-              data-aos-delay="200"
-              @click="goToNavigate"
-              style="cursor: pointer"
-            >
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200" @click="goToNavigate"
+              style="cursor: pointer">
               <div class="feature-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
               <h3 class="feature-title">
                 {{ t('home.our_features.our_features_cards.navigate.navigate_title') }}
@@ -213,6 +168,7 @@ function scrollToMission() {
   z-index: 0;
   pointer-events: none;
 }
+
 @media (max-width: 768px) {
   .ourmission_content {
     padding-top: 20px !important;
@@ -299,7 +255,6 @@ h2 {
 
 /* Banner title styling */
 .banner_title {
-  font-family: 'Inter', sans-serif;
   font-weight: 900;
   font-size: clamp(2.5rem, 8vw, 5rem);
   margin-bottom: 1rem;
@@ -518,7 +473,6 @@ h2 {
   letter-spacing: 0.12em;
   text-align: center;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-  font-family: 'Inter', sans-serif;
 }
 
 /* Our Feature  */
@@ -570,7 +524,6 @@ h2 {
   font-weight: 900;
   letter-spacing: 0.08em;
   text-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  font-family: 'Inter', sans-serif;
 }
 
 .our_features_section {
@@ -589,15 +542,15 @@ h2 {
   min-height: 100%;
 }
 
-.our-features-header-yellow-col {
-  background: #facf46;
+/* .our-features-header-yellow-col {
+  background: #D796FF;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 2;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.07);
-}
+} */
 
 .vertical-text {
   writing-mode: vertical-rl;
@@ -608,7 +561,6 @@ h2 {
   letter-spacing: 0.12em;
   text-align: center;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-  font-family: 'Inter', sans-serif;
 }
 
 .our-features-main-content {
@@ -624,7 +576,6 @@ h2 {
   font-weight: 900;
   letter-spacing: 0.08em;
   text-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  font-family: 'Inter', sans-serif;
 }
 
 .features-container {
@@ -760,7 +711,7 @@ h2 {
 .our-features-header-yellow-col {
   width: 90px;
   min-width: 70px;
-  background: #facf46;
+  background: #D796FF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -778,7 +729,6 @@ h2 {
   letter-spacing: 0.12em;
   text-align: center;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
-  font-family: 'Inter', sans-serif;
 }
 
 .our-features-header-main {
@@ -796,7 +746,6 @@ h2 {
   font-weight: 900;
   letter-spacing: 0.08em;
   text-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  font-family: 'Inter', sans-serif;
 }
 
 @media (max-width: 1200px) {

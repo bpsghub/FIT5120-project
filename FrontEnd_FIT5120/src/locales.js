@@ -1,7 +1,11 @@
-import LearnEnglish from "./views/LearnEnglish.vue";
+import LearnEnglish from './views/LearnEnglish.vue'
 
 export default {
   en: {
+    quiz: {
+      title: 'Quiz',
+      subtitle: 'Test your knowledge with our interactive quizzes',
+    },
     meetingpeople_title: 'Meeting New People',
     myki_learning: {
       title: 'Learning About Myki Card',
@@ -33,7 +37,8 @@ export default {
       language: 'Language',
       brand: 'Ankang Life',
       main_view: 'Main View',
-      safety:' Safety Tips',
+      safety: 'Safety Tips',
+      chatbot: 'Practice English',
       lang: {
         en: 'English',
         zh: 'Chinese',
@@ -219,6 +224,15 @@ export default {
       idcare_desc: 'Identity theft support service',
       my_location: 'My location',
       my_emergency_location: 'My Emergency Location'
+    facility: {
+      title: 'Find Facility',
+      subtitle: 'Locate essential services and community resources near you',
+      badges: {
+        location: 'Location',
+        restaurants: 'Restaurants',
+        shopping: 'Shopping Malls',
+        schools: 'Schools',
+      },
     },
     learnenglish: {
       title: 'Learn English',
@@ -242,7 +256,7 @@ export default {
       our_mission: {
         our_mission_title: 'Our Mission',
         our_mission_desc:
-          'Ankang Life exists to empower elderly immigrants in Melbourne by helping them overcome language and cultural barriers, navigate daily life independently, and feel truly included in their community.'
+          'Ankang Life exists to empower elderly immigrants in Melbourne by helping them overcome language and cultural barriers, navigate daily life independently, and feel truly included in their community.',
       },
       our_features: {
         our_features_title: 'Our Features',
@@ -274,6 +288,9 @@ export default {
       label: 'Learn More',
     },
     socialnorms: {
+      title: 'Social Norms',
+      subtitle:
+        'Learn Australian customs, everyday manners, and social etiquette to feel confident in any situation',
       meetingpeople: {
         title: 'Meeting New People',
         subtitle:
@@ -286,6 +303,8 @@ export default {
     },
     navigate_your_life: {
       title: 'Navigate Your Life Independently',
+      subtitle:
+        'Practical guides to help you manage daily tasks and feel confident living in Australia',
       cards: {
         publictransportation: {
           title: 'Ride Public Transportation',
@@ -361,6 +380,10 @@ export default {
     },
   },
   zh: {
+    quiz: {
+      title: '测验',
+      subtitle: '通过我们的互动测验测试您的知识',
+    },
     meetingpeople_title: '结识新朋友',
     myki_learning: {
       title: '了解 Myki 卡',
@@ -387,7 +410,8 @@ export default {
       language: '语言',
       brand: '安康生活',
       main_view: '主视图',
-      safety:' 安全提示',
+      safety: ' 安全提示',
+      chatbot: '练习英语',
       lang: {
         en: '英语',
         zh: '中文',
@@ -573,6 +597,15 @@ export default {
       idcare_desc: '身份盗用支持服务',
       my_location: '我的位置',
       my_emergency_location: '我的紧急位置'
+    facility: {
+      title: '查找设施',
+      subtitle: '定位您附近的重要服务和社区资源',
+      badges: {
+        location: '位置',
+        restaurants: '餐厅',
+        shopping: '购物中心',
+        schools: '学校',
+      },
     },
     learnenglish: {
       title: '学英语',
@@ -623,6 +656,8 @@ export default {
       label: '了解更多',
     },
     socialnorms: {
+      title: '社交规范',
+      subtitle: '了解澳大利亚的习俗、日常礼仪和社交礼节，让你在任何情况下都能充满自信',
       meetingpeople: {
         title: '结识新朋友',
         subtitle: '你好！了解如何在澳大利亚通过微笑、握手和友好的问候结识新朋友。',
@@ -634,6 +669,7 @@ export default {
     },
     navigate_your_life: {
       title: '独立导航你的生活',
+      subtitle: '实用指南，帮助你处理日常事务，自信地生活在澳大利亚',
       cards: {
         publictransportation: {
           title: '乘坐公共交通',
@@ -697,6 +733,10 @@ export default {
     },
   },
   vi: {
+    quiz: {
+      title: 'Quiz',
+      subtitle: 'Kiểm tra kiến thức của bạn với các bài kiểm tra tương tác của chúng tôi',
+    },
     meetingpeople_title: 'Gặp gỡ người mới',
     myki_learning: {
       title: 'Học về thẻ Myki',
@@ -727,7 +767,8 @@ export default {
       language: 'Ngôn ngữ',
       brand: 'Ankang Life',
       main_view: 'Trang chính',
-      safety:' Mẹo An Toàn',
+      safety: ' Mẹo An Toàn',
+      chatbot: 'Luyện tập tiếng Anh',
       lang: {
         en: 'Tiếng Anh',
         zh: 'Tiếng Trung',
@@ -913,6 +954,15 @@ export default {
       idcare_desc: 'Dịch vụ hỗ trợ trộm danh tính',
       my_location: 'Vị trí của tôi',
       my_emergency_location: 'Vị trí khẩn cấp của tôi'
+    facility: {
+      title: 'Tìm Cơ sở',
+      subtitle: 'Định vị các dịch vụ và tài nguyên cộng đồng thiết yếu gần bạn',
+      badges: {
+        location: 'Vị trí',
+        restaurants: 'Nhà hàng',
+        shopping: 'Trung tâm mua sắm',
+        schools: 'Trường học',
+      },
     },
     learnenglish: {
       title: 'Học Tiếng Anh',
@@ -922,7 +972,8 @@ export default {
       choose_category: 'Chọn một chủ đề',
       choose_category_desc: 'Chọn một chủ đề để bắt đầu học các cụm từ tiếng Anh',
       welcome_title: 'Chào mừng đến với học tiếng Anh!',
-      welcome_desc: 'Vui lòng chọn ngôn ngữ mẹ đẻ của bạn ở trên để bắt đầu học các cụm từ tiếng Anh.',
+      welcome_desc:
+        'Vui lòng chọn ngôn ngữ mẹ đẻ của bạn ở trên để bắt đầu học các cụm từ tiếng Anh.',
       feature_audio: 'Phát âm bằng âm thanh',
       feature_flashcards: 'Thẻ ghi nhớ tương tác',
       feature_mobile: 'Thiết kế thân thiện với di động',
@@ -968,6 +1019,9 @@ export default {
       label: 'Tìm hiểu thêm',
     },
     socialnorms: {
+      title: 'Chuẩn mực xã hội',
+      subtitle:
+        'Tìm hiểu phong tục, phép lịch sự hàng ngày và nghi thức xã hội của Úc để tự tin trong mọi tình huống',
       meetingpeople: {
         title: 'Gặp gỡ người mới',
         subtitle:
@@ -980,6 +1034,7 @@ export default {
     },
     navigate_your_life: {
       title: 'Tự chủ cuộc sống của bạn',
+      subtitle: 'Hướng dẫn thực tế giúp bạn quản lý các công việc hàng ngày và tự tin sống ở Úc',
       cards: {
         publictransportation: {
           title: 'Đi phương tiện công cộng',
@@ -1052,6 +1107,10 @@ export default {
     },
   },
   id: {
+    quiz: {
+      title: 'Kuis',
+      subtitle: 'Uji pengetahuan Anda dengan kuis interaktif kami',
+    },
     meetingpeople_title: 'Bertemu Orang Baru',
     myki_learning: {
       title: 'Belajar Kartu Myki',
@@ -1083,7 +1142,8 @@ export default {
       language: 'Bahasa',
       brand: 'Ankang Life',
       main_view: 'Tampilan Utama',
-      safety:'Tips Keamanan',
+      safety: 'Tips Keamanan',
+      chatbot: 'Latihan Bahasa Inggris',
       lang: {
         en: 'Inggris',
         zh: 'Cina',
@@ -1269,6 +1329,15 @@ export default {
       idcare_desc: 'Layanan dukungan pencurian identitas',
       my_location: 'Lokasi saya',
       my_emergency_location: 'Lokasi Darurat Saya'
+    facility: {
+      title: 'Cari Fasilitas',
+      subtitle: 'Temukan layanan penting dan sumber daya komunitas di dekat Anda',
+      badges: {
+        location: 'Lokasi',
+        restaurants: 'Restoran',
+        shopping: 'Pusat Perbelanjaan',
+        schools: 'Sekolah',
+      },
     },
     learnenglish: {
       title: 'Belajar Bahasa Inggris',
@@ -1278,7 +1347,8 @@ export default {
       choose_category: 'Pilih Kategori',
       choose_category_desc: 'Pilih topik untuk mulai belajar frasa bahasa Inggris',
       welcome_title: 'Selamat datang di Pembelajaran Bahasa Inggris!',
-      welcome_desc: 'Silakan pilih bahasa ibu Anda di atas untuk mulai belajar frasa bahasa Inggris.',
+      welcome_desc:
+        'Silakan pilih bahasa ibu Anda di atas untuk mulai belajar frasa bahasa Inggris.',
       feature_audio: 'Pelafalan audio',
       feature_flashcards: 'Kartu flash interaktif',
       feature_mobile: 'Desain ramah seluler',
@@ -1324,6 +1394,9 @@ export default {
       label: 'Pelajari Lebih Lanjut',
     },
     socialnorms: {
+      title: 'Norma Sosial',
+      subtitle:
+        'Pelajari adat istiadat Australia, sopan santun sehari-hari, dan etiket sosial untuk merasa percaya diri dalam situasi apa pun',
       meetingpeople: {
         title: 'Bertemu Orang Baru',
         subtitle:
@@ -1337,6 +1410,8 @@ export default {
     },
     navigate_your_life: {
       title: 'Navigasi Hidup Anda Secara Mandiri',
+      subtitle:
+        'Panduan praktis untuk membantu Anda mengelola tugas sehari-hari dan merasa percaya diri tinggal di Australia',
       cards: {
         publictransportation: {
           title: 'Naik Transportasi Umum',
