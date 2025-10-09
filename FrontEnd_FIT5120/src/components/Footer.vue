@@ -2,7 +2,7 @@
   <footer class="footer py-5">
     <div class="container">
       <!-- Main Footer Content -->
-      <div class="row g-4">
+      <div class="row g-4 footer-row-mobile-center">
         <!-- Company Info -->
         <div class="col-lg-4 col-md-6 col-12">
           <h3 class="footer-title mb-3">Ankang Life</h3>
@@ -214,6 +214,11 @@
 
 /* Mobile Responsive */
 @media (max-width: 767.98px) {
+  .footer-row-mobile-center {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
   .footer-title {
     font-size: 1.5rem;
     text-align: center;

@@ -1,176 +1,158 @@
 <template>
-  <div class="facility-detail-page">
-    <button @click="$router.go(-1)" class="back-btn">← Back</button>
-    
-    <div v-if="loading" class="loading">
-      <div class="spinner"></div>
-      <p>Loading facility details...</p>
-    </div>
-    
-    <div v-if="error && !loading" class="error-message">
-      <p>❌ {{ error }}</p>
-      <button @click="loadFacilityDetail" class="retry-btn">Try Again</button>
-    </div>
-    
-    <div v-if="!loading && !error && facility" class="detail-content">
-      <div class="detail-header">
-        <div class="header-image">
-          <img :src="facility.imageUrl || defaultImage" :alt="facility.name" />
-        </div>
-        
-        <div class="header-info">
-          <!-- Facility name and business status -->
-          <div class="status-container">
-            <h1 class="facility-name">{{ facility.name }}</h1>
-            <el-tag 
-              :type="facility.isOpen ? 'success' : 'danger'"
-              class="status-badge"
-              size="large"
-            >
-              {{ facility.isOpen ? 'Open' : 'Closed' }}
-            </el-tag>
-          </div>
-          
-          <!-- Facility types as tags -->
-          <div class="facility-types">
-            <el-tag 
-              v-for="type in facility.types" 
-              :key="type"
-              type="info"
-              class="type-tag"
-              size="small"
-            >
-              {{ formatType(type) }}
-            </el-tag>
-          </div>
-          
-          <!-- Rating display -->
-          <div class="rating">
-            <el-rate 
-              v-model="facility.rating" 
-              disabled 
-              show-score 
-              text-color="#ff9900"
-              score-template="{value} points"
-            />
-            <span class="review-count">({{ facility.userRatingCount || 0 }} reviews)</span>
-          </div>
-          
-          <!-- Address information -->
-          <div class="address">
-            <el-card class="address-card" shadow="hover">
-              <div class="address-content">
-                <el-icon class="address-icon"><LocationFilled /></el-icon>
-                <p>{{ facility.formattedAddress }}</p>
-              </div>
-            </el-card>
-          </div>
-          
-          <!-- Action buttons -->
-          <div class="action-buttons">
-            <el-button 
-              @click="getDirections" 
-              type="primary"
-              size="large"
-              class="action-btn"
-            >
-              <el-icon><Guide /></el-icon>
-              Get Directions
-            </el-button>
-            
-            <el-button 
-              @click="openGoogleMaps" 
-              type="success"
-              size="large"
-              class="action-btn"
-            >
-              <el-icon><MapLocation /></el-icon>
-              View on Google Maps
-            </el-button>
-          </div>
-        </div>
+  <div class="w-100">
+    <BannerMeteor :title="facility?.name || 'Facility Details'"
+      :subtitle="facility?.formattedAddress || 'Loading facility information...'" :badges="facilityBadges"
+      :mainIcon="facilityIcon" />
+    <div class="facility-detail-page my-5">
+
+
+      <button @click="$router.go(-1)" class="back-btn">← Back</button>
+
+      <div v-if="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Loading facility details...</p>
       </div>
-      
-      <!-- Facility details and map tabs -->
-      <div class="detail-tabs">
-        <el-tabs v-model="activeTab" type="card" class="facility-tabs">
-          <el-tab-pane label="Details" name="details">
-            <div class="tab-content">
-              <h3>About This Facility</h3>
-              
-              <!-- Location coordinates -->
-              <el-card class="info-card" shadow="hover">
-                <template #header>
-                  <div class="card-header">
-                    <el-icon><Location /></el-icon>
-                    <span>Location Information</span>
+
+      <div v-if="error && !loading" class="error-message">
+        <p>❌ {{ error }}</p>
+        <button @click="loadFacilityDetail" class="retry-btn">Try Again</button>
+      </div>
+
+      <div v-if="!loading && !error && facility" class="detail-content">
+        <div class="detail-header">
+          <div class="header-image">
+            <img :src="facility.imageUrl || defaultImage" :alt="facility.name" />
+          </div>
+
+          <div class="header-info">
+            <!-- Facility name and business status -->
+            <div class="status-container">
+              <h1 class="facility-name">{{ facility.name }}</h1>
+              <el-tag :type="facility.isOpen ? 'success' : 'danger'" class="status-badge" size="large">
+                {{ facility.isOpen ? 'Open' : 'Closed' }}
+              </el-tag>
+            </div>
+
+            <!-- Facility types as tags -->
+            <div class="facility-types">
+              <el-tag v-for="type in facility.types" :key="type" type="info" class="type-tag" size="small">
+                {{ formatType(type) }}
+              </el-tag>
+            </div>
+
+            <!-- Rating display -->
+            <div class="rating">
+              <el-rate v-model="facility.rating" disabled show-score text-color="#ff9900"
+                score-template="{value} points" />
+              <span class="review-count">({{ facility.userRatingCount || 0 }} reviews)</span>
+            </div>
+
+            <!-- Address information -->
+            <div class="address">
+              <el-card class="address-card" shadow="hover">
+                <div class="address-content">
+                  <el-icon class="address-icon">
+                    <LocationFilled />
+                  </el-icon>
+                  <p>{{ facility.formattedAddress }}</p>
+                </div>
+              </el-card>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="action-buttons">
+              <el-button @click="getDirections" type="primary" size="large" class="action-btn">
+                <el-icon>
+                  <Guide />
+                </el-icon>
+                Get Directions
+              </el-button>
+
+              <el-button @click="openGoogleMaps" type="success" size="large" class="action-btn">
+                <el-icon>
+                  <MapLocation />
+                </el-icon>
+                View on Google Maps
+              </el-button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Facility details and map tabs -->
+        <div class="detail-tabs">
+          <el-tabs v-model="activeTab" type="card" class="facility-tabs">
+            <el-tab-pane label="Details" name="details">
+              <div class="tab-content">
+                <h3>About This Facility</h3>
+
+                <!-- Location coordinates -->
+                <el-card class="info-card" shadow="hover">
+                  <template #header>
+                    <div class="card-header">
+                      <el-icon>
+                        <Location />
+                      </el-icon>
+                      <span>Location Information</span>
+                    </div>
+                  </template>
+                  <div class="location-info">
+                    <p><strong>Latitude:</strong> {{ facility.location.latitude }}</p>
+                    <p><strong>Longitude:</strong> {{ facility.location.longitude }}</p>
+                    <p><strong>Business Status:</strong>
+                      <el-tag :type="facility.businessStatus === 'OPERATIONAL' ? 'success' : 'warning'" size="small">
+                        {{ getBusinessStatusText(facility.businessStatus) }}
+                      </el-tag>
+                    </p>
                   </div>
-                </template>
-                <div class="location-info">
-                  <p><strong>Latitude:</strong> {{ facility.location.latitude }}</p>
-                  <p><strong>Longitude:</strong> {{ facility.location.longitude }}</p>
-                  <p><strong>Business Status:</strong> 
-                    <el-tag 
-                      :type="facility.businessStatus === 'OPERATIONAL' ? 'success' : 'warning'"
-                      size="small"
-                    >
-                      {{ getBusinessStatusText(facility.businessStatus) }}
+                </el-card>
+
+                <!-- Categories -->
+                <el-card class="info-card" shadow="hover">
+                  <template #header>
+                    <div class="card-header">
+                      <el-icon>
+                        <Collection />
+                      </el-icon>
+                      <span>Categories</span>
+                    </div>
+                  </template>
+                  <div class="categories-list">
+                    <el-tag v-for="type in facility.types" :key="type" type="primary" class="category-tag" size="large">
+                      {{ formatType(type) }}
                     </el-tag>
-                  </p>
-                </div>
-              </el-card>
-              
-              <!-- Categories -->
-              <el-card class="info-card" shadow="hover">
-                <template #header>
-                  <div class="card-header">
-                    <el-icon><Collection /></el-icon>
-                    <span>Categories</span>
                   </div>
-                </template>
-                <div class="categories-list">
-                  <el-tag 
-                    v-for="type in facility.types" 
-                    :key="type"
-                    type="primary"
-                    class="category-tag"
-                    size="large"
-                  >
-                    {{ formatType(type) }}
-                  </el-tag>
-                </div>
-              </el-card>
-            </div>
-          </el-tab-pane>
-          
-          <el-tab-pane label="Map" name="map">
-            <div class="tab-content">
-              <div id="facilityMap" class="detail-map"></div>
-              
-              <div class="map-actions">
-                <el-button 
-                  @click="getDirections" 
-                  type="primary"
-                  size="large"
-                  class="map-action-btn"
-                >
-                  <el-icon><Guide /></el-icon>
-                  Get Directions from Your Location
-                </el-button>
+                </el-card>
               </div>
-            </div>
-          </el-tab-pane>
-        </el-tabs>
+            </el-tab-pane>
+
+            <el-tab-pane label="Map" name="map">
+              <div class="tab-content">
+                <div id="facilityMap" class="detail-map"></div>
+
+                <div class="map-actions">
+                  <el-button @click="getDirections" type="primary" size="large" class="map-action-btn">
+                    <el-icon>
+                      <Guide />
+                    </el-icon>
+                    Get Directions from Your Location
+                  </el-button>
+                </div>
+              </div>
+            </el-tab-pane>
+          </el-tabs>
+        </div>
       </div>
     </div>
   </div>
+
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, nextTick, computed } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick, h } from 'vue'
 import { useRoute } from 'vue-router'
 import facilityService from '@/services/facilityService'
 import { LocationFilled, Guide, MapLocation, Location, Collection } from '@element-plus/icons-vue'
+import BannerMeteor from '@/components/BannerMeteor.vue'
 
 // State management
 const route = useRoute()
@@ -185,6 +167,48 @@ const routingControl = ref(null)
 // User location
 const userLocation = ref({ lat: -37.8136, lng: 144.9631 })
 const userLocationFound = ref(false)
+
+// Facility icon for banner
+const facilityIcon = () => h('svg', {
+  xmlns: 'http://www.w3.org/2000/svg',
+  viewBox: '0 0 24 24',
+  width: '48',
+  height: '48',
+  fill: '#ffffff',
+}, [
+  h('g', {
+    fill: 'none',
+    stroke: '#ffffff',
+    'stroke-linecap': 'round',
+    'stroke-miterlimit': '10',
+    'stroke-width': '1.5',
+  }, [
+    h('path', { d: 'M21.5 12h-2.111M12 2.5v2.111M2.5 12h2.111M12 21.5v-2.111m0 0A7.389 7.389 0 1 0 12 4.61a7.389 7.389 0 0 0 0 14.778Z' }),
+    h('path', { d: 'M12 16.222a4.222 4.222 0 1 0 0-8.444a4.222 4.222 0 0 0 0 8.444Z' })
+  ])
+])
+
+// Facility badges
+const facilityBadges = [
+  {
+    icon: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z' })
+    ]),
+    text: 'Location'
+  },
+  {
+    icon: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' })
+    ]),
+    text: 'Details'
+  },
+  {
+    icon: () => h('svg', { xmlns: 'http://www.w3.org/2000/svg', viewBox: '0 0 24 24', fill: 'currentColor' }, [
+      h('path', { d: 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z' })
+    ]),
+    text: 'Map'
+  }
+]
 
 // Helper functions
 const getBusinessStatusText = (status) => {
@@ -214,7 +238,7 @@ const getOpenStatus = (facility) => {
 }
 
 const formatType = (type) => {
-  return type.split('_').map(word => 
+  return type.split('_').map(word =>
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ')
 }
@@ -237,7 +261,7 @@ const loadFacilityDetail = async () => {
     facility.value = response.data
     // attach computed open status
     facility.value.isOpen = getOpenStatus(facility.value)
-    
+
     if (facility.value.location) {
       setTimeout(() => {
         initializeMap()
@@ -280,7 +304,7 @@ const getUserLocation = () => {
 // Initialize map
 const initializeMap = async () => {
   await nextTick()
-  
+
   const mapElement = document.getElementById('facilityMap')
   if (!mapElement || !facility.value?.location) return
 
@@ -321,8 +345,8 @@ const initializeMap = async () => {
     [facility.value.location.latitude, facility.value.location.longitude],
     { icon: facilityIcon }
   ).addTo(map.value)
-   .bindPopup(`<b>${facility.value.name}</b><br>${facility.value.address}`)
-   .openPopup()
+    .bindPopup(`<b>${facility.value.name}</b><br>${facility.value.address}`)
+    .openPopup()
 
   // Add user location marker
   if (userLocationFound.value) {
@@ -459,8 +483,13 @@ onUnmounted(() => {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .loading p {
@@ -604,43 +633,43 @@ onUnmounted(() => {
     gap: 25px;
     padding: 20px;
   }
-  
+
   .header-image {
     flex: none;
     height: 250px;
   }
-  
+
   .facility-name {
     font-size: 2rem;
   }
-  
+
   .facility-types {
     justify-content: center;
   }
-  
+
   .action-buttons {
     flex-direction: column;
   }
-  
+
   .action-btn {
     width: 100%;
   }
-  
+
   .tab-content {
     padding: 20px;
   }
-  
+
   .categories-list {
     justify-content: center;
   }
-  
+
   .status-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 15px;
   }
-  
+
   .rating {
     justify-content: center;
   }

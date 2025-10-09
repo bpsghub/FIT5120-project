@@ -12,6 +12,11 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import 'aos/dist/aos.css'
 
+// Import Web Speech test helpers (only in development)
+if (import.meta.env.DEV) {
+  import('./utils/webSpeechTest.js')
+}
+
 // Fix Leaflet icon path issues
 delete L.Icon.Default.prototype._getIconUrl
 L.Icon.Default.mergeOptions({

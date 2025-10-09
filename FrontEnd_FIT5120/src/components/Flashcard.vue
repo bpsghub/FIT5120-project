@@ -38,27 +38,26 @@
               {{ isPlayingAudio ? 'Playing...' : 'Listen' }}
             </button>
 
-            <button class="talk-btn" @click.stop="handleTalk" :disabled="isRecording || isAssessing">
+            <button class="talk-btn" @click.stop="handleTalk" :disabled="isRecording || isAssessing"
+              :title="getTalkButtonTitle()">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                 style="height: 16px; width: 16px">
                 <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" />
                 <path
                   d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" />
               </svg>
-              {{ isRecording ? 'Recording...' : isAssessing ? 'Assessing...' : 'Talk' }}
+              {{ getTalkButtonText() }}
             </button>
           </div>
 
-          <!-- Pronunciation Result -->
-          <div v-if="pronunciationResult" class="pronunciation-result" :class="`result-${pronunciationResult.level}`">
-            <div class="result-score">
-              <!-- <span class="score-value">{{ pronunciationResult.score }}</span>
-              <span class="score-label">/100</span> -->
-            </div>
+          <!-- Recording Instructions -->
+          <div v-if="isRecording" class="recording-instructions">
+            🎤 Speak clearly: "{{ phrase.english }}"
+          </div>
+
+          <!-- Pronunciation Result (Simple Feedback Only) -->
+          <div v-if="pronunciationResult" class="pronunciation-result">
             <div class="result-feedback">{{ pronunciationResult.feedback }}</div>
-            <div v-if="pronunciationResult.transcribed" class="result-transcribed">
-              <strong>You said:</strong> "{{ pronunciationResult.transcribed }}"
-            </div>
           </div>
         </div>
       </div>
@@ -69,7 +68,6 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { useSpeechRecognition } from '@/composables/useSpeechRecognition.js'
-import { assessPronunciation, isAzureConfigured } from '@/services/azureSpeechService.js'
 
 const props = defineProps({
   phrase: {
@@ -98,11 +96,8 @@ const pronunciationResult = ref(null)
 // Speech recognition composable
 const {
   startRecordingWebAPI,
-  startRecordingForAzure,
   stopRecording,
-  getAudioBlob,
   evaluatePronunciation,
-  transcript,
   recognitionResult
 } = useSpeechRecognition()
 
@@ -115,6 +110,18 @@ const getLanguageName = computed(() => {
   }
   return (langCode) => languageMap[langCode] || langCode
 })
+
+// Get talk button text
+const getTalkButtonText = () => {
+  if (isRecording.value) return 'Recording... (5s)'
+  if (isAssessing.value) return 'Assessing...'
+  return 'Talk'
+}
+
+// Get talk button title/tooltip
+const getTalkButtonTitle = () => {
+  return 'Click and speak clearly: "' + props.phrase.english + '"'
+}
 
 // Methods
 const flip = () => {
@@ -171,16 +178,8 @@ const handleTalk = async () => {
   pronunciationResult.value = null
 
   try {
-    // Check if Azure is configured
-    const useAzure = isAzureConfigured()
-
-    if (useAzure) {
-      // Use Azure Speech Service
-      await handleAzurePronunciation()
-    } else {
-      // Fallback to Web Speech API
-      await handleWebSpeechPronunciation()
-    }
+    console.log('🎤 Using Web Speech API for pronunciation assessment')
+    await handleWebSpeechPronunciation()
   } catch (error) {
     console.error('Talk handler error:', error)
     pronunciationResult.value = {
@@ -194,78 +193,92 @@ const handleTalk = async () => {
   }
 }
 
-// Azure Speech Service pronunciation assessment
-const handleAzurePronunciation = async () => {
-  isRecording.value = true
-
-  // Start recording
-  await startRecordingForAzure()
-
-  // Record for 5 seconds
-  await new Promise(resolve => setTimeout(resolve, 5000))
-
-  // Stop recording
-  stopRecording()
-  isRecording.value = false
-  isAssessing.value = true
-
-  // Get audio blob
-  const audioBlob = await getAudioBlob()
-
-  // Assess pronunciation with Azure
-  const result = await assessPronunciation(audioBlob, props.phrase.english, 'en-US')
-
-  pronunciationResult.value = result
-  isAssessing.value = false
-}
-
-// Web Speech API pronunciation assessment (fallback)
+// Web Speech API pronunciation assessment (enhanced)
 const handleWebSpeechPronunciation = async () => {
   isRecording.value = true
 
-  // Start Web Speech Recognition
-  await startRecordingWebAPI('en-US')
+  try {
+    console.log('Starting Web Speech API pronunciation assessment...')
+    console.log('Target phrase:', props.phrase.english)
 
-  // Wait for recognition result
-  await new Promise((resolve) => {
-    const checkInterval = setInterval(() => {
-      if (!isRecording.value || recognitionResult.value) {
-        clearInterval(checkInterval)
-        resolve()
+    // Reset previous results
+    recognitionResult.value = null
+
+    // Start Web Speech Recognition with better settings
+    await startRecordingWebAPI('en-US')
+
+    // Wait for recognition result or timeout (longer timeout for better accuracy)
+    await new Promise((resolve) => {
+      let attempts = 0
+      const maxAttempts = 100 // 10 seconds with 100ms intervals
+
+      const checkInterval = setInterval(() => {
+        attempts++
+
+        if (recognitionResult.value || attempts >= maxAttempts) {
+          clearInterval(checkInterval)
+          stopRecording()
+          resolve()
+        }
+      }, 100)
+    })
+
+    isRecording.value = false
+    isAssessing.value = true
+
+    // Evaluate pronunciation
+    if (recognitionResult.value && recognitionResult.value.text) {
+      console.log('Recognition successful:', {
+        transcribed: recognitionResult.value.text,
+        confidence: recognitionResult.value.confidence,
+        target: props.phrase.english
+      })
+
+      const result = evaluatePronunciation(
+        props.phrase.english,
+        recognitionResult.value.text,
+        recognitionResult.value.confidence || 1
+      )
+
+      pronunciationResult.value = {
+        feedback: result.feedback,
+        method: 'web-speech-api'
       }
-    }, 100)
 
-    // Timeout after 10 seconds
-    setTimeout(() => {
-      clearInterval(checkInterval)
-      stopRecording()
-      resolve()
-    }, 10000)
-  })
+      // Auto-clear result after 5 seconds
+      setTimeout(() => {
+        pronunciationResult.value = null
+      }, 5000)
+    } else {
+      // No speech detected
+      console.warn('No speech detected by Web Speech API')
+      pronunciationResult.value = {
+        feedback: 'No speech detected. Please speak clearly and try again.',
+        method: 'web-speech-api'
+      }
 
-  isRecording.value = false
-  isAssessing.value = true
-
-  // Evaluate pronunciation
-  if (recognitionResult.value && recognitionResult.value.text) {
-    const result = evaluatePronunciation(
-      props.phrase.english,
-      recognitionResult.value.text,
-      recognitionResult.value.confidence || 1
-    )
-
-    pronunciationResult.value = result
-  } else {
-    pronunciationResult.value = {
-      success: false,
-      score: 0,
-      feedback: 'Could not recognize speech. Please try again.',
-      level: 'error',
-      transcribed: transcript.value || ''
+      // Auto-clear result after 5 seconds
+      setTimeout(() => {
+        pronunciationResult.value = null
+      }, 5000)
     }
-  }
 
-  isAssessing.value = false
+    isAssessing.value = false
+  } catch (error) {
+    console.error('Web Speech API error:', error)
+    isRecording.value = false
+    isAssessing.value = false
+
+    pronunciationResult.value = {
+      feedback: `Speech recognition error: ${error.message}. Please try again.`,
+      method: 'web-speech-api'
+    }
+
+    // Auto-clear result after 5 seconds
+    setTimeout(() => {
+      pronunciationResult.value = null
+    }, 5000)
+  }
 }
 
 // Auto-flip functionality
@@ -503,11 +516,15 @@ defineExpose({
 }
 
 .result-feedback {
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 0.5rem;
-  color: #475569;
+  color: #22c55e;
+  background: #e6fbe6;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.08);
 }
 
 .result-transcribed {
@@ -683,6 +700,93 @@ defineExpose({
 
   .audio-btn {
     transition: none;
+  }
+}
+
+/* Recording instructions */
+.recording-instructions {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
+  animation: pulse 2s infinite;
+  margin-top: 8px;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Talk button enhancements */
+.talk-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.talk-btn:disabled {
+  background: #94a3b8 !important;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.talk-btn:disabled:hover {
+  background: #94a3b8 !important;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Pronunciation result enhancements */
+.result-confidence {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.result-method {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.result-transcribed {
+  background: #f3f4f6;
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 8px;
+  font-size: 0.875rem;
+}
+
+/* Recording animation */
+.recording-instructions {
+  animation: recordingPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes recordingPulse {
+
+  0%,
+  100% {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    transform: scale(1);
+  }
+
+  50% {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    transform: scale(1.02);
   }
 }
 </style>

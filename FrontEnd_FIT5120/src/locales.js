@@ -79,8 +79,8 @@ export default {
           vietnamese_restaurant: 'Vietnamese restaurant',
           indonesian_restaurant: 'Indonesian restaurant',
           shopping_mall: 'Shopping mall',
-        }
-      }
+        },
+      },
     },
     safety: {
       title: 'Safety Information',
@@ -119,7 +119,8 @@ export default {
       medium_crime: 'Medium Crime',
       high_crime: 'High Crime',
       very_high_crime: 'Very High Crime',
-      points_explanation: 'Each point represents a Local Government Area. Point size and color intensity indicate crime levels - larger and redder points show higher crime counts.',
+      points_explanation:
+        'Each point represents a Local Government Area. Point size and color intensity indicate crime levels - larger and redder points show higher crime counts.',
       coverage_stats: 'Coverage Statistics',
       total_lgas: 'LGAs Covered',
       total_offences: 'Total Offences',
@@ -179,32 +180,36 @@ export default {
       scamwatch: 'Scamwatch',
       daily_safety: 'Daily Safety',
       daily_tip1: 'Avoid walking alone at night, especially in unfamiliar areas',
-      daily_tip2: 'Keep your personal belongings secure and don\'t display expensive items',
+      daily_tip2: "Keep your personal belongings secure and don't display expensive items",
       daily_tip3: 'Stay aware of your surroundings and trust your instincts',
-      daily_tip4: 'Let someone know where you\'re going and when you expect to return',
+      daily_tip4: "Let someone know where you're going and when you expect to return",
       scam_protection: 'Scam Protection',
-      scam_tip1: 'Don\'t click on suspicious links in text messages or emails',
-      scam_tip2: 'Never send money to people you\'ve only met online',
-      scam_tip3: 'Government agencies won\'t call demanding immediate payment',
+      scam_tip1: "Don't click on suspicious links in text messages or emails",
+      scam_tip2: "Never send money to people you've only met online",
+      scam_tip3: "Government agencies won't call demanding immediate payment",
       scam_tip4: 'If something sounds too good to be true, it probably is',
       at_home: 'At Home',
-      home_tip1: 'Always lock doors and windows, even when you\'re home',
+      home_tip1: "Always lock doors and windows, even when you're home",
       home_tip2: 'Use motion sensor lights or security cameras if possible',
-      home_tip3: 'Don\'t tell strangers that you live alone',
+      home_tip3: "Don't tell strangers that you live alone",
       home_tip4: 'Have a safety plan and know your exit routes',
       call_confirm: 'Do you want to call {name} at {number}?',
 
       // Additional safety tips
       protect_personal_info: 'Protect Personal Information',
-      protect_personal_desc: 'Never share personal details like passwords, bank account numbers, or Medicare numbers with strangers.',
+      protect_personal_desc:
+        'Never share personal details like passwords, bank account numbers, or Medicare numbers with strangers.',
       take_time: 'Take Your Time',
-      take_time_desc: 'Scammers create urgency. Always take time to think and consult with trusted family or friends.',
+      take_time_desc:
+        'Scammers create urgency. Always take time to think and consult with trusted family or friends.',
       verify_identity: 'Verify Identity',
-      verify_identity_desc: 'Always verify the identity of callers by hanging up and calling official numbers independently.',
+      verify_identity_desc:
+        'Always verify the identity of callers by hanging up and calling official numbers independently.',
       secure_payments: 'Secure Payment Methods',
-      secure_payments_desc: 'Use secure payment methods and avoid wire transfers, gift cards, or cryptocurrency for unknown parties.',
+      secure_payments_desc:
+        'Use secure payment methods and avoid wire transfers, gift cards, or cryptocurrency for unknown parties.',
       immediate_danger: 'Immediate Danger',
-      immediate_danger_desc: 'If you are in immediate danger, call 000 first. Don\'t hesitate!',
+      immediate_danger_desc: "If you are in immediate danger, call 000 first. Don't hesitate!",
       money_lost: 'Money Lost to Scam',
       money_lost_desc: 'Contact your bank immediately and then report to Scamwatch and police',
       identity_theft: 'Identity Theft',
@@ -232,8 +237,8 @@ export default {
         shopping: 'Shopping Malls',
         schools: 'Schools',
       },
-  },
-  learnenglish: {
+    },
+    learnenglish: {
       title: 'Learn English',
       subtitle: 'Practice English phrases for everyday situations',
       select_language_label: 'Select your native language:',
@@ -453,8 +458,8 @@ export default {
           vietnamese_restaurant: '越南餐厅',
           indonesian_restaurant: '印尼餐厅',
           shopping_mall: '购物中心',
-        }
-      }
+        },
+      },
     },
     safety: {
       title: '安全信息',
@@ -493,7 +498,8 @@ export default {
       medium_crime: '中等犯罪',
       high_crime: '高犯罪',
       very_high_crime: '极高犯罪',
-      points_explanation: '每个点代表一个地方政府区域。点的大小和颜色强度表示犯罪水平 - 更大更红的点显示更高的犯罪数量。',
+      points_explanation:
+        '每个点代表一个地方政府区域。点的大小和颜色强度表示犯罪水平 - 更大更红的点显示更高的犯罪数量。',
       coverage_stats: '覆盖统计',
       total_lgas: '覆盖LGA数',
       total_offences: '总犯罪数',
@@ -811,12 +817,13 @@ export default {
           vietnamese_restaurant: 'Nhà hàng Việt Nam',
           indonesian_restaurant: 'Nhà hàng Indonesia',
           shopping_mall: 'Trung tâm mua sắm',
-        }
-      }
+        },
+      },
     },
     safety: {
       title: 'Thông tin An toàn',
-      subtitle: 'Giữ an toàn và cập nhật thông tin với cảnh báo thời gian thực, thông báo tội phạm và mẹo an toàn',
+      subtitle:
+        'Giữ an toàn và cập nhật thông tin với cảnh báo thời gian thực, thông báo tội phạm và mẹo an toàn',
       emergency_call: 'Gọi 000 - Khẩn cấp',
       emergency_note: 'Để được hỗ trợ khẩn cấp ngay lập tức',
       emergency_confirm: 'Bạn có muốn gọi 000 để được hỗ trợ khẩn cấp không?',
@@ -851,7 +858,8 @@ export default {
       medium_crime: 'Tội phạm trung bình',
       high_crime: 'Tội phạm cao',
       very_high_crime: 'Tội phạm rất cao',
-      points_explanation: 'Mỗi điểm đại diện cho một khu vực chính quyền địa phương. Kích thước và cường độ màu sắc của điểm cho biết mức độ tội phạm - điểm lớn hơn và đỏ hơn cho thấy số lượng tội phạm cao hơn.',
+      points_explanation:
+        'Mỗi điểm đại diện cho một khu vực chính quyền địa phương. Kích thước và cường độ màu sắc của điểm cho biết mức độ tội phạm - điểm lớn hơn và đỏ hơn cho thấy số lượng tội phạm cao hơn.',
       coverage_stats: 'Thống kê bao phủ',
       total_lgas: 'LGA được bao phủ',
       total_offences: 'Tổng tội phạm',
@@ -880,7 +888,8 @@ export default {
       // Scam alerts
       scam_alerts: 'Cảnh báo lừa đảo',
       stay_alert: 'Luôn cảnh giác!',
-      scam_warning: 'Kẻ lừa đảo thường nhắm vào người cao tuổi và người nhập cư mới. Hãy cảnh giác!',
+      scam_warning:
+        'Kẻ lừa đảo thường nhắm vào người cao tuổi và người nhập cư mới. Hãy cảnh giác!',
       prevention_tips: 'Mẹo phòng ngừa',
       phone_tip1: 'Hãy nghi ngờ những cuộc gọi bất ngờ yêu cầu thông tin',
       phone_tip2: 'Cúp máy và gọi lại bằng số chính thức',
@@ -928,19 +937,24 @@ export default {
 
       // Additional safety tips
       protect_personal_info: 'Bảo vệ thông tin cá nhân',
-      protect_personal_desc: 'Không bao giờ chia sẻ thông tin cá nhân như mật khẩu, số tài khoản ngân hàng, hoặc số Medicare với người lạ.',
+      protect_personal_desc:
+        'Không bao giờ chia sẻ thông tin cá nhân như mật khẩu, số tài khoản ngân hàng, hoặc số Medicare với người lạ.',
       take_time: 'Từ từ thôi',
-      take_time_desc: 'Kẻ lừa đảo tạo ra sự khẩn cấp. Luôn dành thời gian để suy nghĩ và tham khảo ý kiến của gia đình hoặc bạn bè đáng tin cậy.',
+      take_time_desc:
+        'Kẻ lừa đảo tạo ra sự khẩn cấp. Luôn dành thời gian để suy nghĩ và tham khảo ý kiến của gia đình hoặc bạn bè đáng tin cậy.',
       verify_identity: 'Xác minh danh tính',
-      verify_identity_desc: 'Luôn xác minh danh tính của người gọi bằng cách cúp máy và gọi lại số chính thức một cách độc lập.',
+      verify_identity_desc:
+        'Luôn xác minh danh tính của người gọi bằng cách cúp máy và gọi lại số chính thức một cách độc lập.',
       secure_payments: 'Phương thức thanh toán an toàn',
-      secure_payments_desc: 'Sử dụng phương thức thanh toán an toàn và tránh chuyển tiền, thẻ quà tặng, hoặc tiền điện tử cho các bên không rõ danh tính.',
+      secure_payments_desc:
+        'Sử dụng phương thức thanh toán an toàn và tránh chuyển tiền, thẻ quà tặng, hoặc tiền điện tử cho các bên không rõ danh tính.',
       immediate_danger: 'Nguy hiểm tức thì',
       immediate_danger_desc: 'Nếu bạn đang gặp nguy hiểm tức thì, hãy gọi 000 trước. Đừng do dự!',
       money_lost: 'Mất tiền do lừa đảo',
       money_lost_desc: 'Liên hệ ngay với ngân hàng của bạn rồi báo cáo cho Scamwatch và cảnh sát',
       identity_theft: 'Trộm danh tính',
-      identity_theft_desc: 'Liên hệ IDCARE (1800 595 160) để được hỗ trợ miễn phí về trộm danh tính',
+      identity_theft_desc:
+        'Liên hệ IDCARE (1800 595 160) để được hỗ trợ miễn phí về trộm danh tính',
       call_000: 'Gọi 000',
       share_location: 'Chia sẻ vị trí',
       activate_alarm: 'Bật báo động',
@@ -1187,12 +1201,13 @@ export default {
           vietnamese_restaurant: 'Restoran Vietnam',
           indonesian_restaurant: 'Restoran Indonesia',
           shopping_mall: 'Mall',
-        }
-      }
+        },
+      },
     },
     safety: {
       title: 'Informasi Keamanan',
-      subtitle: 'Tetap aman dan terinformasi dengan peringatan real-time, alert kejahatan, dan tips keamanan',
+      subtitle:
+        'Tetap aman dan terinformasi dengan peringatan real-time, alert kejahatan, dan tips keamanan',
       emergency_call: 'Hubungi 000 - Darurat',
       emergency_note: 'Untuk bantuan darurat segera',
       emergency_confirm: 'Apakah Anda ingin menghubungi 000 untuk bantuan darurat?',
@@ -1214,7 +1229,8 @@ export default {
       heat_hazard: 'Bahaya Panas',
       heat_desc: 'Tetap terhidrasi, hindari sinar matahari siang hari',
       heavy_rain_warning: 'Peringatan Hujan Lebat',
-      heavy_rain_desc: 'Hindari berkendara di area banjir, tinggal di dalam ruangan jika memungkinkan',
+      heavy_rain_desc:
+        'Hindari berkendara di area banjir, tinggal di dalam ruangan jika memungkinkan',
       bushfire_risk: 'Risiko Kebakaran Hutan',
       bushfire_desc: 'Bahaya kebakaran tinggi, hindari pembakaran luar ruangan',
 
@@ -1227,7 +1243,8 @@ export default {
       medium_crime: 'Kejahatan Sedang',
       high_crime: 'Kejahatan Tinggi',
       very_high_crime: 'Kejahatan Sangat Tinggi',
-      points_explanation: 'Setiap titik mewakili Area Pemerintah Lokal. Ukuran titik dan intensitas warna menunjukkan tingkat kejahatan - titik yang lebih besar dan lebih merah menunjukkan jumlah kejahatan yang lebih tinggi.',
+      points_explanation:
+        'Setiap titik mewakili Area Pemerintah Lokal. Ukuran titik dan intensitas warna menunjukkan tingkat kejahatan - titik yang lebih besar dan lebih merah menunjukkan jumlah kejahatan yang lebih tinggi.',
       coverage_stats: 'Statistik Cakupan',
       total_lgas: 'LGA Tercakup',
       total_offences: 'Total Pelanggaran',
@@ -1286,7 +1303,8 @@ export default {
       translation_service: 'Layanan Terjemahan (TIS)',
       scamwatch: 'Scamwatch',
       daily_safety: 'Keamanan Harian',
-      daily_tip1: 'Hindari berjalan sendirian di malam hari, terutama di daerah yang tidak familiar',
+      daily_tip1:
+        'Hindari berjalan sendirian di malam hari, terutama di daerah yang tidak familiar',
       daily_tip2: 'Jaga barang pribadi Anda dan jangan memamerkan barang mahal',
       daily_tip3: 'Selalu waspada terhadap lingkungan sekitar dan percayai naluri Anda',
       daily_tip4: 'Beri tahu seseorang ke mana Anda pergi dan kapan Anda diharapkan kembali',
@@ -1304,19 +1322,25 @@ export default {
 
       // Additional safety tips
       protect_personal_info: 'Lindungi Informasi Pribadi',
-      protect_personal_desc: 'Jangan pernah bagikan detail pribadi seperti kata sandi, nomor rekening bank, atau nomor Medicare kepada orang asing.',
+      protect_personal_desc:
+        'Jangan pernah bagikan detail pribadi seperti kata sandi, nomor rekening bank, atau nomor Medicare kepada orang asing.',
       take_time: 'Luangkan Waktu',
-      take_time_desc: 'Penipu menciptakan urgensi. Selalu luangkan waktu untuk berpikir dan berunding dengan keluarga atau teman terpercaya.',
+      take_time_desc:
+        'Penipu menciptakan urgensi. Selalu luangkan waktu untuk berpikir dan berunding dengan keluarga atau teman terpercaya.',
       verify_identity: 'Verifikasi Identitas',
-      verify_identity_desc: 'Selalu verifikasi identitas penelpon dengan menutup telepon dan menelepon nomor resmi secara independen.',
+      verify_identity_desc:
+        'Selalu verifikasi identitas penelpon dengan menutup telepon dan menelepon nomor resmi secara independen.',
       secure_payments: 'Metode Pembayaran Aman',
-      secure_payments_desc: 'Gunakan metode pembayaran yang aman dan hindari transfer kawat, kartu hadiah, atau cryptocurrency untuk pihak yang tidak dikenal.',
+      secure_payments_desc:
+        'Gunakan metode pembayaran yang aman dan hindari transfer kawat, kartu hadiah, atau cryptocurrency untuk pihak yang tidak dikenal.',
       immediate_danger: 'Bahaya Segera',
-      immediate_danger_desc: 'Jika Anda dalam bahaya segera, hubungi 000 terlebih dahulu. Jangan ragu!',
+      immediate_danger_desc:
+        'Jika Anda dalam bahaya segera, hubungi 000 terlebih dahulu. Jangan ragu!',
       money_lost: 'Uang Hilang karena Penipuan',
       money_lost_desc: 'Hubungi bank Anda segera kemudian laporkan ke Scamwatch dan polisi',
       identity_theft: 'Pencurian Identitas',
-      identity_theft_desc: 'Hubungi IDCARE (1800 595 160) untuk dukungan gratis dengan pencurian identitas',
+      identity_theft_desc:
+        'Hubungi IDCARE (1800 595 160) untuk dukungan gratis dengan pencurian identitas',
       call_000: 'Panggil 000',
       share_location: 'Bagikan Lokasi',
       activate_alarm: 'Bunyikan Alarm',

@@ -3,7 +3,7 @@
     <BannerMeteor :title="$t('facility.title')" :subtitle="$t('facility.subtitle')" :badges="facilityBadges"
       :main-icon="facilityMainIcon" />
 
-    <div class="content-wrapper">
+    <div class="content-wrapper mb-5">
       <div class="controls-container my-3">
         <div class="controls">
           <button @click="showFilters = !showFilters" class="filter-btn" :class="{ 'filter-active': showFilters }">

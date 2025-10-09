@@ -14,6 +14,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@azure-rest/ai-inference": "^1.0.0-beta.6",
+    "@azure/core-auth": "^1.10.1",
     "@element-plus/icons-vue": "^2.3.2",
     "aos": "^2.3.4",
     "axios": "^1.11.0",
@@ -21,6 +23,7 @@
     "element-plus": "^2.11.2",
     "leaflet": "^1.9.4",
     "leaflet-routing-machine": "^3.2.12",
+    "microsoft-cognitiveservices-speech-sdk": "^1.46.0",
     "papaparse": "^5.5.3",
     "pinia": "^3.0.3",
     "swiper": "^12.0.2",
