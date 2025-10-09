@@ -6,17 +6,11 @@
       </span>
     </div>
     <div>
-      <section
-        v-for="(card, idx) in cards"
-        :key="card.key"
-        :class="[
-          'service-section',
-          idx % 2 === 1 ? 'reverse' : '',
-          idx === 0 ? 'slide-in-right' : 'slide-in-left',
-        ]"
-        :style="{ animationDelay: `${0.2 * idx}s` }"
-        aria-label="Social Norms Section"
-      >
+      <section v-for="(card, idx) in cards" :key="card.key" :class="[
+        'service-section',
+        idx % 2 === 1 ? 'reverse' : '',
+        idx === 0 ? 'slide-in-right' : 'slide-in-left',
+      ]" :style="{ animationDelay: `${0.2 * idx}s` }" aria-label="Social Norms Section">
         <div class="section-img">
           <img :src="card.img" :alt="card.title" />
           <div class="img-overlay"></div>
@@ -72,8 +66,7 @@ function goTo(key) {
   width: 100%;
   min-height: 100vh;
   /* Fixed background image */
-  background: url('https://c4.wallpaperflare.com/wallpaper/180/498/372/sydney-australia-sydney-opera-house-city-wallpaper-preview.jpg')
-    no-repeat center center fixed;
+  background: url('https://c4.wallpaperflare.com/wallpaper/180/498/372/sydney-australia-sydney-opera-house-city-wallpaper-preview.jpg') no-repeat center center fixed;
   background-size: cover;
   padding: 0 0 40px 0;
   font-family: 'Roboto', 'Arial', sans-serif;
@@ -265,6 +258,7 @@ function goTo(key) {
 }
 
 @media (max-width: 900px) {
+
   .service-section,
   .service-section.reverse {
     flex-direction: column !important;

@@ -32,8 +32,10 @@
           <ul class="list-unstyled footer-links">
             <li class="mb-2"><router-link to="/learnenglish" class="footer-link">Learn English</router-link></li>
             <li class="mb-2"><router-link to="/socialnorms" class="footer-link">Social Norms</router-link></li>
-            <li class="mb-2"><router-link to="/socialnorms/meetingpeople" class="footer-link">Meeting People</router-link></li>
-            <li class="mb-2"><router-link to="/socialnorms/eatingout" class="footer-link">Dining Etiquette</router-link></li>
+            <li class="mb-2"><router-link to="/socialnorms/meetingpeople" class="footer-link">Meeting
+                People</router-link></li>
+            <li class="mb-2"><router-link to="/socialnorms/eatingout" class="footer-link">Dining Etiquette</router-link>
+            </li>
             <li class="mb-2"><router-link to="/chatbot" class="footer-link">AI Chatbot</router-link></li>
           </ul>
         </div>
@@ -42,9 +44,12 @@
         <div class="col-lg-2 col-md-6 col-6">
           <h4 class="footer-subtitle mb-3">Navigate Life</h4>
           <ul class="list-unstyled footer-links">
-            <li class="mb-2"><router-link to="/publicTransportation" class="footer-link">Public Transport</router-link></li>
-            <li class="mb-2"><router-link to="/grocceriesShopping" class="footer-link">Groceries Shopping</router-link></li>
-            <li class="mb-2"><router-link to="/medicalAttention" class="footer-link">Medical Attention</router-link></li>
+            <li class="mb-2"><router-link to="/publicTransportation" class="footer-link">Public Transport</router-link>
+            </li>
+            <li class="mb-2"><router-link to="/grocceriesShopping" class="footer-link">Groceries Shopping</router-link>
+            </li>
+            <li class="mb-2"><router-link to="/medicalAttention" class="footer-link">Medical Attention</router-link>
+            </li>
             <li class="mb-2"><router-link to="/mykicardlearning" class="footer-link">Myki Card Guide</router-link></li>
             <li class="mb-2"><router-link to="/safety" class="footer-link">Safety Tips</router-link></li>
           </ul>
@@ -207,31 +212,31 @@
     font-size: 1.5rem;
     text-align: center;
   }
-  
+
   .footer-subtitle {
     font-size: 1rem;
     text-align: center;
     margin-top: 2rem;
   }
-  
+
   .footer-description {
     text-align: center;
     margin-bottom: 2rem;
   }
-  
+
   .social-links {
     text-align: center;
     margin-bottom: 2rem;
   }
-  
+
   .footer-links {
     text-align: center;
   }
-  
+
   .contact-info {
     text-align: center;
   }
-  
+
   .contact-item {
     justify-content: center;
     margin-bottom: 0.5rem;
@@ -243,7 +248,7 @@
   .footer-title {
     font-size: 1.6rem;
   }
-  
+
   .footer-subtitle {
     font-size: 1.05rem;
   }
@@ -254,7 +259,7 @@
   .footer {
     padding: 4rem 0 2rem;
   }
-  
+
   .footer-title {
     font-size: 2rem;
   }

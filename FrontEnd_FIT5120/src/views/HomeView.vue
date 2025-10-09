@@ -91,7 +91,7 @@ function scrollToMission() {
             data-aos-delay="400">
             <span class="our-features-header-title">{{
               t('home.our_features.our_features_title')
-            }}</span>
+              }}</span>
           </div>
           <div class="features-container">
             <div class="feature-card" data-aos="fade-up" data-aos-delay="50" @click="goToFacility"
