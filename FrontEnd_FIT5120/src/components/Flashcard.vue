@@ -58,7 +58,7 @@
           <!-- Pronunciation Result (Enhanced Feedback) -->
           <div v-if="pronunciationResult" class="pronunciation-result">
             <div :class="[
-              'result-feedback', 
+              'result-feedback',
               {
                 'feedback-excellent': pronunciationResult.level === 'excellent',
                 'feedback-good': pronunciationResult.level === 'good',
@@ -73,7 +73,7 @@
                 <div class="star">*</div>
                 <div class="star">*</div>
               </div>
-              
+
               <!-- Main feedback message -->
               <div class="feedback-message">
                 {{ pronunciationResult.feedback }}
@@ -587,6 +587,7 @@ defineExpose({
     box-shadow: 0 4px 16px rgba(34, 197, 94, 0.2);
     transform: scale(1);
   }
+
   100% {
     box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
     transform: scale(1.02);
@@ -661,12 +662,15 @@ defineExpose({
     transform: translateY(-20px) rotate(0deg);
     opacity: 0;
   }
+
   20% {
     opacity: 1;
   }
+
   80% {
     opacity: 1;
   }
+
   100% {
     transform: translateY(50px) rotate(360deg);
     opacity: 0;
@@ -688,10 +692,13 @@ defineExpose({
 }
 
 @keyframes celebrationPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     background: linear-gradient(135deg, #fef9c3, #fef3c7);
   }
+
   50% {
     transform: scale(1.05);
     background: linear-gradient(135deg, #fef3c7, #fde68a);

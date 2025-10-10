@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # FIT5120-project
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -34,6 +33,3 @@ npm run build
 ```sh
 npm run lint
 ```
-=======
-# FIT5120-project
->>>>>>> 63f30a5cecde8465f96948524334e64cbb09ae13
